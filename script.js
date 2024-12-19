@@ -1,4 +1,4 @@
-const PROXY_URL = "https://cors-anywhere.herokuapp.com/"; // Public proxy URL
+const PROXY_URL = "https://api.allorigins.win/raw?url="; // Public proxy URL
 const playButton = document.getElementById('playButton');
 const videoPlayer = videojs('videoPlayer');
 
