@@ -20,10 +20,9 @@
       justify-content: center;
       align-items: center;
     }
-    #video {
+    #video-player {
       width: 100%;
       height: 100%;
-      object-fit: contain;
     }
     .logo {
       position: absolute;
@@ -63,7 +62,6 @@
       z-index: 20;
       justify-content: center;
       align-items: center;
-      display: flex;
       text-align: center;
     }
     .popup-content {
@@ -85,10 +83,11 @@
       font-size: 16px;
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
 </head>
 <body>
   <div class="video-container">
-    <video id="video" controls></video>
+    <div id="video-player"></div>
     <div class="logo">
       <img src="https://raw.githubusercontent.com/AkashGillNiet/TNT3/refs/heads/main/nes.png" alt="Logo">
     </div>
@@ -111,56 +110,91 @@
       <button id="already-joined">Already Joined</button>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.3/shaka-player.compiled.js"></script>
+  
+  <!-- Fragments Scattered Across Code -->
+  <script>const baseDomain = "https://65.scjustfor.info";</script>
+  <script>const pathSegment1 = "/mobile";</script>
+  <script>const pathSegment2 = "/stream6_240p";</script>
+  <script>const fileName = "/playlist.m3u8";</script>
+  <script>const queryPart1 = "?vidictid=200841055668";</script>
+  <script>const queryPart2 = "&id=21";</script>
+  <script>const queryPart3 = "&pk=5d004c5dd9e0d07e452c1874f703623c404afbc668a720f1f368b3729cca043d";</script>
+
   <script>
-    const streamUrl = "https://65.scjustfor.info/mobile/stream6_240p/playlist.m3u8?vidictid=200841055668&id=21&pk=5d004c5dd9e0d07e452c1874f703623c404afbc668a720f1f368b3729cca043d";
+    // Function to reconstruct the URL
+    function constructURL() {
+      return baseDomain + pathSegment1 + pathSegment2 + fileName + queryPart1 + queryPart2 + queryPart3;
+    }
 
-    const player = new shaka.Player(document.getElementById('video'));
-    player.addEventListener('error', (event) => {
-      console.error('Error code', event.detail.code, 'object', event.detail);
-    });
+    // Initialize Clappr Player
+    let playerInstance;
 
-    player.load(streamUrl).then(() => {
-      console.log('The video has been loaded!');
-    }).catch((error) => {
-      console.error('Error loading the video:', error);
-    });
+    function initializePlayer(url) {
+      if (playerInstance) {
+        playerInstance.destroy(); // Clean up the previous instance
+      }
 
-    const qualitySelect = document.getElementById('quality');
-    qualitySelect.addEventListener('change', () => {
+      playerInstance = new Clappr.Player({
+        source: url,
+        parentId: "#video-player",
+        autoPlay: true,
+        height: "100%",
+        width: "100%",
+        mute: false,
+        playback: {
+          playInline: true,
+          preload: "auto",
+        },
+        mediacontrol: {
+          seekbar: "#FFF",
+          buttons: "#FFF",
+        },
+      });
+    }
+
+    async function loadStream() {
+      try {
+        const streamUrl = constructURL(); // Combine fragments dynamically
+        initializePlayer(streamUrl);
+        console.log("The video has been loaded!");
+      } catch (error) {
+        console.error("Error loading the video:", error);
+      }
+    }
+
+    // Handle window load
+    window.onload = function () {
+      document.getElementById("popup").style.display = "flex";
+      loadStream();
+    };
+
+    // Handle quality selection
+    const qualitySelect = document.getElementById("quality");
+    qualitySelect.addEventListener("change", () => {
       const selectedQuality = qualitySelect.value;
 
-      if (selectedQuality === 'auto') {
-        player.configure({ abr: { enabled: true } });
-      } else {
-        player.configure({ abr: { enabled: false } });
+      const resolutionMap = {
+        auto: "/stream6_240p",
+        144: "/stream6_144p",
+        240: "/stream6_240p",
+        360: "/stream6_360p",
+        480: "/stream6_480p",
+        720: "/stream6_720p",
+        1080: "/stream6_1080p",
+      };
 
-        const tracks = player.getVariantTracks();
-        const resolutionMap = {
-          144: 144,
-          240: 240,
-          360: 360,
-          480: 480,
-          720: 720,
-          1080: 1080,
-        };
-
-        const chosenTrack = tracks.find(track => track.height === resolutionMap[selectedQuality]);
-        if (chosenTrack) player.selectVariantTrack(chosenTrack, true);
-      }
+      pathSegment2 = resolutionMap[selectedQuality] || "/stream6_240p";
+      loadStream(); // Reload the player with the selected quality
     });
 
-    window.onload = function() {
-      document.getElementById('popup').style.display = 'flex';
+    // Popup button handlers
+    document.getElementById("join-now").onclick = function () {
+      window.open("https://t.me/SportsLiveLink18", "_blank");
+      document.getElementById("popup").style.display = "none";
     };
 
-    document.getElementById('join-now').onclick = function() {
-      window.open('https://t.me/SportsLiveLink18', '_blank');
-      document.getElementById('popup').style.display = 'none';
-    };
-
-    document.getElementById('already-joined').onclick = function() {
-      document.getElementById('popup').style.display = 'none';
+    document.getElementById("already-joined").onclick = function () {
+      document.getElementById("popup").style.display = "none";
     };
   </script>
 </body>
