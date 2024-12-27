@@ -1,24 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Stream Player</title>
-    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niet EnterSports</title>
+  <link href="https://cdn.jsdelivr.net/npm/shaka-player@3.0.3/dist/controls.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      height: 100%;
+    }
+    .video-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+    .logo img {
+      width: 100px;
+      height: auto;
+    }
+    .quality-select {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 15;
+    }
+    .quality-select select {
+      background-color: #2c2c2c;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      display: none;
+      z-index: 20;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      text-align: center;
+    }
+    .popup-content {
+      background-color: #2c2c2c;
+      color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 500px;
+    }
+    .popup button {
+      background-color: #6a4e23;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Stream Any Video</h1>
-        <p>Enter a video URL and watch it here using a public proxy.</p>
-        <input type="text" id="videoLink" placeholder="Enter video URL">
-        <button id="playButton">Play Video</button>
-        <div id="player-container">
-            <video id="videoPlayer" class="video-js" controls preload="auto" width="640" height="360"></video>
-        </div>
-        <p class="note">Note: This site uses a public proxy for fetching videos. Restricted content might not work.</p>
+  <div class="video-container">
+    <video id="video" controls></video>
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/AkashGillNiet/TNT3/refs/heads/main/nes.png" alt="Logo">
     </div>
-    <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
-    <script src="script.js"></script>
+    <div class="quality-select">
+      <select id="quality">
+        <option value="auto">Auto</option>
+        <option value="144">144p</option>
+        <option value="240">240p</option>
+        <option value="360">360p</option>
+        <option value="480">480p</option>
+        <option value="720">720p</option>
+        <option value="1080">1080p</option>
+      </select>
+    </div>
+  </div>
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Join our Telegram Channel</h2>
+      <button id="join-now">Join Now</button>
+      <button id="already-joined">Already Joined</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.3/shaka-player.compiled.js"></script>
+  <script>
+    const streamUrl = "http://extraott.com:80/live/3969424152/3723991250/175793.m3u8";
+
+    const player = new shaka.Player(document.getElementById('video'));
+    player.addEventListener('error', (event) => {
+      console.error('Error code', event.detail.code, 'object', event.detail);
+    });
+
+    player.load(streamUrl).then(() => {
+      console.log('The video has been loaded!');
+    }).catch((error) => {
+      console.error('Error loading the video:', error);
+    });
+
+    const qualitySelect = document.getElementById('quality');
+    qualitySelect.addEventListener('change', () => {
+      const selectedQuality = qualitySelect.value;
+
+      if (selectedQuality === 'auto') {
+        player.configure({ abr: { enabled: true } });
+      } else {
+        player.configure({ abr: { enabled: false } });
+
+        const tracks = player.getVariantTracks();
+        const resolutionMap = {
+          144: 144,
+          240: 240,
+          360: 360,
+          480: 480,
+          720: 720,
+          1080: 1080,
+        };
+
+        const chosenTrack = tracks.find(track => track.height === resolutionMap[selectedQuality]);
+        if (chosenTrack) player.selectVariantTrack(chosenTrack, true);
+      }
+    });
+
+    window.onload = function() {
+      document.getElementById('popup').style.display = 'flex';
+    };
+
+    document.getElementById('join-now').onclick = function() {
+      window.open('https://t.me/SportsLiveLink18', '_blank');
+      document.getElementById('popup').style.display = 'none';
+    };
+
+    document.getElementById('already-joined').onclick = function() {
+      document.getElementById('popup').style.display = 'none';
+    };
+  </script>
 </body>
 </html>
