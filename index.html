@@ -13,6 +13,8 @@
     <!-- HLS.js for Jio TV -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.8/hls.min.js"></script>
     <!-- Shaka Player for Zee TV -->
+    <!-- Corrected order: Load core library first, then UI library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.ui.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/controls.min.css" crossorigin="anonymous" />
     <style>
@@ -113,6 +115,14 @@
             <button id="highlights-tab" class="tab-button bg-[#21262d] text-[#e0e6f0] font-medium py-3 px-6 rounded-full transition-all duration-300">Highlights</button>
         </div>
 
+        <!-- Channel Search Section -->
+        <div class="w-full max-w-5xl p-4 mb-6 rounded-xl bg-[#1a1e26] shadow-xl">
+            <div class="relative">
+                <input type="text" id="channel-search" placeholder="Search channels..." class="w-full p-3 pl-10 rounded-lg bg-[#21262d] text-[#c9d1d9] placeholder-[#8b949e] focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
+                <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-[#8b949e]"></i>
+            </div>
+        </div>
+
         <!-- Channel List -->
         <div id="channel-list" class="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
             <div id="loading-spinner" class="col-span-full text-center p-10 hidden">
@@ -137,9 +147,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const state = {
-                activeTab: 'jio-tv',
+                activeTab: 'jio-tab',
                 currentHls: null,
-                currentShakaPlayer: null
+                currentShakaPlayer: null,
+                channelsData: {} // To store fetched channel data
             };
 
             const elements = {
@@ -158,7 +169,8 @@
                 playerOverlay: document.getElementById('player-overlay'),
                 qualitySelectorContainer: document.getElementById('quality-selector-container'),
                 qualitySelector: document.getElementById('quality-selector'),
-                loadingSpinner: document.getElementById('loading-spinner')
+                loadingSpinner: document.getElementById('loading-spinner'),
+                channelSearch: document.getElementById('channel-search') // Added search input
             };
 
             // Using updated, working URLs
@@ -261,35 +273,35 @@
 
             const initZeePlayer = (mpdUrl, clearkey, title) => {
                 stopPlayer();
-                if (!shaka || !shaka.Player.isSupported()) {
-                    elements.streamTitle.textContent = "Error: Shaka Player is not supported on this browser.";
-                    return;
-                }
                 
                 elements.playerOverlay.classList.add('hidden');
                 
-                shaka.log.setLevel(shaka.log.Level.V1);
-                
-                const ui = elements.video['ui'];
-                const controls = ui.getControls();
-                state.currentShakaPlayer = controls.getPlayer();
+                try {
+                    // Create the player object. This is a more direct way to check for support.
+                    const player = new shaka.Player(elements.video);
+                    state.currentShakaPlayer = player;
+                    
+                    const config = {
+                        drm: {
+                            clearKeys: clearkey
+                        }
+                    };
+                    
+                    player.configure(config);
 
-                const config = {
-                    drm: {
-                        clearKeys: clearkey
-                    }
-                };
-                
-                state.currentShakaPlayer.configure(config);
-
-                state.currentShakaPlayer.load(mpdUrl).then(() => {
-                    elements.streamTitle.textContent = title;
-                    elements.qualitySelectorContainer.classList.add('hidden');
-                }).catch((error) => {
-                    console.error('Error while loading stream:', error);
-                    elements.streamTitle.textContent = `Error: Could not load stream. ${error.code} - ${error.message}`;
+                    player.load(mpdUrl).then(() => {
+                        elements.streamTitle.textContent = title;
+                        elements.qualitySelectorContainer.classList.add('hidden');
+                    }).catch((error) => {
+                        console.error('Error while loading stream:', error);
+                        elements.streamTitle.textContent = `Error: Could not load stream. ${error.code} - ${error.message}`;
+                        elements.playerOverlay.classList.remove('hidden');
+                    });
+                } catch (error) {
+                    console.error('Error initializing Shaka Player:', error);
+                    elements.streamTitle.textContent = `Error: Shaka Player is not supported on this browser.`;
                     elements.playerOverlay.classList.remove('hidden');
-                });
+                }
             };
 
             const createChannelCard = (name, logoUrl, clickHandler) => {
@@ -311,68 +323,82 @@
                 return card;
             };
 
-            // --- Tab Switching Logic ---
-            const switchTab = (tabName) => {
-                if (state.activeTab === tabName) return;
-                state.activeTab = tabName;
-
-                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-                document.getElementById(`${tabName}-tab`).classList.add('active');
+            const renderChannels = (channelsToRender, tabId) => {
                 elements.channelList.innerHTML = '';
-                stopPlayer();
-                loadChannels(tabName);
+                if (channelsToRender.length === 0) {
+                    elements.channelList.innerHTML = `<p class="col-span-full text-center text-lg text-[#8b949e]">No channels found.</p>`;
+                    return;
+                }
+
+                channelsToRender.forEach(channel => {
+                    const card = createChannelCard(
+                        channel.name, 
+                        channel.logo, 
+                        () => {
+                            if (tabId === 'jio-tab' || tabId === 'pirate-tab' || tabId === 'highlights-tab') {
+                                initJioPlayer(channel.url, channel.name);
+                            } else if (tabId === 'zee-tab') {
+                                const clearKeyObject = {};
+                                if (channel.clearkey) {
+                                    clearKeyObject[channel.clearkey.keyId] = channel.clearkey.key;
+                                }
+                                initZeePlayer(channel.mpd, clearKeyObject, channel.name);
+                            }
+                        }
+                    );
+                    elements.channelList.appendChild(card);
+                });
             };
 
-            const loadChannels = async (tabName) => {
+            // --- Tab Switching Logic ---
+            const switchTab = (tabId) => {
+                if (state.activeTab === tabId) return;
+                state.activeTab = tabId;
+
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.getElementById(tabId).classList.add('active');
+                elements.channelSearch.value = ''; // Clear search on tab switch
+                elements.channelList.innerHTML = '';
+                stopPlayer();
+                loadChannels(tabId);
+            };
+
+            const loadChannels = async (tabId) => {
                 elements.loadingSpinner.classList.remove('hidden');
                 try {
                     let channels = [];
-                    switch (tabName) {
-                        case 'jio-tv':
-                            const jioResponse = await fetch(jioTvDataUrl);
-                            const jioData = await jioResponse.text();
-                            channels = parseM3uData(jioData);
-                            break;
-                        case 'zee-tv':
-                            const zeeResponse = await fetch(zeeTvDataUrl);
-                            const zeeData = await zeeResponse.json();
-                            channels = zeeData.channels;
-                            break;
-                        case 'pirate-tv':
-                            channels = [{
-                                name: 'Public Domain',
-                                logo: 'https://placehold.co/150x150/21262d/c9d1d9?text=Public',
-                                url: 'https://cdn-1.vidsrc.me/hls/rJ98LpP7/playlist.m3u8'
-                            }];
-                            break;
-                        case 'highlights':
-                            channels = [{
-                                name: 'Big Buck Bunny',
-                                logo: 'https://placehold.co/150x150/21262d/c9d1d9?text=Movie',
-                                url: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8'
-                            }];
-                            break;
+                    if (!state.channelsData[tabId]) { // Fetch only if not cached
+                        switch (tabId) {
+                            case 'jio-tab':
+                                const jioResponse = await fetch(jioTvDataUrl);
+                                const jioData = await jioResponse.text();
+                                channels = parseM3uData(jioData);
+                                break;
+                            case 'zee-tab':
+                                const zeeResponse = await fetch(zeeTvDataUrl);
+                                const zeeData = await zeeResponse.json();
+                                channels = zeeData.channels;
+                                break;
+                            case 'pirate-tab':
+                                channels = [{
+                                    name: 'Public Domain',
+                                    logo: 'https://placehold.co/150x150/21262d/c9d1d9?text=Public',
+                                    url: 'https://cdn-1.vidsrc.me/hls/rJ98LpP7/playlist.m3u8'
+                                }];
+                                break;
+                            case 'highlights-tab':
+                                channels = [{
+                                    name: 'Big Buck Bunny',
+                                    logo: 'https://placehold.co/150x150/21262d/c9d1d9?text=Movie',
+                                    url: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8'
+                                }];
+                                break;
+                        }
+                        state.channelsData[tabId] = channels; // Cache the data
                     }
+                    
+                    renderChannels(state.channelsData[tabId], tabId);
 
-                    elements.channelList.innerHTML = '';
-                    channels.forEach(channel => {
-                        const card = createChannelCard(
-                            channel.name, 
-                            channel.logo, 
-                            () => {
-                                if (tabName === 'jio-tv' || tabName === 'pirate-tv' || tabName === 'highlights') {
-                                    initJioPlayer(channel.url, channel.name);
-                                } else if (tabName === 'zee-tv') {
-                                    const clearKeyObject = {};
-                                    if (channel.clearkey) {
-                                        clearKeyObject[channel.clearkey.keyId] = channel.clearkey.key;
-                                    }
-                                    initZeePlayer(channel.mpd, clearKeyObject, channel.name);
-                                }
-                            }
-                        );
-                        elements.channelList.appendChild(card);
-                    });
                 } catch (error) {
                     console.error("Error loading channels:", error);
                     elements.streamTitle.textContent = "Error: Failed to load channels. Please check the network.";
@@ -402,29 +428,26 @@
                 });
                 return channels;
             };
+            
+            // --- Search Functionality ---
+            elements.channelSearch.addEventListener('keyup', () => {
+                const query = elements.channelSearch.value.toLowerCase();
+                const allChannels = state.channelsData[state.activeTab] || [];
+                const filteredChannels = allChannels.filter(channel => 
+                    channel.name.toLowerCase().includes(query)
+                );
+                renderChannels(filteredChannels, state.activeTab);
+            });
+
 
             // --- Event Listeners for tabs ---
-            elements.jioTab.addEventListener('click', () => switchTab('jio-tv'));
-            elements.zeeTab.addEventListener('click', () => switchTab('zee-tv'));
-            elements.pirateTab.addEventListener('click', () => switchTab('pirate-tv'));
-            elements.highlightsTab.addEventListener('click', () => switchTab('highlights'));
+            elements.jioTab.addEventListener('click', () => switchTab('jio-tab'));
+            elements.zeeTab.addEventListener('click', () => switchTab('zee-tab'));
+            elements.pirateTab.addEventListener('click', () => switchTab('pirate-tab'));
+            elements.highlightsTab.addEventListener('click', () => switchTab('highlights-tab'));
 
             // Initial load
-            loadChannels('jio-tv');
-            
-            // Shaka Player UI initialization
-            const initShakaUI = () => {
-              if (shaka && shaka.ui) {
-                const videoElement = document.getElementById('video');
-                const ui = videoElement['ui'];
-                if (ui) ui.destroy();
-                shaka.ui.Controls.create(
-                    new shaka.Player(videoElement),
-                    videoElement
-                );
-              }
-            };
-            initShakaUI();
+            loadChannels('jio-tab');
         });
     </script>
 </body>
