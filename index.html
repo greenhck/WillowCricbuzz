@@ -1,631 +1,431 @@
 <!DOCTYPE html>
-<html lang="en" class="dark"> <!-- Default to dark theme -->
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer" />
-    <meta name="description" content="Peregrine - Your go-to platform for live sports streaming, upcoming matches, and highlights.">
-    <title>Peregrine - Professional Sports Streaming</title>
-    <!-- Tailwind CSS CDN -->
+    <title>PEREGRINE LIVE</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- HLS.js CDN for HLS streams (e.g., Jio TV) -->
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <!-- Shaka Player JS for DASH streams (e.g., Zee Network) -->
+    <!-- Poppins Font (More Professional) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- HLS.js for Jio TV -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.8/hls.min.js"></script>
+    <!-- Shaka Player for Zee TV -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.ui.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/controls.min.css" crossorigin="anonymous"/>
-    <!-- Lucide Icons CDN for icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/controls.min.css" crossorigin="anonymous" />
     <style>
-        /* Custom styles and overrides */
         body {
-            font-family: 'Inter', sans-serif;
-            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300;
-            margin: 0;
-            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.4s, color 0.4s;
         }
-        main {
-            padding-top: 2rem;
-            padding-left: 0;
-            padding-right: 0;
+        .dark-theme {
+            background-color: #0c0d12;
+            color: #e0e6f0;
         }
-        .container {
-            width: 100vw;
-            max-width: none;
-            margin-left: 0;
-            margin-right: 0;
+        .light-theme {
+            background-color: #f0f2f5;
+            color: #1a202c;
+        }
+        /* Gradient for professional look */
+        .header-bg {
+            background-image: linear-gradient(to right, #1a273a, #131b28);
+            color: #fff;
+        }
+        .light-theme .header-bg {
+            background-image: linear-gradient(to right, #6b88c4, #4a639d);
+            color: #fff;
+        }
+        .tab-button {
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
         }
         .tab-button.active {
-            @apply border-b-2 border-indigo-500 text-indigo-500 font-semibold;
+            background-color: #3b82f6 !important;
+            color: white !important;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
         }
-        .quality-option {
-            padding: 8px 12px;
-            cursor: pointer;
-            @apply hover:bg-gray-700 dark:hover:bg-gray-600 rounded-md;
+        .dark-theme .channel-card {
+            background-color: #1a1e26;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
         }
-        .shaka-video-container {
-            width: 100%;
-            height: 100%;
+        .dark-theme .channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            background-color: #21262d;
         }
-        .shaka-video-container .shaka-video {
-            width: 100%;
-            height: 100%;
+        .light-theme .channel-card {
+            background-color: #ffffff;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        }
+        .light-theme .channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            background-color: #f7f9fd;
+        }
+        .quality-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.5rem center;
+            background-size: 1.5em;
         }
     </style>
 </head>
-<body>
-    <!-- Header - Now scrolls with the page -->
-    <header class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md py-4 flex justify-between items-center transition-colors duration-300">
-        <div class="flex items-center space-x-4 pl-4">
-            <a href="#" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Peregrine</a>
-            <nav class="hidden md:flex space-x-6 text-gray-600 dark:text-gray-300">
-                <a href="#" class="hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-200">Home</a>
-                <a href="#" class="hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-200">Sports</a>
-                <a href="#" class="hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-200">About</a>
-            </nav>
-        </div>
-        <div class="flex items-center space-x-4 pr-4">
-            <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                <i data-lucide="sun" class="w-5 h-5 text-gray-700 dark:text-gray-300 dark:hidden"></i>
-                <i data-lucide="moon" class="w-5 h-5 text-gray-700 dark:text-gray-300 hidden dark:inline-block"></i>
-            </button>
-        </div>
-    </header>
 
-    <!-- Main Content Area -->
-    <main class="container mx-auto px-0 py-8">
+<body class="dark-theme">
+    <div class="min-h-screen p-4 flex flex-col items-center">
+
+        <!-- Header -->
+        <header class="w-full max-w-5xl p-6 mb-8 flex flex-col md:flex-row items-center justify-between rounded-2xl shadow-xl header-bg">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-wider mb-4 md:mb-0 text-white">PEREGRINE LIVE</h1>
+            <div class="flex space-x-4">
+                <button id="theme-toggle" class="bg-gray-700 text-white font-medium py-2 px-5 rounded-full hover:bg-gray-600 transition-colors shadow-lg">
+                    <i class="fas fa-moon"></i> Theme
+                </button>
+                <button id="about-button" class="bg-gray-700 text-white font-medium py-2 px-5 rounded-full hover:bg-gray-600 transition-colors shadow-lg">
+                    <i class="fas fa-info-circle"></i> About
+                </button>
+            </div>
+        </header>
+
         <!-- Video Player Section -->
-        <section id="player-section" class="bg-gray-800 rounded-lg shadow-xl overflow-hidden mb-8 hidden p-4">
-            <div class="relative w-full aspect-video bg-black flex items-center justify-center" data-shaka-player-container shaka-controls>
-                <video id="video-player" autoplay controls preload="auto" class="w-full h-full object-cover shaka-video">
-                    Your browser does not support the video tag.
-                </video>
-                <div id="player-overlay" class="absolute inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center text-white text-lg font-medium hidden">
-                    <p id="player-message">Loading stream...</p>
-                    <button id="retry-stream" class="mt-4 px-6 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors duration-200 hidden">
-                        Retry
-                    </button>
-                </div>
+        <main class="w-full max-w-5xl mb-8 bg-[#1a1e26] rounded-2xl shadow-2xl p-4 md:p-6">
+            <div id="video-container" class="shaka-video-container relative aspect-video w-full rounded-xl overflow-hidden shadow-inner-lg">
+                <video id="video" class="w-full h-full object-cover" poster="https://placehold.co/1280x720/1a202c/6b7280?text=Select+a+channel+to+stream" controls autoplay></video>
+                <div id="player-overlay" class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-white text-xl font-bold transition-opacity duration-300">Select a channel to start streaming.</div>
             </div>
-            <!-- Quality button moved to the left and placed next to the title -->
-            <div class="p-4 bg-gray-900 flex justify-start items-center flex-wrap gap-4">
-                <div class="relative">
-                    <button id="quality-select-button" class="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 flex items-center gap-2">
-                        <i data-lucide="settings" class="w-5 h-5"></i>
-                        Quality
-                    </button>
-                    <div id="quality-options" class="absolute left-0 mt-2 w-36 bg-gray-800 rounded-lg shadow-lg py-2 hidden z-10">
-                        <!-- Quality options will be dynamically inserted here -->
-                    </div>
-                </div>
-                <h2 id="current-stream-title" class="text-xl font-semibold text-white">Select a channel to watch</h2>
-            </div>
-        </section>
+            <p id="stream-title" class="text-center text-lg md:text-xl font-semibold mt-4 text-[#8b949e]"></p>
+        </main>
 
-        <!-- Channel Browsing Section -->
-        <section class="bg-white dark:bg-gray-900 rounded-lg shadow-xl p-6">
-            <!-- Tabs -->
-            <div class="flex border-b border-gray-200 dark:border-gray-700 mb-6">
-                <button data-tab="jiotv" class="tab-button active flex-1 py-3 px-4 text-center text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all duration-200 rounded-tl-lg flex items-center justify-center gap-2">
-                    <i data-lucide="tv" class="w-5 h-5"></i> Jio TV
-                </button>
-                <button data-tab="zee" class="tab-button flex-1 py-3 px-4 text-center text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all duration-200 flex items-center justify-center gap-2">
-                    <i data-lucide="wifi" class="w-5 h-5"></i> Zee Network
-                </button>
-                <button data-tab="highlights" class="tab-button flex-1 py-3 px-4 text-center text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all duration-200 rounded-tr-lg flex items-center justify-center gap-2">
-                    <i data-lucide="star" class="w-5 h-5"></i> Highlights
-                </button>
-            </div>
+        <!-- Quality Selector (Initially hidden) -->
+        <div id="quality-selector-container" class="w-full max-w-2xl p-3 rounded-xl mb-6 bg-[#1a1e26] shadow-xl hidden">
+            <label for="quality-selector" class="block text-sm font-medium text-[#8b949e] mb-2">Select Quality:</label>
+            <select id="quality-selector" class="w-full p-3 rounded-lg bg-[#21262d] text-[#c9d1d9] quality-select focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </select>
+        </div>
 
-            <!-- Search Bar -->
-            <div class="mb-6 relative mx-auto max-w-lg">
-                <input type="text" id="search-input" placeholder="Search channels..."
-                       class="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200">
-                <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500"></i>
-            </div>
+        <!-- Tabs Section -->
+        <div class="w-full max-w-5xl mb-8 flex flex-wrap justify-center space-x-2 md:space-x-4 p-2 rounded-xl bg-[#1a1e26] shadow-inner">
+            <button id="jio-tab" class="tab-button bg-[#21262d] text-[#e0e6f0] font-medium py-3 px-6 rounded-full transition-all duration-300 active">Jio TV</button>
+            <button id="zee-tab" class="tab-button bg-[#21262d] text-[#e0e6f0] font-medium py-3 px-6 rounded-full transition-all duration-300">Zee TV</button>
+            <button id="pirate-tab" class="tab-button bg-[#21262d] text-[#e0e6f0] font-medium py-3 px-6 rounded-full transition-all duration-300">Pirate TV</button>
+            <button id="highlights-tab" class="tab-button bg-[#21262d] text-[#e0e6f0] font-medium py-3 px-6 rounded-full transition-all duration-300">Highlights</button>
+        </div>
 
-            <!-- Channel Grid -->
-            <div id="channel-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                <!-- Channel cards will be dynamically inserted here -->
+        <!-- Channel List -->
+        <div id="channel-list" class="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+            <div id="loading-spinner" class="col-span-full text-center p-10 hidden">
+                <i class="fas fa-spinner fa-spin fa-3x text-blue-500"></i>
+                <p class="mt-4 text-xl font-medium">Loading channels...</p>
             </div>
-            <div id="no-channels-message" class="text-center text-gray-500 dark:text-gray-400 text-lg mt-8 hidden">
-                No channels found for this category or search.
-            </div>
-        </section>
-    </main>
+            <!-- Channel cards will be populated here by JavaScript -->
+        </div>
 
-    <!-- Telegram Popup -->
-    <div id="telegram-popup" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-[100] hidden">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8 max-w-sm w-full relative transform transition-all duration-300 scale-95 opacity-0" id="telegram-popup-content">
-            <button id="close-popup" class="absolute top-4 right-4 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-200">
-                <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
-            <div class="text-center">
-                <img src="https://placehold.co/100x100/60A5FA/FFFFFF?text=TG" alt="Telegram Icon" class="mx-auto mb-6 rounded-full w-20 h-20">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Join Our Telegram Channel!</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">
-                    Don't miss out on the latest updates and exclusive links.
-                    Join our community now!
-                </p>
-                <a href="https://t.me/sportslivelink18" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105">
-                    <i data-lucide="send" class="w-5 h-5 mr-2"></i> Join @sportslivelink18
-                </a>
+        <!-- About Modal (Hidden by default) -->
+        <div id="about-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden p-4">
+            <div class="modal-content bg-[#1a1e26] p-8 rounded-2xl shadow-2xl w-full max-w-xl relative">
+                <button id="close-modal-button" class="absolute top-4 right-4 text-3xl font-bold text-[#c9d1d9] hover:text-[#58a6ff] transition-colors">&times;</button>
+                <h2 class="text-3xl font-bold mb-4 text-white">About PEREGRINE LIVE</h2>
+                <p class="text-gray-400">यह एक सिंपल लाइव स्ट्रीमिंग वेबसाइट है। इसका मुख्य उद्देश्य HLS (Jio TV) और DASH (Zee TV) दोनों प्रकार की स्ट्रीम को एक ही जगह पर चलाना है।</p>
+                <p class="text-gray-400 mt-4"><b>Disclaimer:</b> यह वेबसाइट सिर्फ educational और demonstration purposes के लिए बनाई गई है। इसमें दी गई सभी स्ट्रीम्स पब्लिक डोमेन में उपलब्ध हैं। किसी भी copyright infringement के लिए developer जिम्मेदार नहीं है।</p>
             </div>
         </div>
+
     </div>
 
     <script>
-        // Lucide आइकन्स को इनिशियलाइज़ करें
-        // Initialize Lucide icons
-        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            const state = {
+                activeTab: 'jio-tv',
+                currentHls: null,
+                currentShakaPlayer: null
+            };
 
-        // --- थीम टॉगल ---
-        // --- Theme Toggle ---
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const htmlElement = document.documentElement;
+            const elements = {
+                body: document.body,
+                themeToggle: document.getElementById('theme-toggle'),
+                aboutButton: document.getElementById('about-button'),
+                aboutModal: document.getElementById('about-modal'),
+                closeModalButton: document.getElementById('close-modal-button'),
+                video: document.getElementById('video'),
+                streamTitle: document.getElementById('stream-title'),
+                jioTab: document.getElementById('jio-tab'),
+                zeeTab: document.getElementById('zee-tab'),
+                pirateTab: document.getElementById('pirate-tab'),
+                highlightsTab: document.getElementById('highlights-tab'),
+                channelList: document.getElementById('channel-list'),
+                playerOverlay: document.getElementById('player-overlay'),
+                qualitySelectorContainer: document.getElementById('quality-selector-container'),
+                qualitySelector: document.getElementById('quality-selector'),
+                loadingSpinner: document.getElementById('loading-spinner')
+            };
 
-        function applyTheme(theme) {
-            if (theme === 'dark') {
-                htmlElement.classList.add('dark');
-            } else {
-                htmlElement.classList.remove('dark');
-            }
-            localStorage.setItem('theme', theme);
-            lucide.createIcons();
-        }
-
-        const storedTheme = localStorage.getItem('theme');
-        if (storedTheme) {
-            applyTheme(storedTheme);
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            applyTheme('dark');
-        } else {
-            applyTheme('light');
-        }
-
-        themeToggleBtn.addEventListener('click', () => {
-            const isDark = htmlElement.classList.contains('dark');
-            applyTheme(isDark ? 'light' : 'dark');
-        });
-
-        // --- डायनेमिक चैनल डेटा लाना ---
-        // --- Dynamic Channel Data Fetching ---
-        const JIO_TV_URL = 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/jd.m3u';
-        const ZEE_NETWORK_URL = 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/zee.json';
-        const JIO_TV_LOGO = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Jio_Platforms_logo.svg/800px-Jio_Platforms_logo.svg.png';
-
-        const HIGHLIGHTS = [
-            { id: '1', name: 'Cricket Highlights', logo: 'https://placehold.co/100x100/FB923C/FFFFFF?text=CHC', hls: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8', status: 'highlight' },
-            { id: '2', name: 'Football Classics', logo: 'https://placehold.co/100x100/34D399/FFFFFF?text=FCC', hls: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', status: 'highlight' },
-            { id: '3', name: 'UFC Fights', logo: 'https://placehold.co/100x100/EC4899/FFFFFF?text=UFC', hls: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8', status: 'highlight' },
-            { id: '4', name: 'Volleyball Pro', logo: 'https://placehold.co/100x100/FBBF24/FFFFFF?text=VBL', hls: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', status: 'highlight' },
-        ];
-
-        let jioChannels = [];
-        let zeeChannels = [];
-
-        async function fetchChannelData() {
-            const fetchPromises = [];
-
-            // JioTV M3U फ़ाइल से डेटा लाएं
-            // Fetch data from JioTV M3U file
-            fetchPromises.push(fetch(JIO_TV_URL)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`JioTV HTTP error! status: ${response.status}`);
-                    }
-                    return response.text();
-                })
-                .then(text => {
-                    const lines = text.split('\n');
-                    let currentChannel = {};
-                    lines.forEach(line => {
-                        if (line.startsWith('#EXTINF:')) {
-                            const nameMatch = line.match(/tvg-name="([^"]+)"/);
-                            const name = nameMatch ? nameMatch[1] : line.split(',')[1].trim();
-                            currentChannel = { name, hls: '', status: 'live', logo: JIO_TV_LOGO };
-                        } else if (line.startsWith('http') && currentChannel.name) {
-                            currentChannel.hls = line.trim();
-                            currentChannel.id = btoa(currentChannel.name + currentChannel.hls); // Unique ID
-                            jioChannels.push(currentChannel);
-                            currentChannel = {};
-                        }
-                    });
-                })
-                .catch(error => console.error("Could not fetch JioTV data:", error)));
-
-            // Zee Network JSON फ़ाइल से डेटा लाएं
-            // Fetch data from Zee Network JSON file
-            fetchPromises.push(fetch(ZEE_NETWORK_URL)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Zee Network HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data && Array.isArray(data.channels)) {
-                        data.channels.forEach(item => {
-                            if (item.name && item.mpd) {
-                                zeeChannels.push({
-                                    id: btoa(item.name + item.mpd),
-                                    name: item.name,
-                                    mpd: item.mpd,
-                                    clearkey: item.clearkey,
-                                    status: 'live',
-                                    logo: item.logo
-                                });
-                            }
-                        });
-                    }
-                })
-                .catch(error => console.error("Could not fetch Zee Network data:", error)));
-
-            await Promise.allSettled(fetchPromises);
-            filterChannels();
-        }
-
-        fetchChannelData();
-
-        // --- DOM एलिमेंट्स ---
-        // --- DOM Elements ---
-        const channelGrid = document.getElementById('channel-grid');
-        const searchInput = document.getElementById('search-input');
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const noChannelsMessage = document.getElementById('no-channels-message');
-        const videoPlayer = document.getElementById('video-player');
-        const playerSection = document.getElementById('player-section');
-        const currentStreamTitle = document.getElementById('current-stream-title');
-        const qualitySelectButton = document.getElementById('quality-select-button');
-        const qualityOptionsDiv = document.getElementById('quality-options');
-        const playerOverlay = document.getElementById('player-overlay');
-        const playerMessage = document.getElementById('player-message');
-        const retryStreamButton = document.getElementById('retry-stream');
-
-        let currentTab = 'jiotv';
-        let hlsInstance = null;
-        let shakaPlayerInstance = null;
-        let currentStreamUrl = null;
-        let currentDrmConfig = null;
-
-        // --- चैनल रेंडर करने का फ़ंक्शन ---
-        // --- Render Channels Function ---
-        function renderChannels(channelsToRender) {
-            channelGrid.innerHTML = '';
-            if (channelsToRender.length === 0) {
-                noChannelsMessage.classList.remove('hidden');
-                return;
-            }
-            noChannelsMessage.classList.add('hidden');
-
-            channelsToRender.forEach(channel => {
-                const channelCard = document.createElement('div');
-                channelCard.className = `bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden
-                                         ${channel.status === 'live' ? 'border-2 border-green-500' : ''}`;
-
-                let statusBadge = '';
-                let statusColor = '';
-                if (channel.status === 'live') {
-                    statusBadge = 'Live';
-                    statusColor = 'bg-red-500';
-                } else if (channel.status === 'upcoming') {
-                    statusBadge = 'Upcoming';
-                    statusColor = 'bg-blue-500';
-                } else if (channel.status === 'highlight') {
-                    statusBadge = 'Highlight';
-                    statusColor = 'bg-purple-500';
-                }
-
-                const logoSrc = channel.logo || 'https://placehold.co/100x100/3B82F6/FFFFFF?text=IMG';
-
-                channelCard.innerHTML = `
-                    <div class="relative">
-                        <img src="${logoSrc}" alt="${channel.name} Logo" class="w-full h-32 object-cover">
-                        <span class="absolute top-2 right-2 px-3 py-1 text-xs font-semibold text-white rounded-full ${statusColor}">
-                            ${statusBadge}
-                        </span>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white truncate">${channel.name}</h3>
-                    </div>
-                `;
-                channelCard.addEventListener('click', () => playChannel(channel));
-                channelGrid.appendChild(channelCard);
-            });
-            lucide.createIcons();
-        }
-
-        // --- चैनल फ़िल्टर करने का फ़ंक्शन ---
-        // --- Filter Channels Function ---
-        function filterChannels() {
-            const searchTerm = searchInput.value.toLowerCase();
-            let channelsToFilter = [];
-            if (currentTab === 'jiotv') {
-                channelsToFilter = jioChannels;
-            } else if (currentTab === 'zee') {
-                channelsToFilter = zeeChannels;
-            } else if (currentTab === 'highlights') {
-                channelsToFilter = HIGHLIGHTS;
-            }
-
-            const filtered = channelsToFilter.filter(channel =>
-                channel.name.toLowerCase().includes(searchTerm)
-            );
-            renderChannels(filtered);
-        }
-
-        // --- टैब बदलने का लॉजिक ---
-        // --- Tab Switching Logic ---
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                currentTab = button.dataset.tab;
-                filterChannels();
-            });
-        });
-
-        searchInput.addEventListener('input', filterChannels);
-
-        // --- प्लेयर मैनेजमेंट ---
-        // --- Player Management ---
-        function destroyCurrentPlayer() {
-            // पुराने प्लेयर (HLS या Shaka) को पूरी तरह से डिस्ट्रॉय करें
-            if (hlsInstance) {
-                hlsInstance.destroy();
-                hlsInstance = null;
-            }
-
-            // अगर Shaka Player का इंस्टेंस मौजूद है, तो उसे और उसके UI को पूरी तरह से हटा दें
-            if (shakaPlayerInstance) {
-                shakaPlayerInstance.destroy();
-                shakaPlayerInstance = null;
-            }
+            // Using updated, working URLs
+            const jioTvDataUrl = 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/jd.m3u';
+            const zeeTvDataUrl = 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/zee.json';
             
-            // DOM से Shaka Player के UI कंटेनर को हटा दें ताकि यह ओवरलैप न हो
-            const shakaUiRoot = videoPlayer.parentElement.querySelector('.shaka-controls-container');
-            if (shakaUiRoot) {
-                shakaUiRoot.remove();
-            }
+            // --- Theme Change Logic ---
+            const currentTheme = localStorage.getItem('theme') || 'dark-theme';
+            elements.body.className = currentTheme;
 
-            // वीडियो एलिमेंट की स्थिति को रीसेट करें
-            videoPlayer.removeAttribute('src');
-            videoPlayer.load();
-
-            // सभी UI तत्वों को छिपा दें
-            qualityOptionsDiv.innerHTML = '';
-            qualitySelectButton.classList.add('hidden');
-            playerOverlay.classList.add('hidden');
-            playerMessage.textContent = '';
-            retryStreamButton.classList.add('hidden');
-        }
-
-        function setupHlsPlayer(url) {
-            destroyCurrentPlayer();
-            currentStreamUrl = url;
-            currentDrmConfig = null; // DRM कॉन्फ़िगरेशन को साफ़ करें
-            playerSection.classList.remove('hidden');
-            playerOverlay.classList.remove('hidden');
-            playerMessage.textContent = 'Loading stream...';
-
-            if (Hls.isSupported()) {
-                hlsInstance = new Hls();
-                hlsInstance.loadSource(url);
-                hlsInstance.attachMedia(videoPlayer);
-
-                hlsInstance.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
-                    const levels = data.levels;
-                    qualityOptionsDiv.innerHTML = '';
-                    qualitySelectButton.classList.remove('hidden');
-
-                    const autoOption = document.createElement('div');
-                    autoOption.className = 'quality-option text-white';
-                    autoOption.textContent = 'Auto';
-                    autoOption.addEventListener('click', () => {
-                        hlsInstance.currentLevel = -1;
-                        qualitySelectButton.click();
-                    });
-                    qualityOptionsDiv.appendChild(autoOption);
-
-                    levels.forEach((level, index) => {
-                        if (level.height) {
-                            const option = document.createElement('div');
-                            option.className = 'quality-option text-white';
-                            option.textContent = `${level.height}p`;
-                            option.addEventListener('click', () => {
-                                hlsInstance.currentLevel = index;
-                                qualitySelectButton.click();
-                            });
-                            qualityOptionsDiv.appendChild(option);
-                        }
-                    });
-
-                    playerOverlay.classList.add('hidden');
-                    videoPlayer.play().catch(error => {
-                        console.warn('Autoplay prevented:', error);
-                        playerOverlay.classList.remove('hidden');
-                        playerMessage.textContent = 'Autoplay prevented. Please click to play.';
-                    });
-                });
-
-                hlsInstance.on(Hls.Events.ERROR, function (event, data) {
-                    if (data.fatal) {
-                        playerOverlay.classList.remove('hidden');
-                        playerMessage.textContent = `Stream error: ${data.details}. Try another quality or retry.`;
-                        retryStreamButton.classList.remove('hidden');
-                        destroyCurrentPlayer();
-                    }
-                });
-            } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
-                videoPlayer.src = url;
-                playerOverlay.classList.add('hidden');
-                videoPlayer.play().catch(error => {
-                    console.warn('Autoplay prevented (native):', error);
-                    playerOverlay.classList.remove('hidden');
-                    playerMessage.textContent = 'Autoplay prevented. Please click to play.';
-                });
-                qualitySelectButton.classList.add('hidden');
-            } else {
-                playerOverlay.classList.remove('hidden');
-                playerMessage.textContent = 'Your browser does not support HLS streaming.';
-            }
-        }
-
-        function setupShakaPlayer(url, drmConfig) {
-            destroyCurrentPlayer();
-            currentStreamUrl = url;
-            currentDrmConfig = drmConfig;
-            playerSection.classList.remove('hidden');
-            playerOverlay.classList.remove('hidden');
-            playerMessage.textContent = 'Loading stream...';
-
-            // Wait for shaka UI to load, then initialize player
-            document.addEventListener('shaka-ui-loaded', () => {
-                if (shakaPlayerInstance) return; // Prevent re-initialization
-
-                if (shaka.Player.isBrowserSupported()) {
-                    const video = document.getElementById('video-player');
-                    const ui = video.parentElement;
-                    const controls = ui.getControls();
-                    shakaPlayerInstance = controls.getPlayer();
-
-                    if (drmConfig && Object.keys(drmConfig).length > 0) {
-                        shakaPlayerInstance.configure({
-                            drm: {
-                                "clearKeys": drmConfig
-                            }
-                        });
-                    }
-                    
-                    shakaPlayerInstance.addEventListener('error', (event) => {
-                        console.error('Shaka Player error', event.detail);
-                        playerOverlay.classList.remove('hidden');
-                        playerMessage.textContent = `Stream error. Please retry.`;
-                        retryStreamButton.classList.remove('hidden');
-                    });
-
-                    shakaPlayerInstance.load(url).then(() => {
-                        console.log('Shaka player loaded successfully');
-                        playerOverlay.classList.add('hidden');
-                    }).catch(error => {
-                        console.error('Shaka Player load error:', error);
-                        playerOverlay.classList.remove('hidden');
-                        playerMessage.textContent = `Failed to load stream. Error: ${error.code}`;
-                        retryStreamButton.classList.remove('hidden');
-                    });
-
-                    shakaPlayerInstance.addEventListener('trackschanged', () => {
-                        const videoTracks = shakaPlayerInstance.getVariantTracks().filter(t => t.type === 'video');
-                        qualityOptionsDiv.innerHTML = '';
-                        qualitySelectButton.classList.remove('hidden');
-
-                        const autoOption = document.createElement('div');
-                        autoOption.className = 'quality-option text-white';
-                        autoOption.textContent = 'Auto';
-                        autoOption.addEventListener('click', () => {
-                            shakaPlayerInstance.selectVariantTrack(videoTracks.find(t => t.id === 'auto'));
-                            qualitySelectButton.click();
-                        });
-                        qualityOptionsDiv.appendChild(autoOption);
-
-                        videoTracks.forEach(track => {
-                            const option = document.createElement('div');
-                            option.className = 'quality-option text-white';
-                            option.textContent = `${track.height}p`;
-                            option.addEventListener('click', () => {
-                                shakaPlayerInstance.selectVariantTrack(track);
-                                qualitySelectButton.click();
-                            });
-                            qualityOptionsDiv.appendChild(option);
-                        });
-                    });
-
+            elements.themeToggle.addEventListener('click', () => {
+                const newTheme = elements.body.classList.contains('dark-theme') ? 'light-theme' : 'dark-theme';
+                elements.body.className = newTheme;
+                localStorage.setItem('theme', newTheme);
+                // Update icon
+                if (newTheme === 'dark-theme') {
+                    elements.themeToggle.innerHTML = '<i class="fas fa-moon"></i> Theme';
                 } else {
-                    playerOverlay.classList.remove('hidden');
-                    playerMessage.textContent = 'Your browser does not support Shaka Player.';
+                    elements.themeToggle.innerHTML = '<i class="fas fa-sun"></i> Theme';
                 }
             });
-        }
 
-        function playChannel(channel) {
-            currentStreamTitle.textContent = `Now Playing: ${channel.name}`;
-            playerSection.scrollIntoView({ behavior: 'smooth' });
-            
-            destroyCurrentPlayer();
-
-            if (channel.mpd) { // MPD स्ट्रीम के लिए Shaka Player का उपयोग करें
-                setupShakaPlayer(channel.mpd, channel.clearkey);
-            } else if (channel.hls) { // HLS स्ट्रीम के लिए HLS.js का उपयोग करें
-                setupHlsPlayer(channel.hls);
-            } else {
-                playerOverlay.classList.remove('hidden');
-                playerMessage.textContent = 'Stream URL not available for this channel.';
+            // Set initial icon
+            if (currentTheme === 'light-theme') {
+                elements.themeToggle.innerHTML = '<i class="fas fa-sun"></i> Theme';
             }
-        }
 
-        // क्वालिटी ऑप्शन ड्रॉपडाउन को टॉगल करें
-        // Toggle quality options dropdown
-        qualitySelectButton.addEventListener('click', (event) => {
-            qualityOptionsDiv.classList.toggle('hidden');
-            event.stopPropagation();
-        });
+            // --- About Modal Logic ---
+            elements.aboutButton.addEventListener('click', () => {
+                elements.aboutModal.classList.remove('hidden');
+            });
+            elements.closeModalButton.addEventListener('click', () => {
+                elements.aboutModal.classList.add('hidden');
+            });
 
-        // बाहर क्लिक करने पर क्वालिटी ऑप्शन को बंद करें
-        // Close quality options if clicked outside
-        document.addEventListener('click', (event) => {
-            if (!qualitySelectButton.contains(event.target) && !qualityOptionsDiv.contains(event.target)) {
-                qualityOptionsDiv.classList.add('hidden');
-            }
-        });
-
-        retryStreamButton.addEventListener('click', () => {
-            if (currentStreamUrl) {
-                if (currentDrmConfig) {
-                    setupShakaPlayer(currentStreamUrl, currentDrmConfig);
-                } else {
-                    setupHlsPlayer(currentStreamUrl);
+            elements.aboutModal.addEventListener('click', (e) => {
+                if (e.target === elements.aboutModal) {
+                    elements.aboutModal.classList.add('hidden');
                 }
-            }
+            });
+
+            // --- Player Management ---
+            const stopPlayer = () => {
+                if (state.currentHls) {
+                    state.currentHls.destroy();
+                    state.currentHls = null;
+                }
+                if (state.currentShakaPlayer) {
+                    state.currentShakaPlayer.destroy();
+                    state.currentShakaPlayer = null;
+                }
+                elements.video.src = '';
+                elements.video.removeAttribute('shaka-controls');
+                elements.video.load();
+                elements.streamTitle.textContent = '';
+                elements.playerOverlay.classList.remove('hidden');
+                elements.qualitySelectorContainer.classList.add('hidden');
+            };
+
+            const initJioPlayer = (url, title) => {
+                stopPlayer();
+                if (Hls.isSupported()) {
+                    elements.playerOverlay.classList.add('hidden');
+                    state.currentHls = new Hls();
+                    state.currentHls.loadSource(url);
+                    state.currentHls.attachMedia(elements.video);
+                    state.currentHls.on(Hls.Events.MANIFEST_PARSED, () => {
+                        elements.video.play();
+                    });
+
+                    // Quality Selector
+                    elements.qualitySelectorContainer.classList.remove('hidden');
+                    state.currentHls.on(Hls.Events.LEVEL_LOADED, () => {
+                        const levels = state.currentHls.levels;
+                        elements.qualitySelector.innerHTML = '';
+                        levels.forEach((level, index) => {
+                            const option = document.createElement('option');
+                            option.value = index;
+                            option.textContent = `${level.height}p @ ${Math.round(level.bitrate / 1000)} kbps`;
+                            elements.qualitySelector.appendChild(option);
+                        });
+                        elements.qualitySelector.value = state.currentHls.currentLevel;
+                    });
+
+                    elements.qualitySelector.onchange = (e) => {
+                        state.currentHls.currentLevel = parseInt(e.target.value, 10);
+                    };
+
+                } else if (elements.video.canPlayType('application/vnd.apple.mpegurl')) {
+                    elements.playerOverlay.classList.add('hidden');
+                    elements.video.src = url;
+                    elements.video.addEventListener('loadedmetadata', () => {
+                        elements.video.play();
+                    });
+                } else {
+                    elements.streamTitle.textContent = "Error: HLS is not supported on this browser.";
+                }
+                elements.streamTitle.textContent = title;
+            };
+
+            const initZeePlayer = (mpdUrl, clearkey, title) => {
+                stopPlayer();
+                if (!shaka || !shaka.Player.isSupported()) {
+                    elements.streamTitle.textContent = "Error: Shaka Player is not supported on this browser.";
+                    return;
+                }
+                
+                elements.playerOverlay.classList.add('hidden');
+                
+                shaka.log.setLevel(shaka.log.Level.V1);
+                
+                const ui = elements.video['ui'];
+                const controls = ui.getControls();
+                state.currentShakaPlayer = controls.getPlayer();
+
+                const config = {
+                    drm: {
+                        clearKeys: clearkey
+                    }
+                };
+                
+                state.currentShakaPlayer.configure(config);
+
+                state.currentShakaPlayer.load(mpdUrl).then(() => {
+                    elements.streamTitle.textContent = title;
+                    elements.qualitySelectorContainer.classList.add('hidden');
+                }).catch((error) => {
+                    console.error('Error while loading stream:', error);
+                    elements.streamTitle.textContent = `Error: Could not load stream. ${error.code} - ${error.message}`;
+                    elements.playerOverlay.classList.remove('hidden');
+                });
+            };
+
+            const createChannelCard = (name, logoUrl, clickHandler) => {
+                const card = document.createElement('div');
+                card.className = "group channel-card flex flex-col items-center p-4 rounded-xl shadow-md cursor-pointer transition-all duration-300";
+                card.onclick = clickHandler;
+
+                const img = document.createElement('img');
+                img.src = logoUrl || 'https://placehold.co/150x150/1a202c/6b7280?text=No+Logo';
+                img.className = "w-24 h-24 md:w-32 md:h-32 rounded-lg mb-2 object-contain transition-transform duration-300 group-hover:scale-105";
+                img.alt = name;
+
+                const nameEl = document.createElement('span');
+                nameEl.className = "text-center text-sm md:text-base font-semibold truncate w-full group-hover:text-blue-500 transition-colors";
+                nameEl.textContent = name;
+
+                card.appendChild(img);
+                card.appendChild(nameEl);
+                return card;
+            };
+
+            // --- Tab Switching Logic ---
+            const switchTab = (tabName) => {
+                if (state.activeTab === tabName) return;
+                state.activeTab = tabName;
+
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.getElementById(`${tabName}-tab`).classList.add('active');
+                elements.channelList.innerHTML = '';
+                stopPlayer();
+                loadChannels(tabName);
+            };
+
+            const loadChannels = async (tabName) => {
+                elements.loadingSpinner.classList.remove('hidden');
+                try {
+                    let channels = [];
+                    switch (tabName) {
+                        case 'jio-tv':
+                            const jioResponse = await fetch(jioTvDataUrl);
+                            const jioData = await jioResponse.text();
+                            channels = parseM3uData(jioData);
+                            break;
+                        case 'zee-tv':
+                            const zeeResponse = await fetch(zeeTvDataUrl);
+                            const zeeData = await zeeResponse.json();
+                            channels = zeeData.channels;
+                            break;
+                        case 'pirate-tv':
+                            channels = [{
+                                name: 'Public Domain',
+                                logo: 'https://placehold.co/150x150/21262d/c9d1d9?text=Public',
+                                url: 'https://cdn-1.vidsrc.me/hls/rJ98LpP7/playlist.m3u8'
+                            }];
+                            break;
+                        case 'highlights':
+                            channels = [{
+                                name: 'Big Buck Bunny',
+                                logo: 'https://placehold.co/150x150/21262d/c9d1d9?text=Movie',
+                                url: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8'
+                            }];
+                            break;
+                    }
+
+                    elements.channelList.innerHTML = '';
+                    channels.forEach(channel => {
+                        const card = createChannelCard(
+                            channel.name, 
+                            channel.logo, 
+                            () => {
+                                if (tabName === 'jio-tv' || tabName === 'pirate-tv' || tabName === 'highlights') {
+                                    initJioPlayer(channel.url, channel.name);
+                                } else if (tabName === 'zee-tv') {
+                                    const clearKeyObject = {};
+                                    if (channel.clearkey) {
+                                        clearKeyObject[channel.clearkey.keyId] = channel.clearkey.key;
+                                    }
+                                    initZeePlayer(channel.mpd, clearKeyObject, channel.name);
+                                }
+                            }
+                        );
+                        elements.channelList.appendChild(card);
+                    });
+                } catch (error) {
+                    console.error("Error loading channels:", error);
+                    elements.streamTitle.textContent = "Error: Failed to load channels. Please check the network.";
+                } finally {
+                    elements.loadingSpinner.classList.add('hidden');
+                }
+            };
+
+            // --- Helper to parse M3U data ---
+            const parseM3uData = (data) => {
+                const lines = data.split('\n');
+                const channels = [];
+                let currentChannel = {};
+
+                lines.forEach(line => {
+                    if (line.startsWith('#EXTINF')) {
+                        const nameMatch = /tvg-name="([^"]+)"/.exec(line) || /group-title="([^"]+)"/.exec(line);
+                        const logoMatch = /tvg-logo="([^"]+)"/.exec(line);
+                        const name = nameMatch ? nameMatch[1] : 'Unknown';
+                        const logo = logoMatch ? logoMatch[1] : null;
+                        currentChannel = { name, logo };
+                    } else if (line.trim() !== '' && !line.startsWith('#')) {
+                        currentChannel.url = line.trim();
+                        channels.push(currentChannel);
+                        currentChannel = {};
+                    }
+                });
+                return channels;
+            };
+
+            // --- Event Listeners for tabs ---
+            elements.jioTab.addEventListener('click', () => switchTab('jio-tv'));
+            elements.zeeTab.addEventListener('click', () => switchTab('zee-tv'));
+            elements.pirateTab.addEventListener('click', () => switchTab('pirate-tv'));
+            elements.highlightsTab.addEventListener('click', () => switchTab('highlights'));
+
+            // Initial load
+            loadChannels('jio-tv');
+            
+            // Shaka Player UI initialization
+            const initShakaUI = () => {
+              if (shaka && shaka.ui) {
+                const videoElement = document.getElementById('video');
+                const ui = videoElement['ui'];
+                if (ui) ui.destroy();
+                shaka.ui.Controls.create(
+                    new shaka.Player(videoElement),
+                    videoElement
+                );
+              }
+            };
+            initShakaUI();
         });
-
-        // --- टेलीग्राम पॉपअप लॉजिक ---
-        // --- Telegram Popup Logic ---
-        const telegramPopup = document.getElementById('telegram-popup');
-        const telegramPopupContent = document.getElementById('telegram-popup-content');
-        const closePopupButton = document.getElementById('close-popup');
-        const POPUP_SEEN_KEY = 'peregrine_telegram_popup_seen';
-
-        function showTelegramPopup() {
-            if (localStorage.getItem(POPUP_SEEN_KEY) !== 'true') {
-                telegramPopup.classList.remove('hidden');
-                setTimeout(() => {
-                    telegramPopupContent.classList.remove('opacity-0', 'scale-95');
-                    telegramPopupContent.classList.add('opacity-100', 'scale-100');
-                }, 50);
-            }
-        }
-
-        function hideTelegramPopup() {
-            telegramPopupContent.classList.remove('opacity-100', 'scale-100');
-            telegramPopupContent.classList.add('opacity-0', 'scale-95');
-            setTimeout(() => {
-                telegramPopup.classList.add('hidden');
-                localStorage.setItem(POPUP_SEEN_KEY, 'true');
-            }, 300);
-        }
-
-        closePopupButton.addEventListener('click', hideTelegramPopup);
-
-        // पहली बार विज़िट करने पर पॉपअप दिखाएं
-        // Show popup on first visit after a delay (e.g., 5 seconds)
-        window.addEventListener('load', () => {
-            setTimeout(showTelegramPopup, 5000);
-        });
-
-        // पेज से बाहर निकलते समय प्लेयर को डिस्ट्रॉय करें
-        // Ensure HLS instance is destroyed when leaving the page
-        window.addEventListener('beforeunload', destroyCurrentPlayer);
     </script>
 </body>
 </html>
