@@ -1,195 +1,485 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark"> <!-- Default to dark theme -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Niet EnterSports</title>
-  <link href="https://cdn.jsdelivr.net/npm/shaka-player@3.0.3/dist/controls.css" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #000;
-      height: 100%;
-    }
-    .video-container {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #video-player {
-      width: 100%;
-      height: 100%;
-    }
-    .logo {
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-    }
-    .logo img {
-      width: 100px;
-      height: auto;
-    }
-    .quality-select {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 15;
-    }
-    .quality-select select {
-      background-color: #2c2c2c;
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-    .popup {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(5px);
-      display: none;
-      z-index: 20;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .popup-content {
-      background-color: #2c2c2c;
-      color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      width: 80%;
-      max-width: 500px;
-    }
-    .popup button {
-      background-color: #6a4e23;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      margin: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-  </style>
-  <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peregrine - Your go-to platform for live sports streaming, upcoming matches, and highlights.">
+    <title>Peregrine - Professional Sports Streaming</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- HLS.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <!-- Lucide Icons CDN for icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles and overrides */
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+        }
+        /* Sticky header padding for content */
+        main {
+            padding-top: 6rem; /* Adjust based on header height */
+        }
+        .tab-button.active {
+            @apply border-b-2 border-indigo-500 text-indigo-500 font-semibold;
+        }
+        .video-js .vjs-big-play-button {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .quality-option {
+            padding: 8px 12px;
+            cursor: pointer;
+            @apply hover:bg-gray-700 dark:hover:bg-gray-600 rounded-md;
+        }
+    </style>
 </head>
 <body>
-  <div class="video-container">
-    <div id="video-player"></div>
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/AkashGillNiet/TNT3/refs/heads/main/nes.png" alt="Logo">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md py-4 px-6 flex justify-between items-center transition-colors duration-300">
+        <div class="flex items-center space-x-4">
+            <a href="#" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Peregrine</a>
+            <nav class="hidden md:flex space-x-6 text-gray-600 dark:text-gray-300">
+                <a href="#" class="hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-200">Home</a>
+                <a href="#" class="hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-200">Sports</a>
+                <a href="#" class="hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-200">About</a>
+            </nav>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <i data-lucide="sun" class="w-5 h-5 text-gray-700 dark:text-gray-300 dark:hidden"></i>
+                <i data-lucide="moon" class="w-5 h-5 text-gray-700 dark:text-gray-300 hidden dark:inline-block"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Video Player Section -->
+        <section id="player-section" class="bg-gray-800 rounded-lg shadow-xl overflow-hidden mb-8 hidden">
+            <div class="relative w-full aspect-video bg-black flex items-center justify-center">
+                <video id="video-player" controls preload="auto" class="w-full h-full object-cover">
+                    Your browser does not support the video tag.
+                </video>
+                <div id="player-overlay" class="absolute inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center text-white text-lg font-medium hidden">
+                    <p id="player-message">Loading stream...</p>
+                    <button id="retry-stream" class="mt-4 px-6 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors duration-200 hidden">
+                        Retry
+                    </button>
+                </div>
+            </div>
+            <div class="p-4 bg-gray-900 flex justify-between items-center flex-wrap gap-4">
+                <h2 id="current-stream-title" class="text-xl font-semibold text-white">Select a channel to watch</h2>
+                <div class="relative">
+                    <button id="quality-select-button" class="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 flex items-center gap-2">
+                        <i data-lucide="settings" class="w-5 h-5"></i>
+                        Quality
+                    </button>
+                    <div id="quality-options" class="absolute right-0 mt-2 w-36 bg-gray-800 rounded-lg shadow-lg py-2 hidden z-10">
+                        <!-- Quality options will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Channel Browsing Section -->
+        <section class="bg-white dark:bg-gray-900 rounded-lg shadow-xl p-6">
+            <!-- Tabs -->
+            <div class="flex border-b border-gray-200 dark:border-gray-700 mb-6">
+                <button data-tab="live" class="tab-button active flex-1 py-3 px-4 text-center text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all duration-200 rounded-tl-lg flex items-center justify-center gap-2">
+                    <i data-lucide="tv" class="w-5 h-5"></i> Live
+                </button>
+                <button data-tab="upcoming" class="tab-button flex-1 py-3 px-4 text-center text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all duration-200 flex items-center justify-center gap-2">
+                    <i data-lucide="clock" class="w-5 h-5"></i> Upcoming
+                </button>
+                <button data-tab="highlights" class="tab-button flex-1 py-3 px-4 text-center text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all duration-200 rounded-tr-lg flex items-center justify-center gap-2">
+                    <i data-lucide="star" class="w-5 h-5"></i> Highlights
+                </button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="mb-6 relative">
+                <input type="text" id="search-input" placeholder="Search channels..."
+                       class="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200">
+                <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500"></i>
+            </div>
+
+            <!-- Channel Grid -->
+            <div id="channel-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Channel cards will be dynamically inserted here -->
+            </div>
+            <div id="no-channels-message" class="text-center text-gray-500 dark:text-gray-400 text-lg mt-8 hidden">
+                No channels found for this category or search.
+            </div>
+        </section>
+    </main>
+
+    <!-- Telegram Popup -->
+    <div id="telegram-popup" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-[100] hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8 max-w-sm w-full relative transform transition-all duration-300 scale-95 opacity-0" id="telegram-popup-content">
+            <button id="close-popup" class="absolute top-4 right-4 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-200">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="text-center">
+                <img src="https://placehold.co/100x100/60A5FA/FFFFFF?text=TG" alt="Telegram Icon" class="mx-auto mb-6 rounded-full w-20 h-20">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Join Our Telegram Channel!</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                    Don't miss out on the latest updates and exclusive links.
+                    Join our community now!
+                </p>
+                <a href="https://t.me/sportslivelink18" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105">
+                    <i data-lucide="send" class="w-5 h-5 mr-2"></i> Join @sportslivelink18
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="quality-select">
-      <select id="quality">
-        <option value="auto">Auto</option>
-        <option value="144">144p</option>
-        <option value="240">240p</option>
-        <option value="360">360p</option>
-        <option value="480">480p</option>
-        <option value="720">720p</option>
-        <option value="1080">1080p</option>
-      </select>
-    </div>
-  </div>
-  <div class="popup" id="popup">
-    <div class="popup-content">
-      <h2>Join our Telegram Channel</h2>
-      <button id="join-now">Join Now</button>
-      <button id="already-joined">Already Joined</button>
-    </div>
-  </div>
-  
-  <!-- Fragments Scattered Across Code -->
-  <script>const baseDomain = "https://tes1.mylife1.top:8088/mobile/stream1_240p/playlist.m3u8?vidictid=201102979007&id=2&pk=af6ef4d0ce777021be1d91bc757a383e8e9cf0e4b2555beee7b44e8cd6a8b78d134ffdd4e34e887515b3c55092a7f0af83d62b65cacf1147b499c2ea4c40376c";</script>
-  <script>
-    
-    // Function to reconstruct the URL
-    function constructURL() {
-      return baseDomain;
-    }
 
-    // Initialize Clappr Player
-    let playerInstance;
 
-    function initializePlayer(url) {
-      if (playerInstance) {
-        playerInstance.destroy(); // Clean up the previous instance
-      }
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
 
-      playerInstance = new Clappr.Player({
-        source: url,
-        parentId: "#video-player",
-        autoPlay: true,
-        height: "100%",
-        width: "100%",
-        mute: false,
-        playback: {
-          playInline: true,
-          preload: "auto",
-        },
-        mediacontrol: {
-          seekbar: "#FFF",
-          buttons: "#FFF",
-        },
-      });
-    }
+        // --- Theme Toggle ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
 
-    async function loadStream() {
-      try {
-        const streamUrl = constructURL(); // Combine fragments dynamically
-        initializePlayer(streamUrl);
-        console.log("The video has been loaded!");
-      } catch (error) {
-        console.error("Error loading the video:", error);
-      }
-    }
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                htmlElement.classList.add('dark');
+                htmlElement.classList.remove('light');
+            } else {
+                htmlElement.classList.add('light');
+                htmlElement.classList.remove('dark');
+            }
+            localStorage.setItem('theme', theme);
+            lucide.createIcons(); // Re-render icons to pick up new theme class if needed
+        }
 
-    // Handle window load
-    window.onload = function () {
-      document.getElementById("popup").style.display = "flex";
-      loadStream();
-    };
+        // Set initial theme based on localStorage or system preference
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            applyTheme(storedTheme);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            applyTheme('dark');
+        } else {
+            applyTheme('light');
+        }
 
-    // Handle quality selection
-    const qualitySelect = document.getElementById("quality");
-    qualitySelect.addEventListener("change", () => {
-      const selectedQuality = qualitySelect.value;
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
+            applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
 
-      const resolutionMap = {
-        auto: "/stream6_240p",
-        144: "/stream6_144p",
-        240: "/stream6_240p",
-        360: "/stream6_360p",
-        480: "/stream6_480p",
-        720: "/stream6_720p",
-        1080: "/stream6_1080p",
-      };
+        // --- Mock Channel Data (replace with actual GitHub fetch) ---
+        // In a real application, you would fetch this from a raw GitHub JSON file like this:
+        // const GITHUB_JSON_URL = 'YOUR_RAW_GITHUB_JSON_URL_HERE';
+        //
+        // async function fetchChannelData() {
+        //     try {
+        //         const response = await fetch(GITHUB_JSON_URL);
+        //         if (!response.ok) {
+        //             throw new Error(`HTTP error! status: ${response.status}`);
+        //         }
+        //         return await response.json();
+        //     } catch (error) {
+        //         console.error("Could not fetch channel data:", error);
+        //         // Fallback to mock data or display an error message
+        //         return MOCK_CHANNELS;
+        //     }
+        // }
+        //
+        // let allChannels = [];
+        // fetchChannelData().then(data => {
+        //     allChannels = data;
+        //     renderChannels(allChannels.filter(c => c.status === currentTab));
+        // });
 
-      pathSegment2 = resolutionMap[selectedQuality] || "/stream6_240p";
-      loadStream(); // Reload the player with the selected quality
-    });
+        const MOCK_CHANNELS = [
+            { id: '1', name: 'Football Live HD', logo: 'https://placehold.co/100x100/34D399/FFFFFF?text=FBL', hls: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', status: 'live' },
+            { id: '2', name: 'Basketball Arena', logo: 'https://placehold.co/100x100/60A5FA/FFFFFF?text=BBL', hls: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8', status: 'live' },
+            { id: '3', name: 'Tennis Grand Slam', logo: 'https://placehold.co/100x100/F472B6/FFFFFF?text=TNS', hls: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.mu8', status: 'upcoming' },
+            { id: '4', name: 'Cricket World Cup', logo: 'https://placehold.co/100x100/FB923C/FFFFFF?text=CWC', hls: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', status: 'live' },
+            { id: '5', name: 'Esports Championship', logo: 'https://placehold.co/100x100/A78BFA/FFFFFF?text=ESP', hls: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8', status: 'upcoming' },
+            { id: '6', name: 'Boxing Night', logo: 'https://placehold.co/100x100/E879F9/FFFFFF?text=BOX', hls: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', status: 'highlight' },
+            { id: '7', name: 'Motorsports Race', logo: 'https://placehold.co/100x100/F87171/FFFFFF?text=MTR', hls: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8', status: 'live' },
+            { id: '8', name: 'Golf Open', logo: 'https://placehold.co/100x100/3B82F6/FFFFFF?text=GLF', hls: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', status: 'upcoming' },
+            { id: '9', name: 'UFC Fights', logo: 'https://placehold.co/100x100/EC4899/FFFFFF?text=UFC', hls: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8', status: 'highlight' },
+            { id: '10', name: 'Hockey League', logo: 'https://placehold.co/100x100/10B981/FFFFFF?text=HKY', hls: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', status: 'live' },
+            { id: '11', name: 'Baseball Series', logo: 'https://placehold.co/100x100/8B5CF6/FFFFFF?text=BBL', hls: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8', status: 'upcoming' },
+            { id: '12', name: 'Volleyball Pro', logo: 'https://placehold.co/100x100/FBBF24/FFFFFF?text=VBL', hls: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', status: 'highlight' },
+            { id: '13', name: 'Cricket Highlights', logo: 'https://placehold.co/100x100/FB923C/FFFFFF?text=CHC', hls: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8', status: 'highlight' },
+            { id: '14', name: 'Football Classics', logo: 'https://placehold.co/100x100/34D399/FFFFFF?text=FCC', hls: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', status: 'highlight' },
+            { id: '15', name: 'NBA Playoff Preview', logo: 'https://placehold.co/100x100/60A5FA/FFFFFF?text=NPP', hls: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8', status: 'upcoming' },
+        ];
+        let allChannels = MOCK_CHANNELS; // Use mock data directly for this example
 
-    // Popup button handlers
-    document.getElementById("join-now").onclick = function () {
-      window.open("https://t.me/SportsLiveLink18", "_blank");
-      document.getElementById("popup").style.display = "none";
-    };
+        // --- DOM Elements ---
+        const channelGrid = document.getElementById('channel-grid');
+        const searchInput = document.getElementById('search-input');
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const noChannelsMessage = document.getElementById('no-channels-message');
 
-    document.getElementById("already-joined").onclick = function () {
-      document.getElementById("popup").style.display = "none";
-    };
-  </script>
+        const videoPlayer = document.getElementById('video-player');
+        const playerSection = document.getElementById('player-section');
+        const currentStreamTitle = document.getElementById('current-stream-title');
+        const qualitySelectButton = document.getElementById('quality-select-button');
+        const qualityOptionsDiv = document.getElementById('quality-options');
+        const playerOverlay = document.getElementById('player-overlay');
+        const playerMessage = document.getElementById('player-message');
+        const retryStreamButton = document.getElementById('retry-stream');
+
+        let currentTab = 'live'; // Default tab
+        let hlsInstance = null;
+        let currentHlsUrl = null;
+
+        // --- Render Channels Function ---
+        function renderChannels(channelsToRender) {
+            channelGrid.innerHTML = ''; // Clear existing channels
+            if (channelsToRender.length === 0) {
+                noChannelsMessage.classList.remove('hidden');
+                return;
+            }
+            noChannelsMessage.classList.add('hidden');
+
+            channelsToRender.forEach(channel => {
+                const channelCard = document.createElement('div');
+                channelCard.className = `bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden
+                                         ${channel.status === 'live' ? 'border-2 border-green-500' : ''}`; // Highlight live channels
+
+                let statusBadge = '';
+                let statusColor = '';
+                if (channel.status === 'live') {
+                    statusBadge = 'Live';
+                    statusColor = 'bg-red-500';
+                } else if (channel.status === 'upcoming') {
+                    statusBadge = 'Upcoming';
+                    statusColor = 'bg-blue-500';
+                } else if (channel.status === 'highlight') {
+                    statusBadge = 'Highlight';
+                    statusColor = 'bg-purple-500';
+                }
+
+
+                channelCard.innerHTML = `
+                    <div class="relative">
+                        <img src="${channel.logo}" alt="${channel.name} Logo" class="w-full h-32 object-cover">
+                        <span class="absolute top-2 right-2 px-3 py-1 text-xs font-semibold text-white rounded-full ${statusColor}">
+                            ${statusBadge}
+                        </span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white truncate">${channel.name}</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Stream ID: ${channel.id}</p>
+                    </div>
+                `;
+                channelCard.addEventListener('click', () => playChannel(channel));
+                channelGrid.appendChild(channelCard);
+            });
+            lucide.createIcons(); // Re-render icons after adding new content
+        }
+
+        // --- Filter Channels Function ---
+        function filterChannels() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filtered = allChannels.filter(channel =>
+                channel.name.toLowerCase().includes(searchTerm) &&
+                (channel.status === currentTab || (currentTab === 'all' && ['live', 'upcoming', 'highlight'].includes(channel.status)))
+            );
+            renderChannels(filtered);
+        }
+
+        // --- Tab Switching Logic ---
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                currentTab = button.dataset.tab;
+                filterChannels(); // Re-filter channels based on new tab
+            });
+        });
+
+        // Initial render and filtering
+        filterChannels();
+        searchInput.addEventListener('input', filterChannels);
+
+        // --- HLS Player Functions ---
+        function destroyHls() {
+            if (hlsInstance) {
+                hlsInstance.destroy();
+                hlsInstance = null;
+            }
+            videoPlayer.removeAttribute('src'); // Clear video source
+            qualityOptionsDiv.innerHTML = ''; // Clear quality options
+            qualitySelectButton.classList.add('hidden'); // Hide quality button
+            playerOverlay.classList.add('hidden'); // Hide overlay
+            playerMessage.textContent = ''; // Clear message
+            retryStreamButton.classList.add('hidden'); // Hide retry
+        }
+
+        function setupHls(url) {
+            destroyHls(); // Always destroy previous instance first
+            currentHlsUrl = url;
+            playerSection.classList.remove('hidden'); // Show player section
+            videoPlayer.load(); // Load video to prepare for HLS
+            currentStreamTitle.textContent = 'Loading...';
+            playerOverlay.classList.remove('hidden'); // Show loading overlay
+            playerMessage.textContent = 'Loading stream...';
+            retryStreamButton.classList.add('hidden');
+
+            if (Hls.isSupported()) {
+                hlsInstance = new Hls();
+                hlsInstance.loadSource(url);
+                hlsInstance.attachMedia(videoPlayer);
+
+                hlsInstance.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+                    console.log('Manifest parsed:', data);
+                    const levels = data.levels;
+                    qualityOptionsDiv.innerHTML = ''; // Clear previous options
+                    qualitySelectButton.classList.remove('hidden'); // Show quality button
+
+                    // Add 'Auto' quality option
+                    const autoOption = document.createElement('div');
+                    autoOption.className = 'quality-option text-white';
+                    autoOption.textContent = 'Auto';
+                    autoOption.addEventListener('click', () => {
+                        hlsInstance.currentLevel = -1; // -1 for auto
+                        qualitySelectButton.click(); // Close dropdown
+                        console.log('Set quality to Auto');
+                    });
+                    qualityOptionsDiv.appendChild(autoOption);
+
+
+                    levels.forEach((level, index) => {
+                        if (level.height) { // Only show quality options with height information
+                            const option = document.createElement('div');
+                            option.className = 'quality-option text-white';
+                            option.textContent = `${level.height}p`;
+                            option.addEventListener('click', () => {
+                                hlsInstance.currentLevel = index;
+                                qualitySelectButton.click(); // Close dropdown
+                                console.log(`Set quality to ${level.height}p`);
+                            });
+                            qualityOptionsDiv.appendChild(option);
+                        }
+                    });
+
+                    // Hide loading overlay and play if ready
+                    playerOverlay.classList.add('hidden');
+                    videoPlayer.play().catch(error => {
+                        console.warn('Autoplay prevented:', error);
+                        // Show a message or play button if autoplay fails
+                        playerOverlay.classList.remove('hidden');
+                        playerMessage.textContent = 'Autoplay prevented. Please click to play.';
+                    });
+                });
+
+                hlsInstance.on(Hls.Events.ERROR, function (event, data) {
+                    console.error('HLS.js error:', data);
+                    if (data.fatal) {
+                        playerOverlay.classList.remove('hidden');
+                        playerMessage.textContent = `Stream error: ${data.details}. Try another quality or retry.`;
+                        retryStreamButton.classList.remove('hidden');
+                        switch (data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                // Try to recover network errors
+                                console.log('HLS network error, trying to recover...');
+                                hlsInstance.startLoad();
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                console.log('HLS media error, trying to recover...');
+                                hlsInstance.recoverMediaError();
+                                break;
+                            default:
+                                // Cannot recover, destroy HLS and prompt user to retry or select another channel
+                                destroyHls();
+                                videoPlayer.src = ''; // Clear native video src
+                                break;
+                        }
+                    }
+                });
+            } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+                // Native HLS support (Safari, iOS)
+                videoPlayer.src = url;
+                currentStreamTitle.textContent = 'Playing natively';
+                playerOverlay.classList.add('hidden');
+                videoPlayer.play().catch(error => {
+                    console.warn('Autoplay prevented (native):', error);
+                    playerOverlay.classList.remove('hidden');
+                    playerMessage.textContent = 'Autoplay prevented. Please click to play.';
+                });
+                qualitySelectButton.classList.add('hidden'); // No quality selection for native HLS typically
+            } else {
+                playerOverlay.classList.remove('hidden');
+                playerMessage.textContent = 'Your browser does not support HLS streaming.';
+                console.error('HLS is not supported in this browser.');
+            }
+        }
+
+        function playChannel(channel) {
+            currentStreamTitle.textContent = `Now Playing: ${channel.name}`;
+            setupHls(channel.hls);
+            // Scroll to player section
+            playerSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Toggle quality options dropdown
+        qualitySelectButton.addEventListener('click', (event) => {
+            qualityOptionsDiv.classList.toggle('hidden');
+            event.stopPropagation(); // Prevent document click from closing immediately
+        });
+
+        // Close quality options if clicked outside
+        document.addEventListener('click', (event) => {
+            if (!qualitySelectButton.contains(event.target) && !qualityOptionsDiv.contains(event.target)) {
+                qualityOptionsDiv.classList.add('hidden');
+            }
+        });
+
+        retryStreamButton.addEventListener('click', () => {
+            if (currentHlsUrl) {
+                setupHls(currentHlsUrl); // Retry with the last played URL
+            }
+        });
+
+        // --- Telegram Popup Logic ---
+        const telegramPopup = document.getElementById('telegram-popup');
+        const telegramPopupContent = document.getElementById('telegram-popup-content');
+        const closePopupButton = document.getElementById('close-popup');
+        const POPUP_SEEN_KEY = 'peregrine_telegram_popup_seen';
+
+        function showTelegramPopup() {
+            if (localStorage.getItem(POPUP_SEEN_KEY) !== 'true') {
+                telegramPopup.classList.remove('hidden');
+                setTimeout(() => {
+                    telegramPopupContent.classList.remove('opacity-0', 'scale-95');
+                    telegramPopupContent.classList.add('opacity-100', 'scale-100');
+                }, 50); // Small delay for CSS transition
+            }
+        }
+
+        function hideTelegramPopup() {
+            telegramPopupContent.classList.remove('opacity-100', 'scale-100');
+            telegramPopupContent.classList.add('opacity-0', 'scale-95');
+            setTimeout(() => {
+                telegramPopup.classList.add('hidden');
+                localStorage.setItem(POPUP_SEEN_KEY, 'true'); // Mark as seen
+            }, 300); // Match CSS transition duration
+        }
+
+        closePopupButton.addEventListener('click', hideTelegramPopup);
+
+        // Show popup on first visit after a delay (e.g., 5 seconds)
+        window.addEventListener('load', () => {
+            // Give preference to initial channel render
+            setTimeout(showTelegramPopup, 5000);
+        });
+
+        // Ensure HLS instance is destroyed when leaving the page
+        window.addEventListener('beforeunload', destroyHls);
+    </script>
 </body>
 </html>
