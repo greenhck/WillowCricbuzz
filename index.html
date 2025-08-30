@@ -86,17 +86,18 @@
                         Retry
                     </button>
                 </div>
-                <div class="absolute top-4 right-4 z-50">
+            </div>
+            <!-- Quality button moved to the left and placed next to the title -->
+            <div class="p-4 bg-gray-900 flex justify-start items-center flex-wrap gap-4">
+                <div class="relative">
                     <button id="quality-select-button" class="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 flex items-center gap-2">
                         <i data-lucide="settings" class="w-5 h-5"></i>
                         Quality
                     </button>
-                    <div id="quality-options" class="absolute right-0 mt-2 w-36 bg-gray-800 rounded-lg shadow-lg py-2 hidden z-10">
+                    <div id="quality-options" class="absolute left-0 mt-2 w-36 bg-gray-800 rounded-lg shadow-lg py-2 hidden z-10">
                         <!-- Quality options will be dynamically inserted here -->
                     </div>
                 </div>
-            </div>
-            <div class="p-4 bg-gray-900 flex justify-between items-center flex-wrap gap-4">
                 <h2 id="current-stream-title" class="text-xl font-semibold text-white">Select a channel to watch</h2>
             </div>
         </section>
@@ -155,9 +156,11 @@
     </div>
 
     <script>
+        // Lucide आइकन्स को इनिशियलाइज़ करें
         // Initialize Lucide icons
         lucide.createIcons();
 
+        // --- थीम टॉगल ---
         // --- Theme Toggle ---
         const themeToggleBtn = document.getElementById('theme-toggle');
         const htmlElement = document.documentElement;
@@ -165,16 +168,13 @@
         function applyTheme(theme) {
             if (theme === 'dark') {
                 htmlElement.classList.add('dark');
-                htmlElement.classList.remove('light');
             } else {
-                htmlElement.classList.add('light');
                 htmlElement.classList.remove('dark');
             }
             localStorage.setItem('theme', theme);
-            lucide.createIcons(); // Re-render icons to pick up new theme class if needed
+            lucide.createIcons();
         }
 
-        // Set initial theme based on localStorage or system preference
         const storedTheme = localStorage.getItem('theme');
         if (storedTheme) {
             applyTheme(storedTheme);
@@ -185,10 +185,11 @@
         }
 
         themeToggleBtn.addEventListener('click', () => {
-            const currentTheme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
-            applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+            const isDark = htmlElement.classList.contains('dark');
+            applyTheme(isDark ? 'light' : 'dark');
         });
 
+        // --- डायनेमिक चैनल डेटा लाना ---
         // --- Dynamic Channel Data Fetching ---
         const JIO_TV_URL = 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/jd.m3u';
         const ZEE_NETWORK_URL = 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/zee.json';
@@ -207,7 +208,8 @@
         async function fetchChannelData() {
             const fetchPromises = [];
 
-            // Fetch from JioTV M3U file
+            // JioTV M3U फ़ाइल से डेटा लाएं
+            // Fetch data from JioTV M3U file
             fetchPromises.push(fetch(JIO_TV_URL)
                 .then(response => {
                     if (!response.ok) {
@@ -233,7 +235,8 @@
                 })
                 .catch(error => console.error("Could not fetch JioTV data:", error)));
 
-            // Fetch from Zee Network JSON file
+            // Zee Network JSON फ़ाइल से डेटा लाएं
+            // Fetch data from Zee Network JSON file
             fetchPromises.push(fetch(ZEE_NETWORK_URL)
                 .then(response => {
                     if (!response.ok) {
@@ -245,7 +248,6 @@
                     if (data && Array.isArray(data.channels)) {
                         data.channels.forEach(item => {
                             if (item.name && item.mpd) {
-                                // Store mpd and clearkey for Shaka Player
                                 zeeChannels.push({
                                     id: btoa(item.name + item.mpd),
                                     name: item.name,
@@ -264,9 +266,9 @@
             filterChannels();
         }
 
-        // Initial fetch and render
         fetchChannelData();
 
+        // --- DOM एलिमेंट्स ---
         // --- DOM Elements ---
         const channelGrid = document.getElementById('channel-grid');
         const searchInput = document.getElementById('search-input');
@@ -281,15 +283,16 @@
         const playerMessage = document.getElementById('player-message');
         const retryStreamButton = document.getElementById('retry-stream');
 
-        let currentTab = 'jiotv'; // Default tab
+        let currentTab = 'jiotv';
         let hlsInstance = null;
         let shakaPlayerInstance = null;
         let currentStreamUrl = null;
         let currentDrmConfig = null;
 
+        // --- चैनल रेंडर करने का फ़ंक्शन ---
         // --- Render Channels Function ---
         function renderChannels(channelsToRender) {
-            channelGrid.innerHTML = ''; // Clear existing channels
+            channelGrid.innerHTML = '';
             if (channelsToRender.length === 0) {
                 noChannelsMessage.classList.remove('hidden');
                 return;
@@ -299,7 +302,7 @@
             channelsToRender.forEach(channel => {
                 const channelCard = document.createElement('div');
                 channelCard.className = `bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden
-                                         ${channel.status === 'live' ? 'border-2 border-green-500' : ''}`; // Highlight live channels
+                                         ${channel.status === 'live' ? 'border-2 border-green-500' : ''}`;
 
                 let statusBadge = '';
                 let statusColor = '';
@@ -314,7 +317,6 @@
                     statusColor = 'bg-purple-500';
                 }
 
-                // Fallback for logo if not provided
                 const logoSrc = channel.logo || 'https://placehold.co/100x100/3B82F6/FFFFFF?text=IMG';
 
                 channelCard.innerHTML = `
@@ -331,9 +333,10 @@
                 channelCard.addEventListener('click', () => playChannel(channel));
                 channelGrid.appendChild(channelCard);
             });
-            lucide.createIcons(); // Re-render icons after adding new content
+            lucide.createIcons();
         }
 
+        // --- चैनल फ़िल्टर करने का फ़ंक्शन ---
         // --- Filter Channels Function ---
         function filterChannels() {
             const searchTerm = searchInput.value.toLowerCase();
@@ -352,29 +355,45 @@
             renderChannels(filtered);
         }
 
+        // --- टैब बदलने का लॉजिक ---
         // --- Tab Switching Logic ---
         tabButtons.forEach(button => {
             button.addEventListener('click', () => {
                 tabButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
                 currentTab = button.dataset.tab;
-                filterChannels(); // Re-filter channels based on new tab
+                filterChannels();
             });
         });
 
         searchInput.addEventListener('input', filterChannels);
 
+        // --- प्लेयर मैनेजमेंट ---
         // --- Player Management ---
         function destroyCurrentPlayer() {
+            // पुराने प्लेयर (HLS या Shaka) को पूरी तरह से डिस्ट्रॉय करें
             if (hlsInstance) {
                 hlsInstance.destroy();
                 hlsInstance = null;
             }
+
+            // अगर Shaka Player का इंस्टेंस मौजूद है, तो उसे और उसके UI को पूरी तरह से हटा दें
             if (shakaPlayerInstance) {
                 shakaPlayerInstance.destroy();
                 shakaPlayerInstance = null;
             }
+            
+            // DOM से Shaka Player के UI कंटेनर को हटा दें ताकि यह ओवरलैप न हो
+            const shakaUiRoot = videoPlayer.parentElement.querySelector('.shaka-controls-container');
+            if (shakaUiRoot) {
+                shakaUiRoot.remove();
+            }
+
+            // वीडियो एलिमेंट की स्थिति को रीसेट करें
             videoPlayer.removeAttribute('src');
+            videoPlayer.load();
+
+            // सभी UI तत्वों को छिपा दें
             qualityOptionsDiv.innerHTML = '';
             qualitySelectButton.classList.add('hidden');
             playerOverlay.classList.add('hidden');
@@ -385,6 +404,7 @@
         function setupHlsPlayer(url) {
             destroyCurrentPlayer();
             currentStreamUrl = url;
+            currentDrmConfig = null; // DRM कॉन्फ़िगरेशन को साफ़ करें
             playerSection.classList.remove('hidden');
             playerOverlay.classList.remove('hidden');
             playerMessage.textContent = 'Loading stream...';
@@ -460,94 +480,98 @@
             playerOverlay.classList.remove('hidden');
             playerMessage.textContent = 'Loading stream...';
 
-            if (shaka.Player.is
-                BrowserSupported()) {
-                shakaPlayerInstance = new shaka.Player(videoPlayer);
-                const ui = videoPlayer.parentElement;
-                const controls = new shaka.ui.Controls(shakaPlayerInstance, ui, videoPlayer);
+            // Wait for shaka UI to load, then initialize player
+            document.addEventListener('shaka-ui-loaded', () => {
+                if (shakaPlayerInstance) return; // Prevent re-initialization
 
-                // Configure DRM
-                if (drmConfig) {
-                    shakaPlayerInstance.configure({
-                        drm: {
-                            clearKeys: {
-                                [drmConfig.keyId]: drmConfig.key
+                if (shaka.Player.isBrowserSupported()) {
+                    const video = document.getElementById('video-player');
+                    const ui = video.parentElement;
+                    const controls = ui.getControls();
+                    shakaPlayerInstance = controls.getPlayer();
+
+                    if (drmConfig && Object.keys(drmConfig).length > 0) {
+                        shakaPlayerInstance.configure({
+                            drm: {
+                                "clearKeys": drmConfig
                             }
-                        }
+                        });
+                    }
+                    
+                    shakaPlayerInstance.addEventListener('error', (event) => {
+                        console.error('Shaka Player error', event.detail);
+                        playerOverlay.classList.remove('hidden');
+                        playerMessage.textContent = `Stream error. Please retry.`;
+                        retryStreamButton.classList.remove('hidden');
                     });
-                }
-                
-                shakaPlayerInstance.addEventListener('error', (event) => {
-                    console.error('Shaka Player error', event.detail);
-                    playerOverlay.classList.remove('hidden');
-                    playerMessage.textContent = `Stream error. Please retry.`;
-                    retryStreamButton.classList.remove('hidden');
-                });
 
-                // Load the manifest
-                shakaPlayerInstance.load(url).then(() => {
-                    console.log('Shaka player loaded successfully');
-                    playerOverlay.classList.add('hidden');
-                }).catch(error => {
-                    console.error('Shaka Player load error:', error);
-                    playerOverlay.classList.remove('hidden');
-                    playerMessage.textContent = `Failed to load stream. Error: ${error.code}`;
-                    retryStreamButton.classList.remove('hidden');
-                });
-
-                // Handle quality options for Shaka Player
-                shakaPlayerInstance.addEventListener('trackschanged', () => {
-                    const videoTracks = shakaPlayerInstance.getVariantTracks().filter(t => t.type === 'video');
-                    qualityOptionsDiv.innerHTML = '';
-                    qualitySelectButton.classList.remove('hidden');
-
-                    const autoOption = document.createElement('div');
-                    autoOption.className = 'quality-option text-white';
-                    autoOption.textContent = 'Auto';
-                    autoOption.addEventListener('click', () => {
-                        shakaPlayerInstance.selectVariantTrack(videoTracks.find(t => t.id === 'auto'));
-                        qualitySelectButton.click();
+                    shakaPlayerInstance.load(url).then(() => {
+                        console.log('Shaka player loaded successfully');
+                        playerOverlay.classList.add('hidden');
+                    }).catch(error => {
+                        console.error('Shaka Player load error:', error);
+                        playerOverlay.classList.remove('hidden');
+                        playerMessage.textContent = `Failed to load stream. Error: ${error.code}`;
+                        retryStreamButton.classList.remove('hidden');
                     });
-                    qualityOptionsDiv.appendChild(autoOption);
 
-                    videoTracks.forEach(track => {
-                        const option = document.createElement('div');
-                        option.className = 'quality-option text-white';
-                        option.textContent = `${track.height}p`;
-                        option.addEventListener('click', () => {
-                            shakaPlayerInstance.selectVariantTrack(track);
+                    shakaPlayerInstance.addEventListener('trackschanged', () => {
+                        const videoTracks = shakaPlayerInstance.getVariantTracks().filter(t => t.type === 'video');
+                        qualityOptionsDiv.innerHTML = '';
+                        qualitySelectButton.classList.remove('hidden');
+
+                        const autoOption = document.createElement('div');
+                        autoOption.className = 'quality-option text-white';
+                        autoOption.textContent = 'Auto';
+                        autoOption.addEventListener('click', () => {
+                            shakaPlayerInstance.selectVariantTrack(videoTracks.find(t => t.id === 'auto'));
                             qualitySelectButton.click();
                         });
-                        qualityOptionsDiv.appendChild(option);
-                    });
-                });
+                        qualityOptionsDiv.appendChild(autoOption);
 
-            } else {
-                playerOverlay.classList.remove('hidden');
-                playerMessage.textContent = 'Your browser does not support Shaka Player.';
-            }
+                        videoTracks.forEach(track => {
+                            const option = document.createElement('div');
+                            option.className = 'quality-option text-white';
+                            option.textContent = `${track.height}p`;
+                            option.addEventListener('click', () => {
+                                shakaPlayerInstance.selectVariantTrack(track);
+                                qualitySelectButton.click();
+                            });
+                            qualityOptionsDiv.appendChild(option);
+                        });
+                    });
+
+                } else {
+                    playerOverlay.classList.remove('hidden');
+                    playerMessage.textContent = 'Your browser does not support Shaka Player.';
+                }
+            });
         }
 
         function playChannel(channel) {
             currentStreamTitle.textContent = `Now Playing: ${channel.name}`;
             playerSection.scrollIntoView({ behavior: 'smooth' });
+            
+            destroyCurrentPlayer();
 
-            if (channel.hls) {
-                setupHlsPlayer(channel.hls);
-            } else if (channel.mpd) {
+            if (channel.mpd) { // MPD स्ट्रीम के लिए Shaka Player का उपयोग करें
                 setupShakaPlayer(channel.mpd, channel.clearkey);
+            } else if (channel.hls) { // HLS स्ट्रीम के लिए HLS.js का उपयोग करें
+                setupHlsPlayer(channel.hls);
             } else {
                 playerOverlay.classList.remove('hidden');
                 playerMessage.textContent = 'Stream URL not available for this channel.';
             }
         }
 
+        // क्वालिटी ऑप्शन ड्रॉपडाउन को टॉगल करें
         // Toggle quality options dropdown
         qualitySelectButton.addEventListener('click', (event) => {
             qualityOptionsDiv.classList.toggle('hidden');
-            event.stopPropagation(); // Prevent document click from closing immediately
+            event.stopPropagation();
         });
 
+        // बाहर क्लिक करने पर क्वालिटी ऑप्शन को बंद करें
         // Close quality options if clicked outside
         document.addEventListener('click', (event) => {
             if (!qualitySelectButton.contains(event.target) && !qualityOptionsDiv.contains(event.target)) {
@@ -565,6 +589,7 @@
             }
         });
 
+        // --- टेलीग्राम पॉपअप लॉजिक ---
         // --- Telegram Popup Logic ---
         const telegramPopup = document.getElementById('telegram-popup');
         const telegramPopupContent = document.getElementById('telegram-popup-content');
@@ -577,7 +602,7 @@
                 setTimeout(() => {
                     telegramPopupContent.classList.remove('opacity-0', 'scale-95');
                     telegramPopupContent.classList.add('opacity-100', 'scale-100');
-                }, 50); // Small delay for CSS transition
+                }, 50);
             }
         }
 
@@ -586,18 +611,19 @@
             telegramPopupContent.classList.add('opacity-0', 'scale-95');
             setTimeout(() => {
                 telegramPopup.classList.add('hidden');
-                localStorage.setItem(POPUP_SEEN_KEY, 'true'); // Mark as seen
-            }, 300); // Match CSS transition duration
+                localStorage.setItem(POPUP_SEEN_KEY, 'true');
+            }, 300);
         }
 
         closePopupButton.addEventListener('click', hideTelegramPopup);
 
+        // पहली बार विज़िट करने पर पॉपअप दिखाएं
         // Show popup on first visit after a delay (e.g., 5 seconds)
         window.addEventListener('load', () => {
-            // Give preference to initial channel render
             setTimeout(showTelegramPopup, 5000);
         });
 
+        // पेज से बाहर निकलते समय प्लेयर को डिस्ट्रॉय करें
         // Ensure HLS instance is destroyed when leaving the page
         window.addEventListener('beforeunload', destroyCurrentPlayer);
     </script>
