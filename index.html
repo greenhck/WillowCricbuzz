@@ -30,31 +30,55 @@
         .tabs-container::-webkit-scrollbar-track {
             background-color: transparent;
         }
+        /* Loading spinner animation */
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
 
     <!-- Header Section -->
-    <header class="bg-black text-white p-4 text-center sticky top-0 z-50 shadow-lg">
-        <h1 class="text-3xl sm:text-4xl font-bold">PEREGRINE LIVE</h1>
-        <div class="mt-4 mx-auto w-full max-w-xl">
-            <input type="text" class="search-bar w-full px-4 py-2 rounded-full border border-gray-700 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" placeholder="खोजें...">
+    <header class="bg-black text-white px-2 sm:px-4 py-3 text-center sticky top-0 z-50 shadow-lg">
+        <div class="flex items-center justify-between">
+            <h1 class="text-xl sm:text-2xl font-bold flex-shrink-0" style="height: 40px; line-height: 40px;">PEREGRINE LIVE</h1>
+            <div class="flex-grow flex justify-end">
+                <input type="text" class="search-bar w-full max-w-xs px-4 py-2 rounded-full border border-gray-700 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" placeholder="खोजें...">
+            </div>
         </div>
-        <nav class="tabs-container overflow-x-auto flex justify-start items-center space-x-2 mt-4 pb-2 px-1 -mx-2">
+        <nav class="tabs-container overflow-x-auto flex justify-start items-center space-x-2 mt-4 pb-2 px-1">
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="fancode">Fancode</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="zee-network">Zee Network</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="pirates-tv">Pirates TV</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="jio-tv">Jio TV</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="others">Others</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="n-stream">N Stream</button>
-            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="iframe">Iframe</button>
         </nav>
     </header>
 
     <!-- Main Content Area -->
-    <main class="flex-grow p-4 md:p-6 lg:p-8 w-full max-w-6xl mx-auto">
-        <div id="content-display" class="content-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-5 mt-4">
-            <!-- Channel cards will be inserted here -->
+    <main class="flex-grow p-2 sm:p-4 w-full mx-auto">
+        <!-- Video Player Container - placed between tabs and content -->
+        <div id="video-player-container" class="bg-gray-800 rounded-lg shadow-xl my-4 hidden flex-col space-y-4">
+            <div data-shaka-player-container class="w-full h-full max-h-screen aspect-video relative flex items-center justify-center">
+                <video autoplay data-shaka-player id="shaka-video-player" class="w-full h-full object-contain"></video>
+            </div>
+            <video id="hls-video-player" class="w-full h-full max-h-screen object-contain" controls></video>
+            
+            <div class="player-controls absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center space-x-4">
+                <select id="quality-selector" class="bg-gray-700 text-white py-2 px-4 rounded-full text-sm font-semibold hidden">
+                    <option value="auto">स्वचालित</option>
+                </select>
+            </div>
         </div>
 
         <!-- N Stream Section -->
@@ -90,30 +114,8 @@
             </div>
         </div>
 
-        <!-- Iframe Section -->
-        <div id="iframe-section" class="bg-gray-800 p-5 rounded-lg shadow-xl mt-4 hidden flex-col space-y-4">
-            <h2 class="text-2xl font-semibold text-center">Iframe में कोई भी लिंक चलाएं</h2>
-            <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-                <input type="text" id="iframe-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="यहां कोई भी वीडियो/स्ट्रीम या वेबपेज लिंक डालें">
-                <button id="load-iframe-btn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-200">लोड करें</button>
-            </div>
-            <iframe id="iframe-display" allowfullscreen class="w-full h-96 rounded-lg border border-gray-600 bg-black"></iframe>
-        </div>
-
-        <!-- Video Player Overlay -->
-        <div id="video-player-overlay" class="fixed inset-0 bg-black bg-opacity-95 z-[9999] hidden items-center justify-center p-4">
-            <div data-shaka-player-container class="w-full h-full max-h-screen aspect-video relative flex items-center justify-center">
-                <video autoplay data-shaka-player id="shaka-video-player" class="w-full h-full object-contain"></video>
-            </div>
-            <video id="hls-video-player" class="w-full h-full max-h-screen object-contain" controls></video>
-            
-            <div class="player-controls absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center space-x-4">
-                <select id="quality-selector" class="bg-gray-700 text-white py-2 px-4 rounded-full text-sm font-semibold hidden">
-                    <option value="auto">स्वचालित</option>
-                </select>
-                <button id="close-player-btn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition-colors duration-200 shadow-lg">बंद करें</button>
-                <button id="fullscreen-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-colors duration-200 shadow-lg">पूर्ण स्क्रीन</button>
-            </div>
+        <div id="content-display" class="content-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-5 mt-4">
+            <!-- Channel cards will be inserted here -->
         </div>
     </main>
 
@@ -126,13 +128,11 @@
     <script>
         const contentDisplay = document.getElementById('content-display');
         const tabButtons = document.querySelectorAll('.tab-button');
-        const videoPlayerOverlay = document.getElementById('video-player-overlay');
+        const videoPlayerContainer = document.getElementById('video-player-container');
         const shakaVideoContainer = document.getElementById('shaka-video-player').parentNode;
         const shakaVideoElement = document.getElementById('shaka-video-player');
         const hlsVideoElement = document.getElementById('hls-video-player');
         
-        const closePlayerBtn = document.getElementById('close-player-btn');
-        const fullscreenBtn = document.getElementById('fullscreen-btn');
         const qualitySelector = document.getElementById('quality-selector');
 
         let shakaPlayerInstance = null;
@@ -150,21 +150,14 @@
         const drmLicenseUrlInput = document.getElementById('drm-license-url-input');
         const playNStreamBtn = document.getElementById('play-n-stream-btn');
 
-        // Iframe elements
-        const iframeSection = document.getElementById('iframe-section');
-        const iframeUrlInput = document.getElementById('iframe-url-input');
-        const loadIframeBtn = document.getElementById('load-iframe-btn');
-        const iframeDisplay = document.getElementById('iframe-display');
-
         // GitHub Raw JSON URLs
         const tabDataUrls = {
             'zee-network': 'https://raw.githubusercontent.com/greenhck/batball/main/zee.json',
-            'fancode': 'https://raw.githubusercontent.com/Jitendraunatti/fancode/refs/heads/main/data/fancode.json',
+            'fancode': 'https://raw.githubusercontent.com/Odfinity/live-events/refs/heads/main/fancode/data.json',
             'pirates-tv': 'https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u',
             'jio-tv': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/jd.m3u',
             'others': 'https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combine_playlist.m3u',
             'n-stream': null,
-            'iframe': null
         };
         
         // Initialize Shaka Player UI once it's loaded
@@ -240,22 +233,24 @@
             // Hide all special sections by default
             nStreamPlayerSection.classList.add('hidden');
             nStreamPlayerSection.classList.remove('flex');
-            iframeSection.classList.add('hidden');
-            iframeSection.classList.remove('flex');
             contentDisplay.style.display = 'grid'; // Show grid for regular tabs
+            videoPlayerContainer.classList.add('hidden');
+            videoPlayerContainer.classList.remove('flex');
 
             if (tabName === 'n-stream') {
                 contentDisplay.style.display = 'none';
                 nStreamPlayerSection.classList.remove('hidden');
                 nStreamPlayerSection.classList.add('flex');
                 return;
-            } else if (tabName === 'iframe') {
-                contentDisplay.style.display = 'none';
-                iframeSection.classList.remove('hidden');
-                iframeSection.classList.add('flex');
-                iframeDisplay.src = '';
-                return;
             }
+
+            // Update loading message with spinner
+            contentDisplay.innerHTML = `
+                <div class="flex items-center justify-center p-4">
+                    <div class="loading-spinner mr-3"></div>
+                    <p class="text-center text-gray-400 font-semibold">Loading channels...</p>
+                </div>
+            `;
 
             const dataUrl = tabDataUrls[tabName];
 
@@ -263,8 +258,6 @@
                 contentDisplay.innerHTML = `<p class="text-center text-red-400 p-4 font-semibold">कृपया **${tabName}** टैब के लिए GitHub Raw JSON/M3U URL को कोड में अपडेट करें।</p>`;
                 return;
             }
-
-            contentDisplay.innerHTML = `<p class="text-center text-gray-400 p-4">**${tabName}** सामग्री लोड हो रही है...</p>`;
 
             try {
                 const response = await fetch(dataUrl);
@@ -286,10 +279,10 @@
                     const data = await response.json();
                     if (data && data.matches) {
                         channelsToDisplay = data.matches.map(match => ({
-                            name: `${match.tournament}: ${match.title} (${match.language})`,
-                            logo: match.image_cdn.APP || match.image,
-                            mpd: null,
-                            m3u8: match.adfree_stream,
+                            name: `${match.event_name}: ${match.match_name}`,
+                            logo: match.src || 'https://placehold.co/200x150/2d3748/a0aec0?text=No+Image',
+                            mpd: match.dai_url,
+                            m3u8: match.adfree_url,
                             clearkey: null
                         }));
                     } else {
@@ -297,13 +290,9 @@
                         contentDisplay.innerHTML = `<p class="text-center text-gray-400 p-4">FanCode के लिए अमान्य डेटा संरचना।</p>`;
                         return;
                     }
-                } else if (tabName === 'pirates-tv' || tabName === 'jio-tv') {
+                } else if (tabName === 'pirates-tv' || tabName === 'jio-tv' || tabName === 'others') {
                     const m3uContent = await response.text();
                     channelsToDisplay = await parseM3U8(m3uContent);
-                }
-                else {
-                    contentDisplay.innerHTML = `<p class="text-center text-gray-400 p-4">**${tabName}** के लिए सामग्री जल्द आ रही है!</p>`;
-                    return;
                 }
 
                 displayChannels(channelsToDisplay);
@@ -340,14 +329,56 @@
         }
 
         async function playChannel(channel) {
-            videoPlayerOverlay.classList.remove('hidden');
-            videoPlayerOverlay.classList.add('flex');
+            videoPlayerContainer.classList.remove('hidden');
+            videoPlayerContainer.classList.add('flex');
             resetPlayers();
 
             shaka.polyfill.installAll();
 
             try {
-                if (channel.mpd) {
+                // Prioritize HLS streams for Fancode matches
+                if (channel.m3u8) {
+                    shakaVideoContainer.style.display = 'none';
+                    hlsVideoElement.style.display = 'block';
+
+                    if (Hls.isSupported()) {
+                        hlsPlayer = new Hls();
+                        hlsPlayer.loadSource(channel.m3u8);
+                        hlsPlayer.attachMedia(hlsVideoElement);
+                        hlsPlayer.on(Hls.Events.MANIFEST_PARSED, function() {
+                            console.log('HLS मैनिफेस्ट पार्स हो गया है (hls.js)!');
+                            hlsVideoElement.play().catch(e => console.warn('HLS video play failed:', e));
+                        });
+                        hlsPlayer.on(Hls.Events.ERROR, function(event, data) {
+                            console.error('HLS.js त्रुटि:', data);
+                            if (data.fatal) {
+                                switch(data.type) {
+                                case Hls.ErrorTypes.NETWORK_ERROR:
+                                    console.error("fatal network error, trying to recover");
+                                    hlsPlayer.startLoad();
+                                    break;
+                                case Hls.ErrorTypes.MEDIA_ERROR:
+                                    console.error("fatal media error, trying to recover");
+                                    hlsPlayer.recoverMediaError();
+                                    break;
+                                default:
+                                    resetPlayers();
+                                    alert('HLS वीडियो चलाने में एक गंभीर त्रुटि हुई।');
+                                    closePlayer();
+                                    break;
+                                }
+                            }
+                        });
+                        console.log('HLS M3U8 URL लोड हो रहा है (hls.js):', channel.m3u8);
+                    } else if (hlsVideoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                        hlsVideoElement.src = channel.m3u8;
+                        hlsVideoElement.addEventListener('loadedmetadata', () => hlsVideoElement.play().catch(e => console.warn('Native HLS play failed:', e)));
+                        console.log('ब्राउज़र के मूल HLS समर्थन का उपयोग किया जा रहा है।');
+                    } else {
+                        alert('आपका ब्राउज़र HLS वीडियो चलाने का समर्थन नहीं करता है।');
+                        closePlayer();
+                    }
+                } else if (channel.mpd) {
                     shakaVideoContainer.style.display = 'block';
                     hlsVideoElement.style.display = 'none';
 
@@ -404,48 +435,6 @@
                     console.log('DASH MPD URL लोड हो रहा है (Shaka Player):', channel.mpd);
                     await shakaPlayerInstance.load(channel.mpd);
                     console.log('वीडियो लोड हो गया है (Shaka Player)!');
-
-                } else if (channel.m3u8) {
-                    shakaVideoContainer.style.display = 'none';
-                    hlsVideoElement.style.display = 'block';
-
-                    if (Hls.isSupported()) {
-                        hlsPlayer = new Hls();
-                        hlsPlayer.loadSource(channel.m3u8);
-                        hlsPlayer.attachMedia(hlsVideoElement);
-                        hlsPlayer.on(Hls.Events.MANIFEST_PARSED, function() {
-                            console.log('HLS मैनिफेस्ट पार्स हो गया है (hls.js)!');
-                            hlsVideoElement.play().catch(e => console.warn('HLS video play failed:', e));
-                        });
-                        hlsPlayer.on(Hls.Events.ERROR, function(event, data) {
-                            console.error('HLS.js त्रुटि:', data);
-                            if (data.fatal) {
-                                switch(data.type) {
-                                case Hls.ErrorTypes.NETWORK_ERROR:
-                                    console.error("fatal network error, trying to recover");
-                                    hlsPlayer.startLoad();
-                                    break;
-                                case Hls.ErrorTypes.MEDIA_ERROR:
-                                    console.error("fatal media error, trying to recover");
-                                    hlsPlayer.recoverMediaError();
-                                    break;
-                                default:
-                                    resetPlayers();
-                                    alert('HLS वीडियो चलाने में एक गंभीर त्रुटि हुई।');
-                                    closePlayer();
-                                    break;
-                                }
-                            }
-                        });
-                        console.log('HLS M3U8 URL लोड हो रहा है (hls.js):', channel.m3u8);
-                    } else if (hlsVideoElement.canPlayType('application/vnd.apple.mpegurl')) {
-                        hlsVideoElement.src = channel.m3u8;
-                        hlsVideoElement.addEventListener('loadedmetadata', () => hlsVideoElement.play().catch(e => console.warn('Native HLS play failed:', e)));
-                        console.log('ब्राउज़र के मूल HLS समर्थन का उपयोग किया जा रहा है।');
-                    } else {
-                        alert('आपका ब्राउज़र HLS वीडियो चलाने का समर्थन नहीं करता है।');
-                        closePlayer();
-                    }
                 } else {
                     alert('इस चैनल के लिए कोई मान्य स्ट्रीम URL (MPD या M3U8) नहीं मिला।');
                     closePlayer();
@@ -467,45 +456,12 @@
         }
 
         function closePlayer() {
-            videoPlayerOverlay.classList.add('hidden');
-            videoPlayerOverlay.classList.remove('flex');
+            videoPlayerContainer.classList.add('hidden');
+            videoPlayerContainer.classList.remove('flex');
             resetPlayers();
         }
 
-        function toggleFullScreen() {
-            let activeVideoElement = null;
-            if (shakaVideoContainer.style.display === 'block') {
-                activeVideoElement = shakaVideoContainer;
-            } else if (hlsVideoElement.style.display === 'block') {
-                activeVideoElement = hlsVideoElement;
-            } else if (iframeSection.classList.contains('flex') && iframeDisplay.contentWindow) {
-                try {
-                    activeVideoElement = iframeDisplay;
-                } catch (e) {
-                    console.warn("Could not access iframe content for fullscreen due to cross-origin restrictions.", e);
-                    alert("Iframe content cannot be put into fullscreen directly due to security restrictions.");
-                    return;
-                }
-            }
-
-            if (activeVideoElement) {
-                if (document.fullscreenElement) {
-                    document.exitFullscreen();
-                } else {
-                    if (activeVideoElement.requestFullscreen) {
-                        activeVideoElement.requestFullscreen();
-                    } else if (activeVideoElement.webkitRequestFullscreen) {
-                        activeVideoElement.webkitRequestFullscreen();
-                    } else if (activeVideoElement.msRequestFullscreen) {
-                        activeVideoElement.msRequestFullscreen();
-                    }
-                }
-            }
-        }
-
         // Event listeners
-        closePlayerBtn.addEventListener('click', closePlayer);
-        fullscreenBtn.addEventListener('click', toggleFullScreen);
         
         tabButtons.forEach(button => {
             button.addEventListener('click', (event) => {
@@ -526,7 +482,7 @@
         const searchBar = document.querySelector('.search-bar');
         searchBar.addEventListener('input', (event) => {
             const searchTerm = event.target.value.toLowerCase();
-            if (nStreamPlayerSection.classList.contains('flex') || iframeSection.classList.contains('flex')) {
+            if (nStreamPlayerSection.classList.contains('flex')) {
                 return;
             }
             const filteredChannels = currentLoadedChannels.filter(channel =>
@@ -588,16 +544,6 @@
                 }
             }
             playChannel(channelConfig);
-        });
-
-        // Iframe specific logic
-        loadIframeBtn.addEventListener('click', () => {
-            const url = iframeUrlInput.value.trim();
-            if (url) {
-                iframeDisplay.src = url;
-            } else {
-                alert('कृपया iframe में लोड करने के लिए एक URL डालें।');
-            }
         });
 
         document.addEventListener('DOMContentLoaded', () => {
