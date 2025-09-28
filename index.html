@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.ui.min.js" crossorigin="anonymous"></script>
     <!-- Hls.js for HLS -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -47,7 +47,6 @@
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
-
     <!-- Header Section -->
     <header class="bg-black text-white px-2 sm:px-4 py-3 text-center sticky top-0 z-50 shadow-lg">
         <div class="flex items-center justify-between">
@@ -61,21 +60,25 @@
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="zee-network">Zee Network</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="pirates-tv">Pirates TV</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="jio-tv">Jio TV</button>
-            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="others">Sony Network</button>
+            <!-- Sony Network tab (previously 'other') - Data-tab name matched to JS variable key -->
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="sony-network">Sony Network</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="jiostar">Jiostar</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="n-stream">N Stream</button>
         </nav>
     </header>
-
     <!-- Main Content Area -->
     <main class="flex-grow p-2 sm:p-4 w-full mx-auto">
         <!-- Video Player Container - placed between tabs and content -->
         <div id="video-player-container" class="bg-gray-800 rounded-lg shadow-xl my-4 hidden flex-col space-y-4">
             <div data-shaka-player-container class="w-full h-full max-h-screen aspect-video relative flex items-center justify-center">
+                <!-- Add a background image to the player container for better loading look -->
+                <div class="absolute inset-0 bg-gray-900 flex items-center justify-center text-gray-500 font-bold text-lg pointer-events-none">
+                    <p>वीडियो लोड हो रहा है...</p>
+                </div>
                 <video autoplay data-shaka-player id="shaka-video-player" class="w-full h-full object-contain"></video>
             </div>
             <video id="hls-video-player" class="w-full h-full max-h-screen object-contain" controls></video>
-            
+
             <div class="player-controls absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center space-x-4">
                 <select id="quality-selector" class="bg-gray-700 text-white py-2 px-4 rounded-full text-sm font-semibold hidden">
                     <option value="auto">स्वचालित</option>
@@ -89,14 +92,15 @@
             <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
                 <label for="stream-type-select" class="text-sm">स्ट्रीम प्रकार:</label>
                 <select id="stream-type-select" class="w-full sm:w-auto px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-500">
-                    <option value="HLS">HLS (M3U8)</option>
+                    <option value="HLS">HLS (M3U8/Generic URL)</option>
                     <option value="DASH">DASH (MPD)</option>
                 </select>
             </div>
             <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
                 <label for="stream-url-input" class="text-sm">स्ट्रीम URL:</label>
-                <input type="text" id="stream-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="यहां M3U8 या MPD लिंक डालें">
+                <input type="text" id="stream-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="यहां M3U8, MPD, या लाइव प्रॉक्सी लिंक डालें">
             </div>
+            
             <div id="drm-controls" class="drm-inputs flex-col space-y-2 pl-4 border-l-2 border-gray-600 hidden">
                 <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
                     <label for="clearkey-id-input" class="text-sm">Clear Key ID:</label>
@@ -134,18 +138,19 @@
         const shakaVideoContainer = document.getElementById('shaka-video-player').parentNode;
         const shakaVideoElement = document.getElementById('shaka-video-player');
         const hlsVideoElement = document.getElementById('hls-video-player');
-        
         const qualitySelector = document.getElementById('quality-selector');
 
         let shakaPlayerInstance = null;
         let hlsPlayer = null;
         let currentLoadedChannels = [];
         let isShakaUINotReady = true;
+        // let currentRequestFilter = null; // REMOVED: Unnecessary complexity/unrequested
 
         // N Stream elements
         const nStreamPlayerSection = document.getElementById('n-stream-player-section');
         const streamTypeSelect = document.getElementById('stream-type-select');
         const streamUrlInput = document.getElementById('stream-url-input');
+        // const streamCookieInput = document.getElementById('stream-cookie-input'); // REMOVED: Unrequested
         const drmControls = document.getElementById('drm-controls');
         const clearkeyIdInput = document.getElementById('clearkey-id-input');
         const clearkeyKeyInput = document.getElementById('clearkey-key-input');
@@ -158,11 +163,12 @@
             'fancode': 'https://raw.githubusercontent.com/Odfinity/live-events/refs/heads/main/fancode/data.json',
             'pirates-tv': 'https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u',
             'jio-tv': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/jd.m3u',
-            'Sony Network': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/sports-pere.m3u',
+            // FIX: Tab key updated to match data-tab="sony-network" and use correct URL
+            'sony-network': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/sports-pere.m3u',
             'jiostar': 'https://raw.githubusercontent.com/alex4528/m3u/refs/heads/main/jtv.m3u',
             'n-stream': null,
         };
-        
+
         // Initialize Shaka Player UI once it's loaded
         document.addEventListener('shaka-ui-loaded', () => {
             console.log('Shaka UI Loaded, initializing Shaka Player instance...');
@@ -195,7 +201,7 @@
                 const channelCard = document.createElement('div');
                 channelCard.classList.add('channel-card', 'bg-gray-800', 'rounded-lg', 'overflow-hidden', 'shadow-lg', 'cursor-pointer', 'transform', 'transition-transform', 'duration-200', 'hover:-translate-y-1', 'hover:shadow-2xl');
                 channelCard.innerHTML = `
-                    <img src="${channel.logo || 'https://placehold.co/200x150/2d3748/a0aec0?text=No+Image'}" alt="${channel.name}" class="w-full h-32 sm:h-40 object-cover">
+                    <img src="${channel.logo || 'https://placehold.co/200x150/2d3748/a0aec0?text=No+Image'}" onerror="this.onerror=null;this.src='https://placehold.co/200x150/2d3748/a0aec0?text=No+Image';" alt="${channel.name}" class="w-full h-32 sm:h-40 object-cover">
                     <h3 class="p-2 sm:p-3 text-sm sm:text-base font-semibold text-center truncate">${channel.name}</h3>
                 `;
                 channelCard.addEventListener('click', () => playChannel(channel));
@@ -217,20 +223,22 @@
                         logo: '',
                         mpd: null,
                         m3u8: null,
-                        clearkey: null,
-                        cookie: null
+                        clearkey: null
+                        // Removed cookie property
                     };
 
                     const nameMatch = line.match(/,(.+)$/);
                     currentChannel.name = nameMatch ? nameMatch[1].trim() : 'Unknown Channel';
-                    const logoMatch = line.match(/tvg-logo="([^"]+)"/);
-                    currentChannel.logo = logoMatch ? logoMatch[1] : '';
+                    const logoMatch = line.match(/tvg-logo="?([^"]*)"?/i);
+                    currentChannel.logo = logoMatch && logoMatch[1] ? logoMatch[1] : '';
 
                     let urlFound = false;
                     let j = i + 1;
                     while (j < lines.length && !urlFound) {
                         const subLine = lines[j];
+
                         if (subLine.startsWith('#KODIPROP:inputstream.adaptive.license_key=')) {
+                            // ClearKey handling
                             const clearkeyMatch = subLine.match(/license_key=([^:]+):([a-f0-9]+)/);
                             if (clearkeyMatch) {
                                 currentChannel.clearkey = {
@@ -238,16 +246,13 @@
                                     key: clearkeyMatch[2]
                                 };
                             }
-                        } else if (subLine.startsWith('#EXTHTTP:')) {
-                            const cookieMatch = subLine.match(/"cookie":"([^"]+)"/);
-                            if (cookieMatch) {
-                                currentChannel.cookie = cookieMatch[1];
-                            }
-                        } else if (!subLine.startsWith('#')) {
+                        } else if (!subLine.startsWith('#') && subLine.startsWith('http')) {
+                            // Found the URL line
                             if (subLine.includes('.mpd')) {
                                 const mpdUrl = subLine.split('&xxx=')[0];
                                 currentChannel.mpd = mpdUrl;
-                            } else if (subLine.includes('.m3u8')) {
+                            } else {
+                                // FIX: If it's a URL but not MPD (like the Sony live.php links), assume it's HLS (m3u8).
                                 currentChannel.m3u8 = subLine;
                             }
                             urlFound = true;
@@ -342,6 +347,8 @@
             shakaVideoContainer.style.display = 'none';
             hlsVideoElement.style.display = 'none';
 
+            // REMOVED: Shaka networking filter deregistration logic
+
             if (shakaPlayerInstance) {
                 shakaPlayerInstance.unload().catch(e => console.warn("Shaka Player unload failed:", e));
             }
@@ -361,7 +368,7 @@
             qualitySelector.innerHTML = '<option value="auto">स्वचालित</option>';
             qualitySelector.classList.add('hidden');
         }
-        
+
         // Autoplay, volume, and fullscreen logic
         function handlePlaybackLogic(video) {
             let hasUserInteracted = false;
@@ -382,11 +389,8 @@
             });
 
             video.addEventListener('play', () => {
-                if (window.self === window.top && !document.fullscreenElement && window.innerWidth <= 768) {
-                    video.requestFullscreen().catch(() => {
-                        console.log('Fullscreen request failed');
-                    });
-                }
+                // Autoplay/Fullscreen logic removed for stability, user must interact for fullscreen/sound
+                // Use the built-in Shaka/HLS controls for fullscreen and playback initiation
             }, { once: true });
 
             document.addEventListener('visibilitychange', () => {
@@ -416,13 +420,18 @@
         }
 
         async function playChannel(channel) {
+            console.log('Playing channel:', channel.name);
             videoPlayerContainer.classList.remove('hidden');
             videoPlayerContainer.classList.add('flex');
-            resetPlayers();
+            nStreamPlayerSection.classList.add('hidden'); // Hide N-Stream section
+            nStreamPlayerSection.classList.remove('flex');
+
+            resetPlayers(); // Clears previous player
 
             shaka.polyfill.installAll();
 
             try {
+                // Priority 1: HLS (m3u8 or generic non-MPD link)
                 if (channel.m3u8) {
                     shakaVideoContainer.style.display = 'none';
                     hlsVideoElement.style.display = 'block';
@@ -432,16 +441,17 @@
                         hlsPlayer.loadSource(channel.m3u8);
                         hlsPlayer.attachMedia(hlsVideoElement);
                         hlsPlayer.on(Hls.Events.MANIFEST_PARSED, function() {
-                            console.log('HLS मैनिफेस्ट पार्स हो गया है (hls.js)!');
+                            console.log('HLS manifest parsed (hls.js)!');
                             hlsVideoElement.play().catch(e => console.warn('HLS video play failed:', e));
                             handlePlaybackLogic(hlsVideoElement);
                         });
                         hlsPlayer.on(Hls.Events.ERROR, function(event, data) {
-                            console.error('HLS.js त्रुटि:', data);
+                            console.error('HLS.js Error:', data);
                             if (data.fatal) {
                                 switch(data.type) {
                                 case Hls.ErrorTypes.NETWORK_ERROR:
                                     console.error("fatal network error, trying to recover");
+                                    hlsPlayer.currentLevel = -1; 
                                     hlsPlayer.startLoad();
                                     break;
                                 case Hls.ErrorTypes.MEDIA_ERROR:
@@ -456,91 +466,74 @@
                                 }
                             }
                         });
-                        console.log('HLS M3U8 URL लोड हो रहा है (hls.js):', channel.m3u8);
+                        console.log('HLS M3U8 URL loading (hls.js):', channel.m3u8);
                     } else if (hlsVideoElement.canPlayType('application/vnd.apple.mpegurl')) {
                         hlsVideoElement.src = channel.m3u8;
                         hlsVideoElement.addEventListener('loadedmetadata', () => hlsVideoElement.play().catch(e => console.warn('Native HLS play failed:', e)));
                         handlePlaybackLogic(hlsVideoElement);
-                        console.log('ब्राउज़र के मूल HLS समर्थन का उपयोग किया जा रहा है।');
+                        console.log('Using browser\'s native HLS support.');
                     } else {
                         alert('आपका ब्राउज़र HLS वीडियो चलाने का समर्थन नहीं करता है।');
                         closePlayer();
                     }
-                } else if (channel.mpd) {
+                }
+                // Priority 2: DASH (mpd)
+                else if (channel.mpd) {
                     shakaVideoContainer.style.display = 'block';
                     hlsVideoElement.style.display = 'none';
 
                     if (!shaka.Player.isBrowserSupported()) {
-                        console.error('ब्राउज़र Shaka Player को सपोर्ट नहीं करता है!');
+                        console.error('Browser does not support Shaka Player!');
                         alert('आपका ब्राउज़र DRM-संरक्षित वीडियो चलाने के लिए आवश्यक सुविधाओं का समर्थन नहीं करता है।');
                         closePlayer();
                         return;
                     }
                     if (isShakaUINotReady || !shakaPlayerInstance) {
-                        console.warn('Shaka UI not yet fully ready, or instance not acquired. Retrying acquisition.');
                         const ui = shakaVideoElement['ui'];
                         if (ui) {
                             const controls = ui.getControls();
                             shakaPlayerInstance = controls.getPlayer();
                             shakaPlayerInstance.addEventListener('error', onErrorEvent);
-                            shakaPlayerInstance.configure({
-                                streaming: { bufferingGoal: 1, rebufferingGoal: 0.5 }
-                            });
+                            shakaPlayerInstance.configure({ streaming: { bufferingGoal: 1, rebufferingGoal: 0.5 } });
                             isShakaUINotReady = false;
                         } else {
-                            console.error("Shaka UI object is still undefined even after retry.");
+                            console.error("Shaka UI object is still undefined.");
                             alert('Shaka Player आरंभ करने में त्रुटि हुई।');
                             closePlayer();
                             return;
                         }
                     }
 
-                    // --- महत्वपूर्ण परिवर्तन: हेडर और कुकी हैंडलिंग यहाँ लागू करें ---
-                    shakaPlayerInstance.getNetworkingEngine().registerRequestFilter((type, request) => {
-                        if (channel.cookie) {
-                            request.headers['Referer'] = 'https://www.jiotv.com/';
-                            request.headers['User-Agent'] = "plaYtv/7.1.5 (Linux;Android 13) ExoPlayerLib/2.11.6";
-                            request.headers['Cookie'] = channel.cookie;
-                        }
+                    // REMOVED: Networking Filter Registration Logic
 
-                        if ( (type === shaka.net.NetworkingEngine.RequestType.MANIFEST || type === shaka.net.NetworkingEngine.RequestType.SEGMENT) && request.uris[0] && channel.cookie) {
-                            if (!request.uris[0].includes('__hdnea__=')) {
-                                const separator = request.uris[0].includes('?') ? '&' : '?';
-                                request.uris[0] += separator + channel.cookie;
-                            }
-                        }
-                    });
-
+                    // --- DRM Configuration ---
                     if (channel.clearkey && channel.clearkey.keyId && channel.clearkey.key) {
                         const keyId = channel.clearkey.keyId.replace(/-/g, '');
                         const key = channel.clearkey.key.replace(/-/g, '');
                         shakaPlayerInstance.configure({
                             drm: { clearKeys: { [keyId]: key } }
                         });
-                        console.log('ClearKey DRM कॉन्फ़िगर किया गया (Shaka Player)।');
+                        console.log('ClearKey DRM configured (Shaka Player).');
                     } else if (channel.drm && channel.drm.licenseUrl) {
                         const servers = {};
                         if (channel.drm.type === 'widevine') {
                             servers['com.widevine.alpha'] = channel.drm.licenseUrl;
                         }
                         shakaPlayerInstance.configure({
-                            drm: {
-                                servers: servers,
-                                advanced: {}
-                            }
+                            drm: { servers: servers, advanced: {} }
                         });
-                        console.log(`${channel.drm.type || 'Generic'} DRM कॉन्फ़िगर किया गया (Shaka Player) लाइसेंस URL: ${channel.drm.licenseUrl}`);
+                        console.log(`${channel.drm.type || 'Generic'} DRM configured (Shaka Player) License URL: ${channel.drm.licenseUrl}`);
                     } else {
                         shakaPlayerInstance.configure({ drm: {} });
-                        console.log('इस DASH चैनल के लिए कोई ClearKey या DRM कॉन्फ़िगरेशन नहीं है।');
+                        console.log('No ClearKey or DRM configured for this DASH channel.');
                     }
 
-                    console.log('DASH MPD URL लोड हो रहा है (Shaka Player):', channel.mpd);
+                    console.log('DASH MPD URL loading (Shaka Player):', channel.mpd);
                     await shakaPlayerInstance.load(channel.mpd);
-                    console.log('वीडियो लोड हो गया है (Shaka Player)!');
+                    console.log('Video loaded (Shaka Player)!');
                     handlePlaybackLogic(shakaVideoElement);
                 } else {
-                    alert('इस चैनल के लिए कोई मान्य स्ट्रीम URL (MPD या M3U8) नहीं मिला।');
+                    alert('इस चैनल के लिए कोई मान्य स्ट्रीम URL (MPD या M3U8/Generic) नहीं मिला।');
                     closePlayer();
                 }
             } catch (e) {
@@ -554,7 +547,7 @@
         }
 
         function onError(error) {
-            console.error('त्रुटि:', error);
+            console.error('Error:', error);
             alert('वीडियो चलाने में त्रुटि हुई। कृपया बाद में पुनः प्रयास करें।');
             closePlayer();
         }
@@ -565,8 +558,43 @@
             resetPlayers();
         }
 
+        // Shaka Quality Selector Logic
+        shakaVideoElement.addEventListener('loadedmetadata', () => {
+            if (shakaPlayerInstance && shakaVideoContainer.style.display !== 'none') {
+                const tracks = shakaPlayerInstance.getVariantTracks();
+                qualitySelector.innerHTML = '<option value="auto">स्वचालित</option>';
+                tracks.sort((a, b) => b.bandwidth - a.bandwidth).forEach(track => {
+                    const option = document.createElement('option');
+                    option.value = track.id;
+                    option.textContent = `${(track.bandwidth / 1000).toFixed(0)} kbps`;
+                    if (track.height) {
+                        option.textContent += ` (${track.height}p)`;
+                    }
+                    qualitySelector.appendChild(option);
+                });
+                qualitySelector.classList.remove('hidden');
+
+                // Set initial selection to auto
+                const activeTrack = shakaPlayerInstance.getVariantTracks().find(t => t.active);
+                qualitySelector.value = activeTrack ? activeTrack.id : 'auto';
+            }
+        });
+
+        qualitySelector.addEventListener('change', (e) => {
+            if (!shakaPlayerInstance) return;
+            const trackId = e.target.value;
+            if (trackId === 'auto') {
+                shakaPlayerInstance.configure({ abr: { enabled: true } });
+            } else {
+                shakaPlayerInstance.configure({ abr: { enabled: false } });
+                const track = shakaPlayerInstance.getVariantTracks().find(t => t.id == trackId);
+                if (track) {
+                    shakaPlayerInstance.selectVariantTrack(track, true);
+                }
+            }
+        });
+
         // Event listeners
-        
         tabButtons.forEach(button => {
             button.addEventListener('click', (event) => {
                 tabButtons.forEach(btn => {
@@ -612,6 +640,7 @@
         playNStreamBtn.addEventListener('click', () => {
             const streamUrl = streamUrlInput.value.trim();
             const streamType = streamTypeSelect.value;
+
             let channelConfig = {
                 name: 'N Stream Custom Playback',
                 logo: '',
@@ -619,6 +648,7 @@
                 m3u8: null,
                 clearkey: null,
                 drm: null
+                // Removed cookie property
             };
 
             if (!streamUrl) {
@@ -653,7 +683,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             const savedTab = localStorage.getItem('activeTab');
             let tabToActivate = savedTab || 'jio-tv'; // Default to jio-tv
-
             const urlParams = new URLSearchParams(window.location.search);
             const nParam = urlParams.get('n');
 
@@ -665,26 +694,22 @@
                 let drmLicenseUrl = '';
                 let streamType = 'HLS';
 
+                // DASH ClearKey Pattern: URL|drmScheme=clearkey&drmLicense=KID:KEY
                 const dashClearKeyPattern = /^([^|]+)\|drmScheme=clearkey&drmLicense=([^:]+):(.+)$/;
                 const matchClearKey = nParam.match(dashClearKeyPattern);
+
+                // REMOVED: URL Token parsing logic
 
                 if (matchClearKey) {
                     streamType = 'DASH';
                     streamUrl = matchClearKey[1];
                     clearkeyId = matchClearKey[2];
                     clearkeyKey = matchClearKey[3];
-                    drmLicenseUrl = '';
-                }
-                else if (streamUrl.includes('.mpd')) {
+                } else if (streamUrl.includes('.mpd')) {
                     streamType = 'DASH';
-                    clearkeyId = '';
-                    clearkeyKey = '';
-                    drmLicenseUrl = '';
-                } else if (streamUrl.includes('.m3u8')) {
+                } else {
+                    // Default to HLS for any other URL
                     streamType = 'HLS';
-                    clearkeyId = '';
-                    clearkeyKey = '';
-                    drmLicenseUrl = '';
                 }
 
                 const nStreamTabButton = document.querySelector('.tab-button[data-tab="n-stream"]');
@@ -693,19 +718,17 @@
                     setTimeout(() => {
                         streamUrlInput.value = streamUrl;
                         streamTypeSelect.value = streamType;
+                        // REMOVED: streamCookieInput setting
+
                         const changeEvent = new Event('change');
                         streamTypeSelect.dispatchEvent(changeEvent);
+
                         if (streamType === 'DASH') {
                             clearkeyIdInput.value = clearkeyId;
                             clearkeyKeyInput.value = clearkeyKey;
                             drmLicenseUrlInput.value = drmLicenseUrl;
-                        } else {
-                            drmControls.classList.add('hidden');
-                            drmControls.classList.remove('flex');
-                            clearkeyIdInput.value = '';
-                            clearkeyKeyInput.value = '';
-                            drmLicenseUrlInput.value = '';
                         }
+
                         playNStreamBtn.click();
                     }, 100);
                 }
@@ -714,6 +737,7 @@
                 if (defaultButton) {
                     defaultButton.click();
                 } else {
+                    // Fallback to Jio TV if saved tab not found (e.g., first load)
                     document.querySelector('.tab-button[data-tab="jio-tv"]').click();
                 }
             }
