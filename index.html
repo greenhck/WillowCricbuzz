@@ -60,7 +60,8 @@
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="zee-network">Zee Network</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="pirates-tv">Pirates TV</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="jio-tv">Jio TV</button>
-            <!-- Sony Network tab (previously 'other') - Data-tab name matched to JS variable key -->
+            <!-- New Tab: Pere Sports -->
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="pere-sports">Pere Sports</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="sony-network">Sony Network</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="jiostar">Jiostar</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="n-stream">N Stream</button>
@@ -144,13 +145,11 @@
         let hlsPlayer = null;
         let currentLoadedChannels = [];
         let isShakaUINotReady = true;
-        // let currentRequestFilter = null; // REMOVED: Unnecessary complexity/unrequested
 
         // N Stream elements
         const nStreamPlayerSection = document.getElementById('n-stream-player-section');
         const streamTypeSelect = document.getElementById('stream-type-select');
         const streamUrlInput = document.getElementById('stream-url-input');
-        // const streamCookieInput = document.getElementById('stream-cookie-input'); // REMOVED: Unrequested
         const drmControls = document.getElementById('drm-controls');
         const clearkeyIdInput = document.getElementById('clearkey-id-input');
         const clearkeyKeyInput = document.getElementById('clearkey-key-input');
@@ -163,7 +162,7 @@
             'fancode': 'https://raw.githubusercontent.com/Odfinity/live-events/refs/heads/main/fancode/data.json',
             'pirates-tv': 'https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u',
             'jio-tv': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/jd.m3u',
-            // FIX: Tab key updated to match data-tab="sony-network" and use correct URL
+            'pere-sports': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/rocketperesports.m3u', // NEW TAB URL
             'sony-network': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/sports-pere.m3u',
             'jiostar': 'https://raw.githubusercontent.com/alex4528/m3u/refs/heads/main/jtv.m3u',
             'n-stream': null,
@@ -224,7 +223,6 @@
                         mpd: null,
                         m3u8: null,
                         clearkey: null
-                        // Removed cookie property
                     };
 
                     const nameMatch = line.match(/,(.+)$/);
@@ -252,7 +250,7 @@
                                 const mpdUrl = subLine.split('&xxx=')[0];
                                 currentChannel.mpd = mpdUrl;
                             } else {
-                                // FIX: If it's a URL but not MPD (like the Sony live.php links), assume it's HLS (m3u8).
+                                // If it's a URL but not MPD, assume it's HLS (m3u8).
                                 currentChannel.m3u8 = subLine;
                             }
                             urlFound = true;
@@ -346,8 +344,6 @@
         function resetPlayers() {
             shakaVideoContainer.style.display = 'none';
             hlsVideoElement.style.display = 'none';
-
-            // REMOVED: Shaka networking filter deregistration logic
 
             if (shakaPlayerInstance) {
                 shakaPlayerInstance.unload().catch(e => console.warn("Shaka Player unload failed:", e));
@@ -460,7 +456,8 @@
                                     break;
                                 default:
                                     resetPlayers();
-                                    alert('HLS वीडियो चलाने में एक गंभीर त्रुटि हुई।');
+                                    // Use a custom message box instead of alert
+                                    console.error('HLS वीडियो चलाने में एक गंभीर त्रुटि हुई।');
                                     closePlayer();
                                     break;
                                 }
@@ -473,7 +470,7 @@
                         handlePlaybackLogic(hlsVideoElement);
                         console.log('Using browser\'s native HLS support.');
                     } else {
-                        alert('आपका ब्राउज़र HLS वीडियो चलाने का समर्थन नहीं करता है।');
+                        console.error('आपका ब्राउज़र HLS वीडियो चलाने का समर्थन नहीं करता है।');
                         closePlayer();
                     }
                 }
@@ -484,7 +481,6 @@
 
                     if (!shaka.Player.isBrowserSupported()) {
                         console.error('Browser does not support Shaka Player!');
-                        alert('आपका ब्राउज़र DRM-संरक्षित वीडियो चलाने के लिए आवश्यक सुविधाओं का समर्थन नहीं करता है।');
                         closePlayer();
                         return;
                     }
@@ -498,13 +494,10 @@
                             isShakaUINotReady = false;
                         } else {
                             console.error("Shaka UI object is still undefined.");
-                            alert('Shaka Player आरंभ करने में त्रुटि हुई।');
                             closePlayer();
                             return;
                         }
                     }
-
-                    // REMOVED: Networking Filter Registration Logic
 
                     // --- DRM Configuration ---
                     if (channel.clearkey && channel.clearkey.keyId && channel.clearkey.key) {
@@ -533,7 +526,7 @@
                     console.log('Video loaded (Shaka Player)!');
                     handlePlaybackLogic(shakaVideoElement);
                 } else {
-                    alert('इस चैनल के लिए कोई मान्य स्ट्रीम URL (MPD या M3U8/Generic) नहीं मिला।');
+                    console.error('इस चैनल के लिए कोई मान्य स्ट्रीम URL (MPD या M3U8/Generic) नहीं मिला।');
                     closePlayer();
                 }
             } catch (e) {
@@ -548,7 +541,7 @@
 
         function onError(error) {
             console.error('Error:', error);
-            alert('वीडियो चलाने में त्रुटि हुई। कृपया बाद में पुनः प्रयास करें।');
+            // Use console.error instead of alert
             closePlayer();
         }
 
@@ -648,11 +641,10 @@
                 m3u8: null,
                 clearkey: null,
                 drm: null
-                // Removed cookie property
             };
 
             if (!streamUrl) {
-                alert('कृपया स्ट्रीम URL डालें।');
+                console.error('कृपया स्ट्रीम URL डालें।');
                 return;
             }
 
@@ -682,7 +674,8 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const savedTab = localStorage.getItem('activeTab');
-            let tabToActivate = savedTab || 'jio-tv'; // Default to jio-tv
+            // Default to 'pere-sports' (new tab) or 'jio-tv' if no saved tab
+            let tabToActivate = savedTab || 'pere-sports'; 
             const urlParams = new URLSearchParams(window.location.search);
             const nParam = urlParams.get('n');
 
@@ -697,8 +690,6 @@
                 // DASH ClearKey Pattern: URL|drmScheme=clearkey&drmLicense=KID:KEY
                 const dashClearKeyPattern = /^([^|]+)\|drmScheme=clearkey&drmLicense=([^:]+):(.+)$/;
                 const matchClearKey = nParam.match(dashClearKeyPattern);
-
-                // REMOVED: URL Token parsing logic
 
                 if (matchClearKey) {
                     streamType = 'DASH';
@@ -718,8 +709,7 @@
                     setTimeout(() => {
                         streamUrlInput.value = streamUrl;
                         streamTypeSelect.value = streamType;
-                        // REMOVED: streamCookieInput setting
-
+                        
                         const changeEvent = new Event('change');
                         streamTypeSelect.dispatchEvent(changeEvent);
 
@@ -737,7 +727,7 @@
                 if (defaultButton) {
                     defaultButton.click();
                 } else {
-                    // Fallback to Jio TV if saved tab not found (e.g., first load)
+                    // Fallback to Jio TV if saved tab not found
                     document.querySelector('.tab-button[data-tab="jio-tv"]').click();
                 }
             }
