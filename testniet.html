@@ -212,9 +212,12 @@
         }
 
         function updateChannelShareableUrl(channelName) {
-            updateQueryParam('tab', currentTab);
-            updateQueryParam('channel', encodeURIComponent(channelName));
-            updateQueryParam('n', null); // Remove N-Stream param if present
+            // Only update if a channel name is provided and we are not in N-Stream tab
+            if (channelName && currentTab !== 'n-stream') {
+                updateQueryParam('tab', currentTab);
+                updateQueryParam('channel', encodeURIComponent(channelName));
+                updateQueryParam('n', null); // Remove N-Stream param if present
+            }
         }
 
         function updateNStreamShareableUrl(channelConfig) {
@@ -296,7 +299,7 @@
         }
         
         // Disable Auto Fullscreen/Autoplay Tweaks (Passive Playback Logic)
-        function handlePlaybackLogic(video, isShaka) {
+        function handlePlaybackLogic(video, isShaka, channelName = null) {
             let hasUserInteracted = false;
             const enableSoundOnInteraction = () => {
                 if (!hasUserInteracted) {
@@ -318,6 +321,10 @@
             const attemptAutoplay = () => {
                 video.play().then(() => {
                     console.log('Autoplay successful (muted)!');
+                    // Update sharable URL on successful playback for regular channels
+                    if (!isShaka && channelName && currentTab !== 'n-stream') {
+                        updateChannelShareableUrl(channelName);
+                    }
                 }).catch(e => {
                     console.warn('Autoplay failed, user interaction required.', e);
                 });
@@ -334,15 +341,11 @@
             if (isShaka) {
                 if (shakaPlayerInstance) {
                     shakaPlayerInstance.addEventListener('loaded', () => {
-                        updateChannelShareableUrl(shakaPlayerInstance.getManifestUri());
+                        // Update sharable URL on successful playback for regular channels
+                        if (channelName && currentTab !== 'n-stream') {
+                            updateChannelShareableUrl(channelName);
+                        }
                     }, {once: true});
-                }
-            } else {
-                // For HLS, update the URL immediately since it's a simple load
-                // We use the channel name for shareable URL
-                const currentChannelName = currentLoadedChannels.find(c => c.m3u8 === video.src)?.name || 'Custom HLS Stream';
-                if (currentTab !== 'n-stream') {
-                     updateChannelShareableUrl(currentChannelName);
                 }
             }
         }
@@ -372,7 +375,7 @@
                         hlsPlayer.attachMedia(hlsVideoElement);
                         hlsPlayer.on(Hls.Events.MANIFEST_PARSED, function() {
                             console.log('HLS manifest parsed (hls.js)!');
-                            handlePlaybackLogic(hlsVideoElement, false);
+                            handlePlaybackLogic(hlsVideoElement, false, channel.name);
                         });
                         hlsPlayer.on(Hls.Events.ERROR, function(event, data) {
                             console.error('HLS.js Error:', data);
@@ -397,7 +400,7 @@
                         console.log('HLS M3U8 URL loading (hls.js):', channel.m3u8);
                     } else if (hlsVideoElement.canPlayType('application/vnd.apple.mpegurl')) {
                         hlsVideoElement.src = channel.m3u8;
-                        hlsVideoElement.addEventListener('loadedmetadata', () => handlePlaybackLogic(hlsVideoElement, false));
+                        hlsVideoElement.addEventListener('loadedmetadata', () => handlePlaybackLogic(hlsVideoElement, false, channel.name));
                         console.log('Using browser\'s native HLS support.');
                     } else {
                         console.error('आपका ब्राउज़र HLS वीडियो चलाने का समर्थन नहीं करता है।');
@@ -439,7 +442,7 @@
                     console.log('DASH MPD URL loading (Shaka Player):', channel.mpd);
                     await shakaPlayerInstance.load(channel.mpd);
                     console.log('Video loaded (Shaka Player)!');
-                    handlePlaybackLogic(shakaVideoElement, true);
+                    handlePlaybackLogic(shakaVideoElement, true, channel.name);
                     setupShakaQualitySelector(); // Setup quality selector after load
 
                 } else {
@@ -448,9 +451,8 @@
                 }
                 
                 // --- Sharable URL Update for Regular Channels ---
-                if (currentTab !== 'n-stream') {
-                    updateChannelShareableUrl(channel.name);
-                }
+                // The update is now handled inside handlePlaybackLogic on successful playback/load
+                
             } catch (e) {
                 onError(e);
             }
@@ -535,7 +537,7 @@
                 `;
                 channelCard.addEventListener('click', () => {
                     playChannel(channel);
-                    // Automatically update URL when channel is clicked
+                    // Update URL immediately on user click, actual stream shareable update happens on success
                     updateChannelShareableUrl(channel.name);
                 });
                 contentDisplay.appendChild(channelCard);
@@ -552,6 +554,17 @@
             contentDisplay.style.display = 'grid'; // Show grid for regular tabs
             videoPlayerContainer.classList.add('hidden');
             videoPlayerContainer.classList.remove('flex');
+            
+            // Update active tab button style
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner');
+                btn.classList.add('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
+                if (btn.dataset.tab === tabName) {
+                    btn.classList.add('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner');
+                    btn.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+                }
+            });
+
 
             if (tabName === 'n-stream') {
                 contentDisplay.style.display = 'none';
@@ -606,16 +619,18 @@
 
                 displayChannels(channelsToDisplay);
 
-                // Auto-play shared channel if specified
+                // --- FIX: Auto-play shared channel now correctly implemented here ---
                 if (channelToPlay) {
                     const channel = channelsToDisplay.find(c => c.name === channelToPlay);
                     if (channel) {
-                        // Delay play slightly to ensure player UI is ready
+                        console.log(`Auto-playing shared channel: ${channelToPlay}`);
+                        // Delay play slightly to ensure player UI is ready and DOM is updated
                         setTimeout(() => playChannel(channel), 100); 
                     } else {
                         console.warn(`Shared channel "${channelToPlay}" not found in tab "${tabName}".`);
                     }
                 }
+                // --- END FIX ---
 
             } catch (error) {
                 console.error('डेटा लोड करने में त्रुटि:', error);
@@ -754,12 +769,8 @@
             button.addEventListener('click', (event) => {
                 const tab = event.target.dataset.tab;
                 
-                tabButtons.forEach(btn => {
-                    btn.classList.remove('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner');
-                    btn.classList.add('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
-                });
-                event.target.classList.add('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner');
-                event.target.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+                // Style update handled inside loadAndDisplayChannels now
+                // Also ensures tab styling is applied correctly on initial shared URL load
 
                 // Update URL for tab selection, remove channel/n
                 updateQueryParam('tab', tab);
@@ -894,12 +905,16 @@
 
                 const nStreamTabButton = document.querySelector('.tab-button[data-tab="n-stream"]');
                 if (nStreamTabButton) {
-                    nStreamTabButton.click();
+                    // Manually set tab and update URL, then proceed with N-Stream logic
+                    currentTab = 'n-stream';
+                    updateQueryParam('tab', 'n-stream');
+                    loadAndDisplayChannels('n-stream'); // Load N-Stream section
+                    
+                    // Populate inputs and play after a short delay
                     setTimeout(() => {
                         streamUrlInput.value = streamUrl;
                         streamTypeSelect.value = streamType;
                         
-                        // Dispatch change event to show/hide DRM controls
                         const changeEvent = new Event('change');
                         streamTypeSelect.dispatchEvent(changeEvent);
 
@@ -915,8 +930,8 @@
             else if (sharedTab && sharedChannel) {
                 const tabButton = document.querySelector(`.tab-button[data-tab="${sharedTab}"]`);
                 if (tabButton) {
-                    // Click the tab, and pass the channel name to loadAndDisplayChannels for auto-play
-                    tabButton.click(); 
+                    // Directly load the tab and pass the channel name for auto-play
+                    // We don't need to 'click' the button, just call the loader
                     loadAndDisplayChannels(sharedTab, decodeURIComponent(sharedChannel));
                 }
             }
@@ -924,10 +939,11 @@
             else {
                 const defaultButton = document.querySelector(`.tab-button[data-tab="${tabToActivate}"]`);
                 if (defaultButton) {
-                    defaultButton.click();
+                    // Directly load the tab
+                    loadAndDisplayChannels(tabToActivate);
                 } else {
                     // Fallback to Jio TV if default/saved tab not found
-                    document.querySelector('.tab-button[data-tab="jio-tv"]').click();
+                    loadAndDisplayChannels('jio-tv');
                 }
             }
         });
