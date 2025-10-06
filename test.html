@@ -182,6 +182,9 @@
         let hlsPlayer = null;
         let currentLoadedChannels = [];
         let currentTab = '';
+        
+        // GLOBAL FIX: Variable to store the dynamic network filter function for Shaka Player
+        let shakaNetworkingFilter = null;
 
         // N Stream elements
         const nStreamPlayerSection = document.getElementById('n-stream-player-section');
@@ -287,11 +290,17 @@
 
             if (shakaPlayerInstance) {
                 shakaPlayerInstance.unload().catch(e => console.warn("Shaka Player unload failed:", e));
-                // Reset DRM config and default net headers
+                // Reset DRM config
                 shakaPlayerInstance.configure({ 
-                    drm: {},
-                    net: { defaultRequestConfiguration: { headers: {} } }
+                    drm: {}
                 });
+
+                // FIX: Remove custom network filter
+                if (shakaNetworkingFilter) {
+                    shakaPlayerInstance.getNetworkingEngine().unregisterRequestFilter(shakaNetworkingFilter);
+                    shakaNetworkingFilter = null;
+                    console.log("Custom Shaka network filter removed.");
+                }
             }
             if (hlsPlayer) {
                 hlsPlayer.destroy();
@@ -376,7 +385,7 @@
             nStreamPlayerSection.classList.add('hidden'); // Hide N-Stream section
             nStreamPlayerSection.classList.remove('flex');
 
-            resetPlayers(); // Clears previous player
+            resetPlayers(); // Clears previous player and network filter
 
             try {
                 // Priority 1: HLS (m3u8 or generic non-MPD link)
@@ -393,6 +402,9 @@
                                 if (customHeaders['Cookie']) {
                                     xhr.setRequestHeader('Cookie', customHeaders['Cookie']);
                                 }
+                                // Add fixed spoof headers for HLS too, just in case
+                                xhr.setRequestHeader('Referer', 'https://www.jiotv.com/');
+                                xhr.setRequestHeader('User-Agent', "plaYtv/7.1.5 (Linux;Android 13) ExoPlayerLib/2.11.6");
                             }
                         });
                         hlsPlayer.loadSource(channel.m3u8);
@@ -442,27 +454,10 @@
                         return;
                     }
 
-                    // --- JIO FIX: Spoofing headers (Referer and User-Agent) to bypass 403 Forbidden ---
-                    const fixedSpoofHeaders = {
-                        'Referer': 'https://www.jiotv.com/',
-                        'User-Agent': "plaYtv/7.1.5 (Linux;Android 13) ExoPlayerLib/2.11.6"
-                    };
-
-                    // Combine fixed spoof headers with user-provided custom headers (like 'Cookie')
-                    const combinedHeaders = {
-                        ...fixedSpoofHeaders,
-                        ...customHeaders 
-                    };
-
-                    // --- Build Shaka Configuration including DRM and Headers ---
+                    // --- Build Shaka Configuration (Only DRM) ---
                     const shakaConfig = {
                         streaming: { bufferingGoal: 1, rebufferingGoal: 0.5 },
-                        drm: {}, // Default empty DRM
-                        net: {
-                            defaultRequestConfiguration: {
-                                headers: combinedHeaders // Apply spoofed and custom headers here
-                            }
-                        }
+                        drm: {} // Default empty DRM
                     };
 
                     // DRM Configuration
@@ -482,7 +477,29 @@
                         console.log('No ClearKey or DRM configured for this DASH channel.');
                     }
 
-                    shakaPlayerInstance.configure(shakaConfig); // Apply full configuration
+                    shakaPlayerInstance.configure(shakaConfig); // Apply configuration (Only DRM/Streaming settings)
+
+                    // --- FIX: Use registerRequestFilter for headers (Correct Method) ---
+                    const fixedSpoofHeaders = {
+                        'Referer': 'https://www.jiotv.com/',
+                        'User-Agent': "plaYtv/7.1.5 (Linux;Android 13) ExoPlayerLib/2.11.6"
+                    };
+
+                    // Define the filter function to set the headers on every request
+                    shakaNetworkingFilter = (type, request) => {
+                        // Apply spoofing headers
+                        Object.assign(request.headers, fixedSpoofHeaders);
+                        
+                        // Apply user-provided Cookie header if available
+                        if (customHeaders['Cookie']) {
+                            request.headers['Cookie'] = customHeaders['Cookie'];
+                        }
+                    };
+
+                    // Register the filter
+                    shakaPlayerInstance.getNetworkingEngine().registerRequestFilter(shakaNetworkingFilter);
+                    console.log('JioTV network filter registered with Referer, User-Agent, and Cookie.');
+
 
                     console.log('DASH MPD URL loading (Shaka Player):', channel.mpd);
                     await shakaPlayerInstance.load(channel.mpd);
