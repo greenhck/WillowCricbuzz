@@ -263,14 +263,10 @@
             const controls = ui.getControls();
             shakaPlayerInstance = controls.getPlayer();
             shakaPlayerInstance.addEventListener('error', onErrorEvent);
-            // Default Shaka Config (will be overridden by playChannel)
+            // FIX 1: Initial configuration simplified. Buffering goals are fine.
             shakaPlayerInstance.configure({
-                streaming: { bufferingGoal: 1, rebufferingGoal: 0.5 },
-                net: {
-                    defaultRequestConfiguration: {
-                        headers: {}
-                    }
-                }
+                streaming: { bufferingGoal: 1, rebufferingGoal: 0.5 }
+                // Removed redundant net config that was causing the initial warning
             });
             console.log('Shaka Player instance initialized via UI.');
         });
@@ -292,8 +288,8 @@
 
             if (shakaPlayerInstance) {
                 shakaPlayerInstance.unload().catch(e => console.warn("Shaka Player unload failed:", e));
-                // Clear any previous DRM/Network config
-                shakaPlayerInstance.configure({ drm: {}, net: { defaultRequestConfiguration: { headers: {} } } });
+                // FIX 2: Only reset DRM config here. Headers will be set in playChannel's configure call.
+                shakaPlayerInstance.configure({ drm: {} });
             }
             if (hlsPlayer) {
                 hlsPlayer.destroy();
@@ -450,7 +446,7 @@
                         drm: {}, // Default empty DRM
                         net: {
                             defaultRequestConfiguration: {
-                                headers: customHeaders // NEW: Apply custom headers (including cookies) here
+                                headers: customHeaders // Apply custom headers (including cookies) here
                             }
                         }
                     };
@@ -472,7 +468,7 @@
                         console.log('No ClearKey or DRM configured for this DASH channel.');
                     }
 
-                    shakaPlayerInstance.configure(shakaConfig); // Apply full configuration
+                    shakaPlayerInstance.configure(shakaConfig); // Apply full configuration (this should now only cause one warning per channel load, which is acceptable)
 
                     console.log('DASH MPD URL loading (Shaka Player):', channel.mpd);
                     await shakaPlayerInstance.load(channel.mpd);
@@ -489,6 +485,7 @@
                 // The update is now handled inside handlePlaybackLogic on successful playback/load
 
             } catch (e) {
+                // Shaka Player error objects (like the 403) are caught here.
                 onError(e);
             }
         }
@@ -905,6 +902,7 @@
 
             // Prepare custom headers object for the player
             const customHeaders = {};
+            // Shaka player expects header names as keys. For cookies, we use 'Cookie'.
             if (cookiesValue) {
                 customHeaders['Cookie'] = cookiesValue;
             }
@@ -1020,3 +1018,4 @@
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "68a40879f6b244629841d4be7aec5e0f"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
+
