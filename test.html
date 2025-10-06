@@ -122,10 +122,10 @@
                 <label for="stream-url-input" class="text-sm">स्ट्रीम URL:</label>
                 <input type="text" id="stream-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="यहां M3U8, MPD, या लाइव प्रॉक्सी लिंक डालें">
             </div>
-            <!-- NEW: Cookies Input for streams requiring authentication/session -->
+            <!-- Cookies Input for streams requiring authentication/session -->
             <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
                 <label for="cookies-input" class="text-sm">HTTP कुकीज़ (वैकल्पिक):</label>
-                <input type="text" id="cookies-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="उदाहरण: key=value; session=xyz">
+                <input type="text" id="cookies-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="उदाहरण: __hdnea__=st=...~exp=...~hmac=...">
             </div>
 
             <div id="drm-controls" class="drm-inputs flex-col space-y-2 pl-4 border-l-2 border-gray-600 hidden">
@@ -193,7 +193,7 @@
         const drmLicenseUrlInput = document.getElementById('drm-license-url-input');
         const playNStreamBtn = document.getElementById('play-n-stream-btn');
         const recentStreamsList = document.getElementById('recent-streams-list');
-        // NEW N Stream elements
+        // N Stream elements
         const cookiesInput = document.getElementById('cookies-input');
         const clearRecentStreamsBtn = document.getElementById('clear-recent-streams-btn');
 
@@ -242,7 +242,7 @@
             } else if (channelConfig.drm && channelConfig.drm.licenseUrl) {
                 params.push(`drmScheme=widevine&drmLicense=${encodeURIComponent(channelConfig.drm.licenseUrl)}`);
             }
-            // NEW: Add cookies to shareable URL if present
+            // Add cookies to shareable URL if present
             if (channelConfig.cookies) {
                 params.push(`cookies=${encodeURIComponent(channelConfig.cookies)}`);
             }
@@ -263,10 +263,9 @@
             const controls = ui.getControls();
             shakaPlayerInstance = controls.getPlayer();
             shakaPlayerInstance.addEventListener('error', onErrorEvent);
-            // FIX 1: Initial configuration simplified. Buffering goals are fine.
+            // Initial configuration simplified.
             shakaPlayerInstance.configure({
                 streaming: { bufferingGoal: 1, rebufferingGoal: 0.5 }
-                // Removed redundant net config that was causing the initial warning
             });
             console.log('Shaka Player instance initialized via UI.');
         });
@@ -288,8 +287,11 @@
 
             if (shakaPlayerInstance) {
                 shakaPlayerInstance.unload().catch(e => console.warn("Shaka Player unload failed:", e));
-                // FIX 2: Only reset DRM config here. Headers will be set in playChannel's configure call.
-                shakaPlayerInstance.configure({ drm: {} });
+                // Reset DRM config and default net headers
+                shakaPlayerInstance.configure({ 
+                    drm: {},
+                    net: { defaultRequestConfiguration: { headers: {} } }
+                });
             }
             if (hlsPlayer) {
                 hlsPlayer.destroy();
@@ -367,7 +369,7 @@
             }
         }
 
-        async function playChannel(channel, customHeaders = {}) { // NEW: customHeaders added
+        async function playChannel(channel, customHeaders = {}) { // customHeaders includes the 'Cookie'
             console.log('Playing channel:', channel.name, 'with headers:', customHeaders);
             videoPlayerContainer.classList.remove('hidden');
             videoPlayerContainer.classList.add('flex');
@@ -386,7 +388,7 @@
                         hlsPlayer = new Hls({
                             liveSyncDuration: 3,
                             liveMaxLatencyDuration: 10,
-                            // NEW: Setup XHR to include cookies
+                            // Setup XHR to include cookies
                             xhrSetup: function(xhr, url) {
                                 if (customHeaders['Cookie']) {
                                     xhr.setRequestHeader('Cookie', customHeaders['Cookie']);
@@ -440,13 +442,25 @@
                         return;
                     }
 
+                    // --- JIO FIX: Spoofing headers (Referer and User-Agent) to bypass 403 Forbidden ---
+                    const fixedSpoofHeaders = {
+                        'Referer': 'https://www.jiotv.com/',
+                        'User-Agent': "plaYtv/7.1.5 (Linux;Android 13) ExoPlayerLib/2.11.6"
+                    };
+
+                    // Combine fixed spoof headers with user-provided custom headers (like 'Cookie')
+                    const combinedHeaders = {
+                        ...fixedSpoofHeaders,
+                        ...customHeaders 
+                    };
+
                     // --- Build Shaka Configuration including DRM and Headers ---
                     const shakaConfig = {
                         streaming: { bufferingGoal: 1, rebufferingGoal: 0.5 },
                         drm: {}, // Default empty DRM
                         net: {
                             defaultRequestConfiguration: {
-                                headers: customHeaders // Apply custom headers (including cookies) here
+                                headers: combinedHeaders // Apply spoofed and custom headers here
                             }
                         }
                     };
@@ -468,7 +482,7 @@
                         console.log('No ClearKey or DRM configured for this DASH channel.');
                     }
 
-                    shakaPlayerInstance.configure(shakaConfig); // Apply full configuration (this should now only cause one warning per channel load, which is acceptable)
+                    shakaPlayerInstance.configure(shakaConfig); // Apply full configuration
 
                     console.log('DASH MPD URL loading (Shaka Player):', channel.mpd);
                     await shakaPlayerInstance.load(channel.mpd);
@@ -480,9 +494,6 @@
                     console.error('इस चैनल के लिए कोई मान्य स्ट्रीम URL (MPD या M3U8/Generic) नहीं मिला।');
                     closePlayer();
                 }
-
-                // --- Sharable URL Update for Regular Channels ---
-                // The update is now handled inside handlePlaybackLogic on successful playback/load
 
             } catch (e) {
                 // Shaka Player error objects (like the 403) are caught here.
@@ -645,7 +656,7 @@
                 }
 
                 displayChannels(channelsToDisplay);
-                // --- FIX: Auto-play shared channel now correctly implemented here ---
+                // Auto-play shared channel
                 if (channelToPlay) {
                     const channel = channelsToDisplay.find(c => c.name === channelToPlay);
                     if (channel) {
@@ -656,7 +667,6 @@
                         console.warn(`Shared channel "${channelToPlay}" not found in tab "${tabName}".`);
                     }
                 }
-                // --- END FIX ---
             } catch (error) {
                 console.error('डेटा लोड करने में त्रुटि:', error);
                 contentDisplay.innerHTML = `<p class="text-center text-red-400 p-4 font-semibold">सामग्री लोड करने में त्रुटि हुई: ${error.message}</p>`;
@@ -780,7 +790,7 @@
                 const keyId = stream.clearkey ? stream.clearkey.keyId : '';
                 const key = stream.clearkey ? stream.clearkey.key : '';
                 const licenseUrl = stream.drm ? stream.drm.licenseUrl : '';
-                const cookies = stream.cookies || ''; // NEW: Read cookies
+                const cookies = stream.cookies || ''; // Read cookies
 
                 const button = document.createElement('button');
                 button.classList.add('bg-gray-700', 'hover:bg-gray-600', 'text-white', 'py-2', 'px-3', 'rounded-lg', 'text-sm', 'transition-all', 'duration-200', 'shadow-md', 'flex', 'flex-col', 'items-start');
@@ -797,7 +807,7 @@
                     clearkeyIdInput.value = keyId;
                     clearkeyKeyInput.value = key;
                     drmLicenseUrlInput.value = licenseUrl;
-                    cookiesInput.value = cookies; // NEW: Pre-fill cookies
+                    cookiesInput.value = cookies; // Pre-fill cookies
 
                     // Trigger change event to show/hide DRM controls
                     const changeEvent = new Event('change');
@@ -855,13 +865,13 @@
             }
         });
 
-        // NEW: Clear recent streams button listener
+        // Clear recent streams button listener
         clearRecentStreamsBtn.addEventListener('click', clearRecentStreams);
 
         playNStreamBtn.addEventListener('click', () => {
             const streamUrl = streamUrlInput.value.trim();
             const streamType = streamTypeSelect.value;
-            const cookiesValue = cookiesInput.value.trim(); // NEW: Read cookies value
+            const cookiesValue = cookiesInput.value.trim(); // Read cookies value
 
             let channelConfig = {
                 name: 'N Stream Custom Playback',
@@ -870,7 +880,7 @@
                 m3u8: null,
                 clearkey: null,
                 drm: null,
-                cookies: cookiesValue || null // NEW: Add cookies to config
+                cookies: cookiesValue || null // Add cookies to config
             };
 
             if (!streamUrl) {
@@ -935,7 +945,7 @@
                 let clearkeyId = '';
                 let clearkeyKey = '';
                 let drmLicenseUrl = '';
-                let cookies = ''; // NEW: For shared cookies
+                let cookies = ''; // For shared cookies
                 let streamType = 'HLS';
 
                 // Split URL from parameters
@@ -960,7 +970,7 @@
                         streamType = 'DASH';
                     }
 
-                    // NEW: Cookies Parsing
+                    // Cookies Parsing
                     const sharedCookies = params.get('cookies');
                     if (sharedCookies) {
                         cookies = sharedCookies;
@@ -987,7 +997,7 @@
                         clearkeyIdInput.value = clearkeyId;
                         clearkeyKeyInput.value = clearkeyKey;
                         drmLicenseUrlInput.value = drmLicenseUrl;
-                        cookiesInput.value = cookies; // NEW: Set cookies input
+                        cookiesInput.value = cookies; // Set cookies input
 
                         playNStreamBtn.click(); // Auto-play the stream
                     }, 100);
@@ -1018,4 +1028,3 @@
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "68a40879f6b244629841d4be7aec5e0f"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
-
