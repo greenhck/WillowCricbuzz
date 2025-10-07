@@ -98,11 +98,11 @@
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="jio-tv">Jio TV</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="pere-sports">Pere Sports</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="sony-network">Sony Network</button>
-            <button class="tab-button flex-shrink-0 bg-gray-600 hover:bg-gray-500 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-inner transform hover:-translate-y-1" data-tab="jiostar">Jiostar</button>
-            <!-- Voot TV Tab (retaining indigo color) -->
-            <button class="tab-button flex-shrink-0 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="voot-tv">Voot TV</button>
-            <!-- NEW TAB: Opplex TV -->
-            <button class="tab-button flex-shrink-0 bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="opplex-tv">Opplex TV</button>
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-inner transform hover:-translate-y-1" data-tab="jiostar">Jiostar</button>
+            <!-- Voot TV Tab: Removed indigo color -->
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="voot-tv">Voot TV</button>
+            <!-- Opplex TV Tab: Removed green color -->
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="opplex-tv">Opplex TV</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="n-stream">N Stream</button>
         </nav>
     </header>
@@ -223,9 +223,7 @@
             'pere-sports': 'https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/ALL.m3u',
             'sony-network': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/sports-pere.m3u',
             'jiostar': 'https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jstar.m3u',
-            // Corrected Voot TV Path (Removed leading /)
             'voot-tv': 'vootTvP.json', 
-            // NEW Opplex TV Path
             'opplex-tv': 'opplexPere.json',
             'n-stream': null,
         };
@@ -647,7 +645,7 @@
                 m3u8: item.url && !item.url.includes('.mpd') ? item.url : null, 
                 clearkey: null,
                 drm: null,
-                customUserAgent: null, 
+                customUserAgent: null,
                 customCookies: null
             }));
         }
@@ -668,8 +666,8 @@
                         const isMpd = item.url && item.url.includes('.mpd');
 
                         allChannels.push({
-                            // Prepend category name for context and clean up unwanted text
-                            name: `[${category.split(' | ')[0]}] ${item.name}`.replace(/•●★--- Welcome ----★●•/g, 'Welcome'), 
+                            // UPDATED: Only use the original name, remove the category/country prefix
+                            name: item.name.replace(/•●★--- Welcome ----★●•/g, 'Welcome'), 
                             logo: item.logo || 'https://placehold.co/200x150/2d3748/a0aec0?text=Opplex+TV',
                             mpd: isMpd ? item.url : null,
                             m3u8: !isMpd && item.url ? item.url : null, // Treat generic links as m3u8/generic
@@ -804,31 +802,15 @@
 
             // Update active tab button style
             tabButtons.forEach(btn => {
-                btn.classList.remove('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner', 'bg-indigo-600', 'hover:bg-indigo-500', 'bg-green-600', 'hover:bg-green-500'); 
+                // Clear all active/color classes
+                btn.classList.remove('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner'); 
+                // Restore default color classes (Voot/Opplex colors removed from HTML, so this is safe)
                 btn.classList.add('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
                 
-                // Specific Voot TV color treatment
-                if (btn.dataset.tab === 'voot-tv') {
-                    if (tabName === 'voot-tv') {
-                        btn.classList.add('active', 'bg-indigo-600', 'hover:bg-indigo-500', 'shadow-inner');
-                        btn.classList.remove('bg-gray-700', 'hover:bg-gray-600');
-                    } else {
-                        btn.classList.add('bg-indigo-600', 'hover:bg-indigo-500', 'shadow-md');
-                    }
-                } 
-                // Specific Opplex TV color treatment
-                else if (btn.dataset.tab === 'opplex-tv') {
-                    if (tabName === 'opplex-tv') {
-                        btn.classList.add('active', 'bg-green-600', 'hover:bg-green-500', 'shadow-inner');
-                        btn.classList.remove('bg-gray-700', 'hover:bg-gray-600');
-                    } else {
-                        btn.classList.add('bg-green-600', 'hover:bg-green-500', 'shadow-md');
-                    }
-                }
-                // Default tab treatment
-                else if (btn.dataset.tab === tabName) {
+                // Apply activation style for the current tab
+                if (btn.dataset.tab === tabName) {
                     btn.classList.add('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner');
-                    btn.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+                    btn.classList.remove('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
                 }
             });
 
@@ -882,7 +864,7 @@
                     const data = await response.json();
                     channelsToDisplay = mapVootTvChannels(data);
                 } else if (tabName === 'opplex-tv') {
-                    // NEW: Opplex TV JSON mapping
+                    // Opplex TV JSON mapping
                     const data = await response.json();
                     channelsToDisplay = mapOpplexChannels(data);
                 } else {
