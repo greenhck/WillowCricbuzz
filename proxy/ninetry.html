@@ -74,6 +74,15 @@
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+    <!-- Message Box Modal (New UI for Errors) -->
+    <div id="message-box-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-[1000] flex items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-xl p-6 w-full max-w-lg shadow-2xl border-t-4 border-red-500">
+            <h3 id="message-box-title" class="text-xl font-bold mb-3 text-red-400">स्ट्रीम एरर</h3>
+            <p id="message-box-content" class="text-gray-300 mb-5 text-sm"></p>
+            <button id="message-box-close-btn" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 rounded-lg transition duration-200">ठीक है (बंद करें)</button>
+        </div>
+    </div>
+
     <!-- Header Section -->
     <header class="bg-black text-white px-2 sm:px-4 py-3 text-center sticky top-0 z-50 shadow-lg">
         <div class="flex items-center justify-between">
@@ -173,6 +182,12 @@
         const shakaVideoElement = document.getElementById('shaka-video-player');
         const hlsVideoElement = document.getElementById('hls-video-player');
         const qualitySelector = document.getElementById('quality-selector');
+        
+        // Message Box Elements
+        const messageBoxModal = document.getElementById('message-box-modal');
+        const messageBoxTitle = document.getElementById('message-box-title');
+        const messageBoxContent = document.getElementById('message-box-content');
+        const messageBoxCloseBtn = document.getElementById('message-box-close-btn');
 
         let shakaPlayerInstance = null;
         let hlsPlayer = null;
@@ -203,9 +218,22 @@
             'jio-tv': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/jd.m3u',
             'pere-sports': 'https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/ALL.m3u',
             'sony-network': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/sports-pere.m3u',
-            'jiostar': 'https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jstar.m3u', // <-- UPDATED URL
+            'jiostar': 'https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jstar.m3u',
             'n-stream': null,
         };
+        
+        // --- Custom Message Box for Errors ---
+        function showMessageBox(title, content) {
+            messageBoxTitle.textContent = title;
+            messageBoxContent.textContent = content;
+            messageBoxModal.classList.remove('hidden');
+        }
+
+        messageBoxCloseBtn.addEventListener('click', () => {
+            messageBoxModal.classList.add('hidden');
+            closePlayer(); // Also close the player when the user acknowledges the error
+        });
+
 
         // --- URL Management (New Sharable Logic) ---
         function updateQueryParam(key, value) {
@@ -258,31 +286,33 @@
             shakaPlayerInstance = controls.getPlayer();
             shakaPlayerInstance.addEventListener('error', onErrorEvent);
             
-            // Initial configuration updated for better live performance (from user feedback).
+            // Configuration adjusted for stability and to prevent page unresponsiveness.
             shakaPlayerInstance.configure({
                 streaming: { 
-                    lowLatencyMode: true,
-                    bufferingGoal: 15,
+                    lowLatencyMode: true, // Keep low latency, but compensate with larger buffer
+                    // FIX: Increase buffering goal to give more stability to high-load streams like JioStar
+                    bufferingGoal: 45, // 45 seconds (was 15)
                     rebufferingGoal: 2,
-                    bufferBehind: 15,
+                    bufferBehind: 45,  // Match buffer behind to buffering goal
                     retryParameters: {
+                        // FIX: Increase backoff factor and base delay to prevent network flooding on unstable streams
                         timeout: 10000,
-                        maxAttempts: 5,
-                        baseDelay: 300,
-                        backoffFactor: 1.2
+                        maxAttempts: 7, // Allow a few more attempts
+                        baseDelay: 1000, // Wait 1 second before first retry (was 300ms)
+                        backoffFactor: 2.0 // Double the delay each time (was 1.2)
                     },
-                    segmentRequestTimeout: 8000,
+                    segmentRequestTimeout: 10000, // Increased timeout (was 8000)
                     segmentPrefetchLimit: 2,
                     useNativeHlsOnSafari: true
                 },
                 manifest: {
                     retryParameters: {
-                        timeout: 8000,
-                        maxAttempts: 3
+                        timeout: 10000,
+                        maxAttempts: 5
                     }
                 }
             });
-            console.log('Shaka Player instance initialized via UI with fast streaming config.');
+            console.log('Shaka Player instance initialized via UI with stability-focused config.');
         });
 
         // Shaka Player error handler
@@ -292,8 +322,36 @@
 
         function onError(error) {
             console.error('Error:', error);
+            
+            const message = error.message || "स्ट्रीमिंग में एक अज्ञात त्रुटि हुई।";
+            let userMessage = "";
+            let title = "स्ट्रीम प्लेबैक त्रुटि";
+
+            if (error.code) {
+                if (error.code === 1001) { // Error 1001: Networking Error (e.g., 403, 404, network failure)
+                    const status = error.data && error.data[1] ? error.data[1] : 'Unknown';
+                    if (status === 403) {
+                        userMessage = "स्ट्रीमिंग टोकन या ऑथेंटिकेशन में त्रुटि (403 Forbidden)। स्ट्रीम का लिंक या कुकी/टोकन अमान्य/एक्सपायर हो सकता है।";
+                        title = "टोकन अमान्य (403)";
+                    } else if (status === 404) {
+                        userMessage = "स्ट्रीम URL नहीं मिला (404 Not Found)। यह चैनल अभी लाइव नहीं हो सकता है या लिंक बदल गया है।";
+                        title = "चैनल नहीं मिला (404)";
+                    } else {
+                        userMessage = `नेटवर्क से डेटा प्राप्त करने में त्रुटि हुई। कोड ${error.code}: ${status}`;
+                    }
+                } else if (error.code === 4001) { // Error 4001: Media Error (e.g., decoding failure, corrupted data)
+                    userMessage = "वीडियो/ऑडियो डेटा त्रुटि: स्ट्रीम डेटा भ्रष्ट (corrupted) है या आपका ब्राउज़र इसे डीकोड नहीं कर पा रहा है।";
+                    title = "डेटा डीकोडिंग त्रुटि";
+                } else {
+                     userMessage = `प्लेबैक के दौरान एक गंभीर त्रुटि हुई। Shaka त्रुटि कोड ${error.code}। स्थिरता के लिए स्ट्रीम को बंद किया जा रहा है।`;
+                }
+            } else {
+                userMessage = message;
+            }
+
+            // Display custom error UI and close the player
+            showMessageBox(title, userMessage);
             closePlayer();
-            // Optional: Display a message box here instead of just logging
         }
 
         function resetPlayers() {
@@ -450,15 +508,18 @@
                                 switch(data.type) {
                                 case Hls.ErrorTypes.NETWORK_ERROR:
                                     console.error("fatal network error, trying to recover");
-                                    hlsPlayer.currentLevel = -1;
-                                    hlsPlayer.startLoad();
+                                    // FIX: For fatal HLS errors, instead of aggressive recovery, show message and close
+                                    showMessageBox("HLS नेटवर्क त्रुटि", "HLS स्ट्रीम नेटवर्क से लोड नहीं हो पा रही है या URL अमान्य है। कृपया बाद में प्रयास करें।");
+                                    closePlayer();
                                     break;
                                 case Hls.ErrorTypes.MEDIA_ERROR:
                                     console.error("fatal media error, trying to recover");
-                                    hlsPlayer.recoverMediaError();
+                                    showMessageBox("HLS मीडिया त्रुटि", "स्ट्रीम डेटा भ्रष्ट (corrupted) है।");
+                                    closePlayer();
                                     break;
                                 default:
                                     console.error('HLS वीडियो चलाने में एक गंभीर त्रुटि हुई।');
+                                    showMessageBox("HLS सामान्य त्रुटि", "HLS वीडियो चलाने में एक गंभीर त्रुटि हुई।");
                                     closePlayer();
                                     break;
                                 }
@@ -471,6 +532,7 @@
                         console.log('Using browser\'s native HLS support.');
                     } else {
                         console.error('आपका ब्राउज़र HLS वीडियो चलाने का समर्थन नहीं करता है।');
+                        showMessageBox("ब्राउज़र संगतता त्रुटि", "आपका ब्राउज़र HLS वीडियो चलाने का समर्थन नहीं करता है।");
                         closePlayer();
                     }
                 }
@@ -518,7 +580,7 @@
                         // 1. Apply all headers (Referer, User-Agent, Cookie) from the dynamic requestHeaders object
                         Object.assign(request.headers, requestHeaders);
                         
-                        // 2. CRITICAL FIX: Append the full cookie string to the URL query parameters
+                        // 2. Append the full cookie string to the URL query parameters
                         const customCookieString = requestHeaders['Cookie'];
 
                         if (customCookieString &&
@@ -529,6 +591,7 @@
                             if (!request.uris[0].includes('__hdnea__=')) { 
                                 const separator = request.uris[0].includes('?') ? '&' : '?';
                                 // The customCookieString should contain the full token string (e.g., __hdnea__=st=...)
+                                // The token is appended directly as the value of the 'Cookie' header is the signed string itself.
                                 request.uris[0] += separator + customCookieString; 
                             }
                         }
@@ -550,11 +613,12 @@
 
                 } else {
                     console.error('इस चैनल के लिए कोई मान्य स्ट्रीम URL (MPD या M3U8/Generic) नहीं मिला।');
+                    showMessageBox("URL त्रुटि", "इस चैनल के लिए कोई मान्य स्ट्रीम URL (MPD या M3U8/Generic) नहीं मिला।");
                     closePlayer();
                 }
 
             } catch (e) {
-                // Shaka Player error objects (like the 403) are caught here.
+                // Shaka Player error objects (like the 403 or heavy buffering errors) are caught here.
                 onError(e);
             }
         }
@@ -962,6 +1026,7 @@
 
             if (!streamUrl) {
                 console.error('कृपया स्ट्रीम URL डालें।');
+                showMessageBox("URL आवश्यक", "कृपया 'स्ट्रीम URL' इनपुट फ़ील्ड में एक मान्य पता डालें।");
                 return;
             }
 
