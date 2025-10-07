@@ -1,0 +1,149 @@
+[
+  {
+    "id": "ColorsHD",
+    "channel_name": "Colors HD",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_HD.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ColorsHD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "ColorsRishtey",
+    "channel_name": "Rishtey",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Rishtey.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ColorsRishtey/JCHLS/index.m3u8"
+  },
+  {
+    "id": "ColorsCineplexHD",
+    "channel_name": "Colors Cineplex",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Cineplex.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ColorsCineplexHD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "ColorsCineplexSuperhit",
+    "channel_name": "Rishtey Cineplex",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Rishtey_Cineplex.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ColorsCineplexSuperhit/JCHLS/index.m3u8"
+  },
+  {
+    "id": "ColorsCineplexBollywood",
+    "channel_name": "Colors Cineplex Bollywood",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Cineplex_Bollywood.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ColorsCineplexBollywood/JCHLS/index.m3u8"
+  },
+  {
+    "id": "NickSD",
+    "channel_name": "Nick Hindi",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Nick_Hindi.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_NickSD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "NickHD",
+    "channel_name": "Nick HD Plus",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Nick_HD_Plus.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_NickHD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "MTVHD",
+    "channel_name": "MTV HD Plus",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/MTV_HD_Plus.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_MTVHD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "ColorsBanglaHD",
+    "channel_name": "Colors Bangla HD",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Bangla_HD.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ColorsBanglaHD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "ColorsInfinityHD",
+    "channel_name": "Colors Infinity HD",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Infinity_HD.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ColorsInfinityHD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "ColorsTamilHD",
+    "channel_name": "Colors Tamil HD",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Tamil_HD.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ColorsTamilHD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "ColorsGujarati",
+    "channel_name": "Colors Gujarati",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Gujarati.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ColorsGujarati/JCHLS/index.m3u8"
+  },
+  {
+    "id": "ColorsKannadaCinema",
+    "channel_name": "Colors Kannada Cinema",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Kannada_Cinema.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ColorsKannadaCinema/JCHLS/index.m3u8"
+  },
+  {
+    "id": "ColorsKannadaHD",
+    "channel_name": "Colors Kannada HD",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Kannada_HD.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ColorsKannadaHD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "ColorsMarathiHD",
+    "channel_name": "Colors Marathi HD",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Marathi_HD.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ColorsMarathiHD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "ComedyCentralHD",
+    "channel_name": "Comedy Central HD",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Comedy_Central_HD.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_ComedyCentralHD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "Sports181HD",
+    "channel_name": "Star Sports 2 Hindi HD",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Sports18_1_HD.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_Sports181HD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "Sports181SD",
+    "channel_name": "Star Sports 2 Hindi SD",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Sports18_1_SD.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_Sports181SD/JCHLS/index.m3u8"
+  },
+  {
+    "id": "Sports182",
+    "channel_name": "Star Sports 2 Telugu",
+    "logo": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Telugu_Transparent_5f794134-ddc1-457f-af2d-d4101d9f6711.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_Sports182/JCHLS/index.m3u8"
+  },
+  {
+    "id": "Sports183",
+    "channel_name": "Star Sports 2 Tamil",
+    "logo": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Tamil_Transparent_495e7bfa-b0b9-4055-a22e-56f3507ca469.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_Sports183/JCHLS/index.m3u8"
+  },
+  {
+    "id": "Sports18Khel",
+    "channel_name": "Star Sports khel",
+    "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sports18_Khel.png",
+    "genre": "V18 | 07",
+    "url": "https://nonprod-sports-cohort.jiocinema.com/bpk-tv/JC_Sports18Khel/JCHLS/index.m3u8"
+  }
+]
