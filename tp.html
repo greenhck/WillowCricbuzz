@@ -98,9 +98,11 @@
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="jio-tv">Jio TV</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="pere-sports">Pere Sports</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="sony-network">Sony Network</button>
-            <button class="tab-button flex-shrink-0 bg-gray-600 hover:bg-gray-500 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-inner transform hover:-translate-y-1" data-tab="jiostar">Jiostar</button>
-            <!-- NEW TAB: Voot TV -->
-            <button class="tab-button flex-shrink-0 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="voot-tv">Voot TV</button>
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-inner transform hover:-translate-y-1" data-tab="jiostar">Jiostar</button>
+            <!-- Voot TV Tab: Removed indigo color -->
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="voot-tv">Voot TV</button>
+            <!-- Opplex TV Tab: Removed green color -->
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="opplex-tv">Opplex TV</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="n-stream">N Stream</button>
         </nav>
     </header>
@@ -184,8 +186,7 @@
         const shakaVideoElement = document.getElementById('shaka-video-player');
         const hlsVideoElement = document.getElementById('hls-video-player');
         const qualitySelector = document.getElementById('quality-selector');
-        
-        // Message Box Elements
+                // Message Box Elements
         const messageBoxModal = document.getElementById('message-box-modal');
         const messageBoxTitle = document.getElementById('message-box-title');
         const messageBoxContent = document.getElementById('message-box-content');
@@ -195,7 +196,7 @@
         let hlsPlayer = null;
         let currentLoadedChannels = [];
         let currentTab = '';
-        
+
         // GLOBAL FIX: Variable to store the dynamic network filter function for Shaka Player
         let shakaNetworkingFilter = null;
 
@@ -211,8 +212,7 @@
         const recentStreamsList = document.getElementById('recent-streams-list');
         const clearRecentStreamsBtn = document.getElementById('clear-recent-streams-btn');
 
-
-        // GitHub Raw JSON URLs (UPDATED JIOSTAR URL)
+        // GitHub Raw JSON URLs (UPDATED Voot TV PATH and ADDED Opplex TV)
         const tabDataUrls = {
             'zee-network': 'https://raw.githubusercontent.com/greenhck/batball/main/zee.json',
             'fancode': 'https://raw.githubusercontent.com/Odfinity/live-events/refs/heads/main/fancode/data.json',
@@ -221,11 +221,11 @@
             'pere-sports': 'https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/ALL.m3u',
             'sony-network': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/sports-pere.m3u',
             'jiostar': 'https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jstar.m3u',
-            // NEW Voot TV Data URL: Assuming relative path for the user's file.
             'voot-tv': 'vootTvP.json', 
+            'opplex-tv': 'opplexPere.json',
             'n-stream': null,
         };
-        
+
         // --- Custom Message Box for Errors ---
         function showMessageBox(title, content) {
             messageBoxTitle.textContent = title;
@@ -237,7 +237,6 @@
             messageBoxModal.classList.add('hidden');
             closePlayer(); // Also close the player when the user acknowledges the error
         });
-
 
         // --- URL Management (New Sharable Logic) ---
         function updateQueryParam(key, value) {
@@ -267,7 +266,9 @@
             let params = [];
 
             if (channelConfig.clearkey && channelConfig.clearkey.keyId && channelConfig.clearkey.key) {
-                params.push(`drmScheme=clearkey&drmLicense=${channelConfig.clearkey.keyId}:${channelConfig.clearkey.key}`);
+                // Ensure keyId and key are separated by colon for correct DOMContentLoaded parsing
+                const license = `${channelConfig.clearkey.keyId}:${channelConfig.clearkey.key}`;
+                params.push(`drmScheme=clearkey&drmLicense=${encodeURIComponent(license)}`);
             } else if (channelConfig.drm && channelConfig.drm.licenseUrl) {
                 params.push(`drmScheme=widevine&drmLicense=${encodeURIComponent(channelConfig.drm.licenseUrl)}`);
             }
@@ -289,7 +290,7 @@
             const controls = ui.getControls();
             shakaPlayerInstance = controls.getPlayer();
             shakaPlayerInstance.addEventListener('error', onErrorEvent);
-            
+
             // Configuration adjusted for stability and to prevent page unresponsiveness.
             shakaPlayerInstance.configure({
                 streaming: { 
@@ -326,7 +327,7 @@
 
         function onError(error) {
             console.error('Error:', error);
-            
+
             const message = error.message || "स्ट्रीमिंग में एक अज्ञात त्रुटि हुई।";
             let userMessage = "";
             let title = "स्ट्रीम प्लेबैक त्रुटि";
@@ -346,7 +347,7 @@
                 } else if (error.code === 4001) { // Error 4001: Media Error (e.g., decoding failure, corrupted data)
                     userMessage = "वीडियो/ऑडियो डेटा त्रुटि: स्ट्रीम डेटा भ्रष्ट (corrupted) है या आपका ब्राउज़र इसे डीकोड नहीं कर पा रहा है।";
                     title = "डेटा डीकोडिंग त्रुटि";
-                } else {
+                } else { 
                      userMessage = `प्लेबैक के दौरान एक गंभीर त्रुटि हुई। Shaka त्रुटि कोड ${error.code}। स्थिरता के लिए स्ट्रीम को बंद किया जा रहा है।`;
                 }
             } else {
@@ -366,7 +367,7 @@
                 shakaPlayerInstance.unload().catch(e => console.warn("Shaka Player unload failed:", e));
                 // Reset DRM config only, keeping the fast streaming configuration
                 shakaPlayerInstance.configure({ 
-                    drm: {}
+                     drm: {}
                 });
 
                 // FIX: Remove custom network filter
@@ -454,11 +455,11 @@
 
         // playChannel function updated to handle custom User-Agent and Cookies from M3U parsing
         async function playChannel(channel) { 
-            console.log('Playing channel:', channel.name);
+             console.log('Playing channel:', channel.name);
             videoPlayerContainer.classList.remove('hidden');
             videoPlayerContainer.classList.add('flex');
-            nStreamPlayerSection.classList.add('hidden'); // Hide N-Stream section
-            nStreamPlayerSection.classList.remove('flex');
+            
+            // NOTE: Do not hide the N-Stream section here. The tab-switching logic handles N-Stream display.
 
             resetPlayers(); // Clears previous player and network filter
 
@@ -481,8 +482,8 @@
                 if (channel.customCookies) {
                     // Use custom Cookies if provided in M3U
                     requestHeaders['Cookie'] = channel.customCookies; 
-                }
-                
+                }                                
+
                 // Priority 1: HLS (m3u8 or generic non-MPD link)
                 if (channel.m3u8) {
                     shakaVideoContainer.style.display = 'none';
@@ -550,12 +551,10 @@
                         closePlayer();
                         return;
                     }
-
                     // --- Build DRM Configuration ONLY (Streaming config is set globally for faster performance) ---
                     const shakaConfig = {
                         drm: {} // Default empty DRM
                     };
-
                     // DRM Configuration
                     if (channel.clearkey && channel.clearkey.keyId && channel.clearkey.key) {
                         // Note: Keys are expected to be clean (no dashes) from parseM3U now
@@ -573,60 +572,54 @@
                     } else {
                         console.log('No ClearKey or DRM configured for this DASH channel.');
                     }
-
                     shakaPlayerInstance.configure(shakaConfig); // Apply ONLY DRM configuration
 
-
-                    // --- Use registerRequestFilter for dynamic headers (Correct Method) ---
-                    
+                    // --- Use registerRequestFilter for dynamic headers (Correct Method) ---                                        
                     // Define the filter function to set the dynamic headers on every request
                     shakaNetworkingFilter = (type, request) => {
                         // 1. Apply all headers (Referer, User-Agent, Cookie) from the dynamic requestHeaders object
                         Object.assign(request.headers, requestHeaders);
-                        
+
                         // 2. Append the full cookie string to the URL query parameters
                         const customCookieString = requestHeaders['Cookie'];
 
                         if (customCookieString &&
-                            (type === shaka.net.NetworkingEngine.RequestType.MANIFEST || 
-                             type === shaka.net.NetworkingEngine.RequestType.SEGMENT)) {
-                            
+                            (type === shaka.net.NetworkingEngine.RequestType.MANIFEST ||
+                              type === shaka.net.NetworkingEngine.RequestType.SEGMENT)) {
+
                             // Check if the URL already contains the cookie token (to avoid double appending)
-                            if (!request.uris[0].includes('__hdnea__=')) { 
-                                const separator = request.uris[0].includes('?') ? '&' : '?';
+                            if (!request.uris[0].includes('__hdnea__=')) {
+                                 const separator = request.uris[0].includes('?') ? '&' : '?';
                                 // The customCookieString should contain the full token string (e.g., __hdnea__=st=...)
                                 // The token is appended directly as the value of the 'Cookie' header is the signed string itself.
+                                // NOTE: This assumes the token itself is the parameter name=value string.
                                 request.uris[0] += separator + customCookieString; 
-                            }
+                             }
                         }
 
                         // CRITICAL DEBUG LOG: Check final URL and headers
                         console.log(`[Shaka Filter] Request Type: ${type}, Final URL: ${request.uris[0]}, Final Headers:`, request.headers);
                     };
-
                     // Register the filter
                     shakaPlayerInstance.getNetworkingEngine().registerRequestFilter(shakaNetworkingFilter);
                     console.log('Dynamic network filter registered with User-Agent, Cookie Header, and URL signing.');
-
 
                     console.log('DASH MPD URL loading (Shaka Player):', channel.mpd);
                     await shakaPlayerInstance.load(channel.mpd);
                     console.log('Video loaded (Shaka Player)!');
                     handlePlaybackLogic(shakaVideoElement, true, channel.name);
                     setupShakaQualitySelector(); // Setup quality selector after load
-
                 } else {
                     console.error('इस चैनल के लिए कोई मान्य स्ट्रीम URL (MPD या M3U8/Generic) नहीं मिला।');
                     showMessageBox("URL त्रुटि", "इस चैनल के लिए कोई मान्य स्ट्रीम URL (MPD या M3U8/Generic) नहीं मिला।");
                     closePlayer();
                 }
-
             } catch (e) {
                 // Shaka Player error objects (like the 403 or heavy buffering errors) are caught here.
                 onError(e);
             }
         }
-
+        
         // --- Channel Mapping Function for Voot TV (and similar JSON structures) ---
         function mapVootTvChannels(data) {
             if (!Array.isArray(data)) {
@@ -637,15 +630,48 @@
                 name: item.channel_name || item.id,
                 logo: item.logo || 'https://placehold.co/200x150/2d3748/a0aec0?text=Voot+TV',
                 // Check if the URL is an MPD (DASH) or M3U8 (HLS)
-                m3u8: (item.url && item.url.includes('.m3u8')) ? item.url : null, 
+                m3u8: (item.url && item.url.includes('.m3u8') && !item.url.includes('.mpd')) ? item.url : null, 
                 mpd: (item.url && item.url.includes('.mpd')) ? item.url : null,
+                // Assuming generic proxy links are M3U8/Generic HLS or similar, so mapping the whole URL to M3U8 if no MPD.
+                m3u8: item.url && !item.url.includes('.mpd') ? item.url : null, 
                 clearkey: null,
                 drm: null,
-                customUserAgent: null, 
+                customUserAgent: null,
                 customCookies: null
             }));
         }
 
+        // --- NEW: Channel Mapping Function for Opplex TV (nested JSON structure) ---
+        function mapOpplexChannels(data) {
+            let allChannels = [];
+            if (typeof data !== 'object' || data === null) {
+                console.error("Opplex TV data is not a valid object:", data);
+                return [];
+            }
+
+            // Iterate over each category key (e.g., "PAKISTAN | ENTERTAINMENT")
+            for (const category in data) {
+                if (Array.isArray(data[category])) {
+                    data[category].forEach(item => {
+                        // The URLs are generic PHP links which should be tested with HLS/Generic player
+                        const isMpd = item.url && item.url.includes('.mpd');
+
+                        allChannels.push({
+                            // UPDATED: Only use the original name, remove the category/country prefix
+                            name: item.name.replace(/•●★--- Welcome ----★●•/g, 'Welcome'), 
+                            logo: item.logo || 'https://placehold.co/200x150/2d3748/a0aec0?text=Opplex+TV',
+                            mpd: isMpd ? item.url : null,
+                            m3u8: !isMpd && item.url ? item.url : null, // Treat generic links as m3u8/generic
+                            clearkey: null,
+                            drm: null,
+                            customUserAgent: null,
+                            customCookies: null
+                        });
+                    });
+                }
+            }
+            return allChannels;
+        }
 
         // --- Channel Loading Functions ---
         async function parseM3U(m3uContent) {
@@ -766,20 +792,15 @@
 
             // Update active tab button style
             tabButtons.forEach(btn => {
-                btn.classList.remove('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner', 'bg-indigo-600', 'hover:bg-indigo-500'); // Added Voot colors for reset
+                // Clear all active/color classes
+                btn.classList.remove('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner'); 
+                // Restore default color classes (Voot/Opplex colors removed from HTML, so this is safe)
                 btn.classList.add('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
-                
-                if (btn.dataset.tab === 'voot-tv') {
-                    // Specific Voot color treatment
-                    if (tabName === 'voot-tv') {
-                        btn.classList.add('active', 'bg-indigo-600', 'hover:bg-indigo-500', 'shadow-inner');
-                        btn.classList.remove('bg-gray-700', 'hover:bg-gray-600');
-                    } else {
-                        btn.classList.add('bg-indigo-600', 'hover:bg-indigo-500', 'shadow-md');
-                    }
-                } else if (btn.dataset.tab === tabName) {
+
+                // Apply activation style for the current tab
+                if (btn.dataset.tab === tabName) {
                     btn.classList.add('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner');
-                    btn.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+                    btn.classList.remove('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
                 }
             });
 
@@ -790,6 +811,7 @@
                 loadRecentStreams();
                 return;
             }
+
             // Update loading message with spinner
             contentDisplay.innerHTML = `
                 <div class="flex items-center justify-center p-4">
@@ -829,9 +851,13 @@
                         throw new Error('FanCode के लिए अमान्य डेटा संरचना।');
                     }
                 } else if (tabName === 'voot-tv') {
-                    // NEW: Voot TV JSON mapping
+                    // Voot TV JSON mapping
                     const data = await response.json();
                     channelsToDisplay = mapVootTvChannels(data);
+                } else if (tabName === 'opplex-tv') {
+                    // Opplex TV JSON mapping
+                    const data = await response.json();
+                    channelsToDisplay = mapOpplexChannels(data);
                 } else {
                     const m3uContent = await response.text();
                     channelsToDisplay = await parseM3U(m3uContent);
@@ -934,7 +960,6 @@
                 clearkey: channelConfig.clearkey ? { keyId: channelConfig.clearkey.keyId, key: channelConfig.clearkey.key } : null,
                 drm: channelConfig.drm ? { licenseUrl: channelConfig.drm.licenseUrl } : null
             };
-
 
             // Remove existing stream with the same URL to put the new one at the front
             streams = streams.filter(s => (s.mpd || s.m3u8) !== url);
@@ -1149,7 +1174,15 @@
                     // Manually set tab and update URL, then proceed with N-Stream logic
                     currentTab = 'n-stream';
                     updateQueryParam('tab', 'n-stream');
-                    loadAndDisplayChannels('n-stream'); // Load N-Stream section
+                    
+                    // Load N-Stream section (shows input form and hides content grid)
+                    loadAndDisplayChannels('n-stream'); 
+                    
+                    // *** FIX: Explicitly ensure player container is ready for auto-play ***
+                    contentDisplay.style.display = 'none'; 
+                    videoPlayerContainer.classList.remove('hidden'); 
+                    videoPlayerContainer.classList.add('flex');
+                    // *******************************************************************
 
                     // Populate inputs and play after a short delay
                     setTimeout(() => {
