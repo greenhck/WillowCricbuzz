@@ -8,7 +8,6 @@
     <title>Perelive - Watch Live Streams & Channels Online</title>
     <!-- Meta Description -->
     <meta name="description" content="Perelive par dekhein latest live channels aur streams online. Entertainment, news, sports aur more, sab ek hi platform par. Join now!">
-    <!-- Meta Keywords -->
     <meta name="keywords" content="live streaming, online TV channels, watch live shows, Perelive, live sports, live news, free streaming, watch online, live entertainment, streaming platform">
     <meta name="google-site-verification" content="JoSAYJv7bUeJMbgQaTPDBpBerWVfYHO60UYENKygDcs" />
 
@@ -20,13 +19,163 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Shaka Player for DASH/DRM -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/controls.min.css" crossorigin="anonymous"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.ui.min.js" crossorigin="anonymous"></script>
+    <!-- Shaka Player for DASH/DRM (UPDATED TO V4.7.11) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/controls.min.css" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/shaka-player.ui.min.js" crossorigin="anonymous"></script>
 
     <!-- Hls.js for HLS -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
+    <!-- Firebase SDKs for Auth and Firestore -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, onSnapshot, collection, serverTimestamp, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Enable debug logging for Firestore
+        setLogLevel('Debug');
+
+        // Firebase Configuration (Using user-provided config as default)
+        const userFirebaseConfig = {
+            apiKey: "AIzaSyBz-v2-lbsBtk91ARf75ezB0NpWc7D0Zyg",
+            authDomain: "perelive-c0ac2.firebaseapp.com",
+            projectId: "perelive-c0ac2",
+            storageBucket: "perelive-c0ac2.firebasestorage.app",
+            messagingSenderId: "38475348473",
+            appId: "1:38475348473:web:c2c8d121216a71944be528",
+            measurementId: "G-5HCG31NZX2"
+        };
+        
+        // IMPORTANT: Using global environment variables if available, otherwise using provided config.
+        let firebaseConfig = userFirebaseConfig;
+        if (typeof __firebase_config !== 'undefined' && __firebase_config) {
+            try {
+                firebaseConfig = JSON.parse(__firebase_config);
+                console.log("Using environment-provided Firebase Config.");
+            } catch (e) {
+                console.error("Failed to parse __firebase_config:", e);
+            }
+        } else {
+             console.log("Using hardcoded default Firebase Config.");
+        }
+        
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-perelive-app';
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app); // Get auth instance AFTER app initialization
+
+        // Global variables for the rest of the script to use
+        window.fbApp = app;
+        window.fbAuth = auth;
+        window.fbDb = db;
+        window.fbAppId = appId;
+        window.fbServerTimestamp = serverTimestamp;
+
+        // --- Active User Tracking Logic ---
+        let globalUserId = null;
+        const userActivityCollection = "live_users_presence"; // Dedicated public collection
+
+        // 1. Authentication and Initial Setup
+        async function initFirebaseAndAuth() {
+            try {
+                console.log("Attempting Firebase Sign-in...");
+                // Use custom token if provided, otherwise sign in anonymously
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                    console.log("Signed in with custom token.");
+                } else {
+                    await signInAnonymously(auth);
+                    console.log("Signed in anonymously.");
+                }
+            } catch (error) {
+                // Handle the configuration error specifically
+                if (error.code === 'auth/configuration-not-found') {
+                    console.error("CRITICAL FIREBASE ERROR: The Firebase Auth configuration is missing or invalid. Please check the apiKey, authDomain, and projectId in the config.");
+                }
+                console.error("Firebase Auth Error:", error);
+            }
+        }
+
+        // 2. Heartbeat Logic (Update presence every 60 seconds)
+        function checkTimeAndHeartbeat() {
+            const now = new Date();
+            const currentHour = now.getHours(); // 0 (midnight) to 23
+
+            // Check if time is between 12 AM (0) and 6 AM (exclusive, i.e., up to 5:59 AM)
+            const isSleepTime = currentHour >= 0 && currentHour < 6;
+
+            if (isSleepTime) {
+                console.log("Sleep Time (12 AM - 6 AM): Heartbeat skipped.");
+                return; 
+            }
+
+            if (globalUserId) {
+                // Update the user's document with the current timestamp
+                // Path: /live_users_presence/{userId} (Public/Shared Collection)
+                const userDocRef = doc(db, userActivityCollection, globalUserId);
+                setDoc(userDocRef, {
+                    last_seen: serverTimestamp(), // Use server timestamp for accuracy
+                    appId: appId,
+                    // Use the UID as the unique identifier
+                    userId: globalUserId 
+                }, { merge: true }).catch(e => console.error("Heartbeat update failed:", e));
+            }
+        }
+
+        // 3. Live Counter Listener
+        function setupLiveCounter() {
+            const userCountDisplay = document.getElementById('user-count-display');
+            const q = collection(db, userActivityCollection);
+
+            onSnapshot(q, (snapshot) => {
+                let activeUsers = 0;
+                // Set the window for activity check to 2 minutes
+                const twoMinutesAgo = Date.now() - (2 * 60 * 1000); 
+
+                snapshot.docs.forEach(doc => {
+                    const data = doc.data();
+                    // Client-side check: Only count users who have updated their presence in the last 2 minutes
+                    if (data.last_seen && data.last_seen.toMillis() > twoMinutesAgo) {
+                         activeUsers++;
+                    }
+                });
+                
+                userCountDisplay.textContent = activeUsers;
+
+                if (activeUsers < 1) { // Fallback if no docs are present or system is slow
+                    userCountDisplay.textContent = '1';
+                }
+            }, (error) => {
+                console.error("Error fetching live user count:", error);
+                userCountDisplay.textContent = '...'; // Show error state
+            });
+        }
+
+        // Handle Auth State Change
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                globalUserId = user.uid;
+                console.log("Firebase signed in. User ID:", globalUserId);
+                
+                // Start initial heartbeat
+                checkTimeAndHeartbeat();
+                
+                // Set up recurring heartbeat
+                setInterval(checkTimeAndHeartbeat, 60000); // 60 seconds (1 minute)
+                
+                // Start the counter listener
+                setupLiveCounter();
+            } else {
+                 console.log("Firebase Auth state changed: No user or signed out.");
+            }
+        });
+
+        // Start Auth process on load
+        document.addEventListener('DOMContentLoaded', initFirebaseAndAuth);
+    </script>
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -85,13 +234,33 @@
 
     <!-- Header Section -->
     <header class="bg-black text-white px-2 sm:px-4 py-3 text-center sticky top-0 z-50 shadow-lg">
-        <div class="flex items-center justify-between">
-            <h1 class="text-xl sm:text-2xl font-bold flex-shrink-0" style="height: 40px; line-height: 40px;">PEREGRINE LIVE</h1>
+        <!-- Top Row: Title, Live Counter, and Search -->
+        <div class="flex items-start justify-between">
+            <!-- Title and Live Counter (Combined into one left-aligned block) -->
+            <div class="flex flex-col flex-shrink-0">
+                <h1 class="text-xl sm:text-2xl font-bold">PERELIVE</h1>
+                <!-- Live Counter (Tightly packed below the title) -->
+                <div id="active-users-counter" class="flex items-center space-x-1 pl-0.5 -mt-1">
+                    <!-- Red Dot with Ping Animation -->
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                    </span>
+                    <!-- User Count -->
+                    <span id="user-count-display" class="text-xs font-bold text-red-400">0</span>
+                    <!-- "Live" Text (Reduced font size) -->
+                    <span class="text-xs font-semibold text-gray-300">Live</span>
+                </div>
+            </div>
+            
+            <!-- Search Bar -->
             <div class="flex-grow flex justify-end">
                 <input type="text" class="search-bar w-full max-w-xs px-4 py-2 rounded-full border border-gray-700 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" placeholder="खोजें...">
             </div>
         </div>
-        <nav class="tabs-container overflow-x-auto flex justify-start items-center space-x-2 mt-4 pb-2 px-1">
+        
+        <!-- Bottom Row: Navigation Tabs -->
+        <nav class="tabs-container overflow-x-auto flex justify-start items-center space-x-2 pt-3 pb-2 px-1">
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="fancode">Fancode</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="zee-network">Zee Network</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="pirates-tv">Pirates TV</button>
@@ -99,9 +268,7 @@
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="pere-sports">Pere Sports</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="sony-network">Sony Network</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-inner transform hover:-translate-y-1" data-tab="jiostar">Jiostar</button>
-            <!-- Voot TV Tab: Removed indigo color -->
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="voot-tv">Voot TV</button>
-            <!-- Opplex TV Tab: Removed green color -->
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="opplex-tv">Opplex TV</button>
             <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="n-stream">N Stream</button>
         </nav>
@@ -196,8 +363,7 @@
         let hlsPlayer = null;
         let currentLoadedChannels = [];
         let currentTab = '';
-
-        // GLOBAL FIX: Variable to store the dynamic network filter function for Shaka Player
+                // GLOBAL FIX: Variable to store the dynamic network filter function for Shaka Player
         let shakaNetworkingFilter = null;
 
         // N Stream elements
@@ -221,7 +387,7 @@
             'pere-sports': 'https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/ALL.m3u',
             'sony-network': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/sports-pere.m3u',
             'jiostar': 'https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jstar.m3u',
-            'voot-tv': 'vootTvP.json', 
+            'voot-tv': 'vootTvP.json',
             'opplex-tv': 'opplexPere.json',
             'n-stream': null,
         };
@@ -266,9 +432,7 @@
             let params = [];
 
             if (channelConfig.clearkey && channelConfig.clearkey.keyId && channelConfig.clearkey.key) {
-                // Ensure keyId and key are separated by colon for correct DOMContentLoaded parsing
-                const license = `${channelConfig.clearkey.keyId}:${channelConfig.clearkey.key}`;
-                params.push(`drmScheme=clearkey&drmLicense=${encodeURIComponent(license)}`);
+                params.push(`drmScheme=clearkey&drmLicense=${channelConfig.clearkey.keyId}:${channelConfig.clearkey.key}`);
             } else if (channelConfig.drm && channelConfig.drm.licenseUrl) {
                 params.push(`drmScheme=widevine&drmLicense=${encodeURIComponent(channelConfig.drm.licenseUrl)}`);
             }
@@ -280,7 +444,6 @@
 
             updateQueryParam('n', encodeURIComponent(nParamValue));
         }
-
         // --- Player Core Functions ---
         // Initialize Shaka Player UI once it's loaded (Mandatory for Shaka UI to work)
         document.addEventListener('shaka-ui-loaded', () => {
@@ -291,33 +454,31 @@
             shakaPlayerInstance = controls.getPlayer();
             shakaPlayerInstance.addEventListener('error', onErrorEvent);
 
-            // Configuration adjusted for stability and to prevent page unresponsiveness.
+            // FIX: Updated Shaka Configuration to match the user's working low-latency settings.
             shakaPlayerInstance.configure({
-                streaming: { 
-                    lowLatencyMode: true, // Keep low latency, but compensate with larger buffer
-                    // FIX: Increase buffering goal to give more stability to high-load streams like JioStar
-                    bufferingGoal: 45, // 45 seconds (was 15)
+                streaming: {
+                    lowLatencyMode: true, 
+                    bufferingGoal: 15, // User's low-latency setting
                     rebufferingGoal: 2,
-                    bufferBehind: 45,  // Match buffer behind to buffering goal
+                    bufferBehind: 15,  // Match buffering goal
                     retryParameters: {
-                        // FIX: Increase backoff factor and base delay to prevent network flooding on unstable streams
                         timeout: 10000,
-                        maxAttempts: 7, // Allow a few more attempts
-                        baseDelay: 1000, // Wait 1 second before first retry (was 300ms)
-                        backoffFactor: 2.0 // Double the delay each time (was 1.2)
+                        maxAttempts: 5, // User's setting
+                        baseDelay: 300, // User's faster retry setting
+                        backoffFactor: 1.2 // User's lower backoff setting
                     },
-                    segmentRequestTimeout: 10000, // Increased timeout (was 8000)
+                    segmentRequestTimeout: 8000,
                     segmentPrefetchLimit: 2,
                     useNativeHlsOnSafari: true
                 },
                 manifest: {
                     retryParameters: {
-                        timeout: 10000,
-                        maxAttempts: 5
+                        timeout: 8000,
+                        maxAttempts: 3
                     }
                 }
             });
-            console.log('Shaka Player instance initialized via UI with stability-focused config.');
+            console.log('Shaka Player instance initialized via UI with low-latency config (v4.7.11).');
         });
 
         // Shaka Player error handler
@@ -347,8 +508,8 @@
                 } else if (error.code === 4001) { // Error 4001: Media Error (e.g., decoding failure, corrupted data)
                     userMessage = "वीडियो/ऑडियो डेटा त्रुटि: स्ट्रीम डेटा भ्रष्ट (corrupted) है या आपका ब्राउज़र इसे डीकोड नहीं कर पा रहा है।";
                     title = "डेटा डीकोडिंग त्रुटि";
-                } else { 
-                     userMessage = `प्लेबैक के दौरान एक गंभीर त्रुटि हुई। Shaka त्रुटि कोड ${error.code}। स्थिरता के लिए स्ट्रीम को बंद किया जा रहा है।`;
+                } else {
+                    userMessage = `प्लेबैक के दौरान एक गंभीर त्रुटि हुई। Shaka त्रुटि कोड ${error.code}। स्थिरता के लिए स्ट्रीम को बंद किया जा रहा है।`;
                 }
             } else {
                 userMessage = message;
@@ -366,8 +527,8 @@
             if (shakaPlayerInstance) {
                 shakaPlayerInstance.unload().catch(e => console.warn("Shaka Player unload failed:", e));
                 // Reset DRM config only, keeping the fast streaming configuration
-                shakaPlayerInstance.configure({ 
-                     drm: {}
+                shakaPlayerInstance.configure({
+                    drm: {}
                 });
 
                 // FIX: Remove custom network filter
@@ -400,7 +561,6 @@
             updateQueryParam('channel', null); // Clean URL
             updateQueryParam('n', null); // Clean URL
         }
-
         // Disable Auto Fullscreen/Autoplay Tweaks (Passive Playback Logic)
         function handlePlaybackLogic(video, isShaka, channelName = null) {
             let hasUserInteracted = false;
@@ -412,7 +572,6 @@
                     console.log('Sound enabled after user interaction (User Clicked)');
                 }
             };
-
             // Listen for any user interaction on the whole document
             ['click', 'touchstart', 'keydown'].forEach(event => {
                 document.addEventListener(event, enableSoundOnInteraction, { once: true });
@@ -452,14 +611,13 @@
                 }
             }
         }
-
         // playChannel function updated to handle custom User-Agent and Cookies from M3U parsing
-        async function playChannel(channel) { 
-             console.log('Playing channel:', channel.name);
+        async function playChannel(channel) {
+            console.log('Playing channel:', channel.name);
             videoPlayerContainer.classList.remove('hidden');
             videoPlayerContainer.classList.add('flex');
-            
-            // NOTE: Do not hide the N-Stream section here. The tab-switching logic handles N-Stream display.
+            nStreamPlayerSection.classList.add('hidden'); // Hide N-Stream section
+            nStreamPlayerSection.classList.remove('flex');
 
             resetPlayers(); // Clears previous player and network filter
 
@@ -481,8 +639,8 @@
 
                 if (channel.customCookies) {
                     // Use custom Cookies if provided in M3U
-                    requestHeaders['Cookie'] = channel.customCookies; 
-                }                                
+                    requestHeaders['Cookie'] = channel.customCookies;
+                }
 
                 // Priority 1: HLS (m3u8 or generic non-MPD link)
                 if (channel.m3u8) {
@@ -551,10 +709,12 @@
                         closePlayer();
                         return;
                     }
+
                     // --- Build DRM Configuration ONLY (Streaming config is set globally for faster performance) ---
                     const shakaConfig = {
                         drm: {} // Default empty DRM
                     };
+
                     // DRM Configuration
                     if (channel.clearkey && channel.clearkey.keyId && channel.clearkey.key) {
                         // Note: Keys are expected to be clean (no dashes) from parseM3U now
@@ -572,9 +732,11 @@
                     } else {
                         console.log('No ClearKey or DRM configured for this DASH channel.');
                     }
+
                     shakaPlayerInstance.configure(shakaConfig); // Apply ONLY DRM configuration
 
-                    // --- Use registerRequestFilter for dynamic headers (Correct Method) ---                                        
+                    // --- Use registerRequestFilter for dynamic headers (Correct Method) ---
+
                     // Define the filter function to set the dynamic headers on every request
                     shakaNetworkingFilter = (type, request) => {
                         // 1. Apply all headers (Referer, User-Agent, Cookie) from the dynamic requestHeaders object
@@ -592,14 +754,14 @@
                                  const separator = request.uris[0].includes('?') ? '&' : '?';
                                 // The customCookieString should contain the full token string (e.g., __hdnea__=st=...)
                                 // The token is appended directly as the value of the 'Cookie' header is the signed string itself.
-                                // NOTE: This assumes the token itself is the parameter name=value string.
-                                request.uris[0] += separator + customCookieString; 
+                                request.uris[0] += separator + customCookieString;
                              }
                         }
 
                         // CRITICAL DEBUG LOG: Check final URL and headers
                         console.log(`[Shaka Filter] Request Type: ${type}, Final URL: ${request.uris[0]}, Final Headers:`, request.headers);
                     };
+
                     // Register the filter
                     shakaPlayerInstance.getNetworkingEngine().registerRequestFilter(shakaNetworkingFilter);
                     console.log('Dynamic network filter registered with User-Agent, Cookie Header, and URL signing.');
@@ -619,7 +781,6 @@
                 onError(e);
             }
         }
-        
         // --- Channel Mapping Function for Voot TV (and similar JSON structures) ---
         function mapVootTvChannels(data) {
             if (!Array.isArray(data)) {
@@ -630,17 +791,16 @@
                 name: item.channel_name || item.id,
                 logo: item.logo || 'https://placehold.co/200x150/2d3748/a0aec0?text=Voot+TV',
                 // Check if the URL is an MPD (DASH) or M3U8 (HLS)
-                m3u8: (item.url && item.url.includes('.m3u8') && !item.url.includes('.mpd')) ? item.url : null, 
+                m3u8: (item.url && item.url.includes('.m3u8') && !item.url.includes('.mpd')) ? item.url : null,
                 mpd: (item.url && item.url.includes('.mpd')) ? item.url : null,
                 // Assuming generic proxy links are M3U8/Generic HLS or similar, so mapping the whole URL to M3U8 if no MPD.
-                m3u8: item.url && !item.url.includes('.mpd') ? item.url : null, 
+                m3u8: item.url && !item.url.includes('.mpd') ? item.url : null,
                 clearkey: null,
                 drm: null,
                 customUserAgent: null,
                 customCookies: null
             }));
         }
-
         // --- NEW: Channel Mapping Function for Opplex TV (nested JSON structure) ---
         function mapOpplexChannels(data) {
             let allChannels = [];
@@ -658,7 +818,7 @@
 
                         allChannels.push({
                             // UPDATED: Only use the original name, remove the category/country prefix
-                            name: item.name.replace(/•●★--- Welcome ----★●•/g, 'Welcome'), 
+                            name: item.name.replace(/•●★--- Welcome ----★●•/g, 'Welcome'),
                             logo: item.logo || 'https://placehold.co/200x150/2d3748/a0aec0?text=Opplex+TV',
                             mpd: isMpd ? item.url : null,
                             m3u8: !isMpd && item.url ? item.url : null, // Treat generic links as m3u8/generic
@@ -708,7 +868,7 @@
 
                         if (subLine.startsWith('#EXTINF:')) {
                             // Hit the next channel entry before finding a URL, stop and break
-                            break; 
+                            break;
                         } else if (subLine.startsWith('#KODIPROP:inputstream.adaptive.license_key=')) {
                             // ClearKey handling
                             const clearkeyMatch = subLine.match(/license_key=([^:]+):([a-f0-9]+)/);
@@ -723,7 +883,7 @@
                             const uaMatch = subLine.match(/http-user-agent=(.+)/);
                             if (uaMatch) {
                                 // Capture the UA string (e.g., plaYtv/7.1.3 ...)
-                                currentChannel.customUserAgent = uaMatch[1].trim(); 
+                                currentChannel.customUserAgent = uaMatch[1].trim();
                             }
                         } else if (subLine.startsWith('#EXTHTTP:')) {
                             // Custom Cookie handling
@@ -793,7 +953,7 @@
             // Update active tab button style
             tabButtons.forEach(btn => {
                 // Clear all active/color classes
-                btn.classList.remove('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner'); 
+                btn.classList.remove('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner');
                 // Restore default color classes (Voot/Opplex colors removed from HTML, so this is safe)
                 btn.classList.add('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
 
@@ -811,7 +971,6 @@
                 loadRecentStreams();
                 return;
             }
-
             // Update loading message with spinner
             contentDisplay.innerHTML = `
                 <div class="flex items-center justify-center p-4">
@@ -880,7 +1039,6 @@
                 contentDisplay.innerHTML = `<p class="text-center text-red-400 p-4 font-semibold">सामग्री लोड करने में त्रुटि हुई: ${error.message}</p>`;
             }
         }
-
         // --- Quality Selector Logic ---
         function setupShakaQualitySelector() {
             if (!shakaPlayerInstance) return;
@@ -1024,7 +1182,6 @@
                 recentStreamsList.appendChild(button);
             });
         }
-
         // --- Event Listeners and Initialization ---
 
         // Tab button event listeners
@@ -1123,7 +1280,6 @@
             // Update sharable URL for N-Stream
             updateNStreamShareableUrl(channelConfig);
         });
-
         // --- Initialization on DOMContentLoaded (Handles Shared URLs) ---
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
@@ -1132,7 +1288,6 @@
             const sharedChannel = urlParams.get('channel');
 
             let tabToActivate = sharedTab || localStorage.getItem('activeTab') || 'pere-sports';
-
             // Case 1: Shared N-Stream URL
             if (nParam) {
                 tabToActivate = 'n-stream';
@@ -1174,15 +1329,7 @@
                     // Manually set tab and update URL, then proceed with N-Stream logic
                     currentTab = 'n-stream';
                     updateQueryParam('tab', 'n-stream');
-                    
-                    // Load N-Stream section (shows input form and hides content grid)
-                    loadAndDisplayChannels('n-stream'); 
-                    
-                    // *** FIX: Explicitly ensure player container is ready for auto-play ***
-                    contentDisplay.style.display = 'none'; 
-                    videoPlayerContainer.classList.remove('hidden'); 
-                    videoPlayerContainer.classList.add('flex');
-                    // *******************************************************************
+                    loadAndDisplayChannels('n-stream'); // Load N-Stream section
 
                     // Populate inputs and play after a short delay
                     setTimeout(() => {
@@ -1222,6 +1369,5 @@
             }
         });
     </script>
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "68a40879f6b244629841d4be7aec5e0f"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "68a40879f6b244629841d4be7aec5e0f"}'></script><!-- End Cloudflare Web Analytics --></body>
 </html>
