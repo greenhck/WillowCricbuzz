@@ -190,18 +190,18 @@
     <div id="policy-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-[1000] flex items-center justify-center p-4 transition-opacity duration-300">
         <div class="bg-gray-800 rounded-xl p-6 w-full max-w-lg shadow-2xl border-t-4 border-yellow-500 transform scale-95 opacity-0 transition-all duration-300" id="policy-modal-content">
             <h3 class="text-2xl font-bold mb-4 text-yellow-400 flex items-center">
-                <i class="fas fa-exclamation-triangle mr-2"></i> महत्वपूर्ण जानकारी (Site Policy)
+                <i class="fas fa-exclamation-triangle mr-2"></i> Important Noti
             </h3>
             <p class="text-gray-300 mb-4 text-sm">
-                यह प्लेटफॉर्म केवल शैक्षिक और निजी उपयोग के लिए है। इस पर उपलब्ध किसी भी सामग्री (content) का उपयोग करने की पूरी जिम्मेदारी उपयोगकर्ता की है। 
+                We are serving only. We respect their policy. 
             </p>
             <p class="text-gray-300 mb-6 text-sm">
-                हम किसी भी स्ट्रीमिंग सेवा, चैनल, या सामग्री का समर्थन या होस्ट नहीं करते हैं। सभी स्ट्रीम URL सार्वजनिक रूप से उपलब्ध स्रोतों से संकलित किए गए हैं।
+                We are not host any content. All data collect from publically.
             </p>
             <ul class="list-disc list-inside text-sm text-gray-400 space-y-2 mb-6 bg-gray-700 p-3 rounded-lg">
-                <li><strong class="text-white">उपयोगकर्ता जिम्मेदारी:</strong> कृपया अपने क्षेत्र के कॉपीराइट कानूनों का पालन करें।</li>
-                <li><strong class="text-white">गोपनीयता:</strong> हम कोई व्यक्तिगत डेटा स्टोर नहीं करते हैं (Firebase User ID केवल लाइव काउंटर के लिए है)।</li>
-                <li><strong class="text-white">Telegram:</strong> नए अपडेट्स और लिंक्स के लिए हमारे Telegram चैनल से जुड़ें।</li>
+                <li><strong class="text-white">User notice:</strong> Be under the policy.</li>
+                <li><strong class="text-white">Security:</strong> We not collect any data from user.</li>
+                <li><strong class="text-white">Telegram:</strong> Join Telegram and enjoy every moment with every person.</li>
             </ul>
             <button id="policy-modal-close-btn" class="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 rounded-lg transition duration-200">समझ गया (बंद करें)</button>
         </div>
@@ -251,16 +251,16 @@
         <!-- Default Banner (Visible on Load, Hidden when Playing) -->
         <div id="default-banner" class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center rounded-none z-10 transition-opacity duration-500">
             <i class="fas fa-satellite-dish text-6xl text-blue-500 mb-4 animate-pulse"></i>
-            <h2 class="text-3xl font-bold text-white mb-2">PERELIVE: लाइव स्ट्रीमिंग शुरू करें</h2>
-            <p class="text-lg text-gray-300">नीचे दी गई सूची से कोई चैनल या मैच चुनें।</p>
-            <p class="text-sm text-yellow-400 mt-2">स्ट्रीम लोड होने के बाद यह बैनर अपने आप छिप जाएगा।</p>
+            <h2 class="text-3xl font-bold text-white mb-2">PERELIVE: Smooth as PereGrine</h2>
+            <p class="text-lg text-gray-300">Choose any channel or any match</p>
+            <p class="text-sm text-yellow-400 mt-2">If you see again this banner after play any channel. Channel not availabe.</p>
         </div>
         
         <!-- Player Containers (Hidden by default, z-index 20 to overlap banner) -->
         <div data-shaka-player-container id="shaka-container-wrapper" class="shaka-player-container w-full h-full relative hidden z-20">
             <!-- Quality Selector fixed to the top right of the player -->
             <select id="quality-selector" class="absolute top-2 right-2 z-300 bg-gray-700 text-white py-1 px-3 rounded-md text-xs font-semibold hidden cursor-pointer shadow-lg hover:bg-gray-600 transition duration-150">
-                <option value="auto">स्वचालित</option>
+                <option value="auto">Auto</option>
             </select>
             <video autoplay data-shaka-player id="shaka-video-player" class="w-full h-full object-contain"></video>
         </div>
@@ -286,13 +286,13 @@
     
     <!-- N Stream Section (Manual Stream Input - Hidden by default, flex-shrink-0) -->
     <div id="n-stream-player-section" class="bg-gray-800 p-4 sm:p-5 rounded-none shadow-xl flex-shrink-0 hidden flex-col space-y-4 border-t border-gray-700">
-        <h2 class="text-2xl font-semibold text-center">N Stream (मैन्युअल स्ट्रीम)</h2>
+        <h2 class="text-2xl font-semibold text-center">N Stream (Network Stream)</h2>
         <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-            <label for="stream-url-input" class="text-sm flex-shrink-0">स्ट्रीम URL:</label>
+            <label for="stream-url-input" class="text-sm flex-shrink-0">Stream URL:</label>
             <input type="text" id="stream-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="यहां M3U8, MPD, या लाइव प्रॉक्सी लिंक डालें">
         </div>
         <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-            <label for="stream-type-select" class="text-sm flex-shrink-0">स्ट्रीम प्रकार:</label>
+            <label for="stream-type-select" class="text-sm flex-shrink-0">Stream Type:</label>
             <select id="stream-type-select" class="w-full sm:w-auto px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-500">
                 <option value="HLS">HLS (M3U8/Generic URL)</option>
                 <option value="DASH">DASH (MPD)</option>
@@ -309,7 +309,7 @@
                 <input type="text" id="clearkey-key-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="Clear Key (हेक्स, डैश के बिना)">
             </div>
             <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-                <label for="drm-license-url-input" class="text-sm">DRM लाइसेंस URL:</label>
+                <label for="drm-license-url-input" class="text-sm">DRM License URL:</label>
                 <input type="text" id="drm-license-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="DRM लाइसेंस URL (यदि आवश्यक हो)">
             </div>
         </div>
@@ -320,11 +320,11 @@
         <!-- Recent Streams Container -->
         <div id="recent-streams-container" class="mt-6 border-t border-gray-700 pt-4">
             <div class="flex justify-between items-center mb-3">
-                <h3 class="text-lg font-semibold text-gray-300">हाल ही की स्ट्रीम्स (Recent Streams)</h3>
+                <h3 class="text-lg font-semibold text-gray-300">Recent Streams</h3>
                 <button id="clear-recent-streams-btn" class="text-xs text-red-400 hover:text-red-300 font-medium py-1 px-3 rounded-full border border-red-500 hover:border-red-400 transition duration-150 shadow-sm hidden" title="सभी हालिया स्ट्रीम्स हटाएँ">सभी साफ़ करें</button>
             </div>
             <div id="recent-streams-list" class="flex flex-wrap gap-3">
-                <p id="no-recent-streams" class="text-sm text-gray-500">कोई हालिया स्ट्रीम नहीं।</p>
+                <p id="no-recent-streams" class="text-sm text-gray-500">no any recent stream</p>
             </div>
         </div>
     </div>
@@ -340,7 +340,7 @@
 
     <!-- Footer Section (FIXED BOTTOM - flex-shrink-0) -->
     <footer class="bg-black text-gray-400 text-center text-sm py-3 flex-shrink-0 w-full">
-        <p>&copy; 2025 PEREGRINE LIVE. सभी अधिकार सुरक्षित।</p>
+        <p>&copy; 2025 PEREGRINE LIVE. all security reserved</p>
     </footer>
 
     <!-- JavaScript -->
@@ -514,7 +514,7 @@
             hlsVideoElement.removeAttribute('src');
             hlsVideoElement.load(); 
             
-            qualitySelector.innerHTML = '<option value="auto">स्वचालित</option>';
+            qualitySelector.innerHTML = '<option value="auto">Auto</option>';
             qualitySelector.classList.add('hidden');
             
             shakaErrorCount = 0;
@@ -609,7 +609,7 @@
             hlsVideoElement.pause();
             hlsVideoElement.removeAttribute('src');
 
-            qualitySelector.innerHTML = '<option value="auto">स्वचालित</option>';
+            qualitySelector.innerHTML = '<option value="auto">Auto</option>';
             qualitySelector.classList.add('hidden');
         }
 
