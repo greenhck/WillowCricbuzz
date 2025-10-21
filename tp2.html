@@ -19,6 +19,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome for Icons (NEWLY ADDED) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Shaka Player for DASH/DRM -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/controls.min.css" crossorigin="anonymous"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.ui.min.js" crossorigin="anonymous"></script>
@@ -42,6 +45,7 @@
             appId: "1:38475348473:web:c2c8d121216a71944be528",
             measurementId: "G-5HCG31NZX2"
         };
+
         // IMPORTANT: Using global environment variables if available, otherwise using provided config.
         const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : userFirebaseConfig;
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-perelive-app';
@@ -80,13 +84,14 @@
         function checkTimeAndHeartbeat() {
             const now = new Date();
             const currentHour = now.getHours(); // 0 (midnight) to 23
+
             // Check if time is between 12 AM (0) and 6 AM (exclusive, i.e., up to 5:59 AM)
             const isSleepTime = currentHour >= 0 && currentHour < 6;
 
             if (isSleepTime) {
                 console.log("Sleep Time (12 AM - 6 AM): Heartbeat skipped.");
                 return;
-            }
+             }
 
             if (globalUserId) {
                 // Update the user's document with the current timestamp
@@ -106,16 +111,16 @@
             onSnapshot(q, (snapshot) => {
                 let activeUsers = 0;
                 // Set the window for activity check to 2 minutes
-                const twoMinutesAgo = Date.now() - (2 * 60 * 1000); 
+                const twoMinutesAgo = Date.now() - (2 * 60 * 1000);
 
                 snapshot.docs.forEach(doc => {
                     const data = doc.data();
                     // Client-side check: Only count users who have updated their presence in the last 2 minutes
-                    if (data.last_seen && data.last_seen.toMillis() > twoMinutesAgo) { 
+                    if (data.last_seen && data.last_seen.toMillis() > twoMinutesAgo) {
                          activeUsers++;
                     }
                 });
-                
+
                 userCountDisplay.textContent = activeUsers;
 
                 if (activeUsers < 1) { // Fallback if no docs are present or system is slow
@@ -132,13 +137,13 @@
             if (user) {
                 globalUserId = user.uid;
                 console.log("Firebase signed in. User ID:", globalUserId);
-                
+
                 // Start initial heartbeat
                 checkTimeAndHeartbeat();
-                
+
                 // Set up recurring heartbeat
                 setInterval(checkTimeAndHeartbeat, 60000); // 60 seconds (1 minute)
-                
+
                 // Start the counter listener
                 setupLiveCounter();
             }
@@ -191,10 +196,13 @@
         #quality-selector {
             z-index: 500 !important;
         }
+        /* Custom CSS for policy modal animation */
+        #policy-modal-content {
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
-
     <!-- Message Box Modal (New UI for Errors) -->
     <div id="message-box-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-[1000] flex items-center justify-center p-4">
         <div class="bg-gray-800 rounded-xl p-6 w-full max-w-lg shadow-2xl border-t-4 border-red-500">
@@ -203,223 +211,194 @@
             <button id="message-box-close-btn" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 rounded-lg transition duration-200">ठीक है (बंद करें)</button>
         </div>
     </div>
-    
-    <!-- Info Modal (New Legal/Disclaimer Popup) -->
-    <div id="info-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-[1000] flex items-center justify-center p-4">
-        <div class="bg-gray-800 rounded-xl p-6 w-full max-w-lg shadow-2xl border-t-4 border-blue-500">
-            <h3 class="text-xl font-bold mb-3 text-blue-400">Disclaimer & Serving Status</h3>
-            <p class="text-gray-300 mb-5 text-sm">
-                This platform is purely for **serving** content links that are already **publicly available** on the internet. 
-                We **do not host or upload** any streaming content, video files, or protected material. 
-                Users are responsible for verifying the legal rights of the streams they access.
+
+    <!-- Policy/Info Modal (New Animated UI for ?) -->
+    <div id="policy-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-[1000] flex items-center justify-center p-4 transition-opacity duration-300">
+        <div class="bg-gray-800 rounded-xl p-6 w-full max-w-lg shadow-2xl border-t-4 border-yellow-500 transform scale-95 opacity-0 transition-all duration-300" id="policy-modal-content">
+            <h3 class="text-2xl font-bold mb-4 text-yellow-400 flex items-center">
+                <i class="fas fa-exclamation-triangle mr-2"></i> महत्वपूर्ण जानकारी (Site Policy)
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm">
+                यह प्लेटफॉर्म केवल शैक्षिक और निजी उपयोग के लिए है। इस पर उपलब्ध किसी भी सामग्री (content) का उपयोग करने की पूरी जिम्मेदारी उपयोगकर्ता की है। 
             </p>
-            <button id="info-modal-close-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200">Close</button>
+            <p class="text-gray-300 mb-6 text-sm">
+                हम किसी भी स्ट्रीमिंग सेवा, चैनल, या सामग्री का समर्थन या होस्ट नहीं करते हैं। सभी स्ट्रीम URL सार्वजनिक रूप से उपलब्ध स्रोतों से संकलित किए गए हैं।
+            </p>
+            <ul class="list-disc list-inside text-sm text-gray-400 space-y-2 mb-6 bg-gray-700 p-3 rounded-lg">
+                <li><strong class="text-white">उपयोगकर्ता जिम्मेदारी:</strong> कृपया अपने क्षेत्र के कॉपीराइट कानूनों का पालन करें।</li>
+                <li><strong class="text-white">गोपनीयता:</strong> हम कोई व्यक्तिगत डेटा स्टोर नहीं करते हैं (Firebase User ID केवल लाइव काउंटर के लिए है)।</li>
+                <li><strong class="text-white">Telegram:</strong> नए अपडेट्स और लिंक्स के लिए हमारे Telegram चैनल से जुड़ें।</li>
+            </ul>
+            <button id="policy-modal-close-btn" class="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 rounded-lg transition duration-200">समझ गया (बंद करें)</button>
         </div>
     </div>
 
+    <!-- Header Section (UPDATED FOR NEW LAYOUT) -->
+    <header class="bg-black text-white px-2 sm:px-4 py-3 sticky top-0 z-50 shadow-lg">
+        <!-- Top Row: Title (Left), Search (Center), Icons (Right) -->
+        <div class="flex items-center justify-between w-full">
 
-    <!-- Header Section (Redesigned) -->
-    <header class="bg-black text-white px-4 py-2 text-center sticky top-0 z-50 shadow-lg">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <!-- Left: Logo/Title -->
-            <h1 class="text-lg sm:text-xl font-bold text-blue-400 whitespace-nowrap">PereLive</h1>
-
-            <!-- Center: Search Bar -->
-            <div class="flex-grow max-w-md mx-4 hidden sm:block">
-                <div class="relative">
-                    <input type="text" placeholder="Search Channels..." class="search-bar w-full py-1.5 px-4 bg-gray-800 border border-gray-700 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <!-- 1. LEFT: Title and Live Counter -->
+            <div class="flex flex-col flex-shrink-0">
+                <h1 class="text-xl sm:text-2xl font-bold">PERELIVE</h1>
+                <!-- Live Counter -->
+                <div id="active-users-counter" class="flex items-center space-x-1 pl-0.5 -mt-1">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                    </span>
+                    <span id="user-count-display" class="text-xs font-bold text-red-400">0</span>
+                    <span class="text-xs font-semibold text-gray-300">Live</span>
                 </div>
             </div>
 
-            <!-- Right: Icons (Telegram & Info) -->
-            <div class="flex items-center space-x-3">
-                
-                <!-- Live User Count -->
-                <div class="flex items-center text-xs sm:text-sm text-green-400 bg-gray-800 px-3 py-1 rounded-full shadow-inner">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-1 text-red-500 animate-pulse">
-                        <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.316 2.784-1.664l11.54 6.347a1.125 1.125 0 0 1 0 1.991l-11.54 6.347c-1.255.652-2.784-.236-2.784-1.664V5.653Z" clip-rule="evenodd" />
-                    </svg>
-                    <span id="user-count-display" class="font-semibold">...</span> Live
-                </div>
-                
-                <!-- Telegram Icon -->
-                <a href="https://t.me/sportslivelink18" target="_blank" title="Join Telegram Channel" class="text-white hover:text-blue-400 transition duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                        <path d="M19.825 5.862c.277-.2.433-.497.464-.813a1.01 1.01 0 0 0-.214-.852c-.3-.265-.724-.316-1.076-.134l-14 6.5A1 1 0 0 0 4 12.562l2.915 2.915 6.273-3.92-4.99 4.757a1 1 0 0 0-.012 1.414c.265.265.69.316 1.056.12l3.8-2.074 4.39 4.39a1 1 0 0 0 1.707.037l2.5-12.5a1 1 0 0 0-.065-.898Z" />
-                    </svg>
+            <!-- 2. CENTER: Search Bar (Hidden on Mobile, centered on larger screens) -->
+            <div class="hidden md:flex flex-grow justify-center mx-4">
+                 <input type="text" class="search-bar w-full max-w-sm px-4 py-2 rounded-full border border-gray-700 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" placeholder="चैनल/मैच खोजें...">
+            </div>
+
+            <!-- 3. RIGHT: Icons -->
+            <div class="flex items-center space-x-3 flex-shrink-0">
+                <!-- Telegram Icon (FAB fa-telegram-plane) -->
+                <a href="https://t.me/sportslivelink18" target="_blank" title="Telegram Channel Join Karein" class="text-white hover:text-blue-400 transition duration-200">
+                    <i class="fab fa-telegram-plane text-2xl sm:text-3xl"></i>
                 </a>
-                
-                <!-- Info Icon (?) -->
-                <button id="info-btn" title="Disclaimer" class="text-white hover:text-blue-400 transition duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75ZM12 15a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z" clip-rule="evenodd" />
-                    </svg>
+                <!-- Policy Icon (?) (FAS fa-question-circle) -->
+                <button id="show-policy-btn" title="Site Policy" class="text-white hover:text-yellow-400 transition duration-200 relative">
+                    <i class="fas fa-question-circle text-2xl sm:text-3xl"></i>
+                    <!-- Small pulsating indicator/arrow to indicate popup -->
+                    <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-yellow-500"></span>
+                    </span>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Search Bar (Only shown on small screens) -->
-        <div class="sm:hidden mt-2">
-            <input type="text" placeholder="Search Channels..." class="search-bar w-full py-1.5 px-4 bg-gray-800 border border-gray-700 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <!-- Secondary Row for Mobile Search (Appears below main bar on mobile) -->
+        <div class="md:hidden flex w-full mt-2">
+            <input type="text" class="search-bar w-full px-4 py-2 rounded-full border border-gray-700 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" placeholder="चैनल/मैच खोजें...">
         </div>
+
+        <!-- Bottom Row: Navigation Tabs -->
+        <nav class="tabs-container overflow-x-auto flex justify-start items-center space-x-2 pt-3 pb-2 px-1">
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="fancode">Fancode</button>
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="zee-network">Zee Network</button>
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="pirates-tv">Pirates TV</button>
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="jio-tv">Jio TV</button>
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="pere-sports">Pere Sports</button>
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="sony-network">Sony Network</button>
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-inner transform hover:-translate-y-1" data-tab="jiostar">Jiostar</button>
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="voot-tv">Voot TV</button>
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="opplex-tv">Opplex TV</button>
+            <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 shadow-md transform hover:-translate-y-1" data-tab="n-stream">N Stream</button>
+        </nav>
     </header>
 
-
     <!-- Main Content Area -->
-    <main class="flex-grow max-w-7xl mx-auto w-full p-2 sm:p-4">
-        
-        <!-- Tabs for Channel Sources -->
-        <div class="tabs-container flex overflow-x-auto whitespace-nowrap space-x-2 sm:space-x-4 mb-4 pb-2">
-            <button class="tab-button text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-lg transition duration-150 text-gray-400 hover:text-white" data-tab="pere-sports">Pere Sports</button>
-            <button class="tab-button text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-lg transition duration-150 text-gray-400 hover:text-white" data-tab="jio-tv">Jio TV</button>
-            <button class="tab-button text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-lg transition duration-150 text-gray-400 hover:text-white" data-tab="zee-network">Zee Network</button>
-            <button class="tab-button text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-lg transition duration-150 text-gray-400 hover:text-white" data-tab="fancode">FanCode</button>
-            <button class="tab-button text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-lg transition duration-150 text-gray-400 hover:text-white" data-tab="voot-tv">Voot TV</button>
-            <button class="tab-button text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-lg transition duration-150 text-gray-400 hover:text-white" data-tab="opplex-tv">Opplex TV</button>
-            <button class="tab-button text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-lg transition duration-150 text-gray-400 hover:text-white" data-tab="pirates-tv">Pirates TV</button>
-            <button class="tab-button text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-lg transition duration-150 text-gray-400 hover:text-white" data-tab="n-stream">N Stream</button>
-        </div>
-        
-        <!-- Video Player Container (Edge to Edge, Hidden by Default) -->
-        <div id="video-player-container" class="hidden flex-col w-full bg-black rounded-xl overflow-hidden shadow-2xl mb-6 relative aspect-video">
-            
-            <!-- Close Button, Share Button, and Quality Selector -->
-            <div class="absolute top-2 right-2 flex space-x-2 z-10">
-                
-                <!-- Share Button -->
-                <button id="share-btn" class="bg-gray-800 bg-opacity-70 hover:bg-opacity-90 text-white p-2 rounded-full shadow-lg transition duration-200" title="Share Channel Link">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                        <path fill-rule="evenodd" d="M15.75 4.5a3 3 0 1 1.411 2.89 1.5 1.5 0 0 0-.411 1.139v9a1.5 1.5 0 0 0 1.5 1.5h1.5a.75.75 0 0 1 0 1.5h-1.5A3 3 0 0 1 14.25 18v-9a1.5 1.5 0 0 0-.411-1.139 3.001 3.001 0 0 1 .411-2.89ZM7.5 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-1.259 8.653a1.5 1.5 0 0 0-.174 1.488l.865 1.44a3 3 0 0 1 3.197 2.454 3 3 0 0 0 5.487-1.464c-.035-.121-.082-.24-.139-.356A2.992 2.992 0 0 1 12 15a2.99 2.99 0 0 1-2.99-2.99c.002-.12.012-.239.03-.357A1.5 1.5 0 0 0 6.241 14.653Z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-                
-                <!-- Quality Selector for Shaka Player -->
-                <select id="quality-selector" class="shaka-select hidden bg-gray-800 bg-opacity-70 text-white rounded-full p-2 text-sm focus:outline-none"></select>
-                
-                <!-- Close Player Button -->
-                <button id="close-player-btn" class="bg-red-600 bg-opacity-70 hover:bg-opacity-90 text-white p-2 rounded-full shadow-lg transition duration-200" title="Close Player">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                </button>
+    <main class="flex-grow p-2 sm:p-4 w-full mx-auto">
+        <!-- Video Player Container -->
+        <div id="video-player-container" class="bg-gray-800 rounded-lg shadow-xl my-4 hidden flex-col space-y-4">
+            <div data-shaka-player-container class="shaka-player-container w-full h-full max-h-screen aspect-video relative flex items-center justify-center">
+                <!-- Quality Selector moved to top-right corner with high Z-index fix -->
+                <select id="quality-selector" class="absolute top-4 right-4 z-500 bg-gray-700 text-white py-1 px-3 rounded-md text-xs font-semibold hidden cursor-pointer shadow-lg hover:bg-gray-600 transition duration-150">
+                    <option value="auto">स्वचालित</option>
+                </select>
+                <video autoplay data-shaka-player id="shaka-video-player" class="w-full h-full object-contain"></video>
             </div>
-            
-            <!-- Shaka Player Container for DASH (MPD) -->
-            <div id="shaka-video-container" data-shaka-player-container style="display: none; height: 100%; width: 100%;">
-                <video id="shaka-video" data-shaka-player class="w-full h-full" autoplay playsinline></video>
-            </div>
-            
-            <!-- Native/HLS.js Video Element for M3U8/Generic -->
-            <video id="hls-video" class="w-full h-full" style="display: none;" autoplay playsinline controls></video>
+            <video id="hls-video-player" class="w-full h-full max-h-screen object-contain" controls></video>
         </div>
 
-
-        <!-- N Stream Player Section -->
-        <div id="n-stream-player-section" class="hidden flex-col bg-gray-800 p-4 sm:p-6 rounded-xl shadow-2xl">
-            <h2 class="text-xl font-semibold mb-4 text-blue-400">N Stream (Custom URL)</h2>
-            <div class="space-y-4">
-                
-                <!-- URL Input -->
-                <div>
-                    <label for="stream-url-input" class="block text-sm font-medium text-gray-300">स्ट्रीम URL (MPD या M3U8)</label>
-                    <input type="text" id="stream-url-input" placeholder="https://stream.example.com/live/index.mpd" class="w-full mt-1 p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500">
-                </div>
-                
-                <!-- Type Selection -->
-                <div>
-                    <label for="stream-type-select" class="block text-sm font-medium text-gray-300">स्ट्रीम प्रकार चुनें</label>
-                    <select id="stream-type-select" class="w-full mt-1 p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500">
-                        <option value="HLS">HLS (M3U8)</option>
-                        <option value="DASH">DASH (MPD)</option>
-                    </select>
-                </div>
-
-                <!-- DRM/ClearKey Controls (Initially Hidden) -->
-                <div id="drm-controls" class="hidden flex-col space-y-4 border-t border-gray-700 pt-4">
-                    <h3 class="text-base font-medium text-red-400">DRM / एन्क्रिप्शन सेटिंग्स (केवल DASH के लिए)</h3>
-                    <!-- ClearKey Inputs -->
-                    <div class="flex space-x-4">
-                        <div class="flex-1">
-                            <label for="clearkey-id-input" class="block text-sm font-medium text-gray-300">ClearKey ID (Key ID)</label>
-                            <input type="text" id="clearkey-id-input" placeholder="e.g., 000000..." class="w-full mt-1 p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-red-500 focus:border-red-500">
-                        </div>
-                        <div class="flex-1">
-                            <label for="clearkey-key-input" class="block text-sm font-medium text-gray-300">ClearKey (Key)</label>
-                            <input type="text" id="clearkey-key-input" placeholder="e.g., 111111..." class="w-full mt-1 p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-red-500 focus:border-red-500">
-                        </div>
-                    </div>
-                    <!-- Widevine/DRM License URL -->
-                    <div>
-                        <label for="drm-license-url-input" class="block text-sm font-medium text-gray-300">DRM License URL (Widevine/PlayReady)</label>
-                        <input type="text" id="drm-license-url-input" placeholder="https://license.example.com" class="w-full mt-1 p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-red-500 focus:border-red-500">
-                        <p class="text-xs text-gray-500 mt-1">नोट: ClearKey या License URL में से किसी एक का ही उपयोग करें।</p>
-                    </div>
-                </div>
-
-                <!-- Play Button -->
-                <button id="play-n-stream-btn" class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition duration-200 shadow-xl">
-                    स्ट्रीम चलाएँ
-                </button>
+        <!-- N Stream Section (Manual Stream Input) -->
+        <div id="n-stream-player-section" class="bg-gray-800 p-5 rounded-lg shadow-xl mt-4 hidden flex-col space-y-4">
+            <h2 class="text-2xl font-semibold text-center">N Stream (मैन्युअल स्ट्रीम)</h2>
+            <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                <label for="stream-type-select" class="text-sm">स्ट्रीम प्रकार:</label>
+                <select id="stream-type-select" class="w-full sm:w-auto px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-500">
+                    <option value="HLS">HLS (M3U8/Generic URL)</option>
+                    <option value="DASH">DASH (MPD)</option>
+                </select>
             </div>
+            <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                <label for="stream-url-input" class="text-sm">स्ट्रीम URL:</label>
+                <input type="text" id="stream-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="यहां M3U8, MPD, या लाइव प्रॉक्सी लिंक डालें">
+            </div>
+            <!-- Cookies Input field was previously removed on user request, retaining removal -->
             
-            <!-- Recent Streams List -->
-            <div class="mt-8">
+            <div id="drm-controls" class="drm-inputs flex-col space-y-2 pl-4 border-l-2 border-gray-600 hidden">
+                <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                    <label for="clearkey-id-input" class="text-sm">Clear Key ID:</label>
+                    <input type="text" id="clearkey-id-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="Clear Key ID (हेक्स, डैश के बिना)">
+                </div>
+                <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                    <label for="clearkey-key-input" class="text-sm">Clear Key:</label>
+                    <input type="text" id="clearkey-key-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="Clear Key (हेक्स, डैश के बिना)">
+                </div>
+                <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                    <label for="drm-license-url-input" class="text-sm">DRM लाइसेंस URL:</label>
+                    <input type="text" id="drm-license-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="DRM लाइसेंस URL (यदि आवश्यक हो)">
+                </div>
+            </div>
+            <div class="flex justify-end">
+                <button id="play-n-stream-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-200">चलाएं</button>
+            </div>
+            <!-- Recent Streams Container -->
+            <div id="recent-streams-container" class="mt-6 border-t border-gray-700 pt-4">
                 <div class="flex justify-between items-center mb-3">
-                    <h3 class="text-lg font-semibold text-gray-300">हालिया स्ट्रीम्स</h3>
-                    <button id="clear-recent-streams-btn" class="text-xs text-red-400 hover:text-red-300 hidden">
-                        हालिया स्ट्रीम्स साफ़ करें
-                    </button>
+                    <h3 class="text-lg font-semibold text-gray-300">हाल ही की स्ट्रीम्स (Recent Streams)</h3>
+                    <!-- NEW: Clear All Button -->
+                    <button id="clear-recent-streams-btn" class="text-xs text-red-400 hover:text-red-300 font-medium py-1 px-3 rounded-full border border-red-500 hover:border-red-400 transition duration-150 shadow-sm hidden" title="सभी हालिया स्ट्रीम्स हटाएँ">सभी साफ़ करें</button>
                 </div>
-                <div id="recent-streams-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div id="recent-streams-list" class="flex flex-wrap gap-3">
                     <p id="no-recent-streams" class="text-sm text-gray-500">कोई हालिया स्ट्रीम नहीं।</p>
                 </div>
             </div>
         </div>
 
-        <!-- Channel Display Grid -->
-        <div id="content-display" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            <!-- Channels will be loaded here -->
+        <div id="content-display" class="content-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-5 mt-4">
+            <!-- Channel cards will be inserted here -->
         </div>
     </main>
 
-    <!-- Footer (Optional: Keep it simple) -->
-    <footer class="bg-gray-800 text-center p-3 text-xs text-gray-500 mt-auto shadow-inner">
-        &copy; 2024 PereLive. All rights reserved. Content links are for testing purposes only.
+    <!-- Footer Section -->
+    <footer class="bg-black text-gray-400 text-center text-sm py-4 mt-auto">
+        <p>&copy; 2025 PEREGRINE LIVE. सभी अधिकार सुरक्षित।</p>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // --- Global State and Data ---
-        let shakaPlayerInstance = null;
-        let hlsPlayer = null;
-        let shakaNetworkingFilter = null;
-        let currentTab = 'pere-sports';
-        let currentLoadedChannels = [];
-        const tabDataUrls = {
-            'pere-sports': 'pereSports.m3u',
-            'jio-tv': 'jioTv.m3u',
-            'zee-network': 'zeeNetwork.json',
-            'fancode': 'fancode.json',
-            'voot-tv': 'vootTvP.json',
-            'opplex-tv': 'opplexPere.json',
-            'pirates-tv': 'piratesTv.m3u',
-            'n-stream': 'N-Stream' // Placeholder, no external data file
-        };
-        
-        // --- DOM Elements ---
-        const videoPlayerContainer = document.getElementById('video-player-container');
-        const shakaVideoContainer = document.getElementById('shaka-video-container');
-        const shakaVideoElement = document.getElementById('shaka-video');
-        const hlsVideoElement = document.getElementById('hls-video');
         const contentDisplay = document.getElementById('content-display');
         const tabButtons = document.querySelectorAll('.tab-button');
-        const closePlayerBtn = document.getElementById('close-player-btn');
-        const shareBtn = document.getElementById('share-btn');
+        const videoPlayerContainer = document.getElementById('video-player-container');
+        const shakaVideoContainer = document.getElementById('shaka-video-player').parentNode;
+        const shakaVideoElement = document.getElementById('shaka-video-player');
+        const hlsVideoElement = document.getElementById('hls-video-player');
         const qualitySelector = document.getElementById('quality-selector');
-        
-        // N-Stream specific elements
+
+        // Message Box Elements
+        const messageBoxModal = document.getElementById('message-box-modal');
+        const messageBoxTitle = document.getElementById('message-box-title');
+        const messageBoxContent = document.getElementById('message-box-content');
+        const messageBoxCloseBtn = document.getElementById('message-box-close-btn');
+
+        // Policy Modal Elements (NEW)
+        const showPolicyBtn = document.getElementById('show-policy-btn');
+        const policyModal = document.getElementById('policy-modal');
+        const policyModalContent = document.getElementById('policy-modal-content');
+        const policyModalCloseBtn = document.getElementById('policy-modal-close-btn');
+
+        let shakaPlayerInstance = null;
+        let hlsPlayer = null;
+        let currentLoadedChannels = [];
+        let currentTab = '';
+
+        // GLOBAL FIX: Variable to store the dynamic network filter function for Shaka Player
+        let shakaNetworkingFilter = null;
+
+        // N Stream elements
         const nStreamPlayerSection = document.getElementById('n-stream-player-section');
-        const streamUrlInput = document.getElementById('stream-url-input');
         const streamTypeSelect = document.getElementById('stream-type-select');
+        const streamUrlInput = document.getElementById('stream-url-input');
         const drmControls = document.getElementById('drm-controls');
         const clearkeyIdInput = document.getElementById('clearkey-id-input');
         const clearkeyKeyInput = document.getElementById('clearkey-key-input');
@@ -427,168 +406,233 @@
         const playNStreamBtn = document.getElementById('play-n-stream-btn');
         const recentStreamsList = document.getElementById('recent-streams-list');
         const clearRecentStreamsBtn = document.getElementById('clear-recent-streams-btn');
-        
-        // Modal elements
-        const messageBoxModal = document.getElementById('message-box-modal');
-        const messageBoxTitle = document.getElementById('message-box-title');
-        const messageBoxContent = document.getElementById('message-box-content');
-        const messageBoxCloseBtn = document.getElementById('message-box-close-btn');
-        const infoModal = document.getElementById('info-modal');
-        const infoBtn = document.getElementById('info-btn');
-        const infoModalCloseBtn = document.getElementById('info-modal-close-btn');
 
+        // GitHub Raw JSON URLs (UPDATED Voot TV PATH and ADDED Opplex TV)
+        const tabDataUrls = {
+            'zee-network': 'https://raw.githubusercontent.com/greenhck/batball/main/zee.json',
+            'fancode': 'https://raw.githubusercontent.com/Odfinity/live-events/refs/heads/main/fancode/data.json',
+            'pirates-tv': 'https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u',
+            'jio-tv': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/jd.m3u',
+            'pere-sports': 'https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/ALL.m3u',
+            'sony-network': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/sports-pere.m3u',
+            'jiostar': 'https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jstar.m3u',
+            'voot-tv': 'vootTvP.json',
+            'opplex-tv': 'opplexPere.json',
+            'n-stream': null,
+        };
 
-        // --- Utility Functions ---
+        // --- Custom Message Box for Errors ---
         function showMessageBox(title, content) {
             messageBoxTitle.textContent = title;
             messageBoxContent.textContent = content;
             messageBoxModal.classList.remove('hidden');
         }
 
-        function closeMessageBox() {
+        messageBoxCloseBtn.addEventListener('click', () => {
             messageBoxModal.classList.add('hidden');
+            closePlayer(); // Also close the player when the user acknowledges the error
+        });
+
+        // --- Policy Modal Logic (NEW) ---
+        function togglePolicyModal(show) {
+            if (show) {
+                policyModal.classList.remove('hidden');
+                // Use setTimeout to trigger transition after display block
+                setTimeout(() => {
+                    policyModal.classList.add('opacity-100');
+                    policyModalContent.classList.add('scale-100', 'opacity-100');
+                    policyModalContent.classList.remove('scale-95', 'opacity-0');
+                }, 10);
+            } else {
+                policyModal.classList.remove('opacity-100');
+                policyModalContent.classList.remove('scale-100', 'opacity-100');
+                policyModalContent.classList.add('scale-95', 'opacity-0');
+                // Use setTimeout to hide modal after transition
+                setTimeout(() => {
+                    policyModal.classList.add('hidden');
+                }, 300); // Match transition duration
+            }
         }
 
-        function openInfoModal() {
-            infoModal.classList.remove('hidden');
+        // Event listeners for Policy Modal
+        if(showPolicyBtn) {
+            showPolicyBtn.addEventListener('click', () => togglePolicyModal(true));
         }
-
-        function closeInfoModal() {
-            infoModal.classList.add('hidden');
+        if(policyModalCloseBtn) {
+            policyModalCloseBtn.addEventListener('click', () => togglePolicyModal(false));
         }
+        // Close on outside click
+        if(policyModal) {
+            policyModal.addEventListener('click', (e) => {
+                if (e.target === policyModal) {
+                    togglePolicyModal(false);
+                }
+            });
+        }
+        // --- End Policy Modal Logic ---
 
+
+        // --- URL Management (New Sharable Logic) ---
         function updateQueryParam(key, value) {
             const url = new URL(window.location);
-            if (value === null) {
-                url.searchParams.delete(key);
-            } else {
+            if (value) {
                 url.searchParams.set(key, value);
+            } else {
+                url.searchParams.delete(key);
             }
             window.history.pushState({}, '', url);
         }
 
         function updateChannelShareableUrl(channelName) {
-            updateQueryParam('tab', currentTab);
-            updateQueryParam('channel', encodeURIComponent(channelName));
-            updateQueryParam('n', null); // Clear N-Stream if set
+            // Only update if a channel name is provided and we are not in N-Stream tab
+            if (channelName && currentTab !== 'n-stream') {
+                updateQueryParam('tab', currentTab);
+                updateQueryParam('channel', encodeURIComponent(channelName));
+                updateQueryParam('n', null); // Remove N-Stream param if present
+            }
         }
 
         function updateNStreamShareableUrl(channelConfig) {
             updateQueryParam('tab', 'n-stream');
-            updateQueryParam('channel', null); // Clear regular channel if set
-            
-            let nValue = channelConfig.mpd || channelConfig.m3u8;
-            const params = [];
-            
+            updateQueryParam('channel', null); // Remove channel param if present
+
+            let nParamValue = channelConfig.mpd || channelConfig.m3u8 || '';
+            let params = [];
+
             if (channelConfig.clearkey && channelConfig.clearkey.keyId && channelConfig.clearkey.key) {
-                // ClearKey format: drmScheme=clearkey&drmLicense=KID:KEY
-                params.push(`drmScheme=clearkey`);
-                params.push(`drmLicense=${channelConfig.clearkey.keyId}:${channelConfig.clearkey.key}`);
+                params.push(`drmScheme=clearkey&drmLicense=${channelConfig.clearkey.keyId}:${channelConfig.clearkey.key}`);
             } else if (channelConfig.drm && channelConfig.drm.licenseUrl) {
-                // Widevine format: drmScheme=widevine&drmLicense=LicenseURL
-                params.push(`drmScheme=widevine`);
-                params.push(`drmLicense=${channelConfig.drm.licenseUrl}`);
+                params.push(`drmScheme=widevine&drmLicense=${encodeURIComponent(channelConfig.drm.licenseUrl)}`);
             }
+            // Cookie handling removed from shareable URL for N-Stream as per user request.
 
             if (params.length > 0) {
-                nValue += '|' + params.join('&');
+                nParamValue += `|${params.join('&')}`;
             }
-            
-            updateQueryParam('n', encodeURIComponent(nValue));
+
+            updateQueryParam('n', encodeURIComponent(nParamValue));
+        }
+
+        // --- Player Core Functions ---
+        // Initialize Shaka Player UI once it's loaded (Mandatory for Shaka UI to work)
+        document.addEventListener('shaka-ui-loaded', () => {
+            console.log('Shaka UI Loaded, initializing Shaka Player instance...');
+            shaka.polyfill.installAll();
+            const ui = shakaVideoElement['ui'];
+            const controls = ui.getControls();
+            shakaPlayerInstance = controls.getPlayer();
+            shakaPlayerInstance.addEventListener('error', onErrorEvent);
+
+            // Configuration adjusted for stability and to prevent page unresponsiveness.
+            shakaPlayerInstance.configure({
+                streaming: {
+                    lowLatencyMode: true, // Keep low latency, but compensate with larger buffer
+                    // FIX: Increase buffering goal to give more stability to high-load streams like JioStar
+                    bufferingGoal: 45, // 45 seconds (was 15)
+                    rebufferingGoal: 2,
+                    bufferBehind: 45,  // Match buffer behind to buffering goal
+                    retryParameters: {
+                        // FIX: Increase backoff factor and base delay to prevent network flooding on unstable streams
+                        timeout: 10000,
+                        maxAttempts: 7, // Allow a few more attempts
+                        baseDelay: 1000, // Wait 1 second before first retry (was 300ms)
+                        backoffFactor: 2.0 // Double the delay each time (was 1.2)
+                    },
+                    segmentRequestTimeout: 10000, // Increased timeout (was 8000)
+                    segmentPrefetchLimit: 2,
+                    useNativeHlsOnSafari: true
+                },
+                manifest: {
+                    retryParameters: {
+                        timeout: 10000,
+                        maxAttempts: 5
+                    }
+                }
+            });
+            console.log('Shaka Player instance initialized via UI with stability-focused config.');
+        });
+
+        // Shaka Player error handler
+        function onErrorEvent(event) {
+            onError(event.detail);
+        }
+
+        function onError(error) {
+            console.error('Error:', error);
+
+            const message = error.message || "स्ट्रीमिंग में एक अज्ञात त्रुटि हुई।";
+            let userMessage = "";
+            let title = "स्ट्रीम प्लेबैक त्रुटि";
+
+            if (error.code) {
+                if (error.code === 1001) { // Error 1001: Networking Error (e.g., 403, 404, network failure)
+                    const status = error.data && error.data[1] ? error.data[1] : 'Unknown';
+                    if (status === 403) {
+                        userMessage = "स्ट्रीमिंग टोकन या ऑथेंटिकेशन में त्रुटि (403 Forbidden)। स्ट्रीम का लिंक या कुकी/टोकन अमान्य/एक्सपायर हो सकता है।";
+                        title = "टोकन अमान्य (403)";
+                    } else if (status === 404) {
+                        userMessage = "स्ट्रीम URL नहीं मिला (404 Not Found)। यह चैनल अभी लाइव नहीं हो सकता है या लिंक बदल गया है।";
+                        title = "चैनल नहीं मिला (404)";
+                    } else {
+                        userMessage = `नेटवर्क से डेटा प्राप्त करने में त्रुटि हुई। कोड ${error.code}: ${status}`;
+                    }
+                } else if (error.code === 4001) { // Error 4001: Media Error (e.g., decoding failure, corrupted data)
+                    userMessage = "वीडियो/ऑडियो डेटा त्रुटि: स्ट्रीम डेटा भ्रष्ट (corrupted) है या आपका ब्राउज़र इसे डीकोड नहीं कर पा रहा है।";
+                    title = "डेटा डीकोडिंग त्रुटि";
+                } else {
+                    userMessage = `प्लेबैक के दौरान एक गंभीर त्रुटि हुई। Shaka त्रुटि कोड ${error.code}। स्थिरता के लिए स्ट्रीम को बंद किया जा रहा है।`;
+                }
+            } else {
+                userMessage = message;
+            }
+
+            // Display custom error UI and close the player
+            showMessageBox(title, userMessage);
+            closePlayer();
         }
 
         function resetPlayers() {
-            // Stop and destroy HLS.js
+            shakaVideoContainer.style.display = 'none';
+            hlsVideoElement.style.display = 'none';
+
+            if (shakaPlayerInstance) {
+                shakaPlayerInstance.unload().catch(e => console.warn("Shaka Player unload failed:", e));
+                // Reset DRM config only, keeping the fast streaming configuration
+                shakaPlayerInstance.configure({
+                    drm: {}
+                });
+
+                // FIX: Remove custom network filter
+                if (shakaNetworkingFilter) {
+                    shakaPlayerInstance.getNetworkingEngine().unregisterRequestFilter(shakaNetworkingFilter);
+                    shakaNetworkingFilter = null;
+                    console.log("Custom Shaka network filter removed.");
+                }
+            }
             if (hlsPlayer) {
                 hlsPlayer.destroy();
                 hlsPlayer = null;
             }
-            
-            // Stop and destroy Shaka Player
-            if (shakaPlayerInstance) {
-                shakaPlayerInstance.unload().catch(() => {});
-                
-                // Unregister network filter if it exists
-                if (shakaNetworkingFilter) {
-                    shakaPlayerInstance.getNetworkingEngine().unregisterRequestFilter(shakaNetworkingFilter);
-                    shakaNetworkingFilter = null;
-                }
-            }
 
-            // Stop native video elements
+            // Ensure video elements are clean
             shakaVideoElement.pause();
             shakaVideoElement.removeAttribute('src');
-            shakaVideoElement.load();
             hlsVideoElement.pause();
             hlsVideoElement.removeAttribute('src');
-            hlsVideoElement.load();
 
-            // Hide quality selector
+            qualitySelector.innerHTML = '<option value="auto">स्वचालित</option>';
             qualitySelector.classList.add('hidden');
         }
 
         function closePlayer() {
-            resetPlayers();
             videoPlayerContainer.classList.add('hidden');
             videoPlayerContainer.classList.remove('flex');
-            updateQueryParam('tab', currentTab);
-            updateQueryParam('channel', null);
-            updateQueryParam('n', null);
+            resetPlayers();
+            contentDisplay.style.display = 'grid';
+            updateQueryParam('channel', null); // Clean URL
+            updateQueryParam('n', null); // Clean URL
         }
 
-        // --- Shaka Player Initialization & Error Handling ---
-        function initShakaPlayer() {
-            // Check if shaka is available
-            if (!shaka || !shaka.Player.is */* ) {
-                console.error('Shaka Player is not available.');
-                return;
-            }
-            
-            // Create player instance
-            shakaPlayerInstance = new shaka.Player(shakaVideoElement);
-            
-            // Configure ABR (Adaptive Bitrate) settings
-            shakaPlayerInstance.configure({
-                abr: {
-                    enabled: true, // Default to ABR enabled
-                },
-                streaming: {
-                    lowLatencyMode: true,
-                    // Buffer target set low for live streams
-                    bufferBehind: 2,
-                    rebufferingGoal: 0.5,
-                },
-                // Add a default Widevine server just in case
-                drm: {
-                     servers: {
-                         'com.widevine.alpha': 'https://license.example.com/widevine'
-                     }
-                }
-            });
-            
-            // Error handling function
-            shakaPlayerInstance.addEventListener('error', onError);
-            
-            // Initialize Shaka UI (Controls)
-            const ui = new shaka.ui.Overlay(shakaPlayerInstance, shakaVideoContainer, shakaVideoElement);
-            // Hide the default resolution selector, we use a custom one
-            ui.get  // <-- This was a previous unfinished line, removing it to be safe
-            
-            console.log('Shaka Player initialized and configured.');
-        }
-        
-        function onError(error) {
-            // The error object comes from the event.
-            console.error('Shaka Player Error Code:', error.code, 'Error Message:', error.detail ? error.detail.message : error.message);
-            
-            // Only show a message box for unrecoverable errors like 403, 404, or DRM errors
-            if (error.code === 403 || error.code === 404 || error.code === 6001) {
-                showMessageBox("स्ट्रीम लोड नहीं हुई", "वीडियो स्ट्रीम लोड करने में त्रुटि आई है। यह URL अमान्य हो सकता है या आपके IP के लिए अनुमत नहीं हो सकता है।");
-                closePlayer();
-            }
-        }
-        
-        // --- Player Core Functions ---
         // Disable Auto Fullscreen/Autoplay Tweaks (Passive Playback Logic)
         function handlePlaybackLogic(video, isShaka, channelName = null) {
             let hasUserInteracted = false;
@@ -600,7 +644,6 @@
                     console.log('Sound enabled after user interaction (User Clicked)');
                 }
             };
-            
             // Listen for any user interaction on the whole document
             ['click', 'touchstart', 'keydown'].forEach(event => {
                 document.addEventListener(event, enableSoundOnInteraction, { once: true });
@@ -631,33 +674,19 @@
             // Only for Shaka Player: When the player is fully loaded and ready
             if (isShaka) {
                 if (shakaPlayerInstance) {
-                    
-                    // Use a dedicated function for the listener
-                    const shakaLoadedListener = () => {
+                    shakaPlayerInstance.addEventListener('loaded', () => {
                         // Update sharable URL on successful playback for regular channels
                         if (channelName && currentTab !== 'n-stream') {
                             updateChannelShareableUrl(channelName);
                         }
-                        // Clean up listener after first use
-                        shakaPlayerInstance.removeEventListener('loaded', shakaLoadedListener);
-                    };
-
-                    // Check if already loaded, or listen for loaded event
-                    if (shakaPlayerInstance.isLoaded()) {
-                         if (channelName && currentTab !== 'n-stream') {
-                            updateChannelShareableUrl(channelName);
-                        }
-                    } else {
-                        shakaPlayerInstance.addEventListener('loaded', shakaLoadedListener);
-                    }
+                    }, {once: true});
                 }
             }
-        } // <--- IMPORTANT: The function is now correctly closed here.
+        }
 
         // playChannel function updated to handle custom User-Agent and Cookies from M3U parsing
         async function playChannel(channel) {
             console.log('Playing channel:', channel.name);
-            // Edge-to-Edge Player: Ensure container uses full width
             videoPlayerContainer.classList.remove('hidden');
             videoPlayerContainer.classList.add('flex');
             nStreamPlayerSection.classList.add('hidden'); // Hide N-Stream section
@@ -711,19 +740,23 @@
                         });
                         hlsPlayer.on(Hls.Events.ERROR, function(event, data) {
                             console.error('HLS.js Error:', data);
-                            // REMOVED: Aggressive closePlayer() calls as requested
                             if (data.fatal) {
                                 switch(data.type) {
                                 case Hls.ErrorTypes.NETWORK_ERROR:
                                     console.error("fatal network error, trying to recover");
-                                    // Removed showMessageBox and closePlayer: allowing HLS.js internal recovery
+                                    // FIX: For fatal HLS errors, instead of aggressive recovery, show message and close
+                                    showMessageBox("HLS नेटवर्क त्रुटि", "HLS स्ट्रीम नेटवर्क से लोड नहीं हो पा रही है या URL अमान्य है। कृपया बाद में प्रयास करें।");
+                                    closePlayer();
                                     break;
                                 case Hls.ErrorTypes.MEDIA_ERROR:
                                     console.error("fatal media error, trying to recover");
-                                    // Removed showMessageBox and closePlayer: allowing HLS.js internal recovery
+                                    showMessageBox("HLS मीडिया त्रुटि", "स्ट्रीम डेटा भ्रष्ट (corrupted) है।");
+                                    closePlayer();
                                     break;
                                 default:
-                                    console.error('HLS video playback failed.');
+                                    console.error('HLS वीडियो चलाने में एक गंभीर त्रुटि हुई।');
+                                    showMessageBox("HLS सामान्य त्रुटि", "HLS वीडियो चलाने में एक गंभीर त्रुटि हुई।");
+                                    closePlayer();
                                     break;
                                 }
                             }
@@ -776,6 +809,7 @@
                     shakaPlayerInstance.configure(shakaConfig); // Apply ONLY DRM configuration
 
                     // --- Use registerRequestFilter for dynamic headers (Correct Method) ---
+
                     // Define the filter function to set the dynamic headers on every request
                     shakaNetworkingFilter = (type, request) => {
                         // 1. Apply all headers (Referer, User-Agent, Cookie) from the dynamic requestHeaders object
@@ -793,7 +827,7 @@
                                  const separator = request.uris[0].includes('?') ? '&' : '?';
                                 // The customCookieString should contain the full token string (e.g., __hdnea__=st=...)
                                 // The token is appended directly as the value of the 'Cookie' header is the signed string itself.
-                                request.uris[0] += separator + customCookieString; 
+                                request.uris[0] += separator + customCookieString;
                              }
                         }
 
@@ -830,9 +864,11 @@
             return data.map(item => ({
                 name: item.channel_name || item.id,
                 logo: item.logo || 'https://placehold.co/200x150/2d3748/a0aec0?text=Voot+TV',
-                // Updated mapping logic (Issue #4 fix area)
+                // Check if the URL is an MPD (DASH) or M3U8 (HLS)
+                m3u8: (item.url && item.url.includes('.m3u8') && !item.url.includes('.mpd')) ? item.url : null,
                 mpd: (item.url && item.url.includes('.mpd')) ? item.url : null,
-                m3u8: item.url && !item.url.includes('.mpd') ? item.url : null, // Assuming generic link is HLS/Generic if not MPD
+                // Assuming generic proxy links are M3U8/Generic HLS or similar, so mapping the whole URL to M3U8 if no MPD.
+                m3u8: item.url && !item.url.includes('.mpd') ? item.url : null,
                 clearkey: null,
                 drm: null,
                 customUserAgent: null,
@@ -857,8 +893,7 @@
 
                         allChannels.push({
                             // UPDATED: Only use the original name, remove the category/country prefix
-                            // FIX: Removing the entire 'Welcome' block for cleaner names
-                            name: item.name.replace(/•●★--- Welcome ----★●•/g, '').trim() || 'Opplex Channel',
+                            name: item.name.replace(/•●★--- Welcome ----★●•/g, 'Welcome'),
                             logo: item.logo || 'https://placehold.co/200x150/2d3748/a0aec0?text=Opplex+TV',
                             mpd: isMpd ? item.url : null,
                             m3u8: !isMpd && item.url ? item.url : null, // Treat generic links as m3u8/generic
@@ -964,10 +999,6 @@
                 contentDisplay.innerHTML = `<p class="text-center text-gray-400 p-4">कोई चैनल/मैच नहीं मिला।</p>`;
                 return;
             }
-            // Mobile grid is 2 cols (grid-cols-2) as requested
-            contentDisplay.classList.remove('grid-cols-2', 'sm:grid-cols-3', 'md:grid-cols-4', 'lg:grid-cols-5');
-            contentDisplay.classList.add('grid-cols-2', 'sm:grid-cols-3', 'md:grid-cols-4', 'lg:grid-cols-5');
-
             channels.forEach(channel => {
                 const channelCard = document.createElement('div');
                 channelCard.classList.add('channel-card', 'bg-gray-800', 'rounded-lg', 'overflow-hidden', 'shadow-lg', 'cursor-pointer', 'transform', 'transition-transform', 'duration-200', 'hover:-translate-y-1', 'hover:shadow-2xl');
@@ -994,16 +1025,17 @@
             videoPlayerContainer.classList.add('hidden');
             videoPlayerContainer.classList.remove('flex');
 
-            // Update active tab button style (Blue Underline as requested)
+            // Update active tab button style
             tabButtons.forEach(btn => {
                 // Clear all active/color classes
-                btn.classList.remove('border-b-2', 'border-blue-400', 'text-white', 'font-bold');
-                btn.classList.add('text-gray-400', 'hover:text-white', 'font-medium'); // Restore default hover/text color
+                btn.classList.remove('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner');
+                // Restore default color classes (Voot/Opplex colors removed from HTML, so this is safe)
+                btn.classList.add('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
 
                 // Apply activation style for the current tab
                 if (btn.dataset.tab === tabName) {
-                    btn.classList.add('border-b-2', 'border-blue-400', 'text-white', 'font-bold');
-                    btn.classList.remove('text-gray-400', 'hover:text-white', 'font-medium');
+                    btn.classList.add('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner');
+                    btn.classList.remove('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
                 }
             });
 
@@ -1024,6 +1056,7 @@
             `;
             const dataUrl = tabDataUrls[tabName];
             let channelsToDisplay = [];
+
             try {
                 const response = await fetch(dataUrl);
                 if (!response.ok) {
@@ -1067,6 +1100,7 @@
                 }
 
                 displayChannels(channelsToDisplay);
+
                 // Auto-play shared channel
                 if (channelToPlay) {
                     const channel = channelsToDisplay.find(c => c.name === channelToPlay);
@@ -1112,7 +1146,22 @@
             const activeTrack = shakaPlayerInstance.getVariantTracks().find(t => t.active);
             qualitySelector.value = activeTrack ? activeTrack.id : 'auto';
         }
-        
+
+        qualitySelector.addEventListener('change', (e) => {
+            if (!shakaPlayerInstance) return;
+            const trackId = e.target.value;
+
+            if (trackId === 'auto') {
+                shakaPlayerInstance.configure({ abr: { enabled: true } });
+            } else {
+                shakaPlayerInstance.configure({ abr: { enabled: false } });
+                const track = shakaPlayerInstance.getVariantTracks().find(t => t.id == trackId);
+                if (track) {
+                    shakaPlayerInstance.selectVariantTrack(track, true);
+                }
+            }
+        });
+
         // --- Recent Streams Logic ---
         function getRecentStreams() {
             try {
@@ -1213,38 +1262,7 @@
                 recentStreamsList.appendChild(button);
             });
         }
-        
         // --- Event Listeners and Initialization ---
-
-        // Player Event Listeners
-        closePlayerBtn.addEventListener('click', closePlayer);
-        shareBtn.addEventListener('click', () => {
-            const url = window.location.href;
-            navigator.clipboard.writeText(url).then(() => {
-                showMessageBox("सफलतापूर्वक साझा किया गया", "चैनल लिंक क्लिपबोर्ड पर कॉपी कर लिया गया है!");
-            }).catch(err => {
-                showMessageBox("कॉपी करने में त्रुटि", "लिंक को कॉपी करने में असमर्थ। कृपया URL को मैन्युअल रूप से कॉपी करें।");
-                console.error('Could not copy text: ', err);
-            });
-        });
-        qualitySelector.addEventListener('change', (e) => {
-            if (!shakaPlayerInstance) return;
-            const trackId = e.target.value;
-            if (trackId === 'auto') {
-                shakaPlayerInstance.configure({ abr: { enabled: true } });
-            } else {
-                shakaPlayerInstance.configure({ abr: { enabled: false } });
-                const track = shakaPlayerInstance.getVariantTracks().find(t => t.id == trackId);
-                if (track) {
-                    shakaPlayerInstance.selectVariantTrack(track, true);
-                }
-            }
-        });
-        
-        // Modal Event Listeners
-        messageBoxCloseBtn.addEventListener('click', closeMessageBox);
-        infoBtn.addEventListener('click', openInfoModal);
-        infoModalCloseBtn.addEventListener('click', closeInfoModal);
 
         // Tab button event listeners
         tabButtons.forEach(button => {
@@ -1262,18 +1280,21 @@
         });
 
         // Search bar logic
-        const searchBars = document.querySelectorAll('.search-bar');
-        searchBars.forEach(searchBar => {
-            searchBar.addEventListener('input', (event) => {
-                const searchTerm = event.target.value.toLowerCase();
-                if (nStreamPlayerSection.classList.contains('flex')) {
-                    return;
-                }
-                const filteredChannels = currentLoadedChannels.filter(channel =>
-                    channel.name.toLowerCase().includes(searchTerm)
-                );
-                displayChannels(filteredChannels);
-            });
+        const searchBar = document.querySelector('.search-bar');
+        searchBar.addEventListener('input', (event) => {
+            const searchTerm = event.target.value.toLowerCase();
+
+            // Find the correct search bar element (handles mobile/desktop difference)
+            const currentSearchBar = document.querySelector('input.search-bar:focus') || document.querySelector('.search-bar');
+            const actualSearchTerm = currentSearchBar.value.toLowerCase();
+
+            if (nStreamPlayerSection.classList.contains('flex')) {
+                return;
+            }
+            const filteredChannels = currentLoadedChannels.filter(channel =>
+                channel.name.toLowerCase().includes(actualSearchTerm)
+            );
+            displayChannels(filteredChannels);
         });
 
         // N Stream specific logic
@@ -1344,12 +1365,9 @@
             // Update sharable URL for N-Stream
             updateNStreamShareableUrl(channelConfig);
         });
-        
+
         // --- Initialization on DOMContentLoaded (Handles Shared URLs) ---
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize Shaka Player (must be done before playing a DASH stream)
-            initShakaPlayer(); 
-            
             const urlParams = new URLSearchParams(window.location.search);
             const nParam = urlParams.get('n');
             const sharedTab = urlParams.get('tab');
