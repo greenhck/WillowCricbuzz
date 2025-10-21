@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="referrer" content="no-referrer" />
     <!-- SEO Title -->
-    <title>Perelive - Watch Live Streams & Channels Online</title>
+    <title>Perelive - Fixed UI Live Stream Player</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Meta Description -->
     <meta name="description" content="Perelive par dekhein latest live channels aur streams online. Entertainment, news, sports aur more, sab ek hi platform par. Join now!">
@@ -126,8 +126,6 @@
             font-family: 'Inter', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            height: 100vh;
-            /* overflow: hidden; Removed overflow hidden to allow grid to manage scroll */
         }
         /* Custom styles for scrollbar in tabs */
         .tabs-container::-webkit-scrollbar {
@@ -169,27 +167,23 @@
         #policy-modal-content {
             transition: transform 0.3s ease-out, opacity 0.3s ease-out;
         }
-        /* Custom styles for the default banner text */
+        /* Fixed banner background */
         #default-banner {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.95));
             backdrop-filter: blur(5px);
-            border: 2px dashed #4b5563;
         }
-        /* Desktop player container needs defined height to fill the grid cell */
+        
+        /* Desktop: Ensure video player fills its 70% height/width */
         @media (min-width: 1024px) {
-            #video-player-container {
-                height: 100%;
-            }
-            /* Ensure the shaka and hls players fill their containers */
-            .shaka-player-container, #shaka-video-player, #hls-video-player {
+            .shaka-player-container, #shaka-video-player, #hls-video-player, #video-player-container {
                 height: 100%;
                 width: 100%;
             }
         }
     </style>
 </head>
-<!-- CRITICAL: Use flex-col and h-screen for fixed/scroll layout -->
-<body class="bg-gray-900 text-gray-100 flex flex-col h-screen">
+<!-- NEW: Make body fill viewport and use flex-col to stack content, hiding scroll on body -->
+<body class="bg-gray-900 text-gray-100 h-screen flex flex-col overflow-hidden">
     <!-- Policy/Info Modal -->
     <div id="policy-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-[1000] flex items-center justify-center p-4 transition-opacity duration-300">
         <div class="bg-gray-800 rounded-xl p-6 w-full max-w-lg shadow-2xl border-t-4 border-yellow-500 transform scale-95 opacity-0 transition-all duration-300" id="policy-modal-content">
@@ -211,10 +205,10 @@
         </div>
     </div>
 
-    <!-- Header Section (FIXED TOP - flex-shrink-0) -->
-    <header class="bg-black text-white px-3 py-3 z-50 shadow-lg flex-shrink-0 w-full border-b border-gray-800">
+    <!-- 1. Header Section (FIXED TOP) -->
+    <header id="main-header" class="bg-black text-white px-3 py-3 z-50 shadow-lg fixed top-0 left-0 right-0 w-full border-b border-gray-800 h-[56px] flex-shrink-0">
         <!-- Main Row: Title, COMPACT Search, Icons -->
-        <div class="flex items-center justify-between w-full">
+        <div class="flex items-center justify-between w-full h-full">
             <!-- 1. LEFT: Title and Live Counter -->
             <div class="flex flex-col flex-shrink-0 mr-2">
                 <h1 class="text-xl sm:text-2xl font-extrabold tracking-wider">PERELIVE</h1>
@@ -228,7 +222,7 @@
                 </div>
             </div>
 
-            <!-- 2. CENTER: Compact Search Bar (Max width to fit well between title/icons) -->
+            <!-- 2. CENTER: Compact Search Bar -->
             <div class="flex-grow flex justify-center mx-1 sm:mx-2 min-w-0">
                  <input type="text" class="search-bar w-full max-w-xs sm:max-w-md px-3 py-1.5 text-sm rounded-full border border-gray-700 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" placeholder="चैनल/मैच खोजें...">
             </div>
@@ -249,22 +243,23 @@
         </div>
     </header>
 
-    <!-- MAIN CONTENT AREA (MOBILE: STACKED | DESKTOP: GRID SPLIT - FIXED) -->
-    <!-- The main content container is flex-grow and has overflow-hidden on large screens -->
-    <div id="main-layout-container" class="flex-grow flex flex-col lg:grid lg:grid-cols-[3fr_2fr] lg:gap-4 lg:overflow-hidden lg:p-4">
-
-        <!-- 1. LEFT PANE: Video Player (Mobile: Top, Desktop: Left) - FIXED on Desktop -->
-        <div id="left-player-pane" class="flex flex-col lg:order-1 lg:h-full lg:flex-shrink-0">
+    <!-- 2. Main Content Area (Between Fixed Header and Fixed Footer) -->
+    <!-- NEW: pt-[56px] for header offset. flex-grow to fill available space. overflow-hidden to contain scrolling inside. -->
+    <div id="content-area-main" class="pt-[56px] pb-[45px] flex flex-col flex-grow lg:grid lg:grid-cols-[7fr_3fr] lg:gap-4 lg:p-4 lg:pb-[45px] overflow-hidden">
+        
+        <!-- 2a. LEFT PANE: Video Player (Fixed/Visible Top Left) -->
+        <!-- flex-shrink-0: Mobile height is fixed by aspect-ratio. lg:h-full: Desktop height fills the grid cell. -->
+        <div id="left-player-pane" class="flex-shrink-0 w-full aspect-video lg:aspect-auto lg:h-full lg:order-1">
             <div id="video-player-container" class="bg-gray-900 shadow-xl w-full aspect-video relative flex-shrink-0 lg:aspect-auto lg:h-full lg:rounded-xl lg:shadow-2xl lg:overflow-hidden">
                 <!-- Default Banner (Visible on Load, Hidden when Playing) -->
-                <div id="default-banner" class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center rounded-none z-10 transition-opacity duration-500">
+                <div id="default-banner" class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center rounded-lg z-10 transition-opacity duration-500">
                     <i class="fas fa-satellite-dish text-6xl text-blue-500 mb-4 animate-pulse"></i>
                     <h2 class="text-3xl font-bold text-white mb-2">PERELIVE: Smooth as PereGrine</h2>
                     <p class="text-lg text-gray-300">Choose any channel or any match</p>
                     <p class="text-sm text-yellow-400 mt-2">If you see again this banner after play any channel. Channel not availabe.</p>
                 </div>
 
-                <!-- Player Containers (Hidden by default, z-index 20 to overlap banner) -->
+                <!-- Player Containers -->
                 <div data-shaka-player-container id="shaka-container-wrapper" class="shaka-player-container w-full h-full relative hidden z-20">
                     <!-- Quality Selector fixed to the top right of the player -->
                     <select id="quality-selector" class="absolute top-2 right-2 z-300 bg-gray-700 text-white py-1 px-3 rounded-md text-xs font-semibold hidden cursor-pointer shadow-lg hover:bg-gray-600 transition duration-150">
@@ -277,9 +272,11 @@
             </div>
         </div>
 
-        <!-- 2. RIGHT PANE: Tabs + Content (Desktop: Right Side) -->
-        <div id="right-scrollable-pane" class="flex flex-col flex-grow lg:order-2 lg:h-full lg:bg-gray-800/30 lg:rounded-xl">
-            <!-- Navigation Tabs (Horizontal Scroll) - FIXED on Desktop via flex-shrink-0 -->
+        <!-- 2b. RIGHT SIDE: Tabs + Scrollable Content -->
+        <!-- flex-col flex-grow: Mobile takes remaining height. lg:h-full: Desktop fills its column. overflow-hidden: Contains the scrolling to the inner wrapper. -->
+        <div id="right-side-combined" class="flex flex-col flex-grow lg:order-2 lg:h-full lg:bg-gray-800/30 lg:rounded-xl overflow-hidden">
+            
+            <!-- Tabs (FIXED/STATIC in this block - flex-shrink-0) -->
             <nav id="nav-tabs-container" class="bg-gray-900 lg:bg-transparent text-white px-3 py-3 z-40 shadow-inner flex-shrink-0 w-full border-t border-gray-700 lg:border-t-0">
                 <div class="tabs-container overflow-x-auto flex justify-start items-center space-x-2">
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="fancode">Fancode</button>
@@ -295,70 +292,72 @@
                 </div>
             </nav>
 
-            <!-- N Stream Section (Manual Stream Input) - FIXED on Desktop via flex-shrink-0 -->
-            <div id="n-stream-player-section" class="bg-gray-800 p-4 sm:p-5 rounded-none shadow-xl flex-shrink-0 hidden flex-col space-y-4 border-t border-gray-700 lg:border-t-0 lg:bg-transparent">
-                <h2 class="text-2xl font-semibold text-center">N Stream (Network Stream)</h2>
-                <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-                    <label for="stream-url-input" class="text-sm flex-shrink-0">Stream URL:</label>
-                    <input type="text" id="stream-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="यहां M3U8, MPD, या लाइव प्रॉक्सी लिंक डालें">
-                </div>
-                <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-                    <label for="stream-type-select" class="text-sm flex-shrink-0">Stream Type:</label>
-                    <select id="stream-type-select" class="w-full sm:w-auto px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-500">
-                        <option value="HLS">HLS (M3U8/Generic URL)</option>
-                        <option value="DASH">DASH (MPD)</option>
-                    </select>
-                </div>
-
-                <div id="drm-controls" class="drm-inputs flex-col space-y-2 pl-4 border-l-2 border-gray-600 hidden">
+            <!-- Main Scrollable Content Wrapper -->
+            <!-- flex-grow: Takes up the remaining vertical space. overflow-y-auto: Enables vertical scrolling. -->
+            <div id="content-scroll-wrapper" class="flex-grow w-full overflow-y-auto">
+                
+                <!-- N Stream Section (flex-shrink-0 when visible, scrolls with content) -->
+                <div id="n-stream-player-section" class="bg-gray-800 p-4 sm:p-5 rounded-none shadow-xl flex-shrink-0 hidden flex-col space-y-4 border-t border-gray-700 lg:border-t-0 lg:bg-transparent">
+                    <h2 class="text-2xl font-semibold text-center">N Stream (Network Stream)</h2>
                     <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-                        <label for="clearkey-id-input" class="text-sm">Clear Key ID:</label>
-                        <input type="text" id="clearkey-id-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="Clear Key ID (हेक्स, डैश के बिना)">
+                        <label for="stream-url-input" class="text-sm flex-shrink-0">Stream URL:</label>
+                        <input type="text" id="stream-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="यहां M3U8, MPD, या लाइव प्रॉक्सी लिंक डालें">
                     </div>
                     <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-                        <label for="clearkey-key-input" class="text-sm">Clear Key:</label>
-                        <input type="text" id="clearkey-key-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="Clear Key (हेक्स, डैश के बिना)">
+                        <label for="stream-type-select" class="text-sm flex-shrink-0">Stream Type:</label>
+                        <select id="stream-type-select" class="w-full sm:w-auto px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-500">
+                            <option value="HLS">HLS (M3U8/Generic URL)</option>
+                            <option value="DASH">DASH (MPD)</option>
+                        </select>
                     </div>
-                    <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-                        <label for="drm-license-url-input" class="text-sm">DRM License URL:</label>
-                        <input type="text" id="drm-license-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="DRM लाइसेंस URL (यदि आवश्यक हो)">
+
+                    <div id="drm-controls" class="drm-inputs flex-col space-y-2 pl-4 border-l-2 border-gray-600 hidden">
+                        <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                            <label for="clearkey-id-input" class="text-sm">Clear Key ID:</label>
+                            <input type="text" id="clearkey-id-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="Clear Key ID (हेक्स, डैश के बिना)">
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                            <label for="clearkey-key-input" class="text-sm">Clear Key:</label>
+                            <input type="text" id="clearkey-key-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="Clear Key (हेक्स, डैश के बिना)">
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                            <label for="drm-license-url-input" class="text-sm">DRM License URL:</label>
+                            <input type="text" id="drm-license-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="DRM लाइसेंस URL (यदि आवश्यक हो)">
+                        </div>
                     </div>
-                </div>
-                <div class="flex justify-end">
-                    <button id="play-n-stream-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-200">चलाएं</button>
+                    <div class="flex justify-end">
+                        <button id="play-n-stream-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-200">चलाएं</button>
+                    </div>
+
+                    <!-- Recent Streams Container -->
+                    <div id="recent-streams-container" class="mt-6 border-t border-gray-700 pt-4">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-lg font-semibold text-gray-300">Recent Streams</h3>
+                            <button id="clear-recent-streams-btn" class="text-xs text-red-400 hover:text-red-300 font-medium py-1 px-3 rounded-full border border-red-500 hover:border-red-400 transition duration-150 shadow-sm hidden" title="सभी हालिया स्ट्रीम्स हटाएँ">सभी साफ़ करें</button>
+                        </div>
+                        <div id="recent-streams-list" class="flex flex-wrap gap-3">
+                            <p id="no-recent-streams" class="text-sm text-gray-500">no any recent stream</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Recent Streams Container -->
-                <div id="recent-streams-container" class="mt-6 border-t border-gray-700 pt-4">
-                    <div class="flex justify-between items-center mb-3">
-                        <h3 class="text-lg font-semibold text-gray-300">Recent Streams</h3>
-                        <button id="clear-recent-streams-btn" class="text-xs text-red-400 hover:text-red-300 font-medium py-1 px-3 rounded-full border border-red-500 hover:border-red-400 transition duration-150 shadow-sm hidden" title="सभी हालिया स्ट्रीम्स हटाएँ">सभी साफ़ करें</button>
-                    </div>
-                    <div id="recent-streams-list" class="flex flex-wrap gap-3">
-                        <p id="no-recent-streams" class="text-sm text-gray-500">no any recent stream</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Main Content Wrapper (THIS IS THE ONLY SCROLLABLE AREA FOR GRID) -->
-            <div id="content-scroll-wrapper" class="p-3 sm:p-4 flex-grow w-full overflow-y-auto">
-                <!-- IMPORTANT CHANGE: lg:grid-cols-2 xl:grid-cols-2 for 2x desktop grid -->
-                <div id="content-display" class="content-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-2 gap-1 sm:gap-2 md:gap-3">
+                <!-- Grid Display -->
+                <!-- Edge-to-Edge fix: Added padding back to grid for mobile, removed it for desktop (lg:p-0) -->
+                <div id="content-display" class="content-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-2 gap-3 p-3 lg:p-0">
                     <!-- Channel cards will be inserted here -->
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer Section (FIXED BOTTOM - flex-shrink-0) -->
-    <footer class="bg-black text-gray-400 text-center text-sm py-3 flex-shrink-0 w-full">
+    <!-- 3. Footer Section (FIXED BOTTOM) -->
+    <footer class="bg-black text-gray-400 text-center text-sm py-3 flex-shrink-0 w-full fixed bottom-0 left-0 right-0 z-50 h-[45px]">
         <p>&copy; 2025 PEREGRINE LIVE. all security reserved</p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- JavaScript (Remaining JS is identical to the previous version and handles the logic) -->
     <script>
         const contentDisplay = document.getElementById('content-display');
-        // Updated selector for tabs since they are now outside the header
         const tabButtons = document.querySelectorAll('#nav-tabs-container .tab-button'); 
         const videoPlayerContainer = document.getElementById('video-player-container');
         const defaultBanner = document.getElementById('default-banner');
@@ -483,14 +482,12 @@
             updateQueryParam('n', encodeURIComponent(nParamValue));
         }
         
-        // --- Player Core Functions ---
-        // Show/Hide Banner
+        // --- Player Core Functions (Identical to previous version) ---
         function setPlayerUIVisibility(isStreamPlaying) {
             if (isStreamPlaying) {
                 defaultBanner.classList.add('opacity-0');
-                setTimeout(() => defaultBanner.classList.add('hidden'), 500); // Hide after transition
+                setTimeout(() => defaultBanner.classList.add('hidden'), 500); 
             } else {
-                // Ensure players are hidden before showing banner
                 shakaContainerWrapper.classList.add('hidden');
                 hlsVideoElement.classList.add('hidden');
                 
@@ -502,7 +499,7 @@
         function passiveStopPlayer(title, message) {
             console.error(`[CRASH PREVENTION ACTIVE] ${title}: ${message}`);
 
-            setPlayerUIVisibility(false); // Show the banner on crash stop
+            setPlayerUIVisibility(false); 
             
             if (shakaPlayerInstance) {
                 shakaPlayerInstance.unload().catch(e => console.warn("Shaka Player unload failed during passive stop:", e));
@@ -594,7 +591,7 @@
         });
         
         function resetPlayers() {
-            setPlayerUIVisibility(false); // Show banner, hide players
+            setPlayerUIVisibility(false); 
             
             shakaErrorCount = 0;
             lastShakaErrorTime = 0; 
@@ -645,7 +642,6 @@
                     if (channelName && currentTab !== 'n-stream') {
                         updateChannelShareableUrl(channelName);
                     }
-                    // NEW: Ensure banner is hidden and player is visible on successful play
                     setPlayerUIVisibility(true);
                 }).catch(e => {
                     console.warn('Autoplay failed, user interaction required.', e);
@@ -664,7 +660,6 @@
                         if (channelName && currentTab !== 'n-stream') {
                             updateChannelShareableUrl(channelName);
                         } 
-                        // NEW: Ensure banner is hidden and player is visible on successful load
                         setPlayerUIVisibility(true);
                     }, {once: true});
                 }
@@ -672,7 +667,6 @@
         }
         
         function showMessageBox(title, message) {
-            // A simple implementation of a message box instead of alert()
             const existingModal = document.getElementById('message-box-modal');
             if (existingModal) existingModal.remove();
 
@@ -700,7 +694,7 @@
             nStreamPlayerSection.classList.remove('flex');
 
             resetPlayers(); 
-            setPlayerUIVisibility(true); // Temporarily hide banner while player loads
+            setPlayerUIVisibility(true); 
             
             try {
                 const fixedSpoofHeaders = {
@@ -719,8 +713,8 @@
                 }
 
                 if (channel.m3u8) {
-                    shakaContainerWrapper.classList.add('hidden'); // Hide shaka wrapper
-                    hlsVideoElement.classList.remove('hidden');    // Show HLS player
+                    shakaContainerWrapper.classList.add('hidden'); 
+                    hlsVideoElement.classList.remove('hidden');    
 
                     if (Hls.isSupported()) {
                         hlsPlayer = new Hls({
@@ -748,8 +742,8 @@
                     }
                 }
                 else if (channel.mpd) {
-                    shakaContainerWrapper.classList.remove('hidden'); // Show shaka wrapper
-                    hlsVideoElement.classList.add('hidden');         // Hide HLS player
+                    shakaContainerWrapper.classList.remove('hidden'); 
+                    hlsVideoElement.classList.add('hidden');         
 
                     if (!shakaPlayerInstance) {
                         passiveStopPlayer("Shaka Player त्रुटि", "Shaka Player इंस्टेंस तैयार नहीं है।");
@@ -780,7 +774,6 @@
                             (type === shaka.net.NetworkingEngine.RequestType.MANIFEST ||
                               type === shaka.net.NetworkingEngine.RequestType.SEGMENT)) {
                             
-                            // Check if a query param is not already present, then add cookie as query param
                             if (!request.uris[0].includes('__hdnea__=')) { 
                                  const separator = request.uris[0].includes('?') ? '&' : '?';
                                 request.uris[0] += separator + customCookieString; 
@@ -798,11 +791,11 @@
                 }
             } catch (e) {
                 handleShakaError({ detail: e });
-                setPlayerUIVisibility(false); // Ensure banner is shown if load fails immediately
+                setPlayerUIVisibility(false);
             }
         }
         
-        // --- Channel Mapping Functions (Same logic as before) ---
+        // --- Channel Mapping Functions (Identical to previous version) ---
         function mapVootTvChannels(data) {
             if (!Array.isArray(data)) return [];
             return data.map(item => ({
@@ -942,16 +935,14 @@
         async function loadAndDisplayChannels(tabName, channelToPlay = null) {
             currentTab = tabName;
 
-            // Hide/Show N-Stream and Content Grid wrappers
             const contentScrollWrapper = document.getElementById('content-scroll-wrapper');
             
             if (tabName === 'n-stream') {
-                contentScrollWrapper.classList.add('hidden');
                 nStreamPlayerSection.classList.remove('hidden');
                 nStreamPlayerSection.classList.add('flex');
+                contentDisplay.classList.add('hidden'); // Hide grid when N-Stream is active
                 loadRecentStreams();
                 
-                // Update active tab button style (moved up for N-Stream too)
                 tabButtons.forEach(btn => {
                     btn.classList.remove('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner');
                     btn.classList.add('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
@@ -963,12 +954,10 @@
                 return;
             }
 
-            // Regular tab load: Hide N-Stream section and show content display loading
             nStreamPlayerSection.classList.add('hidden');
             nStreamPlayerSection.classList.remove('flex');
-            contentScrollWrapper.classList.remove('hidden'); 
+            contentDisplay.classList.remove('hidden'); // Show grid
             
-            // Update active tab button style
             tabButtons.forEach(btn => {
                 btn.classList.remove('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner');
                 btn.classList.add('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
@@ -979,7 +968,6 @@
                 }
             });
 
-            // Update loading message with spinner
             contentDisplay.innerHTML = `
                 <div class="flex items-center justify-center p-4 col-span-full">
                     <div class="loading-spinner mr-3"></div>
@@ -1020,11 +1008,9 @@
                         throw new Error('FanCode के लिए अमान्य डेटा संरचना।');
                     }
                 } else if (tabName === 'voot-tv') {
-                    // Voot TV JSON mapping
                     const data = await response.json();
                     channelsToDisplay = mapVootTvChannels(data);
                 } else if (tabName === 'opplex-tv') {
-                    // Opplex TV JSON mapping
                     const data = await response.json();
                     channelsToDisplay = mapOpplexChannels(data);
                 } else {
@@ -1034,12 +1020,10 @@
 
                 displayChannels(channelsToDisplay);
                 
-                // Auto-play shared channel
                 if (channelToPlay) {
                     const channel = channelsToDisplay.find(c => c.name === channelToPlay);
                     if (channel) {
                         console.log(`Auto-playing shared channel: ${channelToPlay}`);
-                        // Delay play slightly to ensure player UI is ready and DOM is updated
                         setTimeout(() => playChannel(channel), 100);
                     } else {
                         console.warn(`Shared channel "${channelToPlay}" not found in tab "${tabName}".`);
@@ -1051,20 +1035,18 @@
             }
         }
         
-        // --- Quality Selector Logic ---
+        // --- Quality Selector Logic (Identical to previous version) ---
         function setupShakaQualitySelector() {
             if (!shakaPlayerInstance) return;
 
             const tracks = shakaPlayerInstance.getVariantTracks();
             qualitySelector.innerHTML = '<option value="auto">स्वचालित</option>';
 
-            // Filter out audio-only tracks and sort by bandwidth (bitrate)
             const videoTracks = tracks.filter(t => t.type === 'variant' && t.height > 0).sort((a, b) => b.bandwidth - a.bandwidth);
 
             videoTracks.forEach(track => {
                 const option = document.createElement('option');
                 option.value = track.id;
-                // Displaying resolution and bitrate
                 option.textContent = `${track.height}p (${Math.round(track.bandwidth / 1000)} Kbps)`;
                 qualitySelector.appendChild(option);
             });
@@ -1075,7 +1057,6 @@
                 qualitySelector.classList.add('hidden');
             }
 
-            // Set initial selection to the active track or auto
             const activeTrack = shakaPlayerInstance.getVariantTracks().find(t => t.active);
             qualitySelector.value = activeTrack ? activeTrack.id : 'auto';
         }
@@ -1094,7 +1075,7 @@
             }
         });
 
-        // --- Recent Streams Logic ---
+        // --- Recent Streams Logic (Identical to previous version) ---
         function getRecentStreams() {
             try {
                 const streams = JSON.parse(localStorage.getItem('recentNStreams') || '[]');
@@ -1109,7 +1090,7 @@
             try {
                 localStorage.removeItem('recentNStreams');
                 console.log('Recent streams cleared.');
-                loadRecentStreams(); // Refresh the display
+                loadRecentStreams(); 
             } catch (e) {
                 console.error("Error clearing recent streams:", e);
             }
@@ -1119,11 +1100,9 @@
             const maxStreams = 5;
             let streams = getRecentStreams();
 
-            // Create a unique key for the stream based on its primary URL
             const url = channelConfig.mpd || channelConfig.m3u8;
             if (!url) return;
 
-            // Remove sensitive DRM keys and keep only required fields for history
             const simpleConfig = {
                 mpd: channelConfig.mpd,
                 m3u8: channelConfig.m3u8,
@@ -1131,18 +1110,13 @@
                 drm: channelConfig.drm ? { licenseUrl: channelConfig.drm.licenseUrl } : null
             };
 
-            // Remove existing stream with the same URL to put the new one at the front
             streams = streams.filter(s => (s.mpd || s.m3u8) !== url);
-
-            // Add new stream to the front
             streams.unshift(simpleConfig);
-
-            // Keep only the maxStreams number
             streams = streams.slice(0, maxStreams);
 
             try {
                 localStorage.setItem('recentNStreams', JSON.stringify(streams));
-                loadRecentStreams(); // Refresh the list
+                loadRecentStreams(); 
             } catch (e) {
                 console.error("Error saving recent streams to localStorage:", e);
             }
@@ -1154,11 +1128,11 @@
 
             if (streams.length === 0) {
                 recentStreamsList.innerHTML = `<p id="no-recent-streams" class="text-sm text-gray-500">कोई हालिया स्ट्रीम नहीं।</p>`;
-                clearRecentStreamsBtn.classList.add('hidden'); // Hide button
+                clearRecentStreamsBtn.classList.add('hidden'); 
                 return;
             }
 
-            clearRecentStreamsBtn.classList.remove('hidden'); // Show button
+            clearRecentStreamsBtn.classList.remove('hidden'); 
 
             streams.forEach(stream => {
                 const streamUrl = stream.mpd || stream.m3u8 || 'N/A';
@@ -1176,18 +1150,15 @@
                 `;
 
                 button.addEventListener('click', () => {
-                    // Pre-fill N-Stream inputs
                     streamUrlInput.value = streamUrl;
                     streamTypeSelect.value = type;
                     clearkeyIdInput.value = keyId;
                     clearkeyKeyInput.value = key;
                     drmLicenseUrlInput.value = licenseUrl;
 
-                    // Trigger change event to show/hide DRM controls
                     const changeEvent = new Event('change');
                     streamTypeSelect.dispatchEvent(changeEvent);
 
-                    // Play the stream directly
                     playNStreamBtn.click();
                 });
 
@@ -1195,14 +1166,12 @@
             });
         }
         
-        // --- Event Listeners and Initialization ---
+        // --- Event Listeners and Initialization (Identical to previous version) ---
 
-        // Tab button event listeners
         tabButtons.forEach(button => {
             button.addEventListener('click', (event) => {
                 const tab = event.target.dataset.tab;
 
-                // Update URL for tab selection, remove channel/n
                 updateQueryParam('tab', tab);
                 updateQueryParam('channel', null);
                 updateQueryParam('n', null);
@@ -1212,12 +1181,10 @@
             });
         });
 
-        // Search bar logic
         const searchBar = document.querySelector('.search-bar');
         searchBar.addEventListener('input', (event) => {
             const searchTerm = event.target.value.toLowerCase();
             if (nStreamPlayerSection.classList.contains('flex')) {
-                // If N-Stream is active, do not filter regular channels
                 return;
             }
             const filteredChannels = currentLoadedChannels.filter(channel =>
@@ -1226,7 +1193,6 @@
             displayChannels(filteredChannels);
         });
 
-        // N Stream specific logic
         streamTypeSelect.addEventListener('change', () => {
             if (streamTypeSelect.value === 'DASH') {
                 drmControls.classList.remove('hidden');
@@ -1240,7 +1206,6 @@
             }
         });
 
-        // Clear recent streams button listener
         clearRecentStreamsBtn.addEventListener('click', clearRecentStreams);
 
         playNStreamBtn.addEventListener('click', () => {
@@ -1254,7 +1219,6 @@
                 m3u8: null,
                 clearkey: null,
                 drm: null
-                // Note: customUserAgent and customCookies are NOT supported for manual N Stream as per previous user request.
             };
 
             if (!streamUrl) {
@@ -1285,17 +1249,11 @@
                 }
             }
 
-            // Play the channel. No custom headers needed now for N Stream.
             playChannel(channelConfig);
-
-            // Save to recent streams after successful attempt
             saveRecentStream(channelConfig);
-
-            // Update sharable URL for N-Stream
             updateNStreamShareableUrl(channelConfig);
         });
         
-        // --- Initialization on DOMContentLoaded (Handles Shared URLs) ---
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const nParam = urlParams.get('n');
@@ -1304,7 +1262,6 @@
 
             let tabToActivate = sharedTab || localStorage.getItem('activeTab') || 'pere-sports';
             
-            // Case 1: Shared N-Stream URL
             if (nParam) {
                 tabToActivate = 'n-stream';
                 const nValue = decodeURIComponent(nParam);
@@ -1315,14 +1272,12 @@
                 let drmLicenseUrl = '';
                 let streamType = 'HLS';
 
-                // Split URL from parameters
                 const parts = nValue.split('|');
                 streamUrl = parts[0];
 
                 if (parts.length > 1) {
                     const params = new URLSearchParams(parts[1]);
 
-                    // DRM/ClearKey Parsing
                     const drmScheme = params.get('drmScheme');
                     if (drmScheme === 'clearkey') {
                         const license = params.get('drmLicense');
@@ -1342,12 +1297,10 @@
 
                 const nStreamTabButton = document.querySelector('.tab-button[data-tab="n-stream"]');
                 if (nStreamTabButton) {
-                    // Manually set tab and update URL, then proceed with N-Stream logic
                     currentTab = 'n-stream';
                     updateQueryParam('tab', 'n-stream');
-                    loadAndDisplayChannels('n-stream'); // Load N-Stream section
+                    loadAndDisplayChannels('n-stream'); 
 
-                    // Populate inputs and play after a short delay
                     setTimeout(() => {
                         streamUrlInput.value = streamUrl;
                         streamTypeSelect.value = streamType;
@@ -1359,27 +1312,21 @@
                         clearkeyKeyInput.value = clearkeyKey;
                         drmLicenseUrlInput.value = drmLicenseUrl;
 
-                        playNStreamBtn.click(); // Auto-play the stream
+                        playNStreamBtn.click(); 
                     }, 100);
                 }
             }
-            // Case 2: Shared Regular Channel URL
             else if (sharedTab && sharedChannel) {
                 const tabButton = document.querySelector(`.tab-button[data-tab="${sharedTab}"]`);
                 if (tabButton) {
-                    // Directly load the tab and pass the channel name for auto-play
-                    // We don't need to 'click' the button, just call the loader
                     loadAndDisplayChannels(sharedTab, decodeURIComponent(sharedChannel));
                 }
             }
-            // Case 3: Default/Saved Tab Load
             else {
                 const defaultButton = document.querySelector(`.tab-button[data-tab="${tabToActivate}"]`);
                 if (defaultButton) {
-                    // Directly load the tab
                     loadAndDisplayChannels(tabToActivate);
                 } else {
-                    // Fallback to Jio TV if default/saved tab not found
                     loadAndDisplayChannels('jio-tv');
                 }
             }
