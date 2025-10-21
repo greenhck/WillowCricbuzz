@@ -179,10 +179,18 @@
                 height: 100%;
                 width: 100%;
             }
+            /* Desktop fix for tab visual separation */
+            #right-side-combined {
+                border: 1px solid rgba(55, 65, 81, 0.5); /* Subtle border for distinction */
+            }
+        }
+        /* Ensure video elements fill their container for poster image */
+        #shaka-video-player, #hls-video-player {
+            background-color: #000; /* Black background for video */
         }
     </style>
 </head>
-<!-- NEW: Make body fill viewport and use flex-col to stack content, hiding scroll on body -->
+<!-- Body: Fill viewport and use flex-col to stack content, hiding scroll on body -->
 <body class="bg-gray-900 text-gray-100 h-screen flex flex-col overflow-hidden">
     <!-- Policy/Info Modal -->
     <div id="policy-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-[1000] flex items-center justify-center p-4 transition-opacity duration-300">
@@ -243,15 +251,15 @@
         </div>
     </header>
 
-    <!-- 2. Main Content Area (Between Fixed Header and Fixed Footer) -->
-    <!-- NEW: pt-[56px] for header offset. flex-grow to fill available space. overflow-hidden to contain scrolling inside. -->
-    <div id="content-area-main" class="pt-[56px] pb-[45px] flex flex-col flex-grow lg:grid lg:grid-cols-[7fr_3fr] lg:gap-4 lg:p-4 lg:pb-[45px] overflow-hidden">
+    <!-- 2. Main Content Area (No Footer, so no bottom padding needed) -->
+    <!-- pt-[56px] for header offset. flex-grow to fill available space. overflow-hidden to contain scrolling inside. -->
+    <div id="content-area-main" class="pt-[56px] flex flex-col flex-grow lg:grid lg:grid-cols-[7fr_3fr] lg:gap-4 lg:p-4 overflow-hidden">
         
         <!-- 2a. LEFT PANE: Video Player (Fixed/Visible Top Left) -->
-        <!-- flex-shrink-0: Mobile height is fixed by aspect-ratio. lg:h-full: Desktop height fills the grid cell. -->
         <div id="left-player-pane" class="flex-shrink-0 w-full aspect-video lg:aspect-auto lg:h-full lg:order-1">
             <div id="video-player-container" class="bg-gray-900 shadow-xl w-full aspect-video relative flex-shrink-0 lg:aspect-auto lg:h-full lg:rounded-xl lg:shadow-2xl lg:overflow-hidden">
                 <!-- Default Banner (Visible on Load, Hidden when Playing) -->
+                <!-- The banner is shown only if there is no poster image set -->
                 <div id="default-banner" class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center rounded-lg z-10 transition-opacity duration-500">
                     <i class="fas fa-satellite-dish text-6xl text-blue-500 mb-4 animate-pulse"></i>
                     <h2 class="text-3xl font-bold text-white mb-2">PERELIVE: Smooth as PereGrine</h2>
@@ -259,7 +267,7 @@
                     <p class="text-sm text-yellow-400 mt-2">If you see again this banner after play any channel. Channel not availabe.</p>
                 </div>
 
-                <!-- Player Containers -->
+                <!-- Player Containers (The video element will show the poster/thumbnail if available) -->
                 <div data-shaka-player-container id="shaka-container-wrapper" class="shaka-player-container w-full h-full relative hidden z-20">
                     <!-- Quality Selector fixed to the top right of the player -->
                     <select id="quality-selector" class="absolute top-2 right-2 z-300 bg-gray-700 text-white py-1 px-3 rounded-md text-xs font-semibold hidden cursor-pointer shadow-lg hover:bg-gray-600 transition duration-150">
@@ -273,11 +281,12 @@
         </div>
 
         <!-- 2b. RIGHT SIDE: Tabs + Scrollable Content -->
-        <!-- flex-col flex-grow: Mobile takes remaining height. lg:h-full: Desktop fills its column. overflow-hidden: Contains the scrolling to the inner wrapper. -->
+        <!-- Fixed height tabs section, and the scrollable content is below it. -->
         <div id="right-side-combined" class="flex flex-col flex-grow lg:order-2 lg:h-full lg:bg-gray-800/30 lg:rounded-xl overflow-hidden">
             
             <!-- Tabs (FIXED/STATIC in this block - flex-shrink-0) -->
-            <nav id="nav-tabs-container" class="bg-gray-900 lg:bg-transparent text-white px-3 py-3 z-40 shadow-inner flex-shrink-0 w-full border-t border-gray-700 lg:border-t-0">
+            <!-- LG: Added bg-gray-800 to ensure visibility on desktop, just below the header line. -->
+            <nav id="nav-tabs-container" class="bg-gray-900 lg:bg-gray-800 text-white px-3 py-3 z-40 shadow-inner flex-shrink-0 w-full border-t border-gray-700 lg:border-t-0">
                 <div class="tabs-container overflow-x-auto flex justify-start items-center space-x-2">
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="fancode">Fancode</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="zee-network">Zee Network</button>
@@ -293,10 +302,9 @@
             </nav>
 
             <!-- Main Scrollable Content Wrapper -->
-            <!-- flex-grow: Takes up the remaining vertical space. overflow-y-auto: Enables vertical scrolling. -->
             <div id="content-scroll-wrapper" class="flex-grow w-full overflow-y-auto">
                 
-                <!-- N Stream Section (flex-shrink-0 when visible, scrolls with content) -->
+                <!-- N Stream Section (scrolls with content) -->
                 <div id="n-stream-player-section" class="bg-gray-800 p-4 sm:p-5 rounded-none shadow-xl flex-shrink-0 hidden flex-col space-y-4 border-t border-gray-700 lg:border-t-0 lg:bg-transparent">
                     <h2 class="text-2xl font-semibold text-center">N Stream (Network Stream)</h2>
                     <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
@@ -336,24 +344,19 @@
                             <button id="clear-recent-streams-btn" class="text-xs text-red-400 hover:text-red-300 font-medium py-1 px-3 rounded-full border border-red-500 hover:border-red-400 transition duration-150 shadow-sm hidden" title="सभी हालिया स्ट्रीम्स हटाएँ">सभी साफ़ करें</button>
                         </div>
                         <div id="recent-streams-list" class="flex flex-wrap gap-3">
-                            <p id="no-recent-streams" class="text-sm text-gray-500">no any recent stream</p>
+                            <p id="no-recent-streams" class="text-sm text-gray-500">कोई हालिया स्ट्रीम नहीं</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Grid Display -->
-                <!-- Edge-to-Edge fix: Added padding back to grid for mobile, removed it for desktop (lg:p-0) -->
                 <div id="content-display" class="content-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-2 gap-3 p-3 lg:p-0">
                     <!-- Channel cards will be inserted here -->
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- 3. Footer Section (FIXED BOTTOM) -->
-    <footer class="bg-black text-gray-400 text-center text-sm py-3 flex-shrink-0 w-full fixed bottom-0 left-0 right-0 z-50 h-[45px]">
-        <p>&copy; 2025 PEREGRINE LIVE. all security reserved</p>
-    </footer>
+    <!-- Removed Footer -->
 
     <!-- JavaScript (Remaining JS is identical to the previous version and handles the logic) -->
     <script>
@@ -482,23 +485,39 @@
             updateQueryParam('n', encodeURIComponent(nParamValue));
         }
         
-        // --- Player Core Functions (Identical to previous version) ---
+        // --- Player Core Functions ---
         function setPlayerUIVisibility(isStreamPlaying) {
+            const isVideoPlayerVisible = shakaContainerWrapper.classList.contains('hidden') === false || hlsVideoElement.classList.contains('hidden') === false;
+            
             if (isStreamPlaying) {
+                // If stream is playing, hide the banner completely
                 defaultBanner.classList.add('opacity-0');
                 setTimeout(() => defaultBanner.classList.add('hidden'), 500); 
             } else {
-                shakaContainerWrapper.classList.add('hidden');
-                hlsVideoElement.classList.add('hidden');
+                // Not playing. Decide whether to show banner or rely on poster.
                 
-                defaultBanner.classList.remove('hidden');
-                setTimeout(() => defaultBanner.classList.remove('opacity-0'), 10);
+                // If no stream is playing AND the video poster is empty, show the banner
+                const hasPoster = shakaVideoElement.poster || hlsVideoElement.poster;
+
+                if (!hasPoster) {
+                    shakaContainerWrapper.classList.add('hidden');
+                    hlsVideoElement.classList.add('hidden');
+                    
+                    defaultBanner.classList.remove('hidden');
+                    setTimeout(() => defaultBanner.classList.remove('opacity-0'), 10);
+                } else {
+                    // Poster is set. Show the player container so the poster is visible, but hide the banner.
+                    defaultBanner.classList.add('hidden', 'opacity-0');
+                }
             }
         }
 
         function passiveStopPlayer(title, message) {
             console.error(`[CRASH PREVENTION ACTIVE] ${title}: ${message}`);
 
+            const currentPoster = shakaVideoElement.poster || hlsVideoElement.poster;
+
+            // Use setPlayerUIVisibility(false) to handle visual state based on current poster
             setPlayerUIVisibility(false); 
             
             if (shakaPlayerInstance) {
@@ -591,6 +610,11 @@
         });
         
         function resetPlayers() {
+            // Clear poster attributes first
+            shakaVideoElement.poster = ''; 
+            hlsVideoElement.poster = '';
+
+            // Then set UI visibility to show the default banner
             setPlayerUIVisibility(false); 
             
             shakaErrorCount = 0;
@@ -603,7 +627,7 @@
                 if (shakaNetworkingFilter) {
                     shakaPlayerInstance.getNetworkingEngine().unregisterRequestFilter(shakaNetworkingFilter);
                     shakaNetworkingFilter = null;
-                    console.log("Custom Shaka network filter removed.");
+                    console.log("Custom Shaka network filter removed during reset.");
                 }
             }
             if (hlsPlayer) {
@@ -693,8 +717,22 @@
             nStreamPlayerSection.classList.add('hidden'); 
             nStreamPlayerSection.classList.remove('flex');
 
-            resetPlayers(); 
-            setPlayerUIVisibility(true); 
+            resetPlayers(); // This now clears poster and shows banner
+            
+            const thumbnailUrl = channel.thumbnail || '';
+            
+            // Set poster attribute. If it's a valid URL, it will display now.
+            shakaVideoElement.poster = thumbnailUrl;
+            hlsVideoElement.poster = thumbnailUrl;
+            
+            // If we have a poster, ensure the banner is hidden and the video container is visible
+            if (thumbnailUrl) {
+                shakaContainerWrapper.classList.remove('hidden');
+                hlsVideoElement.classList.add('hidden'); // Shaka container holds shaka player, which is fine for poster
+                defaultBanner.classList.add('hidden');
+            } else {
+                // If no poster, ensure banner is visible and players are hidden (resetPlayers handles visibility)
+            }
             
             try {
                 const fixedSpoofHeaders = {
@@ -795,7 +833,7 @@
             }
         }
         
-        // --- Channel Mapping Functions (Identical to previous version) ---
+        // --- Channel Mapping Functions ---
         function mapVootTvChannels(data) {
             if (!Array.isArray(data)) return [];
             return data.map(item => ({
@@ -806,6 +844,7 @@
                 m3u8: item.url && !item.url.includes('.mpd') ? item.url : null,
                 clearkey: null,
                 drm: null,
+                thumbnail: item.thumbnail || '', // Added thumbnail support
                 customUserAgent: null,
                 customCookies: null
             }));
@@ -826,6 +865,7 @@
                             m3u8: !isMpd && item.url ? item.url : null,
                             clearkey: null,
                             drm: null,
+                            thumbnail: item.thumbnail || '', // Added thumbnail support
                             customUserAgent: null,
                             customCookies: null
                         });
@@ -851,6 +891,7 @@
                         m3u8: null,
                         clearkey: null,
                         drm: null,
+                        thumbnail: '', // Added thumbnail support
                         customUserAgent: null, 
                         customCookies: null
                         };
@@ -859,6 +900,10 @@
                     currentChannel.name = nameMatch ? nameMatch[1].trim() : 'Unknown Channel';
                     const logoMatch = line.match(/tvg-logo="?([^"]*)"?/i);
                     currentChannel.logo = logoMatch && logoMatch[1] ? logoMatch[1] : '';
+                    
+                    // Added thumbnail check from M3U properties
+                    const thumbnailMatch = line.match(/tvg-logo="?([^"]*)"?/i); 
+                    currentChannel.thumbnail = thumbnailMatch && thumbnailMatch[1] ? thumbnailMatch[1] : '';
 
                     let j = i + 1;
                     let urlFound = false;
@@ -920,8 +965,11 @@
             channels.forEach(channel => {
                 const channelCard = document.createElement('div');
                 channelCard.classList.add('channel-card', 'bg-gray-800', 'rounded-lg', 'overflow-hidden', 'shadow-lg', 'cursor-pointer', 'transform', 'transition-transform', 'duration-200', 'hover:-translate-y-0.5', 'hover:shadow-2xl');
+                
+                const imageUrl = channel.thumbnail || channel.logo || 'https://placehold.co/200x150/2d3748/a0aec0?text=No+Image';
+
                 channelCard.innerHTML = `
-                    <img src="${channel.logo || 'https://placehold.co/200x150/2d3748/a0aec0?text=No+Image'}" onerror="this.onerror=null;this.src='https://placehold.co/200x150/2d3748/a0aec0?text=No+Image';" alt="${channel.name}" class="w-full h-24 sm:h-32 object-cover">
+                    <img src="${imageUrl}" onerror="this.onerror=null;this.src='https://placehold.co/200x150/2d3748/a0aec0?text=No+Image';" alt="${channel.name}" class="w-full h-24 sm:h-32 object-cover">
                     <h3 class="p-2 text-xs sm:text-sm font-semibold text-center truncate">${channel.name}</h3>
                 `;
                 channelCard.addEventListener('click', () => {
@@ -987,7 +1035,10 @@
                 if (tabName === 'zee-network') {
                     const data = await response.json();
                     if (data && data.channels) {
-                        channelsToDisplay = data.channels;
+                        channelsToDisplay = data.channels.map(c => ({
+                            ...c,
+                            thumbnail: c.thumbnail || '' // ensure thumbnail property exists
+                        }));
                     } else {
                         throw new Error('Zee Network के लिए अमान्य डेटा संरचना।');
                     }
@@ -1001,6 +1052,7 @@
                             m3u8: match.adfree_url,
                             clearkey: null,
                             drm: null,
+                            thumbnail: match.src || '', // Using logo as thumbnail fallback
                             customUserAgent: null,
                             customCookies: null
                         }));
@@ -1107,7 +1159,8 @@
                 mpd: channelConfig.mpd,
                 m3u8: channelConfig.m3u8,
                 clearkey: channelConfig.clearkey ? { keyId: channelConfig.clearkey.keyId, key: channelConfig.clearkey.key } : null,
-                drm: channelConfig.drm ? { licenseUrl: channelConfig.drm.licenseUrl } : null
+                drm: channelConfig.drm ? { licenseUrl: channelConfig.drm.licenseUrl } : null,
+                thumbnail: channelConfig.thumbnail || '' // Save thumbnail for N-Stream
             };
 
             streams = streams.filter(s => (s.mpd || s.m3u8) !== url);
@@ -1166,7 +1219,7 @@
             });
         }
         
-        // --- Event Listeners and Initialization (Identical to previous version) ---
+        // --- Event Listeners and Initialization ---
 
         tabButtons.forEach(button => {
             button.addEventListener('click', (event) => {
@@ -1218,7 +1271,8 @@
                 mpd: null,
                 m3u8: null,
                 clearkey: null,
-                drm: null
+                drm: null,
+                thumbnail: ''
             };
 
             if (!streamUrl) {
@@ -1227,6 +1281,10 @@
                 return;
             }
 
+            // N-Stream does not inherently have a thumbnail, but we can allow the user to manually set one if desired.
+            // For simplicity, we just check if the input URL might be a thumbnail itself, or allow it to be blank.
+            // Since we don't have a separate thumbnail input for N-Stream, the thumbnail remains blank.
+            
             if (streamType === 'HLS') {
                 channelConfig.m3u8 = streamUrl;
             } else if (streamType === 'DASH') {
@@ -1330,6 +1388,9 @@
                     loadAndDisplayChannels('jio-tv');
                 }
             }
+
+            // Initial reset to ensure banner is visible if no auto-play happens
+            resetPlayers();
         });
     </script>
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "68a40879f6b244629841d4be7aec5e0f"}'></script><!-- End Cloudflare Web Analytics -->
