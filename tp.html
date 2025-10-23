@@ -253,11 +253,11 @@
 
     <!-- 2. Main Content Area (No Footer, so no bottom padding needed) -->
     <!-- pt-[56px] for header offset. flex-grow to fill available space. overflow-hidden to contain scrolling inside. -->
-    <div id="content-area-main" class="pt-[56px] flex flex-col flex-grow h-full lg:grid lg:grid-cols-[7fr_3fr] lg:gap-4 lg:p-4 overflow-y-auto">
+    <div id="content-area-main" class="pt-[56px] flex flex-col flex-grow h-full lg:grid lg:grid-cols-[7fr_3fr] lg:gap-0 overflow-hidden">
         
         <!-- 2a. LEFT PANE: Video Player (Fixed/Visible Top Left) -->
         <div id="left-player-pane" class="flex-shrink-0 w-full aspect-video lg:aspect-auto lg:h-full lg:order-1">
-            <div id="video-player-container" class="bg-gray-900 shadow-xl w-full aspect-video relative flex-shrink-0 lg:aspect-auto lg:h-full lg:rounded-xl lg:shadow-2xl lg:overflow-hidden">
+            <div id="video-player-container" class="bg-gray-900 shadow-xl w-full aspect-video relative flex-shrink-0 lg:aspect-auto lg:h-full lg:shadow-2xl lg:overflow-hidden">
                 <!-- Default Banner (Visible on Load, Hidden when Playing) -->
                 <!-- The banner is shown only if there is no poster image set -->
                 <div id="default-banner" class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center rounded-lg z-10 transition-opacity duration-500">
@@ -282,11 +282,11 @@
 
         <!-- 2b. RIGHT SIDE: Tabs + Scrollable Content -->
         <!-- Fixed height tabs section, and the scrollable content is below it. -->
-        <div id="right-side-combined" class="flex flex-col flex-grow lg:order-2 lg:h-full lg:bg-gray-800/30 lg:rounded-xl overflow-hidden">
+        <div id="right-side-combined" class="flex flex-col flex-grow lg:order-2 lg:h-full lg:bg-gray-800/30 overflow-hidden">
             
             <!-- Tabs (FIXED/STATIC in this block - flex-shrink-0) -->
             <!-- LG: Added bg-gray-800 to ensure visibility on desktop, just below the header line. -->
-            <nav id="nav-tabs-container" class="bg-gray-900 lg:bg-gray-800 text-white px-3 py-3 z-40 shadow-inner flex-shrink-0 w-full border-t border-gray-700 lg:border-t-0 lg:sticky lg:top-0">
+            <nav id="nav-tabs-container" class="bg-gray-900 lg:bg-gray-800 text-white px-3 py-3 shadow-inner flex-shrink-0 w-full border-t border-gray-700 lg:border-t-0">
                 <div class="tabs-container overflow-x-auto flex justify-start items-center space-x-2">
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="fancode">Fancode</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="zee-network">Zee Network</button>
@@ -350,7 +350,7 @@
                 </div>
 
                 <!-- Grid Display -->
-                <div id="content-display" class="content-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-2 gap-3 p-3 lg:p-0">
+                <div id="content-display" class="content-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-2 gap-3 p-3">
                     <!-- Channel cards will be inserted here -->
                 </div>
             </div>
