@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="referrer" content="no-referrer" />
     <!-- SEO Title -->
-    <title>Perelive - Fixed UI Live Stream Player</title>
+    <title>Perelive - Watch Live Streams & Channels Online</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Meta Description -->
     <meta name="description" content="Perelive par dekhein latest live channels aur streams online. Entertainment, news, sports aur more, sab ek hi platform par. Join now!">
@@ -297,6 +297,7 @@
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-inner transform hover:scale-[1.03]" data-tab="jiostar">Jiostar</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="voot-tv">Voot TV</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="opplex-tv">Opplex TV</button>
+                    <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="movies">Movies</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="n-stream">N Stream</button>
                 </div>
             </nav>
@@ -413,6 +414,7 @@
             'jiostar': 'https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jstar.m3u',
             'voot-tv': 'vootTvP.json',
             'opplex-tv': 'opplexPere.json',
+            'movies': 'moviesnsrock.json',
             'n-stream': null,
         };
 
@@ -475,6 +477,17 @@
             let nParamValue = channelConfig.mpd || channelConfig.m3u8 || '';
             let params = [];
 
+            // Add custom cookies if present
+            if (channelConfig.customCookies) {
+                params.push(`cookie=${channelConfig.customCookies}`);
+            }
+
+            // Add custom User-Agent if present
+            if (channelConfig.customUserAgent) {
+                params.push(`User-agent=${encodeURIComponent(channelConfig.customUserAgent)}`);
+            }
+
+            // Add DRM parameters
             if (channelConfig.clearkey && channelConfig.clearkey.keyId && channelConfig.clearkey.key) {
                 params.push(`drmScheme=clearkey&drmLicense=${channelConfig.clearkey.keyId}:${channelConfig.clearkey.key}`);
             } else if (channelConfig.drm && channelConfig.drm.licenseUrl) {
@@ -878,6 +891,21 @@
             return allChannels;
         }
 
+        function mapMoviesChannels(data) {
+            if (!Array.isArray(data)) return [];
+            return data.map(item => ({
+                name: item.name || 'Unknown Movie',
+                logo: item.logo || 'https://placehold.co/200x150/2d3748/a0aec0?text=Movie',
+                m3u8: item.link || null,
+                mpd: null,
+                clearkey: null,
+                drm: null,
+                thumbnail: item.logo || '',
+                customUserAgent: null,
+                customCookies: null
+            }));
+        }
+
         async function parseM3U(m3uContent) {
             const lines = m3uContent.split('\n').map(line => line.trim()).filter(line => line.length > 0);
             const channels = [];
@@ -1072,6 +1100,9 @@
                 } else if (tabName === 'opplex-tv') {
                     const data = await response.json();
                     channelsToDisplay = mapOpplexChannels(data);
+                } else if (tabName === 'movies') {
+                    const data = await response.json();
+                    channelsToDisplay = mapMoviesChannels(data);
                 } else {
                     const m3uContent = await response.text();
                     channelsToDisplay = await parseM3U(m3uContent);
@@ -1171,7 +1202,9 @@
                 m3u8: channelConfig.m3u8,
                 clearkey: channelConfig.clearkey ? { keyId: channelConfig.clearkey.keyId, key: channelConfig.clearkey.key } : null,
                 drm: channelConfig.drm ? { licenseUrl: channelConfig.drm.licenseUrl } : null,
-                thumbnail: channelConfig.thumbnail || '' // Save thumbnail for N-Stream
+                thumbnail: channelConfig.thumbnail || '', // Save thumbnail for N-Stream
+                customUserAgent: channelConfig.customUserAgent || null,
+                customCookies: channelConfig.customCookies || null
             };
 
             streams = streams.filter(s => (s.mpd || s.m3u8) !== url);
@@ -1204,6 +1237,8 @@
                 const keyId = stream.clearkey ? stream.clearkey.keyId : '';
                 const key = stream.clearkey ? stream.clearkey.key : '';
                 const licenseUrl = stream.drm ? stream.drm.licenseUrl : '';
+                const customUserAgent = stream.customUserAgent || '';
+                const customCookies = stream.customCookies || '';
 
                 const button = document.createElement('button');
                 button.classList.add('bg-gray-700', 'hover:bg-gray-600', 'text-white', 'py-2', 'px-3', 'rounded-lg', 'text-sm', 'transition-all', 'duration-200', 'shadow-md', 'flex', 'flex-col', 'items-start');
@@ -1214,7 +1249,21 @@
                 `;
 
                 button.addEventListener('click', () => {
-                    streamUrlInput.value = streamUrl;
+                    // Reconstruct full URL with parameters if custom headers exist
+                    let fullUrl = streamUrl;
+                    if (customCookies || customUserAgent || keyId || licenseUrl) {
+                        const params = [];
+                        if (customCookies) params.push(`cookie=${customCookies}`);
+                        if (customUserAgent) params.push(`User-agent=${encodeURIComponent(customUserAgent)}`);
+                        if (keyId && key) params.push(`drmScheme=clearkey&drmLicense=${keyId}:${key}`);
+                        else if (licenseUrl) params.push(`drmScheme=widevine&drmLicense=${encodeURIComponent(licenseUrl)}`);
+                        
+                        if (params.length > 0) {
+                            fullUrl += '|' + params.join('&');
+                        }
+                    }
+                    
+                    streamUrlInput.value = fullUrl;
                     streamTypeSelect.value = type;
                     clearkeyIdInput.value = keyId;
                     clearkeyKeyInput.value = key;
@@ -1294,7 +1343,9 @@
                 m3u8: null,
                 clearkey: null,
                 drm: null,
-                thumbnail: ''
+                thumbnail: '',
+                customUserAgent: null,
+                customCookies: null
             };
 
             if (!streamUrl) {
@@ -1303,14 +1354,50 @@
                 return;
             }
 
-            // N-Stream does not inherently have a thumbnail, but we can allow the user to manually set one if desired.
-            // For simplicity, we just check if the input URL might be a thumbnail itself, or allow it to be blank.
-            // Since we don't have a separate thumbnail input for N-Stream, the thumbnail remains blank.
+            // Parse URL if it contains pipe-separated parameters
+            let actualStreamUrl = streamUrl;
+            let cookieValue = '';
+            let userAgentValue = '';
+            
+            if (streamUrl.includes('|')) {
+                const parts = streamUrl.split('|');
+                actualStreamUrl = parts[0];
+                
+                if (parts.length > 1) {
+                    const paramsString = parts[1];
+                    const params = new URLSearchParams(paramsString);
+                    
+                    // Extract cookie parameter
+                    if (params.has('cookie')) {
+                        cookieValue = params.get('cookie');
+                        channelConfig.customCookies = cookieValue;
+                    }
+                    
+                    // Extract User-agent parameter
+                    if (params.has('User-agent')) {
+                        userAgentValue = decodeURIComponent(params.get('User-agent'));
+                        channelConfig.customUserAgent = userAgentValue;
+                    }
+                    
+                    // Extract DRM parameters if present
+                    const drmScheme = params.get('drmScheme');
+                    if (drmScheme === 'clearkey' && params.has('drmLicense')) {
+                        const license = params.get('drmLicense');
+                        const [kid, key] = license.split(':');
+                        if (kid && key) {
+                            clearkeyIdInput.value = kid;
+                            clearkeyKeyInput.value = key;
+                        }
+                    } else if (drmScheme === 'widevine' && params.has('drmLicense')) {
+                        drmLicenseUrlInput.value = params.get('drmLicense');
+                    }
+                }
+            }
             
             if (streamType === 'HLS') {
-                channelConfig.m3u8 = streamUrl;
+                channelConfig.m3u8 = actualStreamUrl;
             } else if (streamType === 'DASH') {
-                channelConfig.mpd = streamUrl;
+                channelConfig.mpd = actualStreamUrl;
                 const clearkeyId = clearkeyIdInput.value.trim();
                 const clearkeyKey = clearkeyKeyInput.value.trim();
                 const drmLicenseUrl = drmLicenseUrlInput.value.trim();
@@ -1371,7 +1458,10 @@
                         drmLicenseUrl = params.get('drmLicense');
                         streamType = 'DASH';
                     }
-                } else if (streamUrl.includes('.mpd')) {
+                }
+                
+                // Auto-detect stream type if not set by DRM params
+                if (streamUrl.includes('.mpd')) {
                     streamType = 'DASH';
                 }
 
@@ -1382,7 +1472,8 @@
                     loadAndDisplayChannels('n-stream'); 
 
                     setTimeout(() => {
-                        streamUrlInput.value = streamUrl;
+                        // Set the full URL with parameters in the input field
+                        streamUrlInput.value = nValue;
                         streamTypeSelect.value = streamType;
 
                         const changeEvent = new Event('change');
