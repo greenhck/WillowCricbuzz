@@ -1,0 +1,503 @@
+#EXTM3U
+2 #EXTINF:-1 tvg-id="" tvg-name="TL | BIGG BOSS 24x7 | TELUGU" tvg-logo="http://greenpa1.com/bbt.png" group-title="ALL BIGG BOSS 24X7",TL | BIGG BOSS 24x7 | TELUGU
+3 https://webhop.live:443/live/juno123/juno123/591439.ts
+4 #EXTINF:-1 tvg-id="" tvg-name="PB: PTC PUNJABI" tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/88/PTC_Punjabi.png" group-title="PUNJABI",PB: PTC PUNJABI
+5 https://webhop.live:443/live/juno123/juno123/171.ts
+6 #EXTINF:-1 tvg-id="ptcpunjabi.in" tvg-name="PB | PTC PUNJABI" tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/88/PTC_Punjabi.png" group-title="PUNJABI",PB | PTC PUNJABI
+7 https://webhop.live:443/live/juno123/juno123/606227.ts
+8 #EXTINF:-1 tvg-id="ptcpunjabi.in" tvg-name="PB | PTC PUNJABI." tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/88/PTC_Punjabi.png" group-title="PUNJABI",PB | PTC PUNJABI.
+9 https://webhop.live:443/live/juno123/juno123/606229.ts
+10 #EXTINF:-1 tvg-id="ptcpunjabi.in" tvg-name="PB | PTC PUNJABI | AIRTEL" tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/88/PTC_Punjabi.png" group-title="PUNJABI",PB | PTC PUNJABI | AIRTEL
+11 https://webhop.live:443/live/juno123/juno123/606239.ts
+12 #EXTINF:-1 tvg-id="ptcpunjabi.uk" tvg-name="PB | PTC PUNJABI | UK" tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/88/PTC_Punjabi.png" group-title="PUNJABI",PB | PTC PUNJABI | UK
+13 https://webhop.live:443/live/juno123/juno123/606244.ts
+14 #EXTINF:-1 tvg-id="" tvg-name="PB | PTC PUNJABI | USA" tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/88/PTC_Punjabi.png" group-title="PUNJABI",PB | PTC PUNJABI | USA
+15 https://webhop.live:443/live/juno123/juno123/606245.ts
+16 #EXTINF:-1 tvg-id="sonyhd.in" tvg-name="IN: SONY (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENTERTAINMENT",IN: SONY (4K).
+17 https://webhop.live:443/live/juno123/juno123/98854.ts
+18 #EXTINF:-1 tvg-id="sonysabhd.in" tvg-name="IN: SONY SAB (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENTERTAINMENT",IN: SONY SAB (4K).
+19 https://webhop.live:443/live/juno123/juno123/98853.ts
+20 #EXTINF:-1 tvg-id="colorshd.in" tvg-name="IN: COLORS (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENTERTAINMENT",IN: COLORS (4K).
+21 https://webhop.live:443/live/juno123/juno123/98851.ts
+22 #EXTINF:-1 tvg-id="starplushd.in" tvg-name="IN: STAR PLUS (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENTERTAINMENT",IN: STAR PLUS (4K).
+23 https://webhop.live:443/live/juno123/juno123/98849.ts
+24 #EXTINF:-1 tvg-id="starbharathd.in" tvg-name="IN: STAR BHARAT (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENTERTAINMENT",IN: STAR BHARAT (4K).
+25 https://webhop.live:443/live/juno123/juno123/98855.ts
+26 #EXTINF:-1 tvg-id="ts40" tvg-name="IN: &TV (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENTERTAINMENT",IN: &TV (4K).
+27 https://webhop.live:443/live/juno123/juno123/98852.ts
+28 #EXTINF:-1 tvg-id="zeetvhd.in" tvg-name="IN: ZEETV (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENTERTAINMENT",IN: ZEETV (4K).
+29 https://webhop.live:443/live/juno123/juno123/98850.ts
+30 #EXTINF:-1 tvg-id="sonymaxhd.in" tvg-name="IN: SONY MAX (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA HINDI MOVIES",IN: SONY MAX (4K).
+31 https://webhop.live:443/live/juno123/juno123/98857.ts
+32 #EXTINF:-1 tvg-id="andpictureshd.in" tvg-name="IN: &PICTURE (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA HINDI MOVIES",IN: &PICTURE (4K).
+33 https://webhop.live:443/live/juno123/juno123/98856.ts
+34 #EXTINF:-1 tvg-id="stargoldhd.in" tvg-name="IN: STAR GOLD (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA HINDI MOVIES",IN: STAR GOLD (4K).
+35 https://webhop.live:443/live/juno123/juno123/98858.ts
+36 #EXTINF:-1 tvg-id="stargoldselecthd.in" tvg-name="IN: STAR GOLD SELECT (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA HINDI MOVIES",IN: STAR GOLD SELECT (4K).
+37 https://webhop.live:443/live/juno123/juno123/98859.ts
+38 #EXTINF:-1 tvg-id="zeecinemaindiahd.in" tvg-name="IN: ZEE CINEMA (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA HINDI MOVIES",IN: ZEE CINEMA (4K).
+39 https://webhop.live:443/live/juno123/juno123/98860.ts
+40 #EXTINF:-1 tvg-id="colorscineplexhd.in" tvg-name="IN: Colors Cineplex (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA HINDI MOVIES",IN: Colors Cineplex (4K).
+41 https://webhop.live:443/live/juno123/juno123/98908.ts
+42 #EXTINF:-1 tvg-id="starmovieshd.in" tvg-name="IN: STAR MOVIE (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENGLISH MOVIES",IN: STAR MOVIE (4K).
+43 https://webhop.live:443/live/juno123/juno123/98842.ts
+44 #EXTINF:-1 tvg-id="starmoviesselecthd.in" tvg-name="IN: STAR MOVIE SELECT (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENGLISH MOVIES",IN: STAR MOVIE SELECT (4K).
+45 https://webhop.live:443/live/juno123/juno123/98843.ts
+46 #EXTINF:-1 tvg-id="andprivehd.in" tvg-name="IN: &PRIVE (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENGLISH MOVIES",IN: &PRIVE (4K).
+47 https://webhop.live:443/live/juno123/juno123/98840.ts
+48 #EXTINF:-1 tvg-id="andflixhd.in" tvg-name="IN: &FLIX (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENGLISH MOVIES",IN: &FLIX (4K).
+49 https://webhop.live:443/live/juno123/juno123/98841.ts
+50 #EXTINF:-1 tvg-id="sonypixhd.in" tvg-name="IN: SONY PIX (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENGLISH MOVIES",IN: SONY PIX (4K).
+51 https://webhop.live:443/live/juno123/juno123/98846.ts
+52 #EXTINF:-1 tvg-id="mnplushd.in" tvg-name="IN: MN+ (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENGLISH MOVIES",IN: MN+ (4K).
+53 https://webhop.live:443/live/juno123/juno123/98847.ts
+54 #EXTINF:-1 tvg-id="zeecafehd.in" tvg-name="IN: ZEE CAFE (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENGLISH MOVIES",IN: ZEE CAFE (4K).
+55 https://webhop.live:443/live/juno123/juno123/98848.ts
+56 #EXTINF:-1 tvg-id="colorsinfinityhd.in" tvg-name="IN: Colors INFINITY (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENGLISH MOVIES",IN: Colors INFINITY (4K).
+57 https://webhop.live:443/live/juno123/juno123/98879.ts
+58 #EXTINF:-1 tvg-id="tlchdworld.in" tvg-name="IN: TLC (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA ENGLISH MOVIES",IN: TLC (4K).
+59 https://webhop.live:443/live/juno123/juno123/98878.ts
+60 #EXTINF:-1 tvg-id="discoveryhd.in" tvg-name="IN: DISCOVERY (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA DOCUMENTARY",IN: DISCOVERY (4K).
+61 https://webhop.live:443/live/juno123/juno123/98872.ts
+62 #EXTINF:-1 tvg-id="animalplanethd.in" tvg-name="IN: ANIMAL PLANET (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA DOCUMENTARY",IN: ANIMAL PLANET (4K).
+63 https://webhop.live:443/live/juno123/juno123/98873.ts
+64 #EXTINF:-1 tvg-id="nationalgeographicchannelhd.in" tvg-name="IN: National GEO (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA DOCUMENTARY",IN: National GEO (4K).
+65 https://webhop.live:443/live/juno123/juno123/98874.ts
+66 #EXTINF:-1 tvg-id="natgeowildhd.in" tvg-name="IN: NAT Geo Wild (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA DOCUMENTARY",IN: NAT Geo Wild (4K).
+67 https://webhop.live:443/live/juno123/juno123/98875.ts
+68 #EXTINF:-1 tvg-id="sonybbcearthhd.in" tvg-name="IN: Sony BBC EARTH (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA DOCUMENTARY",IN: Sony BBC EARTH (4K).
+69 https://webhop.live:443/live/juno123/juno123/98871.ts
+70 #EXTINF:-1 tvg-id="historytv18hd.in" tvg-name="IN: HISTORY TV (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="INDIA DOCUMENTARY",IN: HISTORY TV (4K).
+71 https://webhop.live:443/live/juno123/juno123/98877.ts
+72 #EXTINF:-1 tvg-id="nickhdplus.in" tvg-name="IN: NICK (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="KIDS",IN: NICK (4K).
+73 https://webhop.live:443/live/juno123/juno123/98880.ts
+74 #EXTINF:-1 tvg-id="zeebanglahd.in" tvg-name="BD: ZEE BANGLA (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="BANGLA",BD: ZEE BANGLA (4K).
+75 https://webhop.live:443/live/juno123/juno123/98881.ts
+76 #EXTINF:-1 tvg-id="colorsbanglahd.in" tvg-name="BD: COLORS BANGLA (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="BANGLA",BD: COLORS BANGLA (4K).
+77 https://webhop.live:443/live/juno123/juno123/98882.ts
+78 #EXTINF:-1 tvg-id="jalshamovieshd.in" tvg-name="BD: JALSHA MOVIES (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="BANGLA",BD: JALSHA MOVIES (4K).
+79 https://webhop.live:443/live/juno123/juno123/98884.ts
+80 #EXTINF:-1 tvg-id="starjalshahd.in" tvg-name="BD: STAR JALSHA (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="BANGLA",BD: STAR JALSHA (4K).
+81 https://webhop.live:443/live/juno123/juno123/98883.ts
+82 #EXTINF:-1 tvg-id="etvhd.in" tvg-name="Telugu: ETV (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TELUGU",Telugu: ETV (4K).
+83 https://webhop.live:443/live/juno123/juno123/98885.ts
+84 #EXTINF:-1 tvg-id="starmaahd.in" tvg-name="Telugu: STAR-MAA (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TELUGU",Telugu: STAR-MAA (4K).
+85 https://webhop.live:443/live/juno123/juno123/98886.ts
+86 #EXTINF:-1 tvg-id="starmaamovieshd.in" tvg-name="Telugu: STAR-MAA-MOVIE (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TELUGU",Telugu: STAR-MAA-MOVIE (4K).
+87 https://webhop.live:443/live/juno123/juno123/98887.ts
+88 #EXTINF:-1 tvg-id="geminitvhd.in" tvg-name="Telugu: GEMINI (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TELUGU",Telugu: GEMINI (4K).
+89 https://webhop.live:443/live/juno123/juno123/98892.ts
+90 #EXTINF:-1 tvg-id="zeeteluguhd.in" tvg-name="Telugu: ZEE-TELUGU (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TELUGU",Telugu: ZEE-TELUGU (4K).
+91 https://webhop.live:443/live/juno123/juno123/98894.ts
+92 #EXTINF:-1 tvg-id="zeecinemaluhd.in" tvg-name="Telugu: ZEE-CINEMALU (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TELUGU",Telugu: ZEE-CINEMALU (4K).
+93 https://webhop.live:443/live/juno123/juno123/98896.ts
+94 #EXTINF:-1 tvg-id="starpravahhd.in" tvg-name="Marathi: STAR-PRAVAH (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="MARATHI",Marathi: STAR-PRAVAH (4K).
+95 https://webhop.live:443/live/juno123/juno123/98902.ts
+96 #EXTINF:-1 tvg-id="zeemarathihd.in" tvg-name="Marathi: ZEE Marathi (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="MARATHI",Marathi: ZEE Marathi (4K).
+97 https://webhop.live:443/live/juno123/juno123/98903.ts
+98 #EXTINF:-1 tvg-id="zeetalkieshd.in" tvg-name="Marathi: ZEE TALKIES (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="MARATHI",Marathi: ZEE TALKIES (4K).
+99 https://webhop.live:443/live/juno123/juno123/98904.ts
+100 #EXTINF:-1 tvg-id="colorsmarathihd.in" tvg-name="MARATHI: COLORS MARATHI (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="MARATHI",MARATHI: COLORS MARATHI (4K).
+101 https://webhop.live:443/live/juno123/juno123/98905.ts
+102 #EXTINF:-1 tvg-id="udayahd.in" tvg-name="Kannada: UDAYA (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="KANNADA",Kannada: UDAYA (4K).
+103 https://webhop.live:443/live/juno123/juno123/98889.ts
+104 #EXTINF:-1 tvg-id="starsuvarnahd.in" tvg-name="Kannada: STAR-SUVARNA (4k)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="KANNADA",Kannada: STAR-SUVARNA (4k).
+105 https://webhop.live:443/live/juno123/juno123/98901.ts
+106 #EXTINF:-1 tvg-id="zeekannadahd.in" tvg-name="Kannada: ZEE-KANNADA (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="KANNADA",Kannada: ZEE-KANNADA (4K).
+107 https://webhop.live:443/live/juno123/juno123/98890.ts
+108 #EXTINF:-1 tvg-id="colorskannadahd.in" tvg-name="Kannada: COLORS_KANNADA (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="KANNADA",Kannada: COLORS_KANNADA (4K).
+109 https://webhop.live:443/live/juno123/juno123/98907.ts
+110 #EXTINF:-1 tvg-id="starsports1hd.in" tvg-name="IN: STAR SPORTS 1 (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title=" SPORTS | INDIA",IN: STAR SPORTS 1 (4K).
+111 https://webhop.live:443/live/juno123/juno123/98864.ts
+112 #EXTINF:-1 tvg-id="starsports2hd.in" tvg-name="IN: STAR SPORTS 2 (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title=" SPORTS | INDIA",IN: STAR SPORTS 2 (4K).
+113 https://webhop.live:443/live/juno123/juno123/98865.ts
+114 #EXTINF:-1 tvg-id="starsports1hdhindi.in" tvg-name="IN: STAR SPORTS 1 HINDI (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title=" SPORTS | INDIA",IN: STAR SPORTS 1 HINDI (4K).
+115 https://webhop.live:443/live/juno123/juno123/98866.ts
+116 #EXTINF:-1 tvg-id="starsportsselect1hd.in" tvg-name="IN: STAR SPORTS SELECT 1 (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title=" SPORTS | INDIA",IN: STAR SPORTS SELECT 1 (4K).
+117 https://webhop.live:443/live/juno123/juno123/98867.ts
+118 #EXTINF:-1 tvg-id="starsportsselecthd2.in" tvg-name="IN: START SPORTS SELECT 2 (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title=" SPORTS | INDIA",IN: START SPORTS SELECT 2 (4K).
+119 https://webhop.live:443/live/juno123/juno123/98868.ts
+120 #EXTINF:-1 tvg-id="sonyten1hd.in" tvg-name="IN: TEN 1 (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title=" SPORTS | INDIA",IN: TEN 1 (4K).
+121 https://webhop.live:443/live/juno123/juno123/98861.ts
+122 #EXTINF:-1 tvg-id="sonyten2hd.in" tvg-name="IN: TEN 2 (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title=" SPORTS | INDIA",IN: TEN 2 (4K).
+123 https://webhop.live:443/live/juno123/juno123/98862.ts
+124 #EXTINF:-1 tvg-id="sonyten3hd.in" tvg-name="IN: TEN 3 (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title=" SPORTS | INDIA",IN: TEN 3 (4K).
+125 https://webhop.live:443/live/juno123/juno123/98863.ts
+126 #EXTINF:-1 tvg-id="sonysixhd.in" tvg-name="IN: SONY TEN 5 (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title=" SPORTS | INDIA",IN: SONY TEN 5 (4K).
+127 https://webhop.live:443/live/juno123/juno123/98870.ts
+128 #EXTINF:-1 tvg-id="foxsports501hd.au" tvg-name="CRIC || FOX CRIC 501 ᴴᴰ" tvg-logo="http://greenpa1.com/fox.png" group-title="CRICKET",CRIC || FOX CRIC 501 ᴴᴰ
+129 https://webhop.live:443/live/juno123/juno123/1856.ts
+130 #EXTINF:-1 tvg-id="supersportcricket.za" tvg-name="CRIC || SUPERSPORTS ᴴᴰ" tvg-logo="http://greenpa1.com/ssc.png" group-title="CRICKET",CRIC || SUPERSPORTS ᴴᴰ
+131 https://webhop.live:443/live/juno123/juno123/158442.ts
+132 #EXTINF:-1 tvg-id="supersportcricket.za" tvg-name="CRIC || SUPERSPORTS ᴴᴰ" tvg-logo="http://greenpa1.com/ssc.png" group-title="CRICKET",CRIC || SUPERSPORTS ᴴᴰ
+133 https://webhop.live:443/live/juno123/juno123/2496.ts
+134 #EXTINF:-1 tvg-id="skysportscricket.uk" tvg-name="CRIC || SKY SPORTS CRIC ᴴᴰ" tvg-logo="http://greenpa1.com/skycricket.png" group-title="CRICKET",CRIC || SKY SPORTS CRIC ᴴᴰ
+135 https://webhop.live:443/live/juno123/juno123/12.ts
+136 #EXTINF:-1 tvg-id="" tvg-name="CRIC || SKY SPORTS CRIC ⁴ᵏ" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="CRICKET",CRIC || SKY SPORTS CRIC ⁴ᵏ
+137 https://webhop.live:443/live/juno123/juno123/23566.ts
+138 #EXTINF:-1 tvg-id="skysportscricket.uk" tvg-name="CRIC || SKY SPORTS CRIC ⁴ᵏ" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="CRICKET",CRIC || SKY SPORTS CRIC ⁴ᵏ
+139 https://webhop.live:443/live/juno123/juno123/114479.ts
+140 #EXTINF:-1 tvg-id="skysportscricket.uk" tvg-name="CRIC || SKY SPORTS CRIC ⁴ᵏ" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="CRICKET",CRIC || SKY SPORTS CRIC ⁴ᵏ
+141 https://webhop.live:443/live/juno123/juno123/124269.ts
+142 #EXTINF:-1 tvg-id="" tvg-name="CRIC || ASTRO CRICKET ᴴᴰ" tvg-logo="http://greenpa1.com/astrocricket.png" group-title="CRICKET",CRIC || ASTRO CRICKET ᴴᴰ
+143 https://webhop.live:443/live/juno123/juno123/2494.ts
+144 #EXTINF:-1 tvg-id="92news.uk" tvg-name="CRIC || WILLOW SPORTS ᴴᴰ" tvg-logo="http://greenpa1.com/willow.png" group-title="CRICKET",CRIC || WILLOW SPORTS ᴴᴰ
+145 https://webhop.live:443/live/juno123/juno123/215.ts
+146 #EXTINF:-1 tvg-id="shemaroo.in" tvg-name="CRIC || WILLOW SPORTS ᴴᴰ" tvg-logo="http://greenpa1.com/willow.png" group-title="CRICKET",CRIC || WILLOW SPORTS ᴴᴰ
+147 https://webhop.live:443/live/juno123/juno123/23943.ts
+148 #EXTINF:-1 tvg-id="92news.uk" tvg-name="CRIC || WILLOW 2 ᴴᴰ" tvg-logo="http://greenpa1.com/willowxtra.png" group-title="CRICKET",CRIC || WILLOW 2 ᴴᴰ
+149 https://webhop.live:443/live/juno123/juno123/5040.ts
+150 #EXTINF:-1 tvg-id="" tvg-name="TNT SPORT 1" tvg-logo="http://starapk1.com/logo/rugby.png" group-title="SPORTS | RUGBY",TNT SPORT 1
+151 https://webhop.live:443/live/juno123/juno123/23564.ts
+152 #EXTINF:-1 tvg-id="" tvg-name="TNT SPORT 2." tvg-logo="http://starapk1.com/logo/rugby.png" group-title="SPORTS | RUGBY",TNT SPORT 2.
+153 https://webhop.live:443/live/juno123/juno123/23565.ts
+154 #EXTINF:-1 tvg-id="btsport3.uk" tvg-name="CRIC || TNT SPORTS 3 ᶠᴴᴰ" tvg-logo="http://greenpa1.com/tntsports.png" group-title="CRICKET",CRIC || TNT SPORTS 3 ᶠᴴᴰ
+155 https://webhop.live:443/live/juno123/juno123/148090.ts
+156 #EXTINF:-1 tvg-id="" tvg-name="CRIC || PTV SPORTS ᴴᴰ" tvg-logo="http://greenpa1.com/ptvsporthd.png" group-title="CRICKET",CRIC || PTV SPORTS ᴴᴰ
+157 https://webhop.live:443/live/juno123/juno123/89.ts
+158 #EXTINF:-1 tvg-id="" tvg-name="CRIC || PTV SPORTS ⁴ᵏ" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="CRICKET",CRIC || PTV SPORTS ⁴ᵏ
+159 https://webhop.live:443/live/juno123/juno123/61674.ts
+160 #EXTINF:-1 tvg-id="" tvg-name="CRIC || A SPORTS ᴴᴰ" tvg-logo="https://i.ibb.co/R7Knx3z/unnamed.png" group-title="CRICKET",CRIC || A SPORTS ᴴᴰ
+161 https://webhop.live:443/live/juno123/juno123/43444.ts
+162 #EXTINF:-1 tvg-id="" tvg-name="CRIC || A SPORTS ⁴ᵏ" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="CRICKET",CRIC || A SPORTS ⁴ᵏ
+163 https://webhop.live:443/live/juno123/juno123/43447.ts
+164 #EXTINF:-1 tvg-id="" tvg-name="CRIC || GEO SUPER ᴴᴰ" tvg-logo="http://greenpa1.com/geosuper.png" group-title="CRICKET",CRIC || GEO SUPER ᴴᴰ
+165 https://webhop.live:443/live/juno123/juno123/101.ts
+166 #EXTINF:-1 tvg-id="" tvg-name="CRIC || TEN SPORTS ᴴᴰ" tvg-logo="https://www.tensports.com.pk/wp-content/uploads/2019/10/Logo.png" group-title="CRICKET",CRIC || TEN SPORTS ᴴᴰ
+167 https://webhop.live:443/live/juno123/juno123/98.ts
+168 #EXTINF:-1 tvg-id="starsports1hd.in" tvg-name="CRIC || STAR SPORTS 1 ENG ᴴᴰ" tvg-logo="http://greenpa1.com/starsports1.png" group-title="CRICKET",CRIC || STAR SPORTS 1 ENG ᴴᴰ
+169 https://webhop.live:443/live/juno123/juno123/148.ts
+170 #EXTINF:-1 tvg-id="starsports1hd.in" tvg-name="CRIC || STAR SPORTS 1 ENG ᶠᴴᴰ" tvg-logo="http://greenpa1.com/starsports1.png" group-title="CRICKET",CRIC || STAR SPORTS 1 ENG ᶠᴴᴰ
+171 https://webhop.live:443/live/juno123/juno123/9397.ts
+172 #EXTINF:-1 tvg-id="starsports1hd.in" tvg-name="CRIC || STAR SPORTS 1 ENG ⁴ᵏ" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="CRICKET",CRIC || STAR SPORTS 1 ENG ⁴ᵏ
+173 https://webhop.live:443/live/juno123/juno123/124281.ts
+174 #EXTINF:-1 tvg-id="starsports2hd.in" tvg-name="CRIC || STAR SPORTS 2 ENGLISH ᴴᴰ" tvg-logo="http://greenpa1.com/starsports2.png" group-title="CRICKET",CRIC || STAR SPORTS 2 ENGLISH ᴴᴰ
+175 https://webhop.live:443/live/juno123/juno123/239.ts
+176 #EXTINF:-1 tvg-id="starsports2hd.in" tvg-name="CRIC || STAR SPORTS 2 ENGLISH ᶠᴴᴰ" tvg-logo="http://greenpa1.com/starsports2.png" group-title="CRICKET",CRIC || STAR SPORTS 2 ENGLISH ᶠᴴᴰ
+177 https://webhop.live:443/live/juno123/juno123/9398.ts
+178 #EXTINF:-1 tvg-id="starsports2hd.in" tvg-name="CRIC || STAR SPORTS 2 ENGLISH ⁴ᵏ" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="CRICKET",CRIC || STAR SPORTS 2 ENGLISH ⁴ᵏ
+179 https://webhop.live:443/live/juno123/juno123/124284.ts
+180 #EXTINF:-1 tvg-id="starsports1hdhindi.in" tvg-name="CRIC || STAR SPORTS 1 HINDI ᴴᴰ" tvg-logo="http://greenpa1.com/ssh1.png" group-title="CRICKET",CRIC || STAR SPORTS 1 HINDI ᴴᴰ
+181 https://webhop.live:443/live/juno123/juno123/211.ts
+182 #EXTINF:-1 tvg-id="starsports1hdhindi.in" tvg-name="CRIC || STAR SPORTS 1 HINDI ᶠᴴᴰ" tvg-logo="http://greenpa1.com/ssh1.png" group-title="CRICKET",CRIC || STAR SPORTS 1 HINDI ᶠᴴᴰ
+183 https://webhop.live:443/live/juno123/juno123/9399.ts
+184 #EXTINF:-1 tvg-id="starsports1hdhindi.in" tvg-name="CRIC || STAR SPORTS 1 HINDI ⁴ᵏ" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="CRICKET",CRIC || STAR SPORTS 1 HINDI ⁴ᵏ
+185 https://webhop.live:443/live/juno123/juno123/124287.ts
+186 #EXTINF:-1 tvg-id="starsportsselect1hd.in" tvg-name="CRIC || STAR SPORTS SELECT 1 ᴴᴰ" tvg-logo="https://static.epg.best/in/StarSportsSelect1.in.png" group-title="CRICKET",CRIC || STAR SPORTS SELECT 1 ᴴᴰ
+187 https://webhop.live:443/live/juno123/juno123/238.ts
+188 #EXTINF:-1 tvg-id="starsportsselecthd2.in" tvg-name="CRIC || STAR SPORTS SELECT 2 ᴴᴰ" tvg-logo="https://static.epg.best/in/StarSportsSelect2.in.png" group-title="CRICKET",CRIC || STAR SPORTS SELECT 2 ᴴᴰ
+189 https://webhop.live:443/live/juno123/juno123/148801.ts
+190 #EXTINF:-1 tvg-id="starsports1tamil.in" tvg-name="CRIC || STAR SPORTS 1 TAMIL ⁴ᵏ" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="CRICKET",CRIC || STAR SPORTS 1 TAMIL ⁴ᵏ
+191 https://webhop.live:443/live/juno123/juno123/9722.ts
+192 #EXTINF:-1 tvg-id="" tvg-name="CRIC || STAR SPORTS 1 TELUGU ⁴ᵏ" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="CRICKET",CRIC || STAR SPORTS 1 TELUGU ⁴ᵏ
+193 https://webhop.live:443/live/juno123/juno123/177843.ts
+194 #EXTINF:-1 tvg-id="starsports3.in" tvg-name="CRIC || STAR SPORTS 3 ᴴᴰ" tvg-logo="http://greenpa1.com/ss3.png" group-title="CRICKET",CRIC || STAR SPORTS 3 ᴴᴰ
+195 https://webhop.live:443/live/juno123/juno123/1080.ts
+196 #EXTINF:-1 tvg-id="" tvg-name="CRIC || T SPORTS ᴴᴰ" tvg-logo="https://i.ibb.co/34FSKYK/images.png" group-title="CRICKET",CRIC || T SPORTS ᴴᴰ
+197 https://webhop.live:443/live/juno123/juno123/18452.ts
+198 #EXTINF:-1 tvg-id="" tvg-name="CRIC || T SPORTS ᴴᴰ" tvg-logo="https://i.ibb.co/34FSKYK/images.png" group-title="CRICKET",CRIC || T SPORTS ᴴᴰ
+199 https://webhop.live:443/live/juno123/juno123/130714.ts
+200 #EXTINF:-1 tvg-id="" tvg-name="CRIC || RTA SPORTS ᴴᴰ" tvg-logo="http://greenpa1.com/rta.png" group-title="CRICKET",CRIC || RTA SPORTS ᴴᴰ
+201 https://webhop.live:443/live/juno123/juno123/1039.ts
+202 #EXTINF:-1 tvg-id="sonyten1hd.in" tvg-name="CRIC || SONY SPORTS 1 ᴴᴰ" tvg-logo="http://greenpa1.com/sonyten1.png" group-title="CRICKET",CRIC || SONY SPORTS 1 ᴴᴰ
+203 https://webhop.live:443/live/juno123/juno123/154.ts
+204 #EXTINF:-1 tvg-id="sonyten2hd.in" tvg-name="SONY Ten 2 HD" tvg-logo="http://starapk1.com/logo/football.png" group-title="FOOTBALL",SONY Ten 2 HD
+205 https://webhop.live:443/live/juno123/juno123/192.ts
+206 #EXTINF:-1 tvg-id="sonyten2hd.in" tvg-name="CRIC || SONY SPORTS 2 ᴴᴰ" tvg-logo="http://greenpa1.com/sonyten2.png" group-title="CRICKET",CRIC || SONY SPORTS 2 ᴴᴰ
+207 https://webhop.live:443/live/juno123/juno123/31314.ts
+208 #EXTINF:-1 tvg-id="sonyten3hd.in" tvg-name="CRIC || SONY SPORTS 3 ᴴᴰ" tvg-logo="http://greenpa1.com/sonyten3.png" group-title="CRICKET",CRIC || SONY SPORTS 3 ᴴᴰ
+209 https://webhop.live:443/live/juno123/juno123/146.ts
+210 #EXTINF:-1 tvg-id="" tvg-name="CRIC || SONY SPORTS 4 TAMIL" tvg-logo="http://greenpa1.com/sonyten4.png" group-title="CRICKET",CRIC || SONY SPORTS 4 TAMIL
+211 https://webhop.live:443/live/juno123/juno123/29469.ts
+212 #EXTINF:-1 tvg-id="sonysixhd.in" tvg-name="CRIC || SONY SPORTS 5 ᴴᴰ" tvg-logo="https://i.ibb.co/3NGPRb1/Sony-Sports-Ten-5.png" group-title="CRICKET",CRIC || SONY SPORTS 5 ᴴᴰ
+213 https://webhop.live:443/live/juno123/juno123/176.ts
+214 #EXTINF:-1 tvg-id="sonyespnhd.in" tvg-name="CRI: SONY ESPN HD" tvg-logo="https://pluspng.com/img-png/sony-hd-png-http-www-indigital-co-in-upload-channellogo-channellogo-635901932420648964-png-sony-espn-hd-300.png" group-title="CRICKET",CRI: SONY ESPN HD
+215 https://webhop.live:443/live/juno123/juno123/155.ts
+216 #EXTINF:-1 tvg-id="" tvg-name="CRIC || SKY SPORT 1 ᶠᴴᴰ" tvg-logo="https://static.sky.co.nz/sky/channel-logos/051_sky_sport_1_logo_stack_rgb.png" group-title="CRICKET",CRIC || SKY SPORT 1 ᶠᴴᴰ
+217 https://webhop.live:443/live/juno123/juno123/150854.ts
+218 #EXTINF:-1 tvg-id="" tvg-name="CRIC || SKY SPORT 3 ᶠᴴᴰ" tvg-logo="https://static.sky.co.nz/sky/channel-logos/051_sky_sport_3_logo_stack_rgb.png" group-title="CRICKET",CRIC || SKY SPORT 3 ᶠᴴᴰ
+219 https://webhop.live:443/live/juno123/juno123/24018.ts
+220 #EXTINF:-1 tvg-id="" tvg-name="CRI: ATN Plus Cricket" tvg-logo="https://i.ibb.co/PtxbFbk/Cricket-Plus-tr.png" group-title="CRICKET",CRI: ATN Plus Cricket
+221 https://webhop.live:443/live/juno123/juno123/85829.ts
+222 #EXTINF:-1 tvg-id="dsport.in" tvg-name="CRIC || EUROSPORTS ᴴᴰ" tvg-logo="https://static.epg.best/no/Eurosport1.no.png" group-title="CRICKET",CRIC || EUROSPORTS ᴴᴰ
+223 https://webhop.live:443/live/juno123/juno123/216.ts
+224 #EXTINF:-1 tvg-id="vijayhd.in" tvg-name="Tamil: VIJAY TV (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TAMIL | ENTERTAINMENT",Tamil: VIJAY TV (4K).
+225 https://webhop.live:443/live/juno123/juno123/98898.ts
+226 #EXTINF:-1 tvg-id="vijayhd.in" tvg-name="Tamil: VIJAY TV (FHD) " tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcROOIKSnDTq5SwY84Bh4uMzNquSleZdK2SnAA&usqp=CAU" group-title="TAMIL | ENTERTAINMENT",Tamil: VIJAY TV (FHD) 
+227 https://webhop.live:443/live/juno123/juno123/9969.ts
+228 #EXTINF:-1 tvg-id="vijayhd.in" tvg-name="TM: STAR VIJAY INDIA FHD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/c/cf/Star_Vijay_HD_2017-0.png/revision/latest/scale-to-width-down/250?cb=20190715142233" group-title="TAMIL | ENTERTAINMENT",TM: STAR VIJAY INDIA FHD
+229 https://webhop.live:443/live/juno123/juno123/5916.ts
+230 #EXTINF:-1 tvg-id="vijayhd.in" tvg-name="TM: STAR VIJAY HD" tvg-logo="https://i.ibb.co/tbmmZY7/download-14.png" group-title="TAMIL | ENTERTAINMENT",TM: STAR VIJAY HD
+231 https://webhop.live:443/live/juno123/juno123/157.ts
+232 #EXTINF:-1 tvg-id="vijayhd.in" tvg-name="TM: VIJAY TV HD" tvg-logo="https://i.ibb.co/tbmmZY7/download-14.png" group-title="TAMIL | ENTERTAINMENT",TM: VIJAY TV HD
+233 https://webhop.live:443/live/juno123/juno123/1634.ts
+234 #EXTINF:-1 tvg-id="starvijay.in" tvg-name="TM: STAR VIJAY HD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/c/cf/Star_Vijay_HD_2017-0.png/revision/latest/scale-to-width-down/250?cb=20190715142233" group-title="TAMIL | ENTERTAINMENT",TM: STAR VIJAY HD
+235 https://webhop.live:443/live/juno123/juno123/5915.ts
+236 #EXTINF:-1 tvg-id="vijayhd.in" tvg-name="TM: STAR VIJAY HD (Vip)" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/c/cf/Star_Vijay_HD_2017-0.png/revision/latest/scale-to-width-down/250?cb=20190715142233" group-title="TAMIL | ENTERTAINMENT",TM: STAR VIJAY HD (Vip)
+237 https://webhop.live:443/live/juno123/juno123/5917.ts
+238 #EXTINF:-1 tvg-id="zeetamilhd.in" tvg-name="Tamil: Zee Tamil (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TAMIL | ENTERTAINMENT",Tamil: Zee Tamil (4K).
+239 https://webhop.live:443/live/juno123/juno123/98897.ts
+240 #EXTINF:-1 tvg-id="zeetamilhd.in" tvg-name="Tamil: Zee Tamil (FHD)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5d/Zee_Tamil.jpeg" group-title="TAMIL | ENTERTAINMENT",Tamil: Zee Tamil (FHD)
+241 https://webhop.live:443/live/juno123/juno123/9971.ts
+242 #EXTINF:-1 tvg-id="zeetamilhd.in" tvg-name="TM: ZEE TAMIL HD (USA)" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Tamil.png" group-title="TAMIL | ENTERTAINMENT",TM: ZEE TAMIL HD (USA)
+243 https://webhop.live:443/live/juno123/juno123/5930.ts
+244 #EXTINF:-1 tvg-id="zeetamilhd.in" tvg-name="TM: ZEE TAMIL" tvg-logo="https://www.smartads.in/resources/assets/uploads/product_group/Television/Zee-Tamil-HD-Logo.png" group-title="TAMIL | ENTERTAINMENT",TM: ZEE TAMIL
+245 https://webhop.live:443/live/juno123/juno123/225.ts
+246 #EXTINF:-1 tvg-id="colorstamilhd.in" tvg-name="Tamil: Colors Tamil (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TAMIL | ENTERTAINMENT",Tamil: Colors Tamil (4K).
+247 https://webhop.live:443/live/juno123/juno123/98911.ts
+248 #EXTINF:-1 tvg-id="colorstamilhd.in" tvg-name="Tamil: Colors Tamil (FHD)" tvg-logo="https://bestmediainfo.com/timthumb.php?src=/wp-content/uploads/2018/07/Colors_Tamil_HD_1.jpg&w=620&h=350&zc=1&q=100" group-title="TAMIL | ENTERTAINMENT",Tamil: Colors Tamil (FHD)
+249 https://webhop.live:443/live/juno123/juno123/9970.ts
+250 #EXTINF:-1 tvg-id="colorstamilhd.in" tvg-name="TM: COLORS TAMIL HD" tvg-logo="https://i.ibb.co/pKVnvdc/images.png" group-title="TAMIL | ENTERTAINMENT",TM: COLORS TAMIL HD
+251 https://webhop.live:443/live/juno123/juno123/5886.ts
+252 #EXTINF:-1 tvg-id="colorstamilhd.in" tvg-name="TM: COLOR TAMIL HD" tvg-logo="https://i.ibb.co/pKVnvdc/images.png" group-title="TAMIL | ENTERTAINMENT",TM: COLOR TAMIL HD
+253 https://webhop.live:443/live/juno123/juno123/57.ts
+254 #EXTINF:-1 tvg-id="ktvhd.in" tvg-name="Tamil: KTV (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TAMIL | MOVIES",Tamil: KTV (4K).
+255 https://webhop.live:443/live/juno123/juno123/98893.ts
+256 #EXTINF:-1 tvg-id="ktvhd.in" tvg-name="Tamil: KTV (FHD)" tvg-logo="" group-title="TAMIL | MOVIES",Tamil: KTV (FHD)
+257 https://webhop.live:443/live/juno123/juno123/23318.ts
+258 #EXTINF:-1 tvg-id="ktvhd.in" tvg-name="TM: KTV HD" tvg-logo="https://i.ibb.co/pnHyfBX/download-6.png" group-title="TAMIL | MOVIES",TM: KTV HD
+259 https://webhop.live:443/live/juno123/juno123/160.ts
+260 #EXTINF:-1 tvg-id="ktvhd.in" tvg-name="TM: KTV HD" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/tv/150/150/bnw/ktv-HD-white.png" group-title="TAMIL | MOVIES",TM: KTV HD
+261 https://webhop.live:443/live/juno123/juno123/5900.ts
+262 #EXTINF:-1 tvg-id="" tvg-name="TM: KTV  FHD (usa)" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/tv/150/150/bnw/ktv-HD-white.png" group-title="TAMIL | MOVIES",TM: KTV  FHD (usa)
+263 https://webhop.live:443/live/juno123/juno123/5898.ts
+264 #EXTINF:-1 tvg-id="ts380" tvg-name="TM: KTV FHD (IND)" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/tv/150/150/bnw/ktv-HD-white.png" group-title="TAMIL | MOVIES",TM: KTV FHD (IND)
+265 https://webhop.live:443/live/juno123/juno123/5899.ts
+266 #EXTINF:-1 tvg-id="suntvhd.in" tvg-name="Tamil: SUNTV (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TAMIL | ENTERTAINMENT",Tamil: SUNTV (4K).
+267 https://webhop.live:443/live/juno123/juno123/98899.ts
+268 #EXTINF:-1 tvg-id="suntvhd.in" tvg-name="Tamil: SUNTV (FHD)" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/2a/HD.SUN.jpg/revision/latest/scale-to-width-down/340?cb=20180306135150" group-title="TAMIL | ENTERTAINMENT",Tamil: SUNTV (FHD)
+269 https://webhop.live:443/live/juno123/juno123/23320.ts
+270 #EXTINF:-1 tvg-id="suntvhd.in" tvg-name="TM: SUN TV HD" tvg-logo="https://i.ibb.co/QmNNQTY/1000x1000-Sun-TVHDDolby-Vision-155535-2312f9df-92b3-48dc-bd0d-761bd9c68a9c.png" group-title="TAMIL | ENTERTAINMENT",TM: SUN TV HD
+271 https://webhop.live:443/live/juno123/juno123/158.ts
+272 #EXTINF:-1 tvg-id="suntvhd.in" tvg-name="TM: SUN TV HD" tvg-logo="" group-title="TAMIL | ENTERTAINMENT",TM: SUN TV HD
+273 https://webhop.live:443/live/juno123/juno123/5921.ts
+274 #EXTINF:-1 tvg-id="suntvhd.in" tvg-name="TM: SUN TV HD" tvg-logo="https://www.smartads.in/resources/assets/uploads/product_group/Television/Sun-TV-HD-Logo.png" group-title="TAMIL | ENTERTAINMENT",TM: SUN TV HD
+275 https://webhop.live:443/live/juno123/juno123/5922.ts
+276 #EXTINF:-1 tvg-id="suntvhd.in" tvg-name="TM: SUN TV HD " tvg-logo="https://www.smartads.in/resources/assets/uploads/product_group/Television/Sun-TV-HD-Logo.png" group-title="TAMIL | ENTERTAINMENT",TM: SUN TV HD 
+277 https://webhop.live:443/live/juno123/juno123/5923.ts
+278 #EXTINF:-1 tvg-id="sunmusichd.in" tvg-name="Tamil: SUN-MUSIC (4K)." tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TAMIL | ENTERTAINMENT",Tamil: SUN-MUSIC (4K).
+279 https://webhop.live:443/live/juno123/juno123/98900.ts
+280 #EXTINF:-1 tvg-id="sunmusichd.in" tvg-name="Tamil: SUN-MUSIC (FHD)" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWh7nKqPNpFt4Ykh-pzPQiCvEzTitpRbkLOg&usqp=CAU" group-title="TAMIL | ENTERTAINMENT",Tamil: SUN-MUSIC (FHD)
+281 https://webhop.live:443/live/juno123/juno123/23321.ts
+282 #EXTINF:-1 tvg-id="sunmusichd.in" tvg-name="TM: SUN MUSIC HD" tvg-logo="https://i.ibb.co/K67xjsm/sun-music-HD-black.png" group-title="TAMIL | ENTERTAINMENT",TM: SUN MUSIC HD
+283 https://webhop.live:443/live/juno123/juno123/159.ts
+284 #EXTINF:-1 tvg-id="ts521" tvg-name="TAMIL: SUN TV USA" tvg-logo="" group-title="TAMIL | ENTERTAINMENT",TAMIL: SUN TV USA
+285 https://webhop.live:443/live/juno123/juno123/76343.ts
+286 #EXTINF:-1 tvg-id="sunmusichd.in" tvg-name="TM: SUN MUSIC HD VIP (USA)" tvg-logo="" group-title="TAMIL | ENTERTAINMENT",TM: SUN MUSIC HD VIP (USA)
+287 https://webhop.live:443/live/juno123/juno123/5920.ts
+288 #EXTINF:-1 tvg-id="vijaysuper.in" tvg-name="TM: VIJAY SUPER (4K)" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TAMIL | MOVIES",TM: VIJAY SUPER (4K)
+289 https://webhop.live:443/live/juno123/juno123/1614.ts
+290 #EXTINF:-1 tvg-id="ts906" tvg-name="TAMIL: VIJAY MUSIC" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/1/19/Vijay_musicBig.png/revision/latest?cb=20200217033512" group-title="TAMIL | ENTERTAINMENT",TAMIL: VIJAY MUSIC
+291 https://webhop.live:443/live/juno123/juno123/23869.ts
+292 #EXTINF:-1 tvg-id="ts1182" tvg-name="TAMIL: ZEE THIRAI (4K)" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TAMIL | MOVIES",TAMIL: ZEE THIRAI (4K)
+293 https://webhop.live:443/live/juno123/juno123/181966.ts
+294 #EXTINF:-1 tvg-id="ts797" tvg-name="TAMIL: Zee Thirai" tvg-logo="" group-title="TAMIL | MOVIES",TAMIL: Zee Thirai
+295 https://webhop.live:443/live/juno123/juno123/144636.ts
+296 #EXTINF:-1 tvg-id="sunlife.in" tvg-name="TM: SUN LIFE HD" tvg-logo="http://2.bp.blogspot.com/-UhBQgmp7gyI/UCkbz25X2OI/AAAAAAAAA70/DbPoAqxWOB4/s1600/sun_life_manisat_com.png" group-title="TAMIL | ENTERTAINMENT",TM: SUN LIFE HD
+297 https://webhop.live:443/live/juno123/juno123/5919.ts
+298 #EXTINF:-1 tvg-id="sunlife.in" tvg-name="TM: SUN LIFE HD" tvg-logo="" group-title="TAMIL | ENTERTAINMENT",TM: SUN LIFE HD
+299 https://webhop.live:443/live/juno123/juno123/5918.ts
+300 #EXTINF:-1 tvg-id="sunlife.in" tvg-name="TM: SUN LIFE" tvg-logo="https://i.ibb.co/YcpHPJD/download-14.png" group-title="TAMIL | ENTERTAINMENT",TM: SUN LIFE
+301 https://webhop.live:443/live/juno123/juno123/1612.ts
+302 #EXTINF:-1 tvg-id="sunnews.in" tvg-name="TM: SUN NEWS" tvg-logo="https://seeklogo.com/images/S/sun-news-logo-107E32491A-seeklogo.com.png" group-title="TAMIL | NEWS",TM: SUN NEWS
+303 https://webhop.live:443/live/juno123/juno123/1613.ts
+304 #EXTINF:-1 tvg-id="sunnews.in" tvg-name="TM: SUN NEWS" tvg-logo="" group-title="TAMIL | NEWS",TM: SUN NEWS
+305 https://webhop.live:443/live/juno123/juno123/5924.ts
+306 #EXTINF:-1 tvg-id="polimernews.in" tvg-name="TM: POLIMER NEWS" tvg-logo="" group-title="TAMIL | NEWS",TM: POLIMER NEWS
+307 https://webhop.live:443/live/juno123/juno123/5911.ts
+308 #EXTINF:-1 tvg-id="polimernews.in" tvg-name="TM: POLIMER NEWS" tvg-logo="https://i.ibb.co/SPNHpqd/POLIMER-NEWS.png" group-title="TAMIL | NEWS",TM: POLIMER NEWS
+309 https://webhop.live:443/live/juno123/juno123/237.ts
+310 #EXTINF:-1 tvg-id="polimertv.in" tvg-name="TM: POLIMER TV" tvg-logo="https://i.ibb.co/dPbtD7b/download-12.png" group-title="TAMIL | ENTERTAINMENT",TM: POLIMER TV
+311 https://webhop.live:443/live/juno123/juno123/1617.ts
+312 #EXTINF:-1 tvg-id="" tvg-name="TM: Kalaignar TV News" tvg-logo="https://i.ibb.co/XysbPp9/download-3-1.png" group-title="TAMIL | NEWS",TM: Kalaignar TV News
+313 https://webhop.live:443/live/juno123/juno123/5897.ts
+314 #EXTINF:-1 tvg-id="sathiyamtv.in" tvg-name="Tamil: Sathiyam Tv news" tvg-logo="" group-title="TAMIL | NEWS",Tamil: Sathiyam Tv news
+315 https://webhop.live:443/live/juno123/juno123/256457.ts
+316 #EXTINF:-1 tvg-id="jaya.in" tvg-name="TM: JAYA TV (4K)" tvg-logo="https://i.ibb.co/p4knk5y/images-4.png" group-title="TAMIL | ENTERTAINMENT",TM: JAYA TV (4K)
+317 https://webhop.live:443/live/juno123/juno123/188.ts
+318 #EXTINF:-1 tvg-id="jaya.in" tvg-name="TM: JAYA TV" tvg-logo="https://www.logolynx.com/images/logolynx/2d/2da9869ee753c8bbaf5e5b7923d96c67.png" group-title="TAMIL | ENTERTAINMENT",TM: JAYA TV
+319 https://webhop.live:443/live/juno123/juno123/5895.ts
+320 #EXTINF:-1 tvg-id="jayamax.in" tvg-name="TM: JAYA MAX" tvg-logo="https://i.ibb.co/mFLk9yN/download-13.png" group-title="TAMIL | ENTERTAINMENT",TM: JAYA MAX
+321 https://webhop.live:443/live/juno123/juno123/240.ts
+322 #EXTINF:-1 tvg-id="jayaplus.in" tvg-name="TM: JAYA PLUS" tvg-logo="https://i.ibb.co/DgSD9Ry0/images-1.png" group-title="TAMIL | ENTERTAINMENT",TM: JAYA PLUS
+323 https://webhop.live:443/live/juno123/juno123/1615.ts
+324 #EXTINF:-1 tvg-id="" tvg-name="TM: JAYA MOVIES" tvg-logo="" group-title="TAMIL | MOVIES",TM: JAYA MOVIES
+325 https://webhop.live:443/live/juno123/juno123/1618.ts
+326 #EXTINF:-1 tvg-id="vendhartv.in" tvg-name="TM: VENDHAR TV" tvg-logo="https://i.ibb.co/pv2fbyf/download-21.png" group-title="TAMIL | ENTERTAINMENT",TM: VENDHAR TV
+327 https://webhop.live:443/live/juno123/juno123/1624.ts
+328 #EXTINF:-1 tvg-id="vendhartv.in" tvg-name="TM: VENDHAR TV HD" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/Vendhar_TV.png" group-title="TAMIL | ENTERTAINMENT",TM: VENDHAR TV HD
+329 https://webhop.live:443/live/juno123/juno123/5931.ts
+330 #EXTINF:-1 tvg-id="rajtv.in" tvg-name="TM: RAJ TV HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/4/40/Raj_TV_Tamil.png" group-title="TAMIL | ENTERTAINMENT",TM: RAJ TV HD
+331 https://webhop.live:443/live/juno123/juno123/5913.ts
+332 #EXTINF:-1 tvg-id="rajtv.in" tvg-name="TM: RAJ TV" tvg-logo="https://upload.wikimedia.org/wikipedia/en/4/40/Raj_TV_Tamil.png" group-title="TAMIL | ENTERTAINMENT",TM: RAJ TV
+333 https://webhop.live:443/live/juno123/juno123/1619.ts
+334 #EXTINF:-1 tvg-id="rajdigitalplus.in" tvg-name="TM: RAJ DIGITAL PLUS" tvg-logo="https://i.ibb.co/Xxf6xNq/download-4.png" group-title="TAMIL | ENTERTAINMENT",TM: RAJ DIGITAL PLUS
+335 https://webhop.live:443/live/juno123/juno123/1616.ts
+336 #EXTINF:-1 tvg-id="news18tamilnadu.in" tvg-name="TM: NEWS 18 TAMIL NADU HD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/e/ef/News18_tamilnadu_logo.png/revision/latest/scale-to-width-down/170?cb=20191220041016" group-title="TAMIL | NEWS",TM: NEWS 18 TAMIL NADU HD
+337 https://webhop.live:443/live/juno123/juno123/5906.ts
+338 #EXTINF:-1 tvg-id="puthiyathalaimurai.in" tvg-name="TM: PUTHIYA THALAIMURAI TV HD" tvg-logo="" group-title="TAMIL | ENTERTAINMENT",TM: PUTHIYA THALAIMURAI TV HD
+339 https://webhop.live:443/live/juno123/juno123/5910.ts
+340 #EXTINF:-1 tvg-id="" tvg-name="TM: PUTHU YUGAmM TV" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bf/Puthuyugam_TV.gif" group-title="TAMIL | ENTERTAINMENT",TM: PUTHU YUGAmM TV
+341 https://webhop.live:443/live/juno123/juno123/5912.ts
+342 #EXTINF:-1 tvg-id="sirippoli.in" tvg-name="TM: SIRIPPOLI TV" tvg-logo="https://upload.wikimedia.org/wikipedia/en/7/74/Sirippoli_tv.jpg" group-title="TAMIL | MOVIES",TM: SIRIPPOLI TV
+343 https://webhop.live:443/live/juno123/juno123/5932.ts
+344 #EXTINF:-1 tvg-id="ts37" tvg-name="Tamil: MEGA TV" tvg-logo="" group-title="TAMIL | ENTERTAINMENT",Tamil: MEGA TV
+345 https://webhop.live:443/live/juno123/juno123/28141.ts
+346 #EXTINF:-1 tvg-id="mega24.in" tvg-name="Tamil: MEGA 24" tvg-logo="" group-title="TAMIL | MOVIES",Tamil: MEGA 24
+347 https://webhop.live:443/live/juno123/juno123/26163.ts
+348 #EXTINF:-1 tvg-id="megamusiq.in" tvg-name="Tamil: MEGA MUSIQ" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/e/ef/Mega_Musiq.jpeg/revision/latest/scale-to-width-down/250?cb=20191224093201" group-title="TAMIL | ENTERTAINMENT",Tamil: MEGA MUSIQ
+349 https://webhop.live:443/live/juno123/juno123/26164.ts
+350 #EXTINF:-1 tvg-id="isaiaruvi.in" tvg-name="Tamil: ISAI ARUVI" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/e/ed/Isai_Aruvi.jpeg/revision/latest/smart/width/250/height/250?cb=20191224121230" group-title="TAMIL | ENTERTAINMENT",Tamil: ISAI ARUVI
+351 https://webhop.live:443/live/juno123/juno123/26165.ts
+352 #EXTINF:-1 tvg-id="ts411" tvg-name="TAMIL: MURASU TV" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/Malai_Murasu.png" group-title="TAMIL | ENTERTAINMENT",TAMIL: MURASU TV
+353 https://webhop.live:443/live/juno123/juno123/29086.ts
+354 #EXTINF:-1 tvg-id="discoverytamil.in" tvg-name="Tamil: D TAMIL" tvg-logo="" group-title="TAMIL | ENTERTAINMENT",Tamil: D TAMIL
+355 https://webhop.live:443/live/juno123/juno123/26162.ts
+356 #EXTINF:-1 tvg-id="travelxptamil.in" tvg-name="TAMIL: TRAVEL XP " tvg-logo="" group-title="TAMIL | ENTERTAINMENT",TAMIL: TRAVEL XP 
+357 https://webhop.live:443/live/juno123/juno123/9972.ts
+358 #EXTINF:-1 tvg-id="sonybbcearthhd.in" tvg-name="TM: SONY BBC EARTH HD" tvg-logo="https://i.ibb.co/m4CDwpf/SONY-BBC-EARTH.png" group-title="TAMIL | ENTERTAINMENT",TM: SONY BBC EARTH HD
+359 https://webhop.live:443/live/juno123/juno123/222.ts
+360 #EXTINF:-1 tvg-id="ts448" tvg-name="TM: NEWS 7 TAMIL HD" tvg-logo="" group-title="TAMIL | NEWS",TM: NEWS 7 TAMIL HD
+361 https://webhop.live:443/live/juno123/juno123/5907.ts
+362 #EXTINF:-1 tvg-id="newsj.in" tvg-name="TM: NEWS J" tvg-logo="" group-title="TAMIL | NEWS",TM: NEWS J
+363 https://webhop.live:443/live/juno123/juno123/5908.ts
+364 #EXTINF:-1 tvg-id="thanthitv.in" tvg-name="Tamil: THANTHI TV" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/Thanthi_TV.png" group-title="TAMIL | ENTERTAINMENT",Tamil: THANTHI TV
+365 https://webhop.live:443/live/juno123/juno123/111034.ts
+366 #EXTINF:-1 tvg-id="srisankaratv.in" tvg-name="Tamil : Sri Sankara TV" tvg-logo="" group-title="TAMIL | ENTERTAINMENT",Tamil : Sri Sankara TV
+367 https://webhop.live:443/live/juno123/juno123/153205.ts
+368 #EXTINF:-1 tvg-id="ts968" tvg-name="TAMIL: News Tamil 24x7" tvg-logo="https://www.lyngsat.com/logo/tv/nn/news-tamil-24x7-in.png" group-title="TAMIL | NEWS",TAMIL: News Tamil 24x7
+369 https://webhop.live:443/live/juno123/juno123/160589.ts
+370 #EXTINF:-1 tvg-id="pepperstv.in" tvg-name="TM: PEPPERS TV" tvg-logo="" group-title="TAMIL | ENTERTAINMENT",TM: PEPPERS TV
+371 https://webhop.live:443/live/juno123/juno123/5909.ts
+372 #EXTINF:-1 tvg-id="ts477" tvg-name="TAMIL: SRI SHANKARA TAMIL" tvg-logo="" group-title="TAMIL | ENTERTAINMENT",TAMIL: SRI SHANKARA TAMIL
+373 https://webhop.live:443/live/juno123/juno123/36653.ts
+374 #EXTINF:-1 tvg-id="ts1166" tvg-name="TAMIL: CHITHIRAM" tvg-logo="" group-title="TAMIL | ENTERTAINMENT",TAMIL: CHITHIRAM
+375 https://webhop.live:443/live/juno123/juno123/46743.ts
+376 #EXTINF:-1 tvg-id="hungama.in" tvg-name="KIDS: SUPER HUNGAMA" tvg-logo="" group-title="KIDS",KIDS: SUPER HUNGAMA
+377 https://webhop.live:443/live/juno123/juno123/66162.ts
+378 #EXTINF:-1 tvg-id="nick.in" tvg-name="TAMIL: NICK" tvg-logo="" group-title="KIDS",TAMIL: NICK
+379 https://webhop.live:443/live/juno123/juno123/66163.ts
+380 #EXTINF:-1 tvg-id="discoverykids.in" tvg-name="TAMIL: DISCOVERY KIDS" tvg-logo="" group-title="KIDS",TAMIL: DISCOVERY KIDS
+381 https://webhop.live:443/live/juno123/juno123/66164.ts
+382 #EXTINF:-1 tvg-id="pogo.in" tvg-name="TAMIL: POGO" tvg-logo="" group-title="KIDS",TAMIL: POGO
+383 https://webhop.live:443/live/juno123/juno123/66165.ts
+384 #EXTINF:-1 tvg-id="chuttitv.in" tvg-name="Tamil: Chutti Tv" tvg-logo="" group-title="TAMIL | ENTERTAINMENT",Tamil: Chutti Tv
+385 https://webhop.live:443/live/juno123/juno123/85931.ts
+386 #EXTINF:-1 tvg-id="ts38" tvg-name="TM: AASTHA TAMIL HD" tvg-logo="https://i.ibb.co/mhk9HzK/download-11.png" group-title="TAMIL",TM: AASTHA TAMIL HD
+387 https://webhop.live:443/live/juno123/juno123/5877.ts
+388 #EXTINF:-1 tvg-id="zeecinemaindiahd.in" tvg-name="TM: ANGEL TV HD" tvg-logo="https://i.ibb.co/cwmmfBj/download-2-1.png" group-title="TAMIL | ENTERTAINMENT",TM: ANGEL TV HD
+389 https://webhop.live:443/live/juno123/juno123/5881.ts
+390 #EXTINF:-1 tvg-id="ts282" tvg-name="TM: ANGEL TV HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/9/95/Logo_of_Angel_TV.png" group-title="TAMIL | ENTERTAINMENT",TM: ANGEL TV HD
+391 https://webhop.live:443/live/juno123/juno123/189.ts
+392 #EXTINF:-1 tvg-id="ts282" tvg-name="TM: ANGEL TV HD" tvg-logo="https://i.ibb.co/cwmmfBj/download-2-1.png" group-title="TAMIL | ENTERTAINMENT",TM: ANGEL TV HD
+393 https://webhop.live:443/live/juno123/juno123/5882.ts
+394 #EXTINF:-1 tvg-id="ts282" tvg-name="TM: ANGEL TV HD" tvg-logo="https://i.ibb.co/cwmmfBj/download-2-1.png" group-title="TAMIL | ENTERTAINMENT",TM: ANGEL TV HD
+395 https://webhop.live:443/live/juno123/juno123/5883.ts
+396 #EXTINF:-1 tvg-id="ddpodhigai.in" tvg-name="TM: DD PODHIGAI" tvg-logo="https://i.ibb.co/YfDd0rN/download-33.png" group-title="TAMIL",TM: DD PODHIGAI
+397 https://webhop.live:443/live/juno123/juno123/5887.ts
+398 #EXTINF:-1 tvg-id="madhatv.in" tvg-name="TM: MADHA TV" tvg-logo="https://i.ibb.co/YfchHZF/download-7.png" group-title="TAMIL | ENTERTAINMENT",TM: MADHA TV
+399 https://webhop.live:443/live/juno123/juno123/5902.ts
+400 #EXTINF:-1 tvg-id="makkaltv.in" tvg-name="TM: MAKKAL TV HD" tvg-logo="https://i.ibb.co/VttxdD7/download-8.png" group-title="TAMIL | ENTERTAINMENT",TM: MAKKAL TV HD
+401 https://webhop.live:443/live/juno123/juno123/5903.ts
+402 #EXTINF:-1 tvg-id="" tvg-name="TAMIL: MK TV" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/MK_TV.png" group-title="TAMIL | ENTERTAINMENT",TAMIL: MK TV
+403 https://webhop.live:443/live/juno123/juno123/37451.ts
+404 #EXTINF:-1 tvg-id="" tvg-name="USA: COMEDY CENTRAL" tvg-logo="" group-title="USA",USA: COMEDY CENTRAL
+405 https://webhop.live:443/live/juno123/juno123/9.ts
+406 #EXTINF:-1 tvg-id="" tvg-name="USA: CBS REALITY" tvg-logo="" group-title="USA",USA: CBS REALITY
+407 https://webhop.live:443/live/juno123/juno123/10.ts
+408 #EXTINF:-1 tvg-id="bbc1.uk" tvg-name="UK: BBC 1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/BBC_One_logo.svg/1000px-BBC_One_logo.svg.png" group-title="UK| GENERAL",UK: BBC 1
+409 https://webhop.live:443/live/juno123/juno123/13.ts
+410 #EXTINF:-1 tvg-id="bbc2.uk" tvg-name="UK: BBC 2" tvg-logo="https://www.pngitem.com/pimgs/m/198-1985267_bbc-two-square-less-logo-bbc-2-logo.png" group-title="UK| GENERAL",UK: BBC 2
+411 https://webhop.live:443/live/juno123/juno123/14.ts
+412 #EXTINF:-1 tvg-id="itv1.uk" tvg-name="ITV" tvg-logo="http://starapk1.com/logo/rugby.png" group-title="SPORTS | RUGBY",ITV
+413 https://webhop.live:443/live/juno123/juno123/15.ts
+414 #EXTINF:-1 tvg-id="supersportcricket.za" tvg-name="DSTV: SUPER SPORTS CRICKET (FHD)." tvg-logo="https://www.lyngsat.com/logo/tv/ss/supersport-cricket-za.png" group-title="SPORTS | DSTV SUPER",DSTV: SUPER SPORTS CRICKET (FHD).
+415 https://webhop.live:443/live/juno123/juno123/24115.ts
+416 #EXTINF:-1 tvg-id="" tvg-name="DSTV: BIG BROTHER NINJA FHD" tvg-logo="ttps://www.brandessencenigeria.com/wp-content/uploads/2023/07/Big-Brother-Naija-All-Stars-Logo.jpg"" group-title="DSTV | ENTERTAINMENT (FHD)",DSTV: BIG BROTHER NINJA FHD
+417 https://webhop.live:443/live/juno123/juno123/167458.ts
+418 #EXTINF:-1 tvg-id="" tvg-name="DSTV: BIG BROTHER NINJA HD" tvg-logo="ttps://www.brandessencenigeria.com/wp-content/uploads/2023/07/Big-Brother-Naija-All-Stars-Logo.jpg"" group-title="DSTV | ENTERTAINMENT",DSTV: BIG BROTHER NINJA HD
+419 https://webhop.live:443/live/juno123/juno123/167459.ts
+420 #EXTINF:-1 tvg-id="" tvg-name="US: National Geographic" tvg-logo="" group-title="USA",US: National Geographic
+421 https://webhop.live:443/live/juno123/juno123/17.ts
+422 #EXTINF:-1 tvg-id="" tvg-name="UK: Cbeebies" tvg-logo="" group-title="KIDS",UK: Cbeebies
+423 https://webhop.live:443/live/juno123/juno123/26.ts
+424 #EXTINF:-1 tvg-id="mutv.uk" tvg-name="MUTV HD" tvg-logo="http://starapk1.com/logo/football.png" group-title="FOOTBALL",MUTV HD
+425 https://webhop.live:443/live/juno123/juno123/29.ts
+426 #EXTINF:-1 tvg-id="liverpoolfctv.uk" tvg-name="LIVERPOOL FC HD" tvg-logo="http://starapk1.com/logo/football.png" group-title="FOOTBALL",LIVERPOOL FC HD
+427 https://webhop.live:443/live/juno123/juno123/30.ts
+428 #EXTINF:-1 tvg-id="itv3.uk" tvg-name="UK: ITV 3 HD" tvg-logo="" group-title="UK| GENERAL",UK: ITV 3 HD
+429 https://webhop.live:443/live/juno123/juno123/31.ts
+430 #EXTINF:-1 tvg-id="itv4.uk" tvg-name="UK: ITV 4 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/ITV4_logo_2013.svg/1200px-ITV4_logo_2013.svg.png" group-title="UK| GENERAL",UK: ITV 4 HD
+431 https://webhop.live:443/live/juno123/juno123/32.ts
+432 #EXTINF:-1 tvg-id="gold.uk" tvg-name="UK: GOLD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Gold_2014.svg/1200px-Gold_2014.svg.png" group-title="UK| GENERAL",UK: GOLD
+433 https://webhop.live:443/live/juno123/juno123/33.ts
+434 #EXTINF:-1 tvg-id="" tvg-name="USA:  HISTORY  HD" tvg-logo="" group-title="USA",USA:  HISTORY  HD
+435 https://webhop.live:443/live/juno123/juno123/34.ts
+436 #EXTINF:-1 tvg-id="" tvg-name="USA: MTV  HD" tvg-logo="" group-title="USA",USA: MTV  HD
+437 https://webhop.live:443/live/juno123/juno123/35.ts
+438 #EXTINF:-1 tvg-id="" tvg-name="USA: TLC HD" tvg-logo="" group-title="USA",USA: TLC HD
+439 https://webhop.live:443/live/juno123/juno123/36.ts
+440 #EXTINF:-1 tvg-id="" tvg-name="USA: Nickelodeon" tvg-logo="" group-title="KIDS",USA: Nickelodeon
+441 https://webhop.live:443/live/juno123/juno123/37.ts
+442 #EXTINF:-1 tvg-id="" tvg-name="USA: NICK JR" tvg-logo="" group-title="KIDS",USA: NICK JR
+443 https://webhop.live:443/live/juno123/juno123/38.ts
+444 #EXTINF:-1 tvg-id="" tvg-name="PB: PTC CHAKDE" tvg-logo="https://i.ibb.co/25RJNyw/download-29.png" group-title="PUNJABI",PB: PTC CHAKDE
+445 https://webhop.live:443/live/juno123/juno123/39.ts
+446 #EXTINF:-1 tvg-id="" tvg-name="PB: PTC SIMRAN" tvg-logo="https://i.ibb.co/WsTHSsx/download-28.png" group-title="PUNJABI",PB: PTC SIMRAN
+447 https://webhop.live:443/live/juno123/juno123/40.ts
+448 #EXTINF:-1 tvg-id="" tvg-name="PB: PTC Punjabi Gold HD" tvg-logo="https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/jPeCo84h.png" group-title="PUNJABI",PB: PTC Punjabi Gold HD
+449 https://webhop.live:443/live/juno123/juno123/42.ts
+450 #EXTINF:-1 tvg-id="" tvg-name="PB: Balle Balle" tvg-logo="https://i.ibb.co/hHzhfwW/download-27.png" group-title="PUNJABI",PB: Balle Balle
+451 https://webhop.live:443/live/juno123/juno123/43.ts
+452 #EXTINF:-1 tvg-id="" tvg-name="USA: Discovery channel" tvg-logo="" group-title="USA",USA: Discovery channel
+453 https://webhop.live:443/live/juno123/juno123/44.ts
+454 #EXTINF:-1 tvg-id="" tvg-name="USA: Boomerang" tvg-logo="" group-title="KIDS",USA: Boomerang
+455 https://webhop.live:443/live/juno123/juno123/45.ts
+456 #EXTINF:-1 tvg-id="" tvg-name="UK: ZEE TV HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d0/Zee_TV-2018.png" group-title="UK| ASIAN",UK: ZEE TV HD
+457 https://webhop.live:443/live/juno123/juno123/46.ts
+458 #EXTINF:-1 tvg-id="" tvg-name="USA: USA Network" tvg-logo="" group-title="USA",USA: USA Network
+459 https://webhop.live:443/live/juno123/juno123/47.ts
+460 #EXTINF:-1 tvg-id="" tvg-name="USA: Showtime HD" tvg-logo="" group-title="USA",USA: Showtime HD
+461 https://webhop.live:443/live/juno123/juno123/48.ts
+462 #EXTINF:-1 tvg-id="" tvg-name="USA: DISNEY JR HD" tvg-logo="" group-title="KIDS",USA: DISNEY JR HD
+463 https://webhop.live:443/live/juno123/juno123/49.ts
+464 #EXTINF:-1 tvg-id="" tvg-name="USA: HBO  COMEDY" tvg-logo="" group-title="USA",USA: HBO  COMEDY
+465 https://webhop.live:443/live/juno123/juno123/50.ts
+466 #EXTINF:-1 tvg-id="4seven.uk" tvg-name="USA: CNN HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/CNN_International_HD.png" group-title="ENGLISH NEWS",USA: CNN HD
+467 https://webhop.live:443/live/juno123/juno123/710.ts
+468 #EXTINF:-1 tvg-id="4seven.uk" tvg-name="USA: Fox News" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Fox_News_Channel_logo.svg/768px-Fox_News_Channel_logo.svg.png" group-title="ENGLISH NEWS",USA: Fox News
+469 https://webhop.live:443/live/juno123/juno123/51.ts
+470 #EXTINF:-1 tvg-id="" tvg-name="US : CNBC HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CNBC_logo.svg/701px-CNBC_logo.svg.png" group-title="ENGLISH NEWS",US : CNBC HD
+471 https://webhop.live:443/live/juno123/juno123/1095.ts
+472 #EXTINF:-1 tvg-id="92news.uk" tvg-name="UK : BBC NEWS HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/2/24/BBC_News_HD_Logo.svg/1280px-BBC_News_HD_Logo.svg.png" group-title="ENGLISH NEWS",UK : BBC NEWS HD
+473 https://webhop.live:443/live/juno123/juno123/1059.ts
+474 #EXTINF:-1 tvg-id="" tvg-name="[MY] AL JAZEERA HD" tvg-logo="" group-title="ENGLISH NEWS",[MY] AL JAZEERA HD
+475 https://webhop.live:443/live/juno123/juno123/5666.ts
+476 #EXTINF:-1 tvg-id="4seven.uk" tvg-name="|CA| CNN | HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/CNN_International_HD.png" group-title="ENGLISH NEWS",|CA| CNN | HD
+477 https://webhop.live:443/live/juno123/juno123/1486.ts
+478 #EXTINF:-1 tvg-id="skynews.uk" tvg-name="UK : SKY NEWS" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b4/Sky-news-logo.png" group-title="ENGLISH NEWS",UK : SKY NEWS
+479 https://webhop.live:443/live/juno123/juno123/1060.ts
+480 #EXTINF:-1 tvg-id="" tvg-name="[MY] DW NEWS HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8e/DW_%28TV%29_Logo_2012.png" group-title="ENGLISH NEWS",[MY] DW NEWS HD
+481 https://webhop.live:443/live/juno123/juno123/5715.ts
+482 #EXTINF:-1 tvg-id="" tvg-name="| TR | TRT WORLD ᴴᴰ" tvg-logo="" group-title="ENGLISH NEWS",| TR | TRT WORLD ᴴᴰ
+483 https://webhop.live:443/live/juno123/juno123/5175.ts
+484 #EXTINF:-1 tvg-id="" tvg-name="USA: ESPN 1" tvg-logo="" group-title="USA",USA: ESPN 1
+485 https://webhop.live:443/live/juno123/juno123/52.ts
+486 #EXTINF:-1 tvg-id="" tvg-name="USA: ESPN 2 HD" tvg-logo="" group-title="USA",USA: ESPN 2 HD
+487 https://webhop.live:443/live/juno123/juno123/53.ts
+488 #EXTINF:-1 tvg-id="" tvg-name="USA: Fox Sport 1 HD (FS1)" tvg-logo="" group-title="USA",USA: Fox Sport 1 HD (FS1)
+489 https://webhop.live:443/live/juno123/juno123/54.ts
+490 #EXTINF:-1 tvg-id="" tvg-name="USA: Fox Sport 2 HD (FS2)" tvg-logo="" group-title="USA",USA: Fox Sport 2 HD (FS2)
+491 https://webhop.live:443/live/juno123/juno123/55.ts
+492 #EXTINF:-1 tvg-id="" tvg-name="USA: NBC GOLF HD" tvg-logo="https://i.ibb.co/QKzqNG8/golf-wallpaper-preview.png" group-title="SPORTS | GOLF",USA: NBC GOLF HD
+493 https://webhop.live:443/live/juno123/juno123/56.ts
+494 #EXTINF:-1 tvg-id="" tvg-name="PB: Gurdwara Dukh Nivaran (BC)" tvg-logo="https://i.ibb.co/PCdzBy6/download-22.png" group-title="PUNJABI",PB: Gurdwara Dukh Nivaran (BC)
+495 https://webhop.live:443/live/juno123/juno123/83.ts
+496 #EXTINF:-1 tvg-id="" tvg-name="PB: Dukh Niwaran Ludhiana" tvg-logo="https://i.ibb.co/PCdzBy6/download-22.png" group-title="PUNJABI",PB: Dukh Niwaran Ludhiana
+497 https://webhop.live:443/live/juno123/juno123/84.ts
+498 #EXTINF:-1 tvg-id="" tvg-name="PB: Vision Punjab TV" tvg-logo="https://i.ibb.co/r53gPGB/download-2-1.png" group-title="PUNJABI",PB: Vision Punjab TV
+499 https://webhop.live:443/live/juno123/juno123/85.ts
+500 #EXTINF:-1 tvg-id="" tvg-name="PB: Vision Punjab Gurbani" tvg-logo="https://i.ibb.co/r53gPGB/download-2-1.png" group-title="PUNJABI",PB: Vision Punjab Gurbani
+501 https://webhop.live:443/live/juno123/juno123/87.ts
+502 #EXTINF:-1 tvg-id="" tvg-name="PB: MH ONE " tvg-logo="https://i.ibb.co/yqPb5Vk/download-26.png" group-title="PUNJABI",PB: MH ONE 
+503 https://webhop.live:443/live/juno123/juno123/88.ts
