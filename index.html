@@ -1436,5 +1436,24 @@
         });
     </script>
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "68a40879f6b244629841d4be7aec5e0f"}'></script><!-- End Cloudflare Web Analytics -->
+    <script>
+(function () {
+    const smartLink = "https://www.effectivegatecpm.com/ausxb7pr?key=26be3cdf2d6a4bb4aee58a75afd9e94e";
+    const cooldown = 60 * 1000; // 1 minute
+    const storageKey = "lastSmartLinkClick";
+
+    document.addEventListener("click", function (e) {
+        const lastClick = localStorage.getItem(storageKey);
+        const now = Date.now();
+
+        if (!lastClick || now - lastClick > cooldown) {
+            localStorage.setItem(storageKey, now);
+            window.location.href = smartLink;
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    }, true);
+})();
+    </script>
 </body>
 </html>
