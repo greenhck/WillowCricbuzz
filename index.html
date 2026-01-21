@@ -188,6 +188,16 @@
         #shaka-video-player, #hls-video-player {
             background-color: #000; /* Black background for video */
         }
+        /* Custom Context Menu */
+        #context-menu button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        /* Download Modal */
+        #download-modal-content {
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        }
     </style>
     <script src="https://pl28530128.effectivegatecpm.com/51/c0/02/51c002fa63f44c7f96b2e905e1d0c837.js"></script>
 </head>
@@ -360,9 +370,28 @@
     </div>
     <!-- Removed Footer -->
 
+    <!-- Download Ruby Player Modal -->
+    <div id="download-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-[1002] flex items-center justify-center p-4 transition-opacity duration-300">
+        <div id="download-modal-content" class="bg-gray-800 rounded-xl p-6 w-full max-w-sm shadow-2xl border-t-4 border-red-500 transform scale-95 opacity-0 transition-all duration-300">
+            <h3 class="text-xl font-bold mb-3 text-red-400">Ruby Player Not Found</h3>
+            <p class="text-gray-300 mb-6 text-sm">To play this channel, you need the Ruby Player app. Please download it to continue.</p>
+            <a href="https://t.me/RubyplayerBr/22" target="_blank" id="download-link-btn" class="w-full text-center bg-red-600 hover:bg-red-700 text-white font-semibold py-2.5 rounded-lg transition duration-200 block">Download Now</a>
+            <button id="download-modal-close-btn" class="w-full mt-3 text-center bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 rounded-lg transition duration-200">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Custom Context Menu -->
+    <div id="context-menu" class="hidden fixed bg-gray-800 border border-gray-700 rounded-md shadow-lg z-[1001] text-white text-sm">
+        <button id="context-play-ruby" class="w-full text-left px-4 py-2 hover:bg-gray-700 flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Play in Ruby Player
+        </button>
+    </div>
+
 <script>
         // --- सर्च के लिए जोड़ा गया Global Variable ---
         let masterChannelList = []; 
+        let contextChannel = null;
         // ----------------------------------------
 
         const contentDisplay = document.getElementById('content-display');
@@ -403,6 +432,11 @@
         const playNStreamBtn = document.getElementById('play-n-stream-btn');
         const recentStreamsList = document.getElementById('recent-streams-list');
         const clearRecentStreamsBtn = document.getElementById('clear-recent-streams-btn');
+        const contextMenu = document.getElementById('context-menu');
+        const contextPlayRubyBtn = document.getElementById('context-play-ruby');
+        const downloadModal = document.getElementById('download-modal');
+        const downloadModalContent = document.getElementById('download-modal-content');
+        const downloadModalCloseBtn = document.getElementById('download-modal-close-btn');
 
         // GitHub Raw JSON URLs 
         const tabDataUrls = {
@@ -1001,6 +1035,47 @@
                     playChannel(channel);
                     updateChannelShareableUrl(channel.name);
                 });
+
+                let pressTimer;
+
+                const showContextMenu = (x, y, channel) => {
+                    contextChannel = channel;
+                    contextMenu.style.left = `${x}px`;
+                    contextMenu.style.top = `${y}px`;
+                    contextMenu.classList.remove('hidden');
+
+                    const hideMenu = () => {
+                        contextMenu.classList.add('hidden');
+                        document.removeEventListener('click', hideMenu);
+                        document.removeEventListener('contextmenu', hideMenu);
+                    };
+
+                    setTimeout(() => { 
+                        document.addEventListener('click', hideMenu);
+                        document.addEventListener('contextmenu', hideMenu);
+                    }, 50);
+                };
+
+                channelCard.addEventListener('contextmenu', (e) => {
+                    e.preventDefault();
+                    showContextMenu(e.clientX, e.clientY, channel);
+                });
+
+                channelCard.addEventListener('touchstart', (e) => {
+                    pressTimer = window.setTimeout(() => {
+                        e.preventDefault();
+                        const touch = e.touches[0];
+                        showContextMenu(touch.clientX, touch.clientY, channel);
+                    }, 500); // 500ms for long press
+                }, { passive: true });
+
+                channelCard.addEventListener('touchend', () => {
+                    clearTimeout(pressTimer);
+                });
+
+                channelCard.addEventListener('touchmove', () => {
+                    clearTimeout(pressTimer);
+                });
                 contentDisplay.appendChild(channelCard);
             });
         }
@@ -1014,6 +1089,16 @@
                 nStreamPlayerSection.classList.remove('hidden');
                 nStreamPlayerSection.classList.add('flex');
                 contentDisplay.classList.add('hidden'); // Hide grid when N-Stream is active
+
+                // Clear input fields when switching to the N-Stream tab
+                streamUrlInput.value = '';
+                clearkeyIdInput.value = '';
+                clearkeyKeyInput.value = '';
+                drmLicenseUrlInput.value = '';
+                streamTypeSelect.value = 'HLS'; // Reset to default
+                drmControls.classList.add('hidden');
+                drmControls.classList.remove('flex');
+
                 loadRecentStreams();
                 
                 tabButtons.forEach(btn => {
@@ -1231,27 +1316,92 @@
 
                 button.innerHTML = `
                     <span class="font-semibold text-blue-300">${type} Stream</span>
-                    <span class="text-xs text-gray-400 recent-stream-url" title="${streamUrl}">${streamUrl}</span>
+                    <span class="text-xs text-gray-400 recent-stream-url" title="${streamUrl}">${streamUrl.split('/')[2] || streamUrl}</span>
                 `;
 
                 button.addEventListener('click', () => {
-                    streamUrlInput.value = streamUrl;
-                    streamTypeSelect.value = type;
-                    clearkeyIdInput.value = keyId;
-                    clearkeyKeyInput.value = key;
-                    drmLicenseUrlInput.value = licenseUrl;
-
-                    const changeEvent = new Event('change');
-                    streamTypeSelect.dispatchEvent(changeEvent);
-
-                    playNStreamBtn.click();
+                    const channelConfig = {
+                        name: `N Stream: ${type}`,
+                        mpd: stream.mpd,
+                        m3u8: stream.m3u8,
+                        clearkey: stream.clearkey,
+                        drm: stream.drm,
+                        thumbnail: stream.thumbnail || ''
+                    };
+                    playChannel(channelConfig);
+                    updateNStreamShareableUrl(channelConfig);
                 });
 
                 recentStreamsList.appendChild(button);
             });
         }
         
+        function toggleDownloadModal(show) {
+            if (show) {
+                downloadModal.classList.remove('hidden');
+                setTimeout(() => {
+                    downloadModal.classList.add('opacity-100');
+                    downloadModalContent.classList.add('scale-100', 'opacity-100');
+                    downloadModalContent.classList.remove('scale-95', 'opacity-0');
+                }, 10);
+            } else {
+                downloadModal.classList.remove('opacity-100');
+                downloadModalContent.classList.remove('scale-100', 'opacity-100');
+                downloadModalContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    downloadModal.classList.add('hidden');
+                }, 300); 
+            }
+        }
+
+        function playInRubyPlayer(channel) {
+            const shareableChannel = {
+                name: channel.name,
+                url: channel.mpd || channel.m3u8,
+                userAgent: channel.customUserAgent,
+                licenseUrl: channel.drm ? channel.drm.licenseUrl : null,
+                keyId: channel.clearkey ? channel.clearkey.keyId : null,
+                key: channel.clearkey ? channel.clearkey.key : null,
+                logo: channel.logo || channel.thumbnail
+            };
+
+            try {
+                const jsonString = JSON.stringify(shareableChannel);
+                const base64Data = btoa(jsonString);
+                const deepLinkUrl = `rubyplayer://play?data=${base64Data}`;
+                console.log(`Attempting to open Ruby Player with URL: ${deepLinkUrl}`);
+                
+                // Attempt to launch the app
+                window.location.href = deepLinkUrl;
+
+                // Fallback for when the app is not installed
+                const appLaunchTimeout = setTimeout(() => {
+                    // If the page is still visible after 2.5 seconds, the app likely didn't open.
+                    if (document.visibilityState === 'visible') {
+                        toggleDownloadModal(true);
+                    }
+                }, 2500);
+            } catch (error) {
+                console.error("Error creating Ruby Player deep link:", error);
+                showMessageBox("Error", "Could not generate the link for Ruby Player.");
+            }
+        }
+
         // --- Event Listeners and Initialization ---
+
+        downloadModalCloseBtn.addEventListener('click', () => toggleDownloadModal(false));
+        downloadModal.addEventListener('click', (e) => {
+            if (e.target === downloadModal) {
+                toggleDownloadModal(false);
+            }
+        });
+
+        contextPlayRubyBtn.addEventListener('click', () => {
+            if (contextChannel) {
+                playInRubyPlayer(contextChannel);
+            }
+            contextMenu.classList.add('hidden');
+        });
 
         tabButtons.forEach(button => {
             button.addEventListener('click', (event) => {
