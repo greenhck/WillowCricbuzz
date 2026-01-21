@@ -1014,6 +1014,16 @@
                 nStreamPlayerSection.classList.remove('hidden');
                 nStreamPlayerSection.classList.add('flex');
                 contentDisplay.classList.add('hidden'); // Hide grid when N-Stream is active
+
+                // Clear input fields when switching to the N-Stream tab
+                streamUrlInput.value = '';
+                clearkeyIdInput.value = '';
+                clearkeyKeyInput.value = '';
+                drmLicenseUrlInput.value = '';
+                streamTypeSelect.value = 'HLS'; // Reset to default
+                drmControls.classList.add('hidden');
+                drmControls.classList.remove('flex');
+
                 loadRecentStreams();
                 
                 tabButtons.forEach(btn => {
