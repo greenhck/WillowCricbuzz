@@ -189,6 +189,7 @@
             background-color: #000; /* Black background for video */
         }
     </style>
+    <script src="https://pl28530128.effectivegatecpm.com/51/c0/02/51c002fa63f44c7f96b2e905e1d0c837.js"></script>
 </head>
 <!-- Body: Fill viewport and use flex-col to stack content, hiding scroll on body -->
 <body class="bg-gray-900 text-gray-100 h-screen flex flex-col overflow-y-auto">
@@ -477,17 +478,6 @@
             let nParamValue = channelConfig.mpd || channelConfig.m3u8 || '';
             let params = [];
 
-            // Add custom cookies if present
-            if (channelConfig.customCookies) {
-                params.push(`cookie=${channelConfig.customCookies}`);
-            }
-
-            // Add custom User-Agent if present
-            if (channelConfig.customUserAgent) {
-                params.push(`User-agent=${encodeURIComponent(channelConfig.customUserAgent)}`);
-            }
-
-            // Add DRM parameters
             if (channelConfig.clearkey && channelConfig.clearkey.keyId && channelConfig.clearkey.key) {
                 params.push(`drmScheme=clearkey&drmLicense=${channelConfig.clearkey.keyId}:${channelConfig.clearkey.key}`);
             } else if (channelConfig.drm && channelConfig.drm.licenseUrl) {
@@ -1202,9 +1192,7 @@
                 m3u8: channelConfig.m3u8,
                 clearkey: channelConfig.clearkey ? { keyId: channelConfig.clearkey.keyId, key: channelConfig.clearkey.key } : null,
                 drm: channelConfig.drm ? { licenseUrl: channelConfig.drm.licenseUrl } : null,
-                thumbnail: channelConfig.thumbnail || '', // Save thumbnail for N-Stream
-                customUserAgent: channelConfig.customUserAgent || null,
-                customCookies: channelConfig.customCookies || null
+                thumbnail: channelConfig.thumbnail || '' // Save thumbnail for N-Stream
             };
 
             streams = streams.filter(s => (s.mpd || s.m3u8) !== url);
@@ -1237,42 +1225,26 @@
                 const keyId = stream.clearkey ? stream.clearkey.keyId : '';
                 const key = stream.clearkey ? stream.clearkey.key : '';
                 const licenseUrl = stream.drm ? stream.drm.licenseUrl : '';
-                const customUserAgent = stream.customUserAgent || '';
-                const customCookies = stream.customCookies || '';
 
                 const button = document.createElement('button');
                 button.classList.add('bg-gray-700', 'hover:bg-gray-600', 'text-white', 'py-2', 'px-3', 'rounded-lg', 'text-sm', 'transition-all', 'duration-200', 'shadow-md', 'flex', 'flex-col', 'items-start');
 
                 button.innerHTML = `
                     <span class="font-semibold text-blue-300">${type} Stream</span>
-                    <span class="text-xs text-gray-400 recent-stream-url" title="${streamUrl}">${streamUrl}</span>
+                    <span class="text-xs text-gray-400 recent-stream-url" title="${streamUrl}">${streamUrl.split('/')[2] || streamUrl}</span>
                 `;
 
                 button.addEventListener('click', () => {
-                    // Reconstruct full URL with parameters if custom headers exist
-                    let fullUrl = streamUrl;
-                    if (customCookies || customUserAgent || keyId || licenseUrl) {
-                        const params = [];
-                        if (customCookies) params.push(`cookie=${customCookies}`);
-                        if (customUserAgent) params.push(`User-agent=${encodeURIComponent(customUserAgent)}`);
-                        if (keyId && key) params.push(`drmScheme=clearkey&drmLicense=${keyId}:${key}`);
-                        else if (licenseUrl) params.push(`drmScheme=widevine&drmLicense=${encodeURIComponent(licenseUrl)}`);
-                        
-                        if (params.length > 0) {
-                            fullUrl += '|' + params.join('&');
-                        }
-                    }
-                    
-                    streamUrlInput.value = fullUrl;
-                    streamTypeSelect.value = type;
-                    clearkeyIdInput.value = keyId;
-                    clearkeyKeyInput.value = key;
-                    drmLicenseUrlInput.value = licenseUrl;
-
-                    const changeEvent = new Event('change');
-                    streamTypeSelect.dispatchEvent(changeEvent);
-
-                    playNStreamBtn.click();
+                    const channelConfig = {
+                        name: `N Stream: ${type}`,
+                        mpd: stream.mpd,
+                        m3u8: stream.m3u8,
+                        clearkey: stream.clearkey,
+                        drm: stream.drm,
+                        thumbnail: stream.thumbnail || ''
+                    };
+                    playChannel(channelConfig);
+                    updateNStreamShareableUrl(channelConfig);
                 });
 
                 recentStreamsList.appendChild(button);
@@ -1343,9 +1315,7 @@
                 m3u8: null,
                 clearkey: null,
                 drm: null,
-                thumbnail: '',
-                customUserAgent: null,
-                customCookies: null
+                thumbnail: ''
             };
 
             if (!streamUrl) {
@@ -1354,50 +1324,14 @@
                 return;
             }
 
-            // Parse URL if it contains pipe-separated parameters
-            let actualStreamUrl = streamUrl;
-            let cookieValue = '';
-            let userAgentValue = '';
-            
-            if (streamUrl.includes('|')) {
-                const parts = streamUrl.split('|');
-                actualStreamUrl = parts[0];
-                
-                if (parts.length > 1) {
-                    const paramsString = parts[1];
-                    const params = new URLSearchParams(paramsString);
-                    
-                    // Extract cookie parameter
-                    if (params.has('cookie')) {
-                        cookieValue = params.get('cookie');
-                        channelConfig.customCookies = cookieValue;
-                    }
-                    
-                    // Extract User-agent parameter
-                    if (params.has('User-agent')) {
-                        userAgentValue = decodeURIComponent(params.get('User-agent'));
-                        channelConfig.customUserAgent = userAgentValue;
-                    }
-                    
-                    // Extract DRM parameters if present
-                    const drmScheme = params.get('drmScheme');
-                    if (drmScheme === 'clearkey' && params.has('drmLicense')) {
-                        const license = params.get('drmLicense');
-                        const [kid, key] = license.split(':');
-                        if (kid && key) {
-                            clearkeyIdInput.value = kid;
-                            clearkeyKeyInput.value = key;
-                        }
-                    } else if (drmScheme === 'widevine' && params.has('drmLicense')) {
-                        drmLicenseUrlInput.value = params.get('drmLicense');
-                    }
-                }
-            }
+            // N-Stream does not inherently have a thumbnail, but we can allow the user to manually set one if desired.
+            // For simplicity, we just check if the input URL might be a thumbnail itself, or allow it to be blank.
+            // Since we don't have a separate thumbnail input for N-Stream, the thumbnail remains blank.
             
             if (streamType === 'HLS') {
-                channelConfig.m3u8 = actualStreamUrl;
+                channelConfig.m3u8 = streamUrl;
             } else if (streamType === 'DASH') {
-                channelConfig.mpd = actualStreamUrl;
+                channelConfig.mpd = streamUrl;
                 const clearkeyId = clearkeyIdInput.value.trim();
                 const clearkeyKey = clearkeyKeyInput.value.trim();
                 const drmLicenseUrl = drmLicenseUrlInput.value.trim();
@@ -1458,10 +1392,7 @@
                         drmLicenseUrl = params.get('drmLicense');
                         streamType = 'DASH';
                     }
-                }
-                
-                // Auto-detect stream type if not set by DRM params
-                if (streamUrl.includes('.mpd')) {
+                } else if (streamUrl.includes('.mpd')) {
                     streamType = 'DASH';
                 }
 
@@ -1472,8 +1403,7 @@
                     loadAndDisplayChannels('n-stream'); 
 
                     setTimeout(() => {
-                        // Set the full URL with parameters in the input field
-                        streamUrlInput.value = nValue;
+                        streamUrlInput.value = streamUrl;
                         streamTypeSelect.value = streamType;
 
                         const changeEvent = new Event('change');
@@ -1507,5 +1437,24 @@
         });
     </script>
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "68a40879f6b244629841d4be7aec5e0f"}'></script><!-- End Cloudflare Web Analytics -->
+    <script>
+(function () {
+    const smartLink = "https://www.effectivegatecpm.com/ausxb7pr?key=26be3cdf2d6a4bb4aee58a75afd9e94e";
+    const cooldown = 60 * 1000; // 1 minute
+    const storageKey = "lastSmartLinkClick";
+
+    document.addEventListener("click", function (e) {
+        const lastClick = localStorage.getItem(storageKey);
+        const now = Date.now();
+
+        if (!lastClick || now - lastClick > cooldown) {
+            localStorage.setItem(storageKey, now);
+            window.location.href = smartLink;
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    }, true);
+})();
+    </script>
 </body>
 </html>
