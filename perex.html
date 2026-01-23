@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Xtream Codes Stream Browser</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- HLS.js -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<style>
+:root {
+  --bg: #0e1117;
+  --card: #161b22;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #1f6feb;
+  --border: #30363d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+header {
+  padding: 16px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+input, button, select {
+  background: #0d1117;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+button {
+  background: var(--accent);
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 12px;
+  padding: 12px;
+}
+
+#list {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.item {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item:hover {
+  background: #1c2128;
+}
+
+.item span {
+  font-size: 14px;
+}
+
+.actions button {
+  margin-left: 6px;
+}
+
+#playerBox {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+video {
+  width: 100%;
+  background: black;
+  border-radius: 6px;
+}
+
+small {
+  color: var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Xtream Codes Stream Browser</h1>
+  <form id="loginForm">
+    <input id="server" placeholder="http://host:port" required>
+    <input id="user" placeholder="Username" required>
+    <input id="pass" placeholder="Password" required type="password">
+    <select id="type">
+      <option value="live">Live TV</option>
+      <option value="vod">Movies</option>
+      <option value="series">Series</option>
+    </select>
+    <button type="submit">Load</button>
+  </form>
+</header>
+
+<main>
+  <div id="list"></div>
+
+  <div id="playerBox">
+    <video id="video" controls></video>
+    <small>Playback is optional. Right-click or use Copy for stream URLs.</small>
+  </div>
+</main>
+
+<script>
+let creds = {};
+
+document.getElementById('loginForm').onsubmit = async (e) => {
+  e.preventDefault();
+  creds = {
+    server: server.value.replace(/\/$/, ''),
+    user: user.value,
+    pass: pass.value
+  };
+  loadList(type.value);
+};
+
+async function api(params) {
+  const url = `${creds.server}/player_api.php?username=${creds.user}&password=${creds.pass}&${params}`;
+  return fetch(url).then(r => r.json());
+}
+
+async function loadList(kind) {
+  const list = document.getElementById('list');
+  list.innerHTML = 'Loading...';
+
+  let data;
+  if (kind === 'live') data = await api('action=get_live_streams');
+  if (kind === 'vod') data = await api('action=get_vod_streams');
+  if (kind === 'series') data = await api('action=get_series');
+
+  list.innerHTML = '';
+  data.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'item';
+
+    const name = document.createElement('span');
+    name.textContent = item.name;
+
+    const actions = document.createElement('div');
+    actions.className = 'actions';
+
+    const url = buildURL(kind, item.stream_id || item.series_id);
+
+    const copy = document.createElement('button');
+    copy.textContent = 'Copy';
+    copy.onclick = () => navigator.clipboard.writeText(url);
+
+    const play = document.createElement('button');
+    play.textContent = 'Play';
+    play.onclick = () => playStream(url);
+
+    actions.append(copy, play);
+    div.append(name, actions);
+    div.oncontextmenu = () => navigator.clipboard.writeText(url);
+
+    list.appendChild(div);
+  });
+}
+
+function buildURL(type, id) {
+  if (type === 'live') {
+    return `${creds.server}/live/${creds.user}/${creds.pass}/${id}.ts`;
+  }
+  return `${creds.server}/movie/${creds.user}/${creds.pass}/${id}.m3u8`;
+}
+
+function playStream(url) {
+  const video = document.getElementById('video');
+  if (Hls.isSupported() && url.endsWith('.m3u8')) {
+    const hls = new Hls();
+    hls.loadSource(url);
+    hls.attachMedia(video);
+  } else {
+    video.src = url;
+  }
+  video.play();
+}
+</script>
+
+</body>
+</html>
