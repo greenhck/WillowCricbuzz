@@ -195,37 +195,8 @@ fetch("https://perelive.pages.dev/999.json")
       // Ruby Player
       if (RUBY_ENABLED) {
         rubyBtn.onclick = () => {
-          console.log("Ruby Player button clicked");
-          console.log("URL:", s.url);
-          
-          // Try multiple approaches
-          const approaches = [
-            // Approach 1: Direct intent (current)
-            "intent:" + s.url + "#Intent;action=android.intent.action.VIEW;type=video/*;package=com.niet.rubyplayer;end",
-            
-            // Approach 2: Without type
-            "intent:" + s.url + "#Intent;action=android.intent.action.VIEW;package=com.niet.rubyplayer;end",
-            
-            // Approach 3: Custom scheme
-            "rubyplayer://play?data=" + encodeURIComponent(s.url),
-            
-            // Approach 4: HTTPS fallback
-            "https://rubyplayer.pages.dev/play?data=" + encodeURIComponent(s.url)
-          ];
-          
-          // Try approach 1 first
-          const intentUrl = approaches[0];
-          console.log("Trying intent URL:", intentUrl);
-          
-          // Add fallback mechanism
-          setTimeout(() => {
-            if (confirm("Ruby Player not opening? Try alternative method?")) {
-              console.log("Trying approach 3:", approaches[2]);
-              window.location.href = approaches[2];
-            }
-          }, 2000);
-          
-          window.location.href = intentUrl;
+          const rubyUrl = "rubyplayer://play?data=" + encodeURIComponent(s.url);
+          window.location.href = rubyUrl;
         };
       } else {
         rubyBtn.style.display = "none";
