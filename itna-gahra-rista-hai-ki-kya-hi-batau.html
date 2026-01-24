@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Live Streams</title>
+<title>Live Streams - Ruby Fix</title>
 
 <style>
 :root {
@@ -40,28 +40,12 @@ h1 {
 }
 
 @keyframes fadeUp {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  to { transform: translateY(0); opacity: 1; }
 }
 
-.channel {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.meta {
-  font-size: 12px;
-  color: #cfd8ff;
-  margin: 6px 0 10px;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
+.channel { font-size: 16px; font-weight: 600; }
+.meta { font-size: 12px; color: #cfd8ff; margin: 6px 0 10px; }
+.buttons { display: flex; flex-wrap: wrap; gap: 8px; }
 
 button {
   flex: 1;
@@ -72,10 +56,7 @@ button {
   font-size: 14px;
   color: #fff;
   cursor: pointer;
-  transition: transform 0.2s;
 }
-
-button:active { transform: scale(0.96); }
 
 .ns { background: linear-gradient(135deg, #ff512f, #dd2476); }
 .playify { background: linear-gradient(135deg, #4facfe, #00f2fe); }
@@ -93,15 +74,12 @@ button:active { transform: scale(0.96); }
   border-radius: 20px;
   font-size: 14px;
   opacity: 0;
+  transition: opacity 0.3s;
   pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 9999;
 }
-
 .toast.show { opacity: 1; }
 </style>
 </head>
-
 <body>
 
 <h1 id="eventTitle">Live Match</h1>
@@ -109,25 +87,20 @@ button:active { transform: scale(0.96); }
 <div class="toast" id="toast"></div>
 
 <script>
-// ================== TOGGLES ==================
 const NS_ENABLED = true;
 const PLAYIFY_ENABLED = true;
 const RUBY_ENABLED = true;
-// =============================================
 
 const toast = document.getElementById("toast");
-
 function showToast(text) {
   toast.textContent = text;
   toast.classList.add("show");
   setTimeout(() => toast.classList.remove("show"), 2600);
 }
 
-// GitHub JSON Fetching
 fetch("https://raw.githubusercontent.com/greenhck/WillowCricbuzz/refs/heads/main/999.json")
   .then(res => res.json())
   .then(data => {
-
     document.getElementById("eventTitle").innerText = data.event.title;
     const list = document.getElementById("list");
 
@@ -135,7 +108,6 @@ fetch("https://raw.githubusercontent.com/greenhck/WillowCricbuzz/refs/heads/main
       const card = document.createElement("div");
       card.className = "card";
       card.style.animationDelay = (i * 0.05) + "s";
-
       card.innerHTML = `
         <div class="channel">${s.channel}</div>
         <div class="meta">${s.language} • ${s.quality} • ${s.format}</div>
@@ -152,47 +124,38 @@ fetch("https://raw.githubusercontent.com/greenhck/WillowCricbuzz/refs/heads/main
       const rubyBtn = card.querySelector(".ruby");
       const copyBtn = card.querySelector(".copy");
 
+      if (!NS_ENABLED) nsBtn.style.display = "none";
+      if (!PLAYIFY_ENABLED) playifyBtn.style.display = "none";
+      if (!RUBY_ENABLED) rubyBtn.style.display = "none";
+
       // NS Player
-      if (NS_ENABLED) {
-        nsBtn.onclick = () => {
-          window.location.href = "intent:" + s.url + "#Intent;action=android.intent.action.VIEW;type=video/*;package=com.genuine.leone;end";
-        };
-      } else { nsBtn.style.display = "none"; }
+      nsBtn.onclick = () => {
+        window.location.href = "intent:" + s.url + "#Intent;action=android.intent.action.VIEW;type=video/*;package=com.genuine.leone;end";
+      };
 
       // PlayiFy
-      if (PLAYIFY_ENABLED) {
-        playifyBtn.onclick = () => {
-          window.location.href = "intent:" + s.url + "#Intent;action=android.intent.action.VIEW;type=video/*;package=com.appnix.playify;end";
-        };
-      } else { playifyBtn.style.display = "none"; }
+      playifyBtn.onclick = () => {
+        window.location.href = "intent:" + s.url + "#Intent;action=android.intent.action.VIEW;type=video/*;package=com.appnix.playify;end";
+      };
 
-      // ✅ Ruby Player (Updated with your working logic)
-      if (RUBY_ENABLED) {
-        rubyBtn.onclick = () => {
-          const isPlaylist = false; 
-          const schemeHost = isPlaylist ? "playlist" : "play";
-          const dataParam = encodeURIComponent(s.url);
+      // ✅ Ruby Player - Perfect Working Logic (No Playlist)
+      rubyBtn.onclick = () => {
+        const dataParam = encodeURIComponent(s.url);
+        // Using "play" host as requested for all links
+        const intentUrl = "intent://play?data=" + dataParam + "#Intent;scheme=rubyplayer;package=com.niet.rubyplayer;end";
+        window.location.href = intentUrl;
+      };
 
-          const intentUrl = "intent://" + schemeHost + "?data=" + dataParam + "#Intent;scheme=rubyplayer;package=com.niet.rubyplayer;end";
-          
-          window.location.href = intentUrl;
-        };
-      } else { rubyBtn.style.display = "none"; }
-
-      // Copy URL
+      // Copy
       copyBtn.onclick = () => {
         navigator.clipboard.writeText(s.url);
-        showToast("Stream URL copied");
+        showToast("URL Copied!");
       };
 
       list.appendChild(card);
     });
   })
-  .catch(err => {
-      console.error(err);
-      document.getElementById("list").innerHTML = "<p style='text-align:center;'>Error loading streams. Check your internet or JSON link.</p>";
-  });
+  .catch(err => console.error("Fetch Error:", err));
 </script>
-
 </body>
 </html>
