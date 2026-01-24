@@ -136,7 +136,7 @@ function showToast(text) {
   setTimeout(() => toast.classList.remove("show"), 2600);
 }
 
-fetch("https://pasteking.u0k.workers.dev/3qsxt.json")
+fetch("https://perelive.pages.dev/999.json")
   .then(res => res.json())
   .then(data => {
 
@@ -192,7 +192,7 @@ fetch("https://pasteking.u0k.workers.dev/3qsxt.json")
         playifyBtn.style.display = "none";
       }
 
-      // ✅ Ruby Player (FIXED - Removed S.title to prevent Play Store redirect)
+      // ✅ Ruby Player (FIXED S.title was problem
       if (RUBY_ENABLED) {
         rubyBtn.onclick = () => {
           const intentUrl =
