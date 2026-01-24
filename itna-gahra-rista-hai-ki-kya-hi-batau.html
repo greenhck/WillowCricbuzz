@@ -72,29 +72,15 @@ button {
   font-size: 14px;
   color: #fff;
   cursor: pointer;
+  transition: transform 0.2s;
 }
 
 button:active { transform: scale(0.96); }
 
-.ns {
-  background: linear-gradient(135deg, #ff512f, #dd2476);
-}
-
-.playify {
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-}
-
-.ruby {
-  background: linear-gradient(135deg, #f7971e, #ffd200);
-  color: #000;
-  font-weight: 600;
-}
-
-.copy {
-  background: linear-gradient(135deg, #43e97b, #38f9d7);
-  color: #000;
-  font-weight: 600;
-}
+.ns { background: linear-gradient(135deg, #ff512f, #dd2476); }
+.playify { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.ruby { background: linear-gradient(135deg, #f7971e, #ffd200); color: #000; font-weight: 600; }
+.copy { background: linear-gradient(135deg, #43e97b, #38f9d7); color: #000; font-weight: 600; }
 
 .toast {
   position: fixed;
@@ -109,6 +95,7 @@ button:active { transform: scale(0.96); }
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  z-index: 9999;
 }
 
 .toast.show { opacity: 1; }
@@ -136,6 +123,7 @@ function showToast(text) {
   setTimeout(() => toast.classList.remove("show"), 2600);
 }
 
+// GitHub JSON Fetching
 fetch("https://raw.githubusercontent.com/greenhck/WillowCricbuzz/refs/heads/main/999.json")
   .then(res => res.json())
   .then(data => {
@@ -167,48 +155,29 @@ fetch("https://raw.githubusercontent.com/greenhck/WillowCricbuzz/refs/heads/main
       // NS Player
       if (NS_ENABLED) {
         nsBtn.onclick = () => {
-          window.location.href =
-            "intent:" + s.url +
-            "#Intent;action=android.intent.action.VIEW;" +
-            "type=video/*;" +
-            "package=com.genuine.leone;" +
-            "end";
+          window.location.href = "intent:" + s.url + "#Intent;action=android.intent.action.VIEW;type=video/*;package=com.genuine.leone;end";
         };
-      } else {
-        nsBtn.style.display = "none";
-      }
+      } else { nsBtn.style.display = "none"; }
 
       // PlayiFy
       if (PLAYIFY_ENABLED) {
         playifyBtn.onclick = () => {
-          window.location.href =
-            "intent:" + s.url +
-            "#Intent;action=android.intent.action.VIEW;" +
-            "type=video/*;" +
-            "package=com.appnix.playify;" +
-            "end";
+          window.location.href = "intent:" + s.url + "#Intent;action=android.intent.action.VIEW;type=video/*;package=com.appnix.playify;end";
         };
-      } else {
-        playifyBtn.style.display = "none";
-      }
+      } else { playifyBtn.style.display = "none"; }
 
-      // ✅ Ruby Player (FIXED & WORKING)
+      // ✅ Ruby Player (Updated with your working logic)
       if (RUBY_ENABLED) {
         rubyBtn.onclick = () => {
-          const intentUrl =
-            "intent:" + s.url +
-            "#Intent;" +
-            "action=android.intent.action.VIEW;" +
-            "type=video/*;" +
-            "package=com.niet.rubyplayer;" +
-            "S.title=" + encodeURIComponent(s.channel) + ";" +
-            "end";
+          const isPlaylist = false; 
+          const schemeHost = isPlaylist ? "playlist" : "play";
+          const dataParam = encodeURIComponent(s.url);
 
+          const intentUrl = "intent://" + schemeHost + "?data=" + dataParam + "#Intent;scheme=rubyplayer;package=com.niet.rubyplayer;end";
+          
           window.location.href = intentUrl;
         };
-      } else {
-        rubyBtn.style.display = "none";
-      }
+      } else { rubyBtn.style.display = "none"; }
 
       // Copy URL
       copyBtn.onclick = () => {
@@ -219,7 +188,10 @@ fetch("https://raw.githubusercontent.com/greenhck/WillowCricbuzz/refs/heads/main
       list.appendChild(card);
     });
   })
-  .catch(err => console.error(err));
+  .catch(err => {
+      console.error(err);
+      document.getElementById("list").innerHTML = "<p style='text-align:center;'>Error loading streams. Check your internet or JSON link.</p>";
+  });
 </script>
 
 </body>
