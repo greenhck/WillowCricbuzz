@@ -1,0 +1,50 @@
+{
+  "event": {
+    "title": "India vs New Zealand T20I Live",
+    "short_title": "IND vs NZ | T20I",
+    "sport": "Cricket",
+    "match_type": "T20I"
+  },
+  "streams": [
+    {
+      "channel": "India vs New Zealand T20I",
+      "provider": "Kliv",
+      "language": "English",
+      "quality": "HD",
+      "format": "HLS",
+      "url": "https://c2ag.short.gy/n/english.m3u8?|&User-agent=null"
+    },
+    {
+      "channel": "India vs New Zealand T20I",
+      "provider": "Kliv",
+      "language": "Hindi",
+      "quality": "HD",
+      "format": "HLS",
+      "url": "https://c2ag.short.gy/n/hin.m3u8?|&User-agent=null"
+    },
+    {
+      "channel": "India vs New Zealand T20I",
+      "provider": "Kliv",
+      "language": "Tamil",
+      "quality": "HD",
+      "format": "HLS",
+      "url": "https://c2ag.short.gy/n/tamil.m3u8?|&User-agent=null"
+    },
+    {
+      "channel": "India vs New Zealand T20I",
+      "provider": "Kliv",
+      "language": "Telugu",
+      "quality": "HD",
+      "format": "HLS",
+      "url": "https://c2ag.short.gy/n/telugu.m3u8?|&User-agent=null"
+    },
+    {
+      "channel": "India vs New Zealand T20I",
+      "provider": "Kliv",
+      "language": "Kannada",
+      "quality": "HD",
+      "format": "HLS",
+      "url": "https://c2ag.short.gy/n/kan.m3u8?|&User-agent=null"
+    }
+  ]
+}
