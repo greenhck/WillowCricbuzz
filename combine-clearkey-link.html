@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MPD ClearKey Converter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: #e5e7eb;
+        margin: 0;
+        padding: 20px;
+    }
+    .box {
+        max-width: 600px;
+        margin: auto;
+        background: #020617;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,.4);
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    input, textarea, button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        border: none;
+        font-size: 14px;
+    }
+    input, textarea {
+        background: #020617;
+        color: #e5e7eb;
+        border: 1px solid #334155;
+    }
+    button {
+        background: #2563eb;
+        color: #fff;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    button:hover {
+        background: #1d4ed8;
+    }
+    textarea {
+        resize: none;
+        height: 80px;
+    }
+
+    /* Popup */
+    .popup {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+    }
+    .popup-content {
+        background: #020617;
+        padding: 25px;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 300px;
+    }
+    .popup a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 15px;
+        background: #22c55e;
+        color: #000;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+    .close-btn {
+        margin-top: 10px;
+        background: #ef4444;
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+
+<!-- Telegram Popup -->
+<div class="popup" id="tgPopup">
+    <div class="popup-content">
+        <h3>Join Telegram Channel</h3>
+        <p>@chatstadium</p>
+        <a href="https://t.me/chatstadium" target="_blank">Join Now</a>
+        <button class="close-btn" onclick="closePopup()">Continue</button>
+    </div>
+</div>
+
+<div class="box">
+    <h2>MPD ➜ ClearKey Converter</h2>
+
+    <input id="mpd" type="text" placeholder="Enter MPD URL">
+
+    <input id="key" type="text" placeholder="Enter Key (KEY_ID:KEY)">
+
+    <button onclick="convert()">Convert</button>
+
+    <textarea id="output" placeholder="Converted link will appear here" readonly></textarea>
+
+    <button onclick="copyLink()">Copy Link</button>
+</div>
+
+<script>
+function closePopup() {
+    document.getElementById("tgPopup").style.display = "none";
+}
+
+function convert() {
+    const mpd = document.getElementById("mpd").value.trim();
+    const key = document.getElementById("key").value.trim();
+
+    if (!mpd || !key) {
+        alert("Please enter MPD URL and Key");
+        return;
+    }
+
+    const finalLink = mpd + "|drmScheme=clearkey&drmLicense=" + key;
+    document.getElementById("output").value = finalLink;
+}
+
+function copyLink() {
+    const out = document.getElementById("output");
+    if (!out.value) {
+        alert("Nothing to copy");
+        return;
+    }
+    out.select();
+    out.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("Link copied!");
+}
+</script>
+
+</body>
+</html>
