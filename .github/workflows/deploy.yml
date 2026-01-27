@@ -1,0 +1,29 @@
+name: Deploy with Encryption Key
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Inject Secrets
+        run: |
+          # Replace __ENCRYPTION_KEY__ placeholder with actual secret
+          sed -i "s|__ENCRYPTION_KEY__|${{ secrets.ENCRYPTION_KEY }}|g" perelive.html
+          # Replace __BRdogAESnnn__ placeholder with actual M3U URL
+          sed -i "s|'brdog': '__BRdogAESnnn__',|'brdog': '${{ secrets.BRdogAESnnn }}',|g" perelive.html
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
