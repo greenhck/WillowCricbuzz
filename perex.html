@@ -1186,8 +1186,11 @@
             
             const dataUrl = tabDataUrls[tabName];
             
+            console.log(`Loading tab: ${tabName}, URL: ${dataUrl}`);
+            
             // Check if dataUrl is null or still a placeholder
             if (!dataUrl || dataUrl === '__BRdogAESnnn__') {
+                console.error(`Data source not configured for ${tabName}`);
                 contentDisplay.innerHTML = `
                     <div class="flex flex-col items-center justify-center p-8 col-span-full">
                         <i class="fas fa-exclamation-triangle text-5xl text-yellow-500 mb-4"></i>
