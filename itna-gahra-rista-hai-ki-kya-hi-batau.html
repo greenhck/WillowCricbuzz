@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Streams</title>
+
+<style>
+:root {
+  --bg: #0b0f1a;
+  --card: rgba(255,255,255,0.08);
+  --blur: blur(14px);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0b0f1a, #090c14);
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding: 16px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.card {
+  background: var(--card);
+  backdrop-filter: var(--blur);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 14px;
+  animation: fadeUp 0.5s ease forwards;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.channel {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.meta {
+  font-size: 12px;
+  color: #cfd8ff;
+  margin: 6px 0 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:active { transform: scale(0.96); }
+
+.ns {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+.playify {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.ruby {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  color: #000;
+  font-weight: 600;
+}
+
+.copy {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #000;
+  font-weight: 600;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.toast.show { opacity: 1; }
+</style>
+</head>
+
+<body>
+
+<h1 id="eventTitle">Live Match</h1>
+<div id="list"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+// ================== TOGGLES ==================
+const NS_ENABLED = true;
+const PLAYIFY_ENABLED = true;
+const RUBY_ENABLED = true;
+// =============================================
+
+const toast = document.getElementById("toast");
+
+function showToast(text) {
+  toast.textContent = text;
+  toast.classList.add("show");
+  setTimeout(() => toast.classList.remove("show"), 2600);
+}
+
+fetch("https://perelive.pages.dev/999.json")
+  .then(res => res.json())
+  .then(data => {
+
+    document.getElementById("eventTitle").innerText = data.event.title;
+    const list = document.getElementById("list");
+
+    data.streams.forEach((s, i) => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.style.animationDelay = (i * 0.05) + "s";
+
+      card.innerHTML = `
+        <div class="channel">${s.channel}</div>
+        <div class="meta">${s.language} • ${s.quality} • ${s.format}</div>
+        <div class="buttons">
+          <button class="ns">NS Player</button>
+          <button class="playify">PlayiFy</button>
+          <button class="ruby">Ruby Player</button>
+          <button class="copy">Copy URL</button>
+        </div>
+      `;
+
+      const nsBtn = card.querySelector(".ns");
+      const playifyBtn = card.querySelector(".playify");
+      const rubyBtn = card.querySelector(".ruby");
+      const copyBtn = card.querySelector(".copy");
+
+      // NS Player
+      if (NS_ENABLED) {
+        nsBtn.onclick = () => {
+          window.location.href =
+            "intent:" + s.url +
+            "#Intent;action=android.intent.action.VIEW;" +
+            "type=video/*;" +
+            "package=com.genuine.leone;" +
+            "end";
+        };
+      } else {
+        nsBtn.style.display = "none";
+      }
+
+      // PlayiFy
+      if (PLAYIFY_ENABLED) {
+        playifyBtn.onclick = () => {
+          window.location.href =
+            "intent:" + s.url +
+            "#Intent;action=android.intent.action.VIEW;" +
+            "type=video/*;" +
+            "package=com.appnix.playify;" +
+            "end";
+        };
+      } else {
+        playifyBtn.style.display = "none";
+      }
+
+      // Ruby Player
+      if (RUBY_ENABLED) {
+        rubyBtn.onclick = () => {
+          const rubyUrl = "rubyplayer://play?data=" + encodeURIComponent(s.url);
+          window.location.href = rubyUrl;
+        };
+      } else {
+        rubyBtn.style.display = "none";
+      }
+
+      // Copy URL
+      copyBtn.onclick = () => {
+        navigator.clipboard.writeText(s.url);
+        showToast("Stream URL copied");
+      };
+
+      list.appendChild(card);
+    });
+  })
+  .catch(err => console.error(err));
+</script>
+
+</body>
+</html>
