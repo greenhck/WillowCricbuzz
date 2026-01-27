@@ -19,7 +19,7 @@ jobs:
           # Replace __ENCRYPTION_KEY__ placeholder with actual secret
           sed -i "s|__ENCRYPTION_KEY__|${{ secrets.ENCRYPTION_KEY }}|g" perelive.html
           # Replace __BRdogAESnnn__ placeholder with actual M3U URL
-          sed -i "s|'brdog': '__BRdogAESnnn__',|'brdog': '${{ secrets.BRdogAESnnn }}',|g" perelive.html
+          sed -i "s|'brdog': '__BRDOGAESNNN__',|'brdog': '${{ secrets.BRDOGAESNNN }}',|g" perelive.html
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
