@@ -311,6 +311,7 @@
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="fancode">Fancode</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="zee-network">Zee Network</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="pirates-tv">Pirates TV</button>
+                    <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="brdog">BRdog</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="jio-tv">Jio TV</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="pere-sports">Pere Sports</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="sony-network">Sony Network</button>
@@ -453,6 +454,7 @@
             'zee-network': 'https://raw.githubusercontent.com/greenhck/batball/main/zee.json',
             'fancode': 'https://raw.githubusercontent.com/Odfinity/live-events/refs/heads/main/fancode/data.json',
             'pirates-tv': 'https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u',
+            'brdog': typeof __BRdogAESnnn__ !== 'undefined' ? __BRdogAESnnn__ : null,
             'jio-tv': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/jd.m3u',
             'pere-sports': 'https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/ALL.m3u',
             'sony-network': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/sports-pere.m3u',
@@ -1183,6 +1185,18 @@
             `;
             
             const dataUrl = tabDataUrls[tabName];
+            
+            if (!dataUrl) {
+                contentDisplay.innerHTML = `
+                    <div class="flex flex-col items-center justify-center p-8 col-span-full">
+                        <i class="fas fa-exclamation-triangle text-5xl text-yellow-500 mb-4"></i>
+                        <p class="text-center text-gray-300 font-semibold text-lg">Data source not configured</p>
+                        <p class="text-center text-gray-400 text-sm mt-2">Please configure the data source for this tab.</p>
+                    </div>
+                `;
+                return;
+            }
+            
             let channelsToDisplay = [];
             
             try {
