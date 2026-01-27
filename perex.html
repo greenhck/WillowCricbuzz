@@ -161,9 +161,14 @@
         .shaka-player-container {
             position: relative;
         }
-        /* High Z-index for quality selector */
-        #quality-selector {
+        /* HLS Quality Selector */
+        #hls-quality-selector {
             z-index: 500 !important;
+            transition: opacity 0.3s ease;
+        }
+        #hls-quality-selector.hidden {
+            opacity: 0;
+            pointer-events: none;
         }
         /* Custom CSS for policy modal animation */
         #policy-modal-content {
@@ -282,14 +287,16 @@
 
                 <!-- Player Containers (The video element will show the poster/thumbnail if available) -->
                 <div data-shaka-player-container id="shaka-container-wrapper" class="shaka-player-container w-full h-full relative hidden z-20">
-                    <!-- Quality Selector fixed to the top right of the player -->
-                    <select id="quality-selector" class="absolute top-2 right-2 z-300 bg-gray-700 text-white py-1 px-3 rounded-md text-xs font-semibold hidden cursor-pointer shadow-lg hover:bg-gray-600 transition duration-150">
-                        <option value="auto">Auto</option>
-                    </select>
                     <video autoplay data-shaka-player id="shaka-video-player" class="w-full h-full object-contain"></video>
                 </div>
 
-                <video id="hls-video-player" class="w-full h-full object-contain hidden z-20" controls></video>
+                <div id="hls-container-wrapper" class="w-full h-full relative hidden z-20">
+                    <!-- Quality Selector for HLS (hidden when controls are hidden) -->
+                    <select id="hls-quality-selector" class="absolute top-2 right-2 z-300 bg-gray-700 text-white py-1 px-3 rounded-md text-xs font-semibold hidden cursor-pointer shadow-lg hover:bg-gray-600 transition duration-150">
+                        <option value="-1">Auto</option>
+                    </select>
+                    <video id="hls-video-player" class="w-full h-full object-contain" controls></video>
+                </div>
             </div>
         </div>
 
@@ -402,8 +409,9 @@
         const defaultBanner = document.getElementById('default-banner');
         const shakaContainerWrapper = document.getElementById('shaka-container-wrapper'); 
         const shakaVideoElement = document.getElementById('shaka-video-player');
+        const hlsContainerWrapper = document.getElementById('hls-container-wrapper');
         const hlsVideoElement = document.getElementById('hls-video-player');
-        const qualitySelector = document.getElementById('quality-selector');
+        const hlsQualitySelector = document.getElementById('hls-quality-selector');
         
         // Policy Modal Elements
         const showPolicyBtn = document.getElementById('show-policy-btn');
@@ -568,7 +576,7 @@
         
         // --- Player Core Functions ---
         function setPlayerUIVisibility(isStreamPlaying) {
-            const isVideoPlayerVisible = shakaContainerWrapper.classList.contains('hidden') === false || hlsVideoElement.classList.contains('hidden') === false;
+            const isVideoPlayerVisible = shakaContainerWrapper.classList.contains('hidden') === false || hlsContainerWrapper.classList.contains('hidden') === false;
             
             if (isStreamPlaying) {
                 // If stream is playing, hide the banner completely
@@ -582,7 +590,7 @@
 
                 if (!hasPoster) {
                     shakaContainerWrapper.classList.add('hidden');
-                    hlsVideoElement.classList.add('hidden');
+                    hlsContainerWrapper.classList.add('hidden');
                     
                     defaultBanner.classList.remove('hidden');
                     setTimeout(() => defaultBanner.classList.remove('opacity-0'), 10);
@@ -621,8 +629,8 @@
             hlsVideoElement.removeAttribute('src');
             hlsVideoElement.load(); 
             
-            qualitySelector.innerHTML = '<option value="auto">Auto</option>';
-            qualitySelector.classList.add('hidden');
+            hlsQualitySelector.innerHTML = '<option value="-1">Auto</option>';
+            hlsQualitySelector.classList.add('hidden');
             
             shakaErrorCount = 0;
             lastShakaErrorTime = 0;
@@ -721,8 +729,8 @@
             hlsVideoElement.pause();
             hlsVideoElement.removeAttribute('src');
 
-            qualitySelector.innerHTML = '<option value="auto">Auto</option>';
-            qualitySelector.classList.add('hidden');
+            hlsQualitySelector.innerHTML = '<option value="-1">Auto</option>';
+            hlsQualitySelector.classList.add('hidden');
         }
 
         function handlePlaybackLogic(video, isShaka, channelName = null) {
@@ -809,7 +817,7 @@
             // If we have a poster, ensure the banner is hidden and the video container is visible
             if (thumbnailUrl) {
                 shakaContainerWrapper.classList.remove('hidden');
-                hlsVideoElement.classList.add('hidden'); // Shaka container holds shaka player, which is fine for poster
+                hlsContainerWrapper.classList.add('hidden'); // Shaka container holds shaka player, which is fine for poster
                 defaultBanner.classList.add('hidden');
             } else {
                 // If no poster, ensure banner is visible and players are hidden (resetPlayers handles visibility)
@@ -833,7 +841,7 @@
 
                 if (channel.m3u8) {
                     shakaContainerWrapper.classList.add('hidden'); 
-                    hlsVideoElement.classList.remove('hidden');  
+                    hlsContainerWrapper.classList.remove('hidden');
 
                     if (Hls.isSupported()) {
                         hlsPlayer = new Hls({
@@ -849,6 +857,7 @@
                         hlsPlayer.attachMedia(hlsVideoElement);
                         hlsPlayer.on(Hls.Events.MANIFEST_PARSED, function() {
                             handlePlaybackLogic(hlsVideoElement, false, channel.name);
+                            setupHlsQualitySelector();
                         });
                         hlsPlayer.on(Hls.Events.ERROR, handleHlsError);
                         
@@ -862,7 +871,7 @@
                 }
                 else if (channel.mpd) {
                     shakaContainerWrapper.classList.remove('hidden'); 
-                    hlsVideoElement.classList.add('hidden');      
+                    hlsContainerWrapper.classList.add('hidden');      
 
                     if (!shakaPlayerInstance) {
                         passiveStopPlayer("Shaka Player त्रुटि", "Shaka Player इंस्टेंस तैयार नहीं है।");
@@ -904,7 +913,6 @@
 
                     await shakaPlayerInstance.load(channel.mpd);
                     handlePlaybackLogic(shakaVideoElement, true, channel.name);
-                    setupShakaQualitySelector(); 
                 } else {
                     passiveStopPlayer("URL त्रुटि", "इस चैनल के लिए कोई मान्य स्ट्रीम URL (MPD या M3U8/Generic) नहीं मिला।");
                 }
@@ -1245,44 +1253,56 @@
             }
         }
         
-        // --- Quality Selector Logic (Identical to previous version) ---
-        function setupShakaQualitySelector() {
-            if (!shakaPlayerInstance) return;
+        // --- HLS Quality Selector Logic ---
+        function setupHlsQualitySelector() {
+            if (!hlsPlayer) return;
 
-            const tracks = shakaPlayerInstance.getVariantTracks();
-            qualitySelector.innerHTML = '<option value="auto">स्वचालित</option>';
+            const levels = hlsPlayer.levels;
+            hlsQualitySelector.innerHTML = '<option value="-1">Auto</option>';
 
-            const videoTracks = tracks.filter(t => t.type === 'variant' && t.height > 0).sort((a, b) => b.bandwidth - a.bandwidth);
-
-            videoTracks.forEach(track => {
-                const option = document.createElement('option');
-                option.value = track.id;
-                option.textContent = `${track.height}p (${Math.round(track.bandwidth / 1000)} Kbps)`;
-                qualitySelector.appendChild(option);
-            });
-
-            if (videoTracks.length > 1) {
-                qualitySelector.classList.remove('hidden');
+            if (levels && levels.length > 1) {
+                levels.forEach((level, index) => {
+                    const option = document.createElement('option');
+                    option.value = index;
+                    option.textContent = `${level.height}p`;
+                    hlsQualitySelector.appendChild(option);
+                });
+                hlsQualitySelector.classList.remove('hidden');
             } else {
-                qualitySelector.classList.add('hidden');
+                hlsQualitySelector.classList.add('hidden');
             }
 
-            const activeTrack = shakaPlayerInstance.getVariantTracks().find(t => t.active);
-            qualitySelector.value = activeTrack ? activeTrack.id : 'auto';
+            hlsQualitySelector.value = hlsPlayer.currentLevel;
         }
 
-        qualitySelector.addEventListener('change', (e) => {
-            if (!shakaPlayerInstance) return;
-            const trackId = e.target.value;
-            if (trackId === 'auto') {
-                shakaPlayerInstance.configure({ abr: { enabled: true } });
-            } else {
-                shakaPlayerInstance.configure({ abr: { enabled: false } });
-                const track = shakaPlayerInstance.getVariantTracks().find(t => t.id == trackId);
-                if (track) {
-                    shakaPlayerInstance.selectVariantTrack(track, true);
-                }
+        // Hide quality selector when controls are hidden
+        hlsVideoElement.addEventListener('controlshidden', () => {
+            hlsQualitySelector.classList.add('hidden');
+        });
+
+        hlsVideoElement.addEventListener('controlsshown', () => {
+            if (hlsPlayer && hlsPlayer.levels && hlsPlayer.levels.length > 1) {
+                hlsQualitySelector.classList.remove('hidden');
             }
+        });
+
+        // Fallback: Monitor controls attribute changes
+        const hlsControlsObserver = new MutationObserver(() => {
+            if (hlsVideoElement.hasAttribute('controls')) {
+                if (hlsPlayer && hlsPlayer.levels && hlsPlayer.levels.length > 1) {
+                    hlsQualitySelector.classList.remove('hidden');
+                }
+            } else {
+                hlsQualitySelector.classList.add('hidden');
+            }
+        });
+
+        hlsControlsObserver.observe(hlsVideoElement, { attributes: true, attributeFilter: ['controls'] });
+
+        hlsQualitySelector.addEventListener('change', (e) => {
+            if (!hlsPlayer) return;
+            const levelIndex = parseInt(e.target.value);
+            hlsPlayer.currentLevel = levelIndex;
         });
 
         // --- Recent Streams Logic (Identical to previous version) ---
@@ -1409,11 +1429,26 @@
             try {
                 const jsonString = JSON.stringify(shareableChannel);
                 const base64Data = btoa(jsonString);
-                const deepLinkUrl = `rubyplayer://play?data=${base64Data}`;
-                console.log(`Attempting to open Ruby Player with URL: ${deepLinkUrl}`);
                 
-                // Attempt to launch the app
-                window.location.href = deepLinkUrl;
+                // Determine scheme host based on playlist or play
+                const isPlaylist = window.location.pathname.startsWith('/playlist');
+                const schemeHost = isPlaylist ? "playlist" : "play";
+                
+                // Create custom scheme URL (for iOS and some Android browsers)
+                const customSchemeUrl = `rubyplayer://${schemeHost}?data=${base64Data}`;
+                
+                // Create intent URL (for Android)
+                const intentUrl = `intent://${schemeHost}?data=${base64Data}#Intent;scheme=rubyplayer;package=com.niet.rubyplayer;end`;
+                
+                console.log(`Attempting to open Ruby Player with URL: ${customSchemeUrl}`);
+                
+                // Try intent URL first (Android)
+                if (/Android/i.test(navigator.userAgent)) {
+                    window.location.href = intentUrl;
+                } else {
+                    // For iOS and other platforms, use custom scheme
+                    window.location.href = customSchemeUrl;
+                }
 
                 // Fallback for when the app is not installed
                 const appLaunchTimeout = setTimeout(() => {
