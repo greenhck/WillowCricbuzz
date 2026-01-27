@@ -454,7 +454,7 @@
             'zee-network': 'https://raw.githubusercontent.com/greenhck/batball/main/zee.json',
             'fancode': 'https://raw.githubusercontent.com/Odfinity/live-events/refs/heads/main/fancode/data.json',
             'pirates-tv': 'https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u',
-            'brdog': typeof __BRDOGAESNNN__ !== 'undefined' ? __BRDOGAESNNN__ : null,
+            'brdog': '__BRdogAESnnn__',
             'jio-tv': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/jd.m3u',
             'pere-sports': 'https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/ALL.m3u',
             'sony-network': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/sports-pere.m3u',
@@ -1186,12 +1186,13 @@
             
             const dataUrl = tabDataUrls[tabName];
             
-            if (!dataUrl) {
+            // Check if dataUrl is null or still a placeholder
+            if (!dataUrl || dataUrl === '__BRdogAESnnn__') {
                 contentDisplay.innerHTML = `
                     <div class="flex flex-col items-center justify-center p-8 col-span-full">
                         <i class="fas fa-exclamation-triangle text-5xl text-yellow-500 mb-4"></i>
                         <p class="text-center text-gray-300 font-semibold text-lg">Data source not configured</p>
-                        <p class="text-center text-gray-400 text-sm mt-2">Please configure the data source for this tab.</p>
+                        <p class="text-center text-gray-400 text-sm mt-2">Please configure the data source for this tab in GitHub Secrets.</p>
                     </div>
                 `;
                 return;
