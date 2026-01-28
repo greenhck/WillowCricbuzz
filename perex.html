@@ -454,7 +454,7 @@
             'zee-network': 'https://raw.githubusercontent.com/greenhck/batball/main/zee.json',
             'fancode': 'https://raw.githubusercontent.com/Odfinity/live-events/refs/heads/main/fancode/data.json',
             'pirates-tv': 'https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u',
-            'brdog': '__BRdogAESnnn__',
+            'brdog': 'https://allinonereborn.xyz/playlist/filextv223.m3u',
             'jio-tv': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/jd.m3u',
             'pere-sports': 'https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/ALL.m3u',
             'sony-network': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/sports-pere.m3u',
@@ -501,7 +501,7 @@
         // --- URL Management ---
         // --- Encryption/Decryption Functions ---
         // Encryption key will be injected from GitHub Secrets during build/deployment
-        const ENCRYPTION_KEY = typeof __ENCRYPTION_KEY__ !== 'undefined' ? __ENCRYPTION_KEY__ : 'default-fallback-key-change-me';
+        const ENCRYPTION_KEY = typeof githubisbest999 !== 'undefined' ? githubisbest999 : 'default-fallback-key-change-me';
         
         function encryptData(data) {
             try {
@@ -1187,10 +1187,9 @@
             const dataUrl = tabDataUrls[tabName];
             
             console.log(`Loading tab: ${tabName}, URL: ${dataUrl}`);
-            console.log(`URL type: ${typeof dataUrl}, Is placeholder: ${dataUrl === '__BRdogAESnnn__'}, Is falsy: ${!dataUrl}`);
             
             // Check if dataUrl is null or still a placeholder
-            if (!dataUrl || dataUrl === '__BRdogAESnnn__') {
+            if (!dataUrl || dataUrl === 'https://allinonereborn.xyz/playlist/filextv223.m3u') {
                 console.error(`Data source not configured for ${tabName}`);
                 contentDisplay.innerHTML = `
                     <div class="flex flex-col items-center justify-center p-8 col-span-full">
