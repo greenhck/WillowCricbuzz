@@ -1,0 +1,42 @@
+name: 10Min BR-Sports Sync
+
+on:
+  schedule:
+    - cron: '*/10 * * * *' # हर 10 मिनट में
+  workflow_dispatch: # मैन्युअल चलाने के लिए बटन
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # परमिशन देना ज़रूरी है ताकि फाइल पुश हो सके
+    permissions:
+      contents: write
+      
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Execute Script
+        env:
+          BRSPORTS1: ${{ secrets.BRSPORTS1 }}
+          BRSPORTS2: ${{ secrets.BRSPORTS2 }}
+          BRSPORTS3: ${{ secrets.BRSPORTS3 }}
+          BRSPORTS4: ${{ secrets.BRSPORTS4 }}
+          # भविष्य में BRSPORTS5 यहाँ जोड़ें
+        run: python multi_fetch.py
+
+      - name: Commit and Push M3U
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add "telegramgroup-chatstadium-ke-maalik-ne-banaya-hai-blackrootAP-pass-is-in99.m3u"
+          git commit -m "Auto-update Sports M3U: $(date)" || exit 0
+          git push
