@@ -1,16 +1,12 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Gurugram Thunders vs Maharashtra Tycoons - 29 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022318/DAI14ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769738826~acl=/*~id=85996492777742719650822305962606~hmac=70aa66d412e4f69897625bfcd7e99f11fd8042075f5782525856580dd0920bcf
+https://sonydaimenew.akamaized.net/hls/live/2022318/DAI14ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769750359~acl=/*~id=77723086561818809529223001788686~hmac=5fa340fb322fd8e71342dbc4cfc90680df2f8960eee389bfaf53345c316db75d
 #EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Gurugram Thunders vs Maharashtra Tycoons - 29 Jan 2026 [HIN]
-https://sonydaimenew.akamaized.net/hls/live/2094588/DAI37ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769738826~acl=/*~id=85996492777742719650822305962606~hmac=70aa66d412e4f69897625bfcd7e99f11fd8042075f5782525856580dd0920bcf
+https://sonydaimenew.akamaized.net/hls/live/2094588/DAI37ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769750359~acl=/*~id=77723086561818809529223001788686~hmac=5fa340fb322fd8e71342dbc4cfc90680df2f8960eee389bfaf53345c316db75d
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Punjab Royals vs Delhi Dangal Warriors - 29 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022320/DAI16ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769738826~acl=/*~id=85996492777742719650822305962606~hmac=70aa66d412e4f69897625bfcd7e99f11fd8042075f5782525856580dd0920bcf
+https://sonydaimenew.akamaized.net/hls/live/2022320/DAI16ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769750359~acl=/*~id=77723086561818809529223001788686~hmac=5fa340fb322fd8e71342dbc4cfc90680df2f8960eee389bfaf53345c316db75d
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Punjab Royals vs Delhi Dangal Warriors - 29 Jan 2026 [HIN]
-https://sonydaimenew.akamaized.net/hls/live/2037139/DAI19ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769738826~acl=/*~id=85996492777742719650822305962606~hmac=70aa66d412e4f69897625bfcd7e99f11fd8042075f5782525856580dd0920bcf
-#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Chennai Super Champs vs Mumbai Pickleball Power - 29 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022319/DAI15ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769738826~acl=/*~id=85996492777742719650822305962606~hmac=70aa66d412e4f69897625bfcd7e99f11fd8042075f5782525856580dd0920bcf
-#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Pune United vs Hyderabad Super Stars - 29 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022319/DAI15ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769738826~acl=/*~id=85996492777742719650822305962606~hmac=70aa66d412e4f69897625bfcd7e99f11fd8042075f5782525856580dd0920bcf
+https://sonydaimenew.akamaized.net/hls/live/2037139/DAI19ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769750359~acl=/*~id=77723086561818809529223001788686~hmac=5fa340fb322fd8e71342dbc4cfc90680df2f8960eee389bfaf53345c316db75d
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1769771643~acl=%2f*~id=bb4a3be3abb37884e02a5733a8920ed7~data=hdntl~hmac=7e31846d99f49f77d8e648a967180210e60c7f412f90508951c7fd6c5b7d8d41&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -115,6 +111,8 @@ https://in-mc-fdlive.fancode.com/mumbai/139767_english_hls_8a982f4b4a96687_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/139597_english_hls_685ece0dd495473_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(1)_1769529100515.png" group-title="Fancode",Day 2 - Centre Court vs Madrid, Spain (Hexagon Cup 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140164_english_hls_318f4d02a767737_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-.png" group-title="Fancode",Main Feed - Day 1 vs Torrey Pines Golf Course  (Farmers Insurance Open 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140021_english_hls_9d2ae0e2065301_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|KANNADA
 #EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
 https://c2ag.short.gy/n/kan.m3u8
