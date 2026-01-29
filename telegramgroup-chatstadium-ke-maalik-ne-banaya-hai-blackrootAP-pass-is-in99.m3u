@@ -107,16 +107,34 @@ https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd4
 https://in-mc-fdlive.fancode.com/mumbai/140079_english_hls_b6c33f621a31054_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Ireland-tour-of-UAE-old-match-card-.png" group-title="Fancode",Ireland vs United Arab Emirates (Ireland tour of United Arab Emirates, 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140132_english_hls_d21924d2cc77509_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Emirates_web_opt2.jpg" group-title="Fancode",Dubai vs Ajman (Emirates D10, 2026)
-https://in-mc-fdlive.fancode.com/mumbai/139596_english_hls_6f49ce3e2f58890_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/CWI-Women's-Super-50-Cup-2026_Old_match-card_2025_FC-WEB_2-(1).jpg" group-title="Fancode",Windward Islands Women vs Leeward Islands Women (CG United Women's Super 50 Cup 2026)
 https://in-mc-fdlive.fancode.com/mumbai/139768_english_hls_c41113cd342833_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/CWI-Women's-Super-50-Cup-2026_Old_match-card_2025_FC-WEB_1-(1).jpg" group-title="Fancode",Jamaica Women vs Barbados Women (CG United Women's Super 50 Cup 2026)
 https://in-mc-fdlive.fancode.com/mumbai/139767_english_hls_8a982f4b4a96687_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/CWI-Women's-Super-50-Cup-2026_Old_match-card_2025_FC-WEB_2-(1).jpg" group-title="Fancode",Guyana Women vs Trinidad and Tobago Women (CG United Women's Super 50 Cup 2026)
-https://in-mc-fdlive.fancode.com/mumbai/139766_english_hls_301a5bcd2231564_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Emirates_web_1769270071345.jpg" group-title="Fancode",Fujairah vs Emirates Red (Emirates D10, 2026)
+https://in-mc-fdlive.fancode.com/mumbai/139597_english_hls_685ece0dd495473_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(1)_1769529100515.png" group-title="Fancode",Day 2 - Centre Court vs Madrid, Spain (Hexagon Cup 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140164_english_hls_318f4d02a767737_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|KANNADA
+#EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
+https://c2ag.short.gy/n/kan.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|TELUGU
+#EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
+https://c2ag.short.gy/n/telugu.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|TAMIL
+#EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
+https://c2ag.short.gy/n/tamil.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|HINDI
+#EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
+https://c2ag.short.gy/n/hin.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|ENGLISH
+#EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
+https://c2ag.short.gy/n/english.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL",Hotstar|HINDI
+#EXTHTTP:{"Cookie":"","Origin":"https://allrounderlive.pages.dev","Referer":"https://allrounderlive.pages.dev","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
+https://dillzyserver.dillzycreations.workers.dev/live/hotstar.m3u8
+
+--------------== T20I ==------------------
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
