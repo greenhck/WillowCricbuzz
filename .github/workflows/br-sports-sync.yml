@@ -30,6 +30,8 @@ jobs:
           BRSPORTS2: ${{ secrets.BRSPORTS2 }}
           BRSPORTS3: ${{ secrets.BRSPORTS3 }}
           BRSPORTS4: ${{ secrets.BRSPORTS4 }}
+          BRSPORTS5: ${{ secrets.BRSPORTS5 }}
+          BRSPORTS6: ${{ secrets.BRSPORTS6 }}
           # भविष्य में BRSPORTS5 यहाँ जोड़ें
         run: python multi_fetch.py
 
