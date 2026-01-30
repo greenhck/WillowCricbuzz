@@ -91,10 +91,6 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1769793306~acl=%2f*~id=f011f97f76917ff001ba6a499d4d0eac~data=hdntl~hmac=1f99f829144cd5e16039e586ee4f1663646b7084c126191273ca4f0966c85a66&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1/140013_CASACARDS_APP.png" group-title="Fancode",Real Sociedad B vs Las Palmas (LALIGA Hypermotion 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/140013_english_hls_79d607d75795089_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(1)_1769529100515.png" group-title="Fancode",Day 3 - Centre Court vs Madrid, Spain (Hexagon Cup 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140166_english_hls_03a071c2e382439_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Main Feed - Day 2 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140026_english_hls_52b1513fd137556_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Featured Holes - Day 2 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
@@ -105,10 +101,6 @@ https://in-mc-fdlive.fancode.com/mumbai/140028_english_hls_c12538667399400_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140027_english_hls_e548bad07f82404_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",World Feed - Day 2 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140025_english_hls_8f0440044384792_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131049_5427_ESL_ALA_FC-Web.png" group-title="Fancode",RCD Espanyol vs Deportivo Alaves (LALIGA 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/131049_english_hls_ad38dd050340759_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/139345_5489_BRI_DER_FC-Web.jpg" group-title="Fancode",Bristol City F.C. vs Derby County Football Club (EFL Championship 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/139345_english_hls_287d9684b44367_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|KANNADA
 #EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
 https://c2ag.short.gy/n/kan.m3u8
