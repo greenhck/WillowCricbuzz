@@ -1,16 +1,10 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",1st T20I - 30 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2018457/DAI35-criclive/std_lrh-800300010.m3u8?hdnea=exp=1769834757~acl=/*~id=45757177372093095070259411011131~hmac=14530b42b4b4c4d0ed8aeece2509946f995e4e834e92504c15854b9888d7f3c4
+https://sonydaimenew.akamaized.net/hls/live/2018457/DAI35-criclive/std_lrh-800300010.m3u8?hdnea=exp=1769837796~acl=/*~id=22984625891178880971208224933218~hmac=a0fa1f2932f377d1029eeae544a81a30e5fc23c1e2b9edc4850cc3ba8c14ae40
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Haryana Thunders vs Punjab Royals - 30 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022320/DAI16ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769834757~acl=/*~id=45757177372093095070259411011131~hmac=14530b42b4b4c4d0ed8aeece2509946f995e4e834e92504c15854b9888d7f3c4
+https://sonydaimenew.akamaized.net/hls/live/2022320/DAI16ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769837796~acl=/*~id=22984625891178880971208224933218~hmac=a0fa1f2932f377d1029eeae544a81a30e5fc23c1e2b9edc4850cc3ba8c14ae40
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Haryana Thunders vs Punjab Royals - 30 Jan 2026 [HIN]
-https://sonydaimenew.akamaized.net/hls/live/2037139/DAI19ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769834757~acl=/*~id=45757177372093095070259411011131~hmac=14530b42b4b4c4d0ed8aeece2509946f995e4e834e92504c15854b9888d7f3c4
-#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Pune Panthers vs Rajasthan Lions - 30 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022318/DAI14ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769834757~acl=/*~id=45757177372093095070259411011131~hmac=14530b42b4b4c4d0ed8aeece2509946f995e4e834e92504c15854b9888d7f3c4
-#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Pune Panthers vs Rajasthan Lions - 30 Jan 2026 [HIN]
-https://sonydaimenew.akamaized.net/hls/live/2094588/DAI37ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769834757~acl=/*~id=45757177372093095070259411011131~hmac=14530b42b4b4c4d0ed8aeece2509946f995e4e834e92504c15854b9888d7f3c4
-#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Bengaluru Jawans vs Dilli Dillwale - 30 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022319/DAI15ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769834757~acl=/*~id=45757177372093095070259411011131~hmac=14530b42b4b4c4d0ed8aeece2509946f995e4e834e92504c15854b9888d7f3c4
+https://sonydaimenew.akamaized.net/hls/live/2037139/DAI19ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769837796~acl=/*~id=22984625891178880971208224933218~hmac=a0fa1f2932f377d1029eeae544a81a30e5fc23c1e2b9edc4850cc3ba8c14ae40
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1769793306~acl=%2f*~id=f011f97f76917ff001ba6a499d4d0eac~data=hdntl~hmac=1f99f829144cd5e16039e586ee4f1663646b7084c126191273ca4f0966c85a66&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -105,14 +99,18 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1769793306~acl=%2f*~id=f011f97f76917ff001ba6a499d4d0eac~data=hdntl~hmac=1f99f829144cd5e16039e586ee4f1663646b7084c126191273ca4f0966c85a66&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(4).png" group-title="Fancode",Sri Lanka vs England (England tour of Sri Lanka, 2026)
 https://sonypartnersdaimenew.akamaized.net/hls/live/2018457/DAI35ME-ENGVSSL/master.m3u8?hdnea=exp=1769823210~acl=/*~id=41243574289036387126957372911430~hmac=bf89a8a3a054bf245d1afa93ef86174c5115e176c7ddee5d175e2462b6242597
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140081_5928_PPT_RLS_FC-Web_1769654908421.jpg" group-title="Fancode",Pune Panthers vs Rajasthan Lions (World Legends Pro T20 League, 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140081_english_hls_4beb0dc9889432_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Emirates_web.jpg" group-title="Fancode",Abu Dhabi vs Dubai (Emirates D10, 2026)
-https://in-mc-fdlive.fancode.com/mumbai/139601_english_hls_9b220821a853642_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/139832_5655_ALK_ANF_FC-Web.jpg" group-title="Fancode",Al-Kholood Club vs Al-Nassr FC (Roshn Saudi League 2025-2026)
+https://in-mc-fdlive.fancode.com/mumbai/139832_english_hls_2235df2b4a59204_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(1)_1769529100515.png" group-title="Fancode",Day 3 - Centre Court vs Madrid, Spain (Hexagon Cup 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140166_english_hls_03a071c2e382439_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Main Feed - Day 2 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140026_english_hls_52b1513fd137556_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Featured Holes - Day 2 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140029_english_hls_6bcd3247e853583_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Featured Groups - Day 2 vs Torrey Pines Golf Course  (Farmers Insurance Open 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140028_english_hls_c12538667399400_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Emirates_web.jpg" group-title="Fancode",Abu Dhabi vs Dubai (Emirates D10, 2026)
+https://in-mc-fdlive.fancode.com/mumbai/139601_english_hls_9b220821a853642_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|KANNADA
 #EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
 https://c2ag.short.gy/n/kan.m3u8
