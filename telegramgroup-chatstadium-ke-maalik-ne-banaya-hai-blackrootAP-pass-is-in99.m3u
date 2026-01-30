@@ -1,22 +1,24 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Novak Djokovic vs Jannik Sinner - Semi-final - 30 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2005445/DAI06ME-AO/std_lrh-800300010.m3u8?hdnea=exp=1769816454~acl=/*~id=63048737818083639290464014358412~hmac=6558456ce3f515d8f881e48ed5d82e92ad34a833d2ecd860e6b32d69157f9d56
+https://sonydaimenew.akamaized.net/hls/live/2005445/DAI06ME-AO/std_lrh-800300010.m3u8?hdnea=exp=1769823155~acl=/*~id=83413415017572496781938878890497~hmac=861fa67f0b872742e73291c30e69ba37b33bcdc0f2c8b26fa970eef14dc45af6
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Novak Djokovic vs Jannik Sinner - Semi-final - 30 Jan 2026 [HIN]
-https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21ME-AO/std_lrh-800300010.m3u8?hdnea=exp=1769816454~acl=/*~id=63048737818083639290464014358412~hmac=6558456ce3f515d8f881e48ed5d82e92ad34a833d2ecd860e6b32d69157f9d56
+https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21ME-AO/std_lrh-800300010.m3u8?hdnea=exp=1769823155~acl=/*~id=83413415017572496781938878890497~hmac=861fa67f0b872742e73291c30e69ba37b33bcdc0f2c8b26fa970eef14dc45af6
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Novak Djokovic vs Jannik Sinner - Semi-final - 30 Jan 2026 [TAM]
-https://sonydaimenew.akamaized.net/hls/live/2037143/DAI23ME-AO/std_lrh-800300010.m3u8?hdnea=exp=1769816454~acl=/*~id=63048737818083639290464014358412~hmac=6558456ce3f515d8f881e48ed5d82e92ad34a833d2ecd860e6b32d69157f9d56
+https://sonydaimenew.akamaized.net/hls/live/2037143/DAI23ME-AO/std_lrh-800300010.m3u8?hdnea=exp=1769823155~acl=/*~id=83413415017572496781938878890497~hmac=861fa67f0b872742e73291c30e69ba37b33bcdc0f2c8b26fa970eef14dc45af6
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Novak Djokovic vs Jannik Sinner - Semi-final - 30 Jan 2026 [TEL]
-https://sonydaimenew.akamaized.net/hls/live/2105080/DAI24ME-AO/std_lrh-800300010.m3u8?hdnea=exp=1769816454~acl=/*~id=63048737818083639290464014358412~hmac=6558456ce3f515d8f881e48ed5d82e92ad34a833d2ecd860e6b32d69157f9d56
-#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Maharashtra Tycoons vs Delhi Warriors - 30 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022318/DAI14ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769816454~acl=/*~id=63048737818083639290464014358412~hmac=6558456ce3f515d8f881e48ed5d82e92ad34a833d2ecd860e6b32d69157f9d56
-#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Maharashtra Tycoons vs Delhi Warriors - 30 Jan 2026 [HIN]
-https://sonydaimenew.akamaized.net/hls/live/2094588/DAI37ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769816454~acl=/*~id=63048737818083639290464014358412~hmac=6558456ce3f515d8f881e48ed5d82e92ad34a833d2ecd860e6b32d69157f9d56
-#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Knockout Phase Play-off Draw - 30 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2105079/DAI08ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769816454~acl=/*~id=63048737818083639290464014358412~hmac=6558456ce3f515d8f881e48ed5d82e92ad34a833d2ecd860e6b32d69157f9d56
+https://sonydaimenew.akamaized.net/hls/live/2105080/DAI24ME-AO/std_lrh-800300010.m3u8?hdnea=exp=1769823155~acl=/*~id=83413415017572496781938878890497~hmac=861fa67f0b872742e73291c30e69ba37b33bcdc0f2c8b26fa970eef14dc45af6
+#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",1st T20I - 30 Jan 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2018457/DAI35-criclive/std_lrh-800300010.m3u8?hdnea=exp=1769823155~acl=/*~id=83413415017572496781938878890497~hmac=861fa67f0b872742e73291c30e69ba37b33bcdc0f2c8b26fa970eef14dc45af6
+#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Pune Panthers vs Rajasthan Lions - 30 Jan 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2022318/DAI14ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769823155~acl=/*~id=83413415017572496781938878890497~hmac=861fa67f0b872742e73291c30e69ba37b33bcdc0f2c8b26fa970eef14dc45af6
+#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Pune Panthers vs Rajasthan Lions - 30 Jan 2026 [HIN]
+https://sonydaimenew.akamaized.net/hls/live/2094588/DAI37ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769823155~acl=/*~id=83413415017572496781938878890497~hmac=861fa67f0b872742e73291c30e69ba37b33bcdc0f2c8b26fa970eef14dc45af6
+#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Rajasthan Titans vs Chennai Super Champs - 30 Jan 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2022319/DAI15ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769823155~acl=/*~id=83413415017572496781938878890497~hmac=861fa67f0b872742e73291c30e69ba37b33bcdc0f2c8b26fa970eef14dc45af6
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Stream 2 - 30 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-AO/std_lrh-800300010.m3u8?hdnea=exp=1769816454~acl=/*~id=63048737818083639290464014358412~hmac=6558456ce3f515d8f881e48ed5d82e92ad34a833d2ecd860e6b32d69157f9d56
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-AO/std_lrh-800300010.m3u8?hdnea=exp=1769823155~acl=/*~id=83413415017572496781938878890497~hmac=861fa67f0b872742e73291c30e69ba37b33bcdc0f2c8b26fa970eef14dc45af6
 #EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Bahrain Championship Day 2 - 30 Jan 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769816454~acl=/*~id=63048737818083639290464014358412~hmac=6558456ce3f515d8f881e48ed5d82e92ad34a833d2ecd860e6b32d69157f9d56
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1769823155~acl=/*~id=83413415017572496781938878890497~hmac=861fa67f0b872742e73291c30e69ba37b33bcdc0f2c8b26fa970eef14dc45af6
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1769793306~acl=%2f*~id=f011f97f76917ff001ba6a499d4d0eac~data=hdntl~hmac=1f99f829144cd5e16039e586ee4f1663646b7084c126191273ca4f0966c85a66&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -109,16 +111,12 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1769793306~acl=%2f*~id=f011f97f76917ff001ba6a499d4d0eac~data=hdntl~hmac=1f99f829144cd5e16039e586ee4f1663646b7084c126191273ca4f0966c85a66&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Emirates_web_1769270071345.jpg" group-title="Fancode",Emirates Red vs Abu Dhabi (Emirates D10, 2026)
-https://in-mc-fdlive.fancode.com/mumbai/139599_english_hls_1a852517c485393_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(2)_1769333142206.png" group-title="Fancode",Malaysia vs Afghanistan (AFC Futsal Asian Cup, 2026)
-https://in-mc-fdlive.fancode.com/mumbai/139895_english_hls_81ef4b717c17538_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Emirates_web_opt2.jpg" group-title="Fancode",Fujairah vs Emirates Blues (Emirates D10, 2026)
+https://in-mc-fdlive.fancode.com/mumbai/139600_english_hls_955ec0f79d79438_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(1)_1769529100515.png" group-title="Fancode",Day 3 - Centre Court vs Madrid, Spain (Hexagon Cup 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140166_english_hls_03a071c2e382439_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(2)_1769333142206.png" group-title="Fancode",Tajikistan vs Japan (AFC Futsal Asian Cup, 2026)
 https://in-mc-fdlive.fancode.com/mumbai/139896_english_hls_5af3284e3475850_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140080_5928_MTY_DW_FC-Web_1769654116007.jpg" group-title="Fancode",Maharashtra Tycoons vs Delhi Warriors (World Legends Pro T20 League, 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140080_english_hls_f547f7669e52892_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|KANNADA
 #EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
 https://c2ag.short.gy/n/kan.m3u8
