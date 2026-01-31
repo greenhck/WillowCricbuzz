@@ -103,20 +103,18 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1769793306~acl=%2f*~id=f011f97f76917ff001ba6a499d4d0eac~data=hdntl~hmac=1f99f829144cd5e16039e586ee4f1663646b7084c126191273ca4f0966c85a66&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140083_5928_DR_PPT_FC-Web_1769805880964.jpg" group-title="Fancode",Pune Panthers vs Dubai Royals (World Legends Pro T20 League, 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140083_english_hls_1c689b86ca82425_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/CWI-Women's-Super-50-Cup-2026_Old_match-card_2025_FC-WEB_1-(1).jpg" group-title="Fancode",Trinidad and Tobago Women vs Barbados Women (CG United Women's Super 50 Cup 2026)
 https://in-mc-fdlive.fancode.com/mumbai/139771_english_hls_c91209300573504_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/CWI-Women's-Super-50-Cup-2026_Old_match-card_2025_FC-WEB_2-(1).jpg" group-title="Fancode",Leeward Islands Women vs Jamaica Women (CG United Women's Super 50 Cup 2026)
 https://in-mc-fdlive.fancode.com/mumbai/139770_english_hls_0ea4ec86db77405_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/CWI-Women's-Super-50-Cup-2026_Old_match-card_2025_FC-WEB_1-(1).jpg" group-title="Fancode",Windward Islands Women vs Guyana Women (CG United Women's Super 50 Cup 2026)
 https://in-mc-fdlive.fancode.com/mumbai/139769_english_hls_fc8cb32e1e37514_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Emirates_web_1769265237104.jpg" group-title="Fancode",Emirates Red vs Sharjah (Emirates D10, 2026)
-https://in-mc-fdlive.fancode.com/mumbai/139605_english_hls_98b99e6ed197170_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131048_5427_OSN_VIL_FC-Web.png" group-title="Fancode",CA Osasuna vs Villarreal CF (LALIGA 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/131048_english_hls_1526422ab378838_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131040_5427_LE_ATL_FC-Web.png" group-title="Fancode",Levante vs Atletico de Madrid (LALIGA 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/131040_english_hls_86a8497dc77036_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Emirates_web_opt2.jpg" group-title="Fancode",Fujairah vs Abu Dhabi (Emirates D10, 2026)
+https://in-mc-fdlive.fancode.com/mumbai/139606_english_hls_213cb2f12a68997_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1/140010_CASACARDS_APP.png" group-title="Fancode",Cultural Leonesa vs Deportivo La Coruna (LALIGA Hypermotion 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/140010_english_hls_d31568c46179077_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(1)_1769529100515.png" group-title="Fancode",Day 4 - Centre Court vs Madrid, Spain (Hexagon Cup 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140168_english_hls_735e4dbfcd78236_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Main Feed - Day 3 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
@@ -127,6 +125,10 @@ https://in-mc-fdlive.fancode.com/mumbai/140034_english_hls_bc9889b7b389576_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140033_english_hls_97fcdda9ad89287_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Marquee Group - Day 3 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140032_english_hls_6ce940b61978129_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140083_5928_DR_PPT_FC-Web_1769805880964.jpg" group-title="Fancode",Pune Panthers vs Dubai Royals (World Legends Pro T20 League, 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140083_english_hls_1c689b86ca82425_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131048_5427_OSN_VIL_FC-Web.png" group-title="Fancode",CA Osasuna vs Villarreal CF (LALIGA 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/131048_english_hls_1526422ab378838_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|KANNADA
 #EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
 https://c2ag.short.gy/n/kan.m3u8
@@ -159,57 +161,3 @@ https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/dash/enc/rlisfyx9vd/out/v1/6
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=da661ad935054591590c7487368b26f3:10229bfa52d2e601b3e88b7951dc0bae
 https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/dash/enc/gmgcjjmmtb/out/v1/b02b49b7e4244b4ebaf4f2d576a97228/cenc.mpd
-#EXTINF:-1 tvg-id="197185" tvg-name="|AU|  Fox Sports 501" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 501
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197185
-#EXTINF:-1 tvg-id="197186" tvg-name="|AU|  Fox Sports 502" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 502
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197186
-#EXTINF:-1 tvg-id="1098502" tvg-name="|AU| Fox Sports 503" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU| Fox Sports 503
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=1098502
-#EXTINF:-1 tvg-id="197188" tvg-name="|AU|  Fox Sports 504" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 504
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197188
-#EXTINF:-1 tvg-id="197189" tvg-name="|AU|  Fox Sports 505" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 505
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197189
-#EXTINF:-1 tvg-id="197190" tvg-name="|AU|  Fox Sports 506" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 506
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197190
-#EXTINF:-1 tvg-id="197191" tvg-name="|AU|  Fox Sports 507" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 507
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197191
-#EXTINF:-1 tvg-id="197192" tvg-name="|AU|  Fox Sports News áµá´´á´° " tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports News áµá´´á´°
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197192
-#EXTINF:-1 tvg-id="197329" tvg-name="|US| Fox Sports 1 á´´á´° US" tvg-logo="http://138.199.27.237:8080/0tv_logo/3513.png" group-title="Fox Sports",|US| Fox Sports 1 á´´á´° US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197329
-#EXTINF:-1 tvg-id="197330" tvg-name="|US| Fox Sports 2 á´´á´° US" tvg-logo="http://138.199.27.237:8080/0tv_logo/3514.png" group-title="Fox Sports",|US| Fox Sports 2 á´´á´° US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197330
-#EXTINF:-1 tvg-id="197333" tvg-name="|US| Fox Sports Florida á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Florida á´´á´° US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197333
-#EXTINF:-1 tvg-id="197337" tvg-name="|US| Fox Sports NetBase á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports NetBase á´´á´° US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197337
-#EXTINF:-1 tvg-id="197342" tvg-name="|US| Fox Sports Soccer á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Soccer á´´á´° US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197342
-#EXTINF:-1 tvg-id="197344" tvg-name="|US| Fox Sports Southeast á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Southeast á´´á´° US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197344
-#EXTINF:-1 tvg-id="197345" tvg-name="|US| Fox Sports Southwest á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Southwest á´´á´° US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197345
-#EXTINF:-1 tvg-id="197346" tvg-name="|US| Fox Sports Southwest Pl á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Southwest Pl á´´á´° US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197346
-#EXTINF:-1 tvg-id="197348" tvg-name="|US| Fox Sports Sun á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Sun á´´á´° US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197348
-#EXTINF:-1 tvg-id="197349" tvg-name="|US| Fox Sports Tennessee á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Tennessee á´´á´° US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197349
-#EXTINF:-1 tvg-id="197352" tvg-name="|US| Fox Sports YES Network á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports YES Network á´´á´° US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=197352
-#EXTINF:-1 tvg-id="22192" tvg-name="|US| Fox Sports 1" tvg-logo="http://138.199.27.237:8080/0tv_logo/3513.png" group-title="Fox Sports",|US| Fox Sports 1
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=22192
-#EXTINF:-1 tvg-id="13134" tvg-name="|US| Fox Sports 1 á´´á´°" tvg-logo="http://138.199.27.237:8080/0tv_logo/3513.png" group-title="Fox Sports",|US| Fox Sports 1 á´´á´°
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=13134
-#EXTINF:-1 tvg-id="11149" tvg-name="|US| Fox Sports 1 US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports 1 US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=11149
-#EXTINF:-1 tvg-id="13135" tvg-name="|US| Fox Sports 2 á´´á´°" tvg-logo="http://138.199.27.237:8080/0tv_logo/3514.png" group-title="Fox Sports",|US| Fox Sports 2 á´´á´°
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=13135
-#EXTINF:-1 tvg-id="11148" tvg-name="|US| Fox Sports 2 US" tvg-logo="http://138.199.27.237:8080/0tv_logo/3514.png" group-title="Fox Sports",|US| Fox Sports 2 US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=11148
-#EXTINF:-1 tvg-id="13148" tvg-name="|US| Fox Sports 1" tvg-logo="http://138.199.27.237:8080/0tv_logo/3513.png" group-title="Fox Sports",|US| Fox Sports 1
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=13148
-#EXTINF:-1 tvg-id="54909" tvg-name="|US| Fox Sports College Central á´´á´°D US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports College Central á´´á´°D US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=54909
-#EXTINF:-1 tvg-id="54912" tvg-name="|US| Fox Sports Florida á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Florida á´´á´° US
-https://allinonereborn.xyz/mix.m3u8/live4.php?id=54912
