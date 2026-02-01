@@ -91,22 +91,8 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770039184~acl=%2f*~id=99e6b5e56f05e141295ad9a913cbadcf~data=hdntl~hmac=0ebbb442d04bba9a9907c467f45171e8ebc996de8356ac193ab870a0f409e44c&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131045_5427_ATH_RS_FC-Web.png" group-title="Fancode",Athletic Club vs Real Sociedad (LALIGA 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/131045_english_hls_fdd7e2aa8a90203_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1/140011_CASACARDS_APP.png" group-title="Fancode",Granada vs Racing de Santander (LALIGA Hypermotion 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/140011_english_hls_4c408f3bc030409_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Main Feed - Day 4 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140036_english_hls_f67591382827326_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Featured Holes - Day 4 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140039_english_hls_b4990ad2ab39861_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Featured Groups - Day 4 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140038_english_hls_86860ea2b190758_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Marquee Group - Day 4 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140037_english_hls_07bf2924d942520_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",World Feed - Day 4 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140035_english_hls_a22edbe27d943_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131042_5427_GEF_CEV_FC-Web.png" group-title="Fancode",Getafe CF vs RC Celta (LALIGA 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/131042_english_hls_d43feb481f87670_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|KANNADA
 #EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
 https://c2ag.short.gy/n/kan.m3u8
