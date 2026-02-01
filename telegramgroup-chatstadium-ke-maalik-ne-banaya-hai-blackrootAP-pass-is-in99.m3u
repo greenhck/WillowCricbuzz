@@ -113,6 +113,10 @@ https://in-mc-fdlive.fancode.com/mumbai/140333_english_hls_518e0f687f63025_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140332_english_hls_35577dde3679087_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Dream-Sports-Championship-2026---Table-Tennisold-match-card.png" group-title="Fancode",Day 2 - Table 4 vs Chennai (Dream Sports Championship Table Tennis 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140331_english_hls_79f72b1c5435_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(2)_1769333142206.png" group-title="Fancode",Tajikistan vs Australia (AFC Futsal Asian Cup, 2026)
+https://in-mc-fdlive.fancode.com/mumbai/139902_english_hls_a71954447d38201_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(2)_1769333142206.png" group-title="Fancode",Japan vs Uzbekistan (AFC Futsal Asian Cup, 2026)
+https://in-mc-fdlive.fancode.com/mumbai/139901_english_hls_d715a104ee83494_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|KANNADA
 #EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
 https://c2ag.short.gy/n/kan.m3u8
