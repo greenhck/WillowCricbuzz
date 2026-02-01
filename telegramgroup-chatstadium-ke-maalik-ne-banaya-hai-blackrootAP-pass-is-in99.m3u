@@ -93,6 +93,8 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770017524~acl=%2f*~id=d4205a5f7fb30bde12efcceb771fc16f~data=hdntl~hmac=706c115900ff171c0e44c74327f6fc3813907f200ee5d66f58df6b25d3192e29&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131045_5427_ATH_RS_FC-Web.png" group-title="Fancode",Athletic Club vs Real Sociedad (LALIGA 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/131045_english_hls_fdd7e2aa8a90203_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1/140011_CASACARDS_APP.png" group-title="Fancode",Granada vs Racing de Santander (LALIGA Hypermotion 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/140011_english_hls_4c408f3bc030409_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Main Feed - Day 4 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140036_english_hls_f67591382827326_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/farmers-insurance-open-2026-old-match-card-_1769182129290.png" group-title="Fancode",Featured Holes - Day 4 vs Torrey Pines Golf Course (Farmers Insurance Open 2026)
