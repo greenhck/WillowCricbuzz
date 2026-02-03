@@ -91,10 +91,10 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770104163~acl=%2f*~id=67dc9fc36901e72c77f8233a6d9f01d9~data=hdntl~hmac=e26334eb8cbc11ae81a8260f84cbb408d0af18ccb867e0c283e53886f248b57b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Dream-Sports-Championship-2026---Table-Tennisold-match-card.png" group-title="Fancode",Day 4 - Table 4 vs Chennai (Dream Sports Championship Table Tennis 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140337_english_hls_4718b83e1e97624_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(2)_1769333142206.png" group-title="Fancode",IR Iran vs Uzbekistan (AFC Futsal Asian Cup, 2026)
 https://in-mc-fdlive.fancode.com/mumbai/139905_english_hls_b57c73356454051_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(2)_1769333142206.png" group-title="Fancode",Thailand vs Iraq (AFC Futsal Asian Cup, 2026)
+https://in-mc-fdlive.fancode.com/mumbai/139906_english_hls_8d49da81ec40844_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|KANNADA
 #EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
 https://c2ag.short.gy/n/kan.m3u8
