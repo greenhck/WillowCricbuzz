@@ -1,10 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Dubai Royals vs Delhi Warriors - SF - 3 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022318/DAI14ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1770186859~acl=/*~id=39220754538060363486324823288310~hmac=36fab26c270d7368d845631bc414c9f2a694e37fc930825af223c7d68035837f
-#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Dubai Royals vs Delhi Warriors - SF - 3 Feb 2026 [HIN]
-https://sonydaimenew.akamaized.net/hls/live/2094588/DAI37ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1770186859~acl=/*~id=39220754538060363486324823288310~hmac=36fab26c270d7368d845631bc414c9f2a694e37fc930825af223c7d68035837f
-#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Chelsea vs PSV - 3 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022316/DAI12ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1770186859~acl=/*~id=39220754538060363486324823288310~hmac=36fab26c270d7368d845631bc414c9f2a694e37fc930825af223c7d68035837f
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770190811~acl=%2f*~id=a3abc547fc9827c9d6ec7f09c072e455~data=hdntl~hmac=c39df700899d44481c34ae7df20fb5d79da3de2b6dd1b2029360ed8a48d2a9f3&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -97,8 +91,6 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770190811~acl=%2f*~id=a3abc547fc9827c9d6ec7f09c072e455~data=hdntl~hmac=c39df700899d44481c34ae7df20fb5d79da3de2b6dd1b2029360ed8a48d2a9f3&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1770065318593/140089_CASACARDS_APP.png" group-title="Fancode",Dubai Royals vs Delhi Warriors (World Legends Pro T20 League, 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140089_english_hls_3c1abd5aef39468_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Emirates_web_opt2.jpg" group-title="Fancode",Emirates Blues vs Abu Dhabi (Emirates D10, 2026)
 https://in-mc-fdlive.fancode.com/mumbai/139614_english_hls_ca89ff10fd58686_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Open-Occitanie_web.jpg" group-title="Fancode",Day 2 vs Montpellier, France (ATP 250 - Open Occitanie 2026)
