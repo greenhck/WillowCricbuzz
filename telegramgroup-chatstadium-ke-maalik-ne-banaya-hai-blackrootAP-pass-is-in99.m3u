@@ -93,8 +93,8 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770212463~acl=%2f*~id=c1b0fc21b5300659d9e84074db543608~data=hdntl~hmac=6b5cf609e9f6cd1d8a96678c2c9d35cb166a8994a15c1d33bd03da01daafac44&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Women's-National-Cricket-League_old_v2_1758034980092.jpg" group-title="Fancode",Tasmania Women vs ACT Meteors (Women's National Cricket League, 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/133976_english_hls_ec5ef1c66e88949_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/02_Olimpia-vs-Club-America_1770142711000.png" group-title="Fancode",Olimpia vs Club América (CONCACAF Champions Cup 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140369_english_hls_0d2061b4d259765_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/03_San-Diego-vs-Pumas-UNAM_1770142761000.png" group-title="Fancode",San Diego vs Pumas UNAM (CONCACAF Champions Cup 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140370_english_hls_826cbd474579774_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Dream-Sports-Championship-2026---Table-Tennisold-match-card.png" group-title="Fancode",Day 5 - Table 1 vs Chennai (Dream Sports Championship Table Tennis 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140313_english_hls_0a52d15e6275475_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Dream-Sports-Championship-2026---Table-Tennisold-match-card.png" group-title="Fancode",Day 5 - Table 2 vs Chennai (Dream Sports Championship Table Tennis 2026)
@@ -135,3 +135,57 @@ https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/dash/enc/rlisfyx9vd/out/v1/6
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=da661ad935054591590c7487368b26f3:10229bfa52d2e601b3e88b7951dc0bae
 https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/dash/enc/gmgcjjmmtb/out/v1/b02b49b7e4244b4ebaf4f2d576a97228/cenc.mpd
+#EXTINF:-1 tvg-id="197185" tvg-name="|AU|  Fox Sports 501" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 501
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197185
+#EXTINF:-1 tvg-id="197186" tvg-name="|AU|  Fox Sports 502" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 502
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197186
+#EXTINF:-1 tvg-id="1098502" tvg-name="|AU| Fox Sports 503" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU| Fox Sports 503
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=1098502
+#EXTINF:-1 tvg-id="197188" tvg-name="|AU|  Fox Sports 504" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 504
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197188
+#EXTINF:-1 tvg-id="197189" tvg-name="|AU|  Fox Sports 505" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 505
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197189
+#EXTINF:-1 tvg-id="197190" tvg-name="|AU|  Fox Sports 506" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 506
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197190
+#EXTINF:-1 tvg-id="197191" tvg-name="|AU|  Fox Sports 507" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 507
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197191
+#EXTINF:-1 tvg-id="197192" tvg-name="|AU|  Fox Sports News áµá´´á´° " tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports News áµá´´á´°
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197192
+#EXTINF:-1 tvg-id="197329" tvg-name="|US| Fox Sports 1 á´´á´° US" tvg-logo="http://138.199.27.237:8080/0tv_logo/3513.png" group-title="Fox Sports",|US| Fox Sports 1 á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197329
+#EXTINF:-1 tvg-id="197330" tvg-name="|US| Fox Sports 2 á´´á´° US" tvg-logo="http://138.199.27.237:8080/0tv_logo/3514.png" group-title="Fox Sports",|US| Fox Sports 2 á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197330
+#EXTINF:-1 tvg-id="197333" tvg-name="|US| Fox Sports Florida á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Florida á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197333
+#EXTINF:-1 tvg-id="197337" tvg-name="|US| Fox Sports NetBase á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports NetBase á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197337
+#EXTINF:-1 tvg-id="197342" tvg-name="|US| Fox Sports Soccer á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Soccer á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197342
+#EXTINF:-1 tvg-id="197344" tvg-name="|US| Fox Sports Southeast á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Southeast á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197344
+#EXTINF:-1 tvg-id="197345" tvg-name="|US| Fox Sports Southwest á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Southwest á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197345
+#EXTINF:-1 tvg-id="197346" tvg-name="|US| Fox Sports Southwest Pl á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Southwest Pl á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197346
+#EXTINF:-1 tvg-id="197348" tvg-name="|US| Fox Sports Sun á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Sun á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197348
+#EXTINF:-1 tvg-id="197349" tvg-name="|US| Fox Sports Tennessee á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Tennessee á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197349
+#EXTINF:-1 tvg-id="197352" tvg-name="|US| Fox Sports YES Network á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports YES Network á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197352
+#EXTINF:-1 tvg-id="22192" tvg-name="|US| Fox Sports 1" tvg-logo="http://138.199.27.237:8080/0tv_logo/3513.png" group-title="Fox Sports",|US| Fox Sports 1
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=22192
+#EXTINF:-1 tvg-id="13134" tvg-name="|US| Fox Sports 1 á´´á´°" tvg-logo="http://138.199.27.237:8080/0tv_logo/3513.png" group-title="Fox Sports",|US| Fox Sports 1 á´´á´°
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=13134
+#EXTINF:-1 tvg-id="11149" tvg-name="|US| Fox Sports 1 US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports 1 US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=11149
+#EXTINF:-1 tvg-id="13135" tvg-name="|US| Fox Sports 2 á´´á´°" tvg-logo="http://138.199.27.237:8080/0tv_logo/3514.png" group-title="Fox Sports",|US| Fox Sports 2 á´´á´°
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=13135
+#EXTINF:-1 tvg-id="11148" tvg-name="|US| Fox Sports 2 US" tvg-logo="http://138.199.27.237:8080/0tv_logo/3514.png" group-title="Fox Sports",|US| Fox Sports 2 US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=11148
+#EXTINF:-1 tvg-id="13148" tvg-name="|US| Fox Sports 1" tvg-logo="http://138.199.27.237:8080/0tv_logo/3513.png" group-title="Fox Sports",|US| Fox Sports 1
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=13148
+#EXTINF:-1 tvg-id="54909" tvg-name="|US| Fox Sports College Central á´´á´°D US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports College Central á´´á´°D US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=54909
+#EXTINF:-1 tvg-id="54912" tvg-name="|US| Fox Sports Florida á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Florida á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=54912
