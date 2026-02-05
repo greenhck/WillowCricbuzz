@@ -91,8 +91,6 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770342423~acl=%2f*~id=8e1c0e7de20662d7e4b601e1d6f54bc9~data=hdntl~hmac=516b95768eec03a0020a80fbe3c29632284b0e155c422de93ed3fcd15c048794&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Women's-National-Cricket-League_old_v3_1758034980120.jpg" group-title="Fancode",Queensland Fire vs New South Wales Breakers (Women's National Cricket League, 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/133977_english_hls_079bcc8a0a20717_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo=" https://www.fancode.com/skillup-uploads/cms-media/Women's-National-Cricket-League_old_v3_1758034980120.jpg" group-title="Fancode",Victoria Women vs South Australian Scorpions (Women's National Cricket League, 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/133978_english_hls_fac81cabc189944_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/134033_5609_VCT_QUN_fc-Web.jpg" group-title="Fancode",Queensland vs Victoria (Sheffield Shield, 2025-26)
@@ -101,8 +99,8 @@ https://in-mc-fdlive.fancode.com/mumbai/134033_english_hls_2b9895c52741502_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/134032_english_hls_046dbb137026643_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/134034_5609_WAU_TAS_fc-Web.jpg" group-title="Fancode",Tasmania vs Western Australia (Sheffield Shield, 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/134034_english_hls_c4cbfdf20720719_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/05_Vancouver-FC-vs-Cruz-Azul_1770142969524.png" group-title="Fancode",Vancouver FC vs Cruz Azul (CONCACAF Champions Cup 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140372_english_hls_b59892138f7814_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Asian-Rifle_Pistol-Championship-2026-old-match-card.png" group-title="Fancode",Day 2 vs Asian Rifle & Pistol Championship (Asian Rifle & Pistol Championship 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140320_english_hls_61025a7bd349802_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|KANNADA
 #EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
 https://c2ag.short.gy/n/kan.m3u8
