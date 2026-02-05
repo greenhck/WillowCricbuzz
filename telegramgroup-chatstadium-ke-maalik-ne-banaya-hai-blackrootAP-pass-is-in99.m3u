@@ -91,10 +91,6 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770385743~acl=%2f*~id=b369b534e2a7e6efaaab99d3357d598d~data=hdntl~hmac=16f041fe94418171684ee5863dd84afc70708767c15c70a8672715138edd63a7&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140050_5806_RB_ATL_FC-Web_1770212051605.jpg" group-title="Fancode",Real Betis vs Atletico de Madrid (Copa del Rey, 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/140050_english_hls_c1422665e261745_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/League-Two-2025-26_match-card.jpg" group-title="Fancode",Accrington Stanley vs Salford City (League Two 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/140018_english_hls_4f85022c5680141_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WM-Phoenix-Open-2026_web_1770182154885.jpg" group-title="Fancode",Main Feed - Day 1 vs TPC Scottsdale (WM Phoenix Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140392_english_hls_243402493641753_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WM-Phoenix-Open-2026_web_1770182154885.jpg" group-title="Fancode",Featured Holes - Day 1 vs TPC Scottsdale (WM Phoenix Open 2026)
