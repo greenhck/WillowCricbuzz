@@ -1,102 +1,98 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Union Berlin vs Eintracht Frankfurt - MD 21 - 7 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094588/DAI04ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1770457222~acl=/*~id=49704715579828884069396750461493~hmac=9e5672729a19a0353deb50467886e0b2b2158440b693a6e74f30e2286e0cf07b
+https://sonydaimenew.akamaized.net/hls/live/2094588/DAI04ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1770457827~acl=/*~id=02027289443837876835155463697853~hmac=f3cc45f06e9ecfcf25ca5d559887752cb0879ab8f315a5848e66452d73d0d0ac
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
-https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
-https://jcevents.hotstar.com/bpk-tv/2c7182c8e6a22cfa6ebc02bbc9ed6dd0/Fallback/2c7182c8e6a22cfa6ebc02bbc9ed6dd0.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://jcevents.hotstar.com/bpk-tv/2c7182c8e6a22cfa6ebc02bbc9ed6dd0/Fallback/2c7182c8e6a22cfa6ebc02bbc9ed6dd0.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Telugu_Transparent_5f794134-ddc1-457f-af2d-d4101d9f6711.png" group-title="Hotstar Sports",Star Sports 2 Telugu
-https://jcevents.hotstar.com/bpk-tv/034d1fb94cae87294a06f4dc266084b9/Fallback/034d1fb94cae87294a06f4dc266084b9.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://jcevents.hotstar.com/bpk-tv/034d1fb94cae87294a06f4dc266084b9/Fallback/034d1fb94cae87294a06f4dc266084b9.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Tamil_Transparent_495e7bfa-b0b9-4055-a22e-56f3507ca469.png" group-title="Hotstar Sports",Star Sports 2 Tamil
-https://jcevents.hotstar.com/bpk-tv/4db6f833701e78ae4443cb268020f03b/Fallback/4db6f833701e78ae4443cb268020f03b.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://jcevents.hotstar.com/bpk-tv/4db6f833701e78ae4443cb268020f03b/Fallback/4db6f833701e78ae4443cb268020f03b.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7429/567429-h" group-title="Hotstar Sports",Star Suvarna
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=786fe347f558460398b9e42e1db50000:d630fb6469c3457e9d7c4bb863e1fef1
-https://livetv.hotstar.com/mp1/gec-india-1540057075/57ae0b6fa2b64281984574d406f9a696/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp1/gec-india-1540057075/57ae0b6fa2b64281984574d406f9a696/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7424/567424-h" group-title="Hotstar Sports",Asianet Plus
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=5f1a41f1f8c04e209dfcdfff2fdc0000:e0a5f3aa6afe414b902d6b729dd9b11b
-https://livetv.hotstar.com/mp1/gec-india-1540057042/65edc0359d4b49f7a42d06d4dfe8457b/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp1/gec-india-1540057042/65edc0359d4b49f7a42d06d4dfe8457b/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5868/595868-h" group-title="Hotstar Sports",Star Pravah
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=9d300f38d30d4829b2e525a037560000:706572c4aac0420f90a778e22116b320
-https://livetv.hotstar.com/mp2/gec-india-1540057063/03a27d0f3ce347f0a3b4af1f6e62d4cc/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp2/gec-india-1540057063/03a27d0f3ce347f0a3b4af1f6e62d4cc/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7421/567421-h" group-title="Hotstar Sports",Star Maa Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=18b7ece05d094614a3839978b9330000:267ba7674fbd4076bbf797eaa1dd16d0
-https://livetv.hotstar.com/mp1/gec-india-1540057036/9b002b1b2a3748b7a80a8512aef0bb8d/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp1/gec-india-1540057036/9b002b1b2a3748b7a80a8512aef0bb8d/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7420/567420-h" group-title="Hotstar Sports",Asianet
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1dd2d0a48be14cc3a9666d861dd60000:24e889ab81444af0bceb8f8b9a530b18
-https://livetv.hotstar.com/mp2/gec-india-1540057084/6569043a1d874fb49fc2cf2f273fe097/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp2/gec-india-1540057084/6569043a1d874fb49fc2cf2f273fe097/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7419/567419-h" group-title="Hotstar Sports",Star Jalsha
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=94b8e23444db4af3b81dc2840c930000:d7c43050ca6d4e1ab3a296c91a4bb38e
-https://livetv.hotstar.com/mp1/gec-india-1540057072/61b6b96b069d42f9821b6ed85b51388e/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp1/gec-india-1540057072/61b6b96b069d42f9821b6ed85b51388e/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7418/567418-h" group-title="Hotstar Sports",Star Maa
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b13dd22b45644e798457508fcdf70000:2c965c36ef5242f68a878952f993a591
-https://livetv.hotstar.com/mp2/gec-india-1540057087/136d113eec07474e8836d7dc3dd0533b/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp2/gec-india-1540057087/136d113eec07474e8836d7dc3dd0533b/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7415/567415-h" group-title="Hotstar Sports",StarPlus
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=17a6e6ef02f74d9bbce4640371d40000:7a89315d2ec84875901dce2d3044556c
-https://livetv.hotstar.com/mp1/gec-india-1540057045/a73567ab8abd4680bc8206dd0c625cb0/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp1/gec-india-1540057045/a73567ab8abd4680bc8206dd0c625cb0/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7409/567409-h" group-title="Hotstar Sports",Star Vijay
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=652811d06b3545a3a1f20c1b03700000:d3db194166ee44b3b5c9c719aa9cdd63
-https://livetv.hotstar.com/mp1/gec-india-1540057060/15ef978ea9f449a2a8c97f7c05e618c5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp1/gec-india-1540057060/15ef978ea9f449a2a8c97f7c05e618c5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7408/567408-h" group-title="Hotstar Sports",Maa Gold
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ab4cba34a7084eddbd6edf6a16460000:fd1cb8f19b2e42838d4ace714427ec76
-https://livetv.hotstar.com/mp1/gec-india-1540057033/9680ef02a23e4d05a7d6afab10805ec4/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp1/gec-india-1540057033/9680ef02a23e4d05a7d6afab10805ec4/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7407/567407-h" group-title="Hotstar Sports",Star Utsav
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=88f55cce9ba94df6b009f2433ef90000:6f33ae9e6fa24f95b82e538563b1cbaf
-https://livetv.hotstar.com/mp1/gec-india-1540057078/6a9d9dbd5cd84dd3ba89856288c589b3/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp1/gec-india-1540057078/6a9d9dbd5cd84dd3ba89856288c589b3/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7437/567437-h" group-title="Hotstar Sports",Star Sports Select HD2
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=fe7718fbb3fb4ba78c07cc0f578744e6:624e24b1843b459fab0a949609416f0d
-https://livetv-push.hotstar.com/dash/live/2002471/ssselecthd2wv/master.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450725~acl=*ssselecthd2*~id=1fcf7b6750aa3399857e9650aae087f0~data=hdntl~hmac=41cd3b75d994e8397ad1bd8d517e8d36a0d88ec90f3c0b1745a30e44f05bf73f&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv-push.hotstar.com/dash/live/2002471/ssselecthd2wv/master.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472384~acl=*ssselecthd2*~id=bee6ff7bc2a85e0ecc337513a3f4faff~data=hdntl~hmac=319233116b80adfea155334ca74bb80bd54d4dd6d646ab306b8398e892cbbe7d&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7433/567433-h" group-title="Hotstar Sports",Star Sports Hindi 1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=fe7718fbb3fb4ba78c07cc0f578744e6:624e24b1843b459fab0a949609416f0d
-https://livetv-push.hotstar.com/dash/live/2002466/sshindiwv/master.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=*sshindi*~id=cf028cbe89b284948276006ade2eaa92~data=hdntl~hmac=40cf95802b36d7dc2a2e28bc776bdbf8e6aff535644903d52599d8968d2c6534&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv-push.hotstar.com/dash/live/2002466/sshindiwv/master.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=*sshindi*~id=d92b85663c8547174a560e44f80a30ce~data=hdntl~hmac=f1a472664c6031e6084f88da2a396f661c37d378d54e8b3ec0277835b1147b1b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7406/567406-h" group-title="Hotstar Sports",Star Bharat
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=4271050207424ba8b3e65c602d7e0000:8fdd910f634b40fdb5bfde551e08fd6c
-https://livetv.hotstar.com/mp2/gec-india-1540057051/aa1fac3acfc244b4bbed73575a4a42da/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp2/gec-india-1540057051/aa1fac3acfc244b4bbed73575a4a42da/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7432/567432-h" group-title="Hotstar Sports",Star Sports 2
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=fe7718fbb3fb4ba78c07cc0f578744e6:624e24b1843b459fab0a949609416f0d
-https://livetv-push.hotstar.com/dash/live/2002465/sshd2livetvwv/master.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450725~acl=*sshd2livetv*~id=e3fce360e44373c3e4589e9eb3ed1498~data=hdntl~hmac=977272ed1740f32655623fedb33f7b88b646fe98dec38a955b089c90c251d178&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv-push.hotstar.com/dash/live/2002465/sshd2livetvwv/master.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=*sshd2livetv*~id=33281d1fdd4bb4efdf4e4ec1342cf275~data=hdntl~hmac=5e2da8b82eb9c6e46e4f1be88db112c48d8f70ba6f303d398cb420d8c0585d71&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7435/567435-h" group-title="Hotstar Sports",Star Sports Select HD1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=fe7718fbb3fb4ba78c07cc0f578744e6:624e24b1843b459fab0a949609416f0d
-https://livetv-push.hotstar.com/dash/live/2002470/ssselecthd1wv/master.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450725~acl=*ssselecthd1*~id=5655295d0f960826d614f50c63455d02~data=hdntl~hmac=ba7ea61352aedcc8ed3a6ce47d9ea9cdc1c4351a7181289c531663075226e8c6&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv-push.hotstar.com/dash/live/2002470/ssselecthd1wv/master.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472384~acl=*ssselecthd1*~id=ad96073fe66fb48f9e5769df4e32c40d~data=hdntl~hmac=30f41305a0cf21ec0d271caaf27dfcfcd36ee421535d85e55d7e96b385820a2e&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7430/567430-h" group-title="Hotstar Sports",Star Sports 1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=fe7718fbb3fb4ba78c07cc0f578744e6:624e24b1843b459fab0a949609416f0d
-https://livetv-push.hotstar.com/dash/live/2002464/sshd1livetvwv/master.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450725~acl=*sshd1livetv*~id=c1a6e3057e02ca06b61ba9ef17f22b21~data=hdntl~hmac=729df9629d52d886dfd35239fd0713424de7973c851920ca5974803d125cf3ca&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv-push.hotstar.com/dash/live/2002464/sshd1livetvwv/master.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=*sshd1livetv*~id=bc3011d1d345fc3391fd2cb4b0e0196f~data=hdntl~hmac=85e94dc5d6119c2b9e31934ede976ed624d18427ff67c6b8ed72f121f2222c77&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7404/567404-h" group-title="Hotstar Sports",Jalsha Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=a515368ea6bc4d76a1aebc22f4660000:e46451b6cdae433ab6e719f39dcc449e
-https://livetv.hotstar.com/mp2/gec-india-1540057027/39127b380adb405e8de434e10e20c3a6/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp2/gec-india-1540057027/39127b380adb405e8de434e10e20c3a6/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7403/567403-h" group-title="Hotstar Sports",Star Gold
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=c3c8fd55071348e9992be759ceab0000:b894ad9ee2ad483fb2a5b71db0434bfc
-https://livetv.hotstar.com/mp2/gec-india-1540057030/0bbcb34798fd454a81c3502fb652911e/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp2/gec-india-1540057030/0bbcb34798fd454a81c3502fb652911e/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7400/567400-h" group-title="Hotstar Sports",Asianet Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=53e552bf422a4feeb017e38ba43e0000:9cf91549836b4ce98e9d8137591dd38e
-https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a1a60/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a1a60/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7399/567399-h" group-title="Hotstar Sports",Star Suvarna Plus
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
-https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770450724~acl=%2f*~id=f4ae479b8458254840cc779e36a1f518~data=hdntl~hmac=3e7eaad08673dd6065e0407e0057b4999164f5935a8ca9fc135f6be0903c1698&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131050_5427_CEV_OSN_FC-Web.png" group-title="Fancode",RC Celta vs CA Osasuna (LALIGA 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/131050_english_hls_fcd7d8a48695573_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1/139348_CASACARDS_APP.png" group-title="Fancode",Charlton Athletic F.C vs Queens Park Rangers F.C. (EFL Championship 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/139348_english_hls_915c7c961552394_1ta-di_h264/index.m3u8
+https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770472383~acl=%2f*~id=5d597ad7ec770e089087205f8c5ef0d0~data=hdntl~hmac=ee39b55544435373e80f8b3846f99671b0025df0ded734c58b27147d32768647&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WM-Phoenix-Open-2026_web_1770182154885.jpg" group-title="Fancode",Main Feed - Day 2 vs TPC Scottsdale (WM Phoenix Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140395_english_hls_ed18c3829423764_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WM-Phoenix-Open-2026_web_1770182154885.jpg" group-title="Fancode",Featured Holes - Day 2 vs TPC Scottsdale (WM Phoenix Open 2026)
@@ -105,6 +101,8 @@ https://in-mc-fdlive.fancode.com/mumbai/140397_english_hls_f6f8c88cba33967_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140396_english_hls_134b91debe95022_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WM-Phoenix-Open-2026_web.jpg" group-title="Fancode",World Feed - Day 2 vs TPC Scottsdale (WM Phoenix Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140041_english_hls_231affc53d40363_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131050_5427_CEV_OSN_FC-Web.png" group-title="Fancode",RC Celta vs CA Osasuna (LALIGA 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/131050_english_hls_fcd7d8a48695573_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|KANNADA
 #EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
 https://c2ag.short.gy/n/kan.m3u8
@@ -137,3 +135,57 @@ https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/dash/enc/rlisfyx9vd/out/v1/6
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=da661ad935054591590c7487368b26f3:10229bfa52d2e601b3e88b7951dc0bae
 https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/dash/enc/gmgcjjmmtb/out/v1/b02b49b7e4244b4ebaf4f2d576a97228/cenc.mpd
+#EXTINF:-1 tvg-id="197185" tvg-name="|AU|  Fox Sports 501" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 501
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197185
+#EXTINF:-1 tvg-id="197186" tvg-name="|AU|  Fox Sports 502" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 502
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197186
+#EXTINF:-1 tvg-id="1098502" tvg-name="|AU| Fox Sports 503" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU| Fox Sports 503
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=1098502
+#EXTINF:-1 tvg-id="197188" tvg-name="|AU|  Fox Sports 504" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 504
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197188
+#EXTINF:-1 tvg-id="197189" tvg-name="|AU|  Fox Sports 505" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 505
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197189
+#EXTINF:-1 tvg-id="197190" tvg-name="|AU|  Fox Sports 506" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 506
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197190
+#EXTINF:-1 tvg-id="197191" tvg-name="|AU|  Fox Sports 507" tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports 507
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197191
+#EXTINF:-1 tvg-id="197192" tvg-name="|AU|  Fox Sports News áµá´´á´° " tvg-logo="https://vectorflags.s3.amazonaws.com/flags/au-circle-01.png" group-title="Fox Sports",|AU|  Fox Sports News áµá´´á´°
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197192
+#EXTINF:-1 tvg-id="197329" tvg-name="|US| Fox Sports 1 á´´á´° US" tvg-logo="http://138.199.27.237:8080/0tv_logo/3513.png" group-title="Fox Sports",|US| Fox Sports 1 á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197329
+#EXTINF:-1 tvg-id="197330" tvg-name="|US| Fox Sports 2 á´´á´° US" tvg-logo="http://138.199.27.237:8080/0tv_logo/3514.png" group-title="Fox Sports",|US| Fox Sports 2 á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197330
+#EXTINF:-1 tvg-id="197333" tvg-name="|US| Fox Sports Florida á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Florida á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197333
+#EXTINF:-1 tvg-id="197337" tvg-name="|US| Fox Sports NetBase á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports NetBase á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197337
+#EXTINF:-1 tvg-id="197342" tvg-name="|US| Fox Sports Soccer á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Soccer á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197342
+#EXTINF:-1 tvg-id="197344" tvg-name="|US| Fox Sports Southeast á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Southeast á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197344
+#EXTINF:-1 tvg-id="197345" tvg-name="|US| Fox Sports Southwest á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Southwest á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197345
+#EXTINF:-1 tvg-id="197346" tvg-name="|US| Fox Sports Southwest Pl á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Southwest Pl á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197346
+#EXTINF:-1 tvg-id="197348" tvg-name="|US| Fox Sports Sun á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Sun á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197348
+#EXTINF:-1 tvg-id="197349" tvg-name="|US| Fox Sports Tennessee á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Tennessee á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197349
+#EXTINF:-1 tvg-id="197352" tvg-name="|US| Fox Sports YES Network á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports YES Network á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=197352
+#EXTINF:-1 tvg-id="22192" tvg-name="|US| Fox Sports 1" tvg-logo="http://138.199.27.237:8080/0tv_logo/3513.png" group-title="Fox Sports",|US| Fox Sports 1
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=22192
+#EXTINF:-1 tvg-id="13134" tvg-name="|US| Fox Sports 1 á´´á´°" tvg-logo="http://138.199.27.237:8080/0tv_logo/3513.png" group-title="Fox Sports",|US| Fox Sports 1 á´´á´°
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=13134
+#EXTINF:-1 tvg-id="11149" tvg-name="|US| Fox Sports 1 US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports 1 US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=11149
+#EXTINF:-1 tvg-id="13135" tvg-name="|US| Fox Sports 2 á´´á´°" tvg-logo="http://138.199.27.237:8080/0tv_logo/3514.png" group-title="Fox Sports",|US| Fox Sports 2 á´´á´°
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=13135
+#EXTINF:-1 tvg-id="11148" tvg-name="|US| Fox Sports 2 US" tvg-logo="http://138.199.27.237:8080/0tv_logo/3514.png" group-title="Fox Sports",|US| Fox Sports 2 US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=11148
+#EXTINF:-1 tvg-id="13148" tvg-name="|US| Fox Sports 1" tvg-logo="http://138.199.27.237:8080/0tv_logo/3513.png" group-title="Fox Sports",|US| Fox Sports 1
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=13148
+#EXTINF:-1 tvg-id="54909" tvg-name="|US| Fox Sports College Central á´´á´°D US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports College Central á´´á´°D US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=54909
+#EXTINF:-1 tvg-id="54912" tvg-name="|US| Fox Sports Florida á´´á´° US" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png" group-title="Fox Sports",|US| Fox Sports Florida á´´á´° US
+https://allinonereborn.xyz/mix.m3u8/live4.php?id=54912
