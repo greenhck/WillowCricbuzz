@@ -93,30 +93,12 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770515705~acl=%2f*~id=108e99d5e622dcedab8e56de0ffcc629~data=hdntl~hmac=fc0ac3d1179a4b61c02a07e401678282ac3f5ee4c7dbe20f2bd82da0fa5f5b06&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1/139423_CASACARDS_APP.png" group-title="Fancode",Western Sydney Wanderers vs Melbourne City (A League 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/139423_english_hls_9b3eecce5a68793_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Emirates_web_1769270071345.jpg" group-title="Fancode",Dubai vs Abu Dhabi (Emirates D10, 2026)
+https://in-mc-fdlive.fancode.com/mumbai/139625_english_hls_bf28bdac6590850_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Asian-Rifle_Pistol-Championship-2026-old-match-card.png" group-title="Fancode",Day 4 vs Delhi (Asian Rifle & Pistol Championship 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140322_english_hls_7871d97b5914503_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|KANNADA
-#EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
-https://c2ag.short.gy/n/kan.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|TELUGU
-#EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
-https://c2ag.short.gy/n/telugu.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|TAMIL
-#EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
-https://c2ag.short.gy/n/tamil.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|HINDI
-#EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
-https://c2ag.short.gy/n/hin.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL", Star|ENGLISH
-#EXTHTTP:{"Cookie":"","Origin":"","Referer":"","User-Agent":"null","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
-https://c2ag.short.gy/n/english.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bb/2026_Women%27s_Premier_League_%28cricket%29.jpg" group-title="WPL",Hotstar|HINDI
-#EXTHTTP:{"Cookie":"","Origin":"https://allrounderlive.pages.dev","Referer":"https://allrounderlive.pages.dev","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","Telegram":"@links_macha_official","Creator":"@DJ-TM"}
-https://dillzyserver.dillzycreations.workers.dev/live/hotstar.m3u8
-
---------------== T20I ==------------------
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/MotoGP-Launch-Event-2026_Web_1080_x_810_2.jpg" group-title="Fancode",MotoGP Launch vs Kuala Lampur (MotoGP Launch Event 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140391_english_hls_336c66184870565_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
