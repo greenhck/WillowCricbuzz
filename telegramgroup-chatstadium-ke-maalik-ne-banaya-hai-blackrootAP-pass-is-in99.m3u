@@ -91,8 +91,6 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WM-Phoenix-Open-2026_web.jpg" group-title="Fancode",World Feed - Day 4 vs TPC Scottsdale (WM Phoenix Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140043_english_hls_d8dd9655ac63389_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
