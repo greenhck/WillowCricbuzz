@@ -601,15 +601,23 @@
             currentTab = `custom-${index}`;
             
             // Update tab styling
-            tabButtons.forEach(btn => {
-                btn.classList.remove('active', 'bg-gray-600', 'bg-purple-600', 'hover:bg-gray-500', 'shadow-inner');
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active', 'bg-gray-600', 'bg-purple-600', 'hover:bg-gray-500', 'hover:bg-purple-500', 'shadow-inner');
                 btn.classList.add('shadow-md');
+                
+                if (btn.classList.contains('custom-playlist-tab')) {
+                    btn.classList.add('bg-purple-700', 'hover:bg-purple-600');
+                    btn.classList.remove('bg-purple-600', 'hover:bg-purple-500');
+                } else {
+                    btn.classList.add('bg-gray-700', 'hover:bg-gray-600');
+                    btn.classList.remove('bg-gray-600', 'hover:bg-gray-500');
+                }
             });
             
             document.querySelectorAll('.custom-playlist-tab').forEach((btn, idx) => {
                 if (idx === index) {
-                    btn.classList.add('active', 'bg-purple-600', 'shadow-inner');
-                    btn.classList.remove('bg-purple-700', 'shadow-md');
+                    btn.classList.add('active', 'bg-purple-600', 'hover:bg-purple-500', 'shadow-inner');
+                    btn.classList.remove('bg-purple-700', 'hover:bg-purple-600', 'shadow-md');
                 }
             });
             
@@ -1298,6 +1306,139 @@
 
                 // Clear input fields when switching to the N-Stream tab
                 streamUrlInput.value = '';
+                clearkeyIdInput.value = '';
+                clearkeyKeyInput.value = '';
+                drmLicenseUrlInput.value = '';
+                streamTypeSelect.value = 'HLS'; // Reset to default
+                drmControls.classList.add('hidden');
+                drmControls.classList.remove('flex');
+
+                loadRecentStreams();
+                
+                // Update all tab buttons
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('active', 'bg-gray-600', 'bg-purple-600', 'hover:bg-gray-500', 'shadow-inner');
+                    btn.classList.add('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
+                    if (btn.dataset.tab === tabName) {
+                        btn.classList.add('active', 'bg-gray-600', 'hover:bg-gray-500', 'shadow-inner');
+                        btn.classList.remove('bg-gray-700', 'hover:bg-gray-600', 'shadow-md');
+                    }
+                });
+                return;
+            }
+            
+            // Check if it's a custom playlist
+            if (tabName.startsWith('custom-')) {
+                const index = parseInt(tabName.replace('custom-', ''));
+                await loadCustomPlaylist(index);
+                return;
+            }
+
+            nStreamPlayerSection.classList.add('hidden');
+            nStreamPlayerSection.classList.remove('flex');
+            contentDisplay.classList.remove('hidden'); // Show grid
+            
+            // Update all tab buttons
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active', 'bg-gray-600', 'bg-purple-600', 'hover:bg-gray-500', 'hover:bg-purple-500', 'shadow-inner');
+                btn.classList.add('shadow-md');
+                
+                if (btn.classList.contains('custom-playlist-tab')) {
+                    btn.classList.add('bg-purple-700', 'hover:bg-purple-600');
+                } else {
+                    btn.classList.add('bg-gray-700', 'hover:bg-gray-600');
+                }
+
+                if (btn.dataset.tab === tabName) {
+                    btn.classList.add('active', 'shadow-inner');
+                    btn.classList.remove('shadow-md');
+                    if (btn.classList.contains('custom-playlist-tab')) {
+                        btn.classList.remove('bg-purple-700', 'hover:bg-purple-600');
+                        btn.classList.add('bg-purple-600', 'hover:bg-purple-500');
+                    } else {
+                        btn.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+                        btn.classList.add('bg-gray-600', 'hover:bg-gray-500');
+                    }
+                }
+            });
+
+            contentDisplay.innerHTML = `
+                <div class="flex items-center justify-center p-4 col-span-full">
+                    <div class="loading-spinner mr-3"></div>
+                    <p class="text-center text-gray-400 font-semibold">Loading channels...</p>
+                </div>
+            `;
+            
+            const dataUrl = tabDataUrls[tabName];
+            let channelsToDisplay = [];
+            
+            try {
+                const response = await fetch(dataUrl);
+                if (!response.ok) {
+                    throw new Error(`HTTP त्रुटि! स्थिति: ${response.status}। सुनिश्चित करें कि JSON फाइल (${dataUrl}) रूट फ़ोल्डर में मौजूद है और पहुंच योग्य है।`);
+                }
+
+                if (tabName === 'zee-network') {
+                    const data = await response.json();
+                    if (data && data.channels) {
+                        channelsToDisplay = data.channels.map(c => ({
+                            ...c,
+                            thumbnail: c.thumbnail || '' // ensure thumbnail property exists
+                        }));
+                    } else {
+                        throw new Error('Zee Network के लिए अमान्य डेटा संरचना।');
+                    }
+                } else if (tabName === 'fancode') {
+                    const data = await response.json();
+                    if (data && data.matches) {
+                        channelsToDisplay = data.matches.map(match => ({
+                            name: `${match.event_name}: ${match.match_name}`,
+                            logo: match.src || 'https://placehold.co/200x150/2d3748/a0aec0?text=No+Image',
+                            mpd: match.dai_url,
+                            m3u8: match.adfree_url,
+                            clearkey: null,
+                            drm: null,
+                            thumbnail: match.src || '', // Using logo as thumbnail fallback
+                            customUserAgent: null,
+                            customCookies: null
+                        }));
+                    } else {
+                        throw new Error('FanCode के लिए अमान्य डेटा संरचना।');
+                    }
+                } else if (tabName === 'voot-tv') {
+                    const data = await response.json();
+                    channelsToDisplay = mapVootTvChannels(data);
+                } else if (tabName === 'opplex-tv') {
+                    const data = await response.json();
+                    channelsToDisplay = mapOpplexChannels(data);
+                } else if (tabName === 'movies') {
+                    const data = await response.json();
+                    channelsToDisplay = mapMoviesChannels(data);
+                } else {
+                    const m3uContent = await response.text();
+                    channelsToDisplay = await parseM3U(m3uContent);
+                }
+
+                // --- बदलाव 3: masterChannelList को अपडेट करें ---
+                masterChannelList = channelsToDisplay;
+                // ---
+
+                displayChannels(channelsToDisplay);
+                
+                if (channelToPlay) {
+                    const channel = channelsToDisplay.find(c => c.name === channelToPlay);
+                    if (channel) {
+                        console.log(`Auto-playing shared channel: ${channelToPlay}`);
+                        setTimeout(() => playChannel(channel), 100);
+                    } else {
+                        console.warn(`Shared channel "${channelToPlay}" not found in tab "${tabName}".`);
+                    }
+                }
+            } catch (error) {
+                console.error('डेटा लोड करने में त्रुटि:', error);
+                contentDisplay.innerHTML = `<p class="text-center text-red-400 p-4 font-semibold col-span-full">सामग्री लोड करने में त्रुटि हुई: ${error.message}</p>`;
+            }
+        }
                 clearkeyIdInput.value = '';
                 clearkeyKeyInput.value = '';
                 drmLicenseUrlInput.value = '';
