@@ -24,8 +24,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.ui.min.js" crossorigin="anonymous"></script>
     <!-- Hls.js for HLS -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <!-- CryptoJS for AES Encryption -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
     <!-- Firebase SDKs for Auth and Firestore -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
@@ -158,17 +156,21 @@
             text-overflow: ellipsis;
             line-height: 1; 
         }
+        /* Custom tab close button */
+        .custom-tab-close {
+            margin-left: 6px;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .custom-tab-close:hover {
+            opacity: 1;
+        }
         .shaka-player-container {
             position: relative;
         }
-        /* HLS Quality Selector */
-        #hls-quality-selector {
+        /* High Z-index for quality selector */
+        #quality-selector {
             z-index: 500 !important;
-            transition: opacity 0.3s ease;
-        }
-        #hls-quality-selector.hidden {
-            opacity: 0;
-            pointer-events: none;
         }
         /* Custom CSS for policy modal animation */
         #policy-modal-content {
@@ -287,16 +289,14 @@
 
                 <!-- Player Containers (The video element will show the poster/thumbnail if available) -->
                 <div data-shaka-player-container id="shaka-container-wrapper" class="shaka-player-container w-full h-full relative hidden z-20">
+                    <!-- Quality Selector fixed to the top right of the player -->
+                    <select id="quality-selector" class="absolute top-2 right-2 z-300 bg-gray-700 text-white py-1 px-3 rounded-md text-xs font-semibold hidden cursor-pointer shadow-lg hover:bg-gray-600 transition duration-150">
+                        <option value="auto">Auto</option>
+                    </select>
                     <video autoplay data-shaka-player id="shaka-video-player" class="w-full h-full object-contain"></video>
                 </div>
 
-                <div id="hls-container-wrapper" class="w-full h-full relative hidden z-20">
-                    <!-- Quality Selector for HLS (hidden when controls are hidden) -->
-                    <select id="hls-quality-selector" class="absolute top-2 right-2 z-300 bg-gray-700 text-white py-1 px-3 rounded-md text-xs font-semibold hidden cursor-pointer shadow-lg hover:bg-gray-600 transition duration-150">
-                        <option value="-1">Auto</option>
-                    </select>
-                    <video id="hls-video-player" class="w-full h-full object-contain" controls></video>
-                </div>
+                <video id="hls-video-player" class="w-full h-full object-contain hidden z-20" controls></video>
             </div>
         </div>
 
@@ -311,7 +311,6 @@
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="fancode">Fancode</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="zee-network">Zee Network</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="pirates-tv">Pirates TV</button>
-                    <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="brdog">BRdog</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="jio-tv">Jio TV</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="pere-sports">Pere Sports</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="sony-network">Sony Network</button>
@@ -320,6 +319,10 @@
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="opplex-tv">Opplex TV</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="movies">Movies</button>
                     <button class="tab-button flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" data-tab="n-stream">N Stream</button>
+                    <!-- Plus icon for adding custom playlists -->
+                    <button id="add-playlist-btn" class="flex-shrink-0 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-3 rounded-full text-sm transition-all duration-200 shadow-md transform hover:scale-[1.03]" title="Add Custom Playlist">
+                        <i class="fas fa-plus"></i>
+                    </button>
                 </div>
             </nav>
 
@@ -380,8 +383,31 @@
     </div>
     <!-- Removed Footer -->
 
+    <!-- Add Playlist Modal -->
+    <div id="add-playlist-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-[1002] flex items-center justify-center p-4 transition-opacity duration-300">
+        <div class="bg-gray-800 rounded-xl p-6 w-full max-w-md shadow-2xl border-t-4 border-green-500 transform scale-95 opacity-0 transition-all duration-300" id="add-playlist-modal-content">
+            <h3 class="text-xl font-bold mb-4 text-green-400 flex items-center">
+                <i class="fas fa-plus-circle mr-2"></i> Add Custom M3U Playlist
+            </h3>
+            <div class="space-y-4">
+                <div>
+                    <label for="playlist-name-input" class="block text-sm font-medium text-gray-300 mb-1">Playlist Name:</label>
+                    <input type="text" id="playlist-name-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="My Playlist">
+                </div>
+                <div>
+                    <label for="playlist-url-input" class="block text-sm font-medium text-gray-300 mb-1">M3U URL:</label>
+                    <input type="text" id="playlist-url-input" class="w-full px-3 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="https://example.com/playlist.m3u">
+                </div>
+            </div>
+            <div class="flex gap-3 mt-6">
+                <button id="add-playlist-confirm-btn" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg transition duration-200">Add</button>
+                <button id="add-playlist-cancel-btn" class="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 rounded-lg transition duration-200">Cancel</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Download Ruby Player Modal -->
-    <div id="download-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-[1002] flex items-center justify-center p-4 transition-opacity duration-300">
+    <div id="download-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-[1002] flex items-center justify-center p-4 transition-opacity duration-300"></div>
         <div id="download-modal-content" class="bg-gray-800 rounded-xl p-6 w-full max-w-sm shadow-2xl border-t-4 border-red-500 transform scale-95 opacity-0 transition-all duration-300">
             <h3 class="text-xl font-bold mb-3 text-red-400">Ruby Player Not Found</h3>
             <p class="text-gray-300 mb-6 text-sm">To play this channel, you need the Ruby Player app. Please download it to continue.</p>
@@ -402,6 +428,10 @@
         // --- सर्च के लिए जोड़ा गया Global Variable ---
         let masterChannelList = []; 
         let contextChannel = null;
+        // Encryption secret key (from GitHub secrets)
+        const ENCRYPTION_KEY = '12n';
+        // Custom playlists storage
+        let customPlaylists = [];
         // ----------------------------------------
 
         const contentDisplay = document.getElementById('content-display');
@@ -410,9 +440,8 @@
         const defaultBanner = document.getElementById('default-banner');
         const shakaContainerWrapper = document.getElementById('shaka-container-wrapper'); 
         const shakaVideoElement = document.getElementById('shaka-video-player');
-        const hlsContainerWrapper = document.getElementById('hls-container-wrapper');
         const hlsVideoElement = document.getElementById('hls-video-player');
-        const hlsQualitySelector = document.getElementById('hls-quality-selector');
+        const qualitySelector = document.getElementById('quality-selector');
         
         // Policy Modal Elements
         const showPolicyBtn = document.getElementById('show-policy-btn');
@@ -448,13 +477,19 @@
         const downloadModal = document.getElementById('download-modal');
         const downloadModalContent = document.getElementById('download-modal-content');
         const downloadModalCloseBtn = document.getElementById('download-modal-close-btn');
+        const addPlaylistBtn = document.getElementById('add-playlist-btn');
+        const addPlaylistModal = document.getElementById('add-playlist-modal');
+        const addPlaylistModalContent = document.getElementById('add-playlist-modal-content');
+        const addPlaylistConfirmBtn = document.getElementById('add-playlist-confirm-btn');
+        const addPlaylistCancelBtn = document.getElementById('add-playlist-cancel-btn');
+        const playlistNameInput = document.getElementById('playlist-name-input');
+        const playlistUrlInput = document.getElementById('playlist-url-input');
 
         // GitHub Raw JSON URLs 
         const tabDataUrls = {
             'zee-network': 'https://raw.githubusercontent.com/greenhck/batball/main/zee.json',
             'fancode': 'https://raw.githubusercontent.com/Odfinity/live-events/refs/heads/main/fancode/data.json',
             'pirates-tv': 'https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u',
-            'brdog': '__BRdogAESnnn__',
             'jio-tv': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/jd.m3u',
             'pere-sports': 'https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/ALL.m3u',
             'sony-network': 'https://raw.githubusercontent.com/rocket12-18/dineshbhai/refs/heads/main/sports-pere.m3u',
@@ -464,6 +499,165 @@
             'movies': 'moviesnsrock.json',
             'n-stream': null,
         };
+
+        // --- Encryption/Decryption Functions ---
+        function simpleEncrypt(text, key) {
+            let result = '';
+            for (let i = 0; i < text.length; i++) {
+                const charCode = text.charCodeAt(i) ^ key.charCodeAt(i % key.length);
+                result += String.fromCharCode(charCode);
+            }
+            return btoa(result);
+        }
+
+        function simpleDecrypt(encrypted, key) {
+            try {
+                const decoded = atob(encrypted);
+                let result = '';
+                for (let i = 0; i < decoded.length; i++) {
+                    const charCode = decoded.charCodeAt(i) ^ key.charCodeAt(i % key.length);
+                    result += String.fromCharCode(charCode);
+                }
+                return result;
+            } catch (e) {
+                console.error('Decryption error:', e);
+                return null;
+            }
+        }
+
+        // --- Custom Playlist Functions ---
+        function loadCustomPlaylists() {
+            try {
+                const stored = localStorage.getItem('customPlaylists');
+                customPlaylists = stored ? JSON.parse(stored) : [];
+                renderCustomPlaylistTabs();
+            } catch (e) {
+                console.error('Error loading custom playlists:', e);
+                customPlaylists = [];
+            }
+        }
+
+        function saveCustomPlaylists() {
+            try {
+                localStorage.setItem('customPlaylists', JSON.stringify(customPlaylists));
+            } catch (e) {
+                console.error('Error saving custom playlists:', e);
+            }
+        }
+
+        function renderCustomPlaylistTabs() {
+            const tabsContainer = document.querySelector('.tabs-container');
+            const addBtn = document.getElementById('add-playlist-btn');
+            
+            // Remove existing custom tabs
+            document.querySelectorAll('.custom-playlist-tab').forEach(tab => tab.remove());
+            
+            // Add custom playlist tabs before the plus button
+            customPlaylists.forEach((playlist, index) => {
+                const tabButton = document.createElement('button');
+                tabButton.classList.add('tab-button', 'custom-playlist-tab', 'flex-shrink-0', 'bg-purple-700', 'hover:bg-purple-600', 'text-white', 'font-semibold', 'py-2', 'px-4', 'rounded-full', 'text-sm', 'transition-all', 'duration-200', 'shadow-md', 'transform', 'hover:scale-[1.03]', 'flex', 'items-center');
+                tabButton.dataset.tab = `custom-${index}`;
+                tabButton.dataset.playlistIndex = index;
+                
+                const tabText = document.createElement('span');
+                tabText.textContent = playlist.name;
+                
+                const closeBtn = document.createElement('span');
+                closeBtn.classList.add('custom-tab-close', 'ml-2', 'cursor-pointer');
+                closeBtn.innerHTML = '<i class="fas fa-times text-xs"></i>';
+                closeBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    removeCustomPlaylist(index);
+                });
+                
+                tabButton.appendChild(tabText);
+                tabButton.appendChild(closeBtn);
+                
+                tabButton.addEventListener('click', () => {
+                    loadCustomPlaylist(index);
+                });
+                
+                tabsContainer.insertBefore(tabButton, addBtn);
+            });
+        }
+
+        function removeCustomPlaylist(index) {
+            if (confirm(`Remove "${customPlaylists[index].name}" playlist?`)) {
+                customPlaylists.splice(index, 1);
+                saveCustomPlaylists();
+                renderCustomPlaylistTabs();
+                
+                // If current tab was removed, switch to default
+                if (currentTab.startsWith('custom-')) {
+                    loadAndDisplayChannels('pere-sports');
+                }
+            }
+        }
+
+        async function loadCustomPlaylist(index) {
+            const playlist = customPlaylists[index];
+            if (!playlist) return;
+            
+            currentTab = `custom-${index}`;
+            
+            // Update tab styling
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active', 'bg-gray-600', 'bg-purple-600', 'hover:bg-gray-500', 'shadow-inner');
+                btn.classList.add('shadow-md');
+            });
+            
+            document.querySelectorAll('.custom-playlist-tab').forEach((btn, idx) => {
+                if (idx === index) {
+                    btn.classList.add('active', 'bg-purple-600', 'shadow-inner');
+                    btn.classList.remove('bg-purple-700', 'shadow-md');
+                }
+            });
+            
+            nStreamPlayerSection.classList.add('hidden');
+            nStreamPlayerSection.classList.remove('flex');
+            contentDisplay.classList.remove('hidden');
+            
+            contentDisplay.innerHTML = `
+                <div class="flex items-center justify-center p-4 col-span-full">
+                    <div class="loading-spinner mr-3"></div>
+                    <p class="text-center text-gray-400 font-semibold">Loading ${playlist.name}...</p>
+                </div>
+            `;
+            
+            try {
+                const response = await fetch(playlist.url);
+                if (!response.ok) throw new Error(`Failed to load playlist: ${response.status}`);
+                
+                const m3uContent = await response.text();
+                const channels = await parseM3U(m3uContent);
+                
+                masterChannelList = channels;
+                displayChannels(channels);
+            } catch (error) {
+                console.error('Error loading custom playlist:', error);
+                contentDisplay.innerHTML = `<p class="text-center text-red-400 p-4 font-semibold col-span-full">Error loading playlist: ${error.message}</p>`;
+            }
+        }
+
+        function toggleAddPlaylistModal(show) {
+            if (show) {
+                addPlaylistModal.classList.remove('hidden');
+                setTimeout(() => {
+                    addPlaylistModal.classList.add('opacity-100');
+                    addPlaylistModalContent.classList.add('scale-100', 'opacity-100');
+                    addPlaylistModalContent.classList.remove('scale-95', 'opacity-0');
+                }, 10);
+            } else {
+                addPlaylistModal.classList.remove('opacity-100');
+                addPlaylistModalContent.classList.remove('scale-100', 'opacity-100');
+                addPlaylistModalContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    addPlaylistModal.classList.add('hidden');
+                    playlistNameInput.value = '';
+                    playlistUrlInput.value = '';
+                }, 300);
+            }
+        }
 
         // --- Policy Modal Logic ---
         function togglePolicyModal(show) {
@@ -499,37 +693,6 @@
         // --- End Policy Modal Logic ---
 
         // --- URL Management ---
-        // --- Encryption/Decryption Functions ---
-        // Encryption key will be injected from GitHub Secrets during build/deployment
-        const ENCRYPTION_KEY = typeof __ENCRYPTION_KEY__ !== 'undefined' ? __ENCRYPTION_KEY__ : 'default-fallback-key-change-me';
-        
-        function encryptData(data) {
-            try {
-                const encrypted = CryptoJS.AES.encrypt(data, ENCRYPTION_KEY).toString();
-                // Convert to URL-safe base64
-                return encrypted.replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
-            } catch (error) {
-                console.error('Encryption error:', error);
-                return null;
-            }
-        }
-        
-        function decryptData(encryptedData) {
-            try {
-                // Convert back from URL-safe base64
-                let base64 = encryptedData.replace(/-/g, '+').replace(/_/g, '/');
-                // Add padding if needed
-                while (base64.length % 4) {
-                    base64 += '=';
-                }
-                const decrypted = CryptoJS.AES.decrypt(base64, ENCRYPTION_KEY);
-                return decrypted.toString(CryptoJS.enc.Utf8);
-            } catch (error) {
-                console.error('Decryption error:', error);
-                return null;
-            }
-        }
-
         function updateQueryParam(key, value) {
             const url = new URL(window.location);
             if (value) {
@@ -543,11 +706,7 @@
         function updateChannelShareableUrl(channelName) {
             if (channelName && currentTab !== 'n-stream') {
                 updateQueryParam('tab', currentTab);
-                // Encrypt the channel name
-                const encryptedChannel = encryptData(channelName);
-                if (encryptedChannel) {
-                    updateQueryParam('channel', encryptedChannel);
-                }
+                updateQueryParam('channel', encodeURIComponent(channelName));
                 updateQueryParam('n', null); 
             }
         }
@@ -569,16 +728,12 @@
                 nParamValue += `|${params.join('&')}`;
             }
 
-            // Encrypt the entire n parameter value
-            const encryptedN = encryptData(nParamValue);
-            if (encryptedN) {
-                updateQueryParam('n', encryptedN);
-            }
+            updateQueryParam('n', encodeURIComponent(nParamValue));
         }
         
         // --- Player Core Functions ---
         function setPlayerUIVisibility(isStreamPlaying) {
-            const isVideoPlayerVisible = shakaContainerWrapper.classList.contains('hidden') === false || hlsContainerWrapper.classList.contains('hidden') === false;
+            const isVideoPlayerVisible = shakaContainerWrapper.classList.contains('hidden') === false || hlsVideoElement.classList.contains('hidden') === false;
             
             if (isStreamPlaying) {
                 // If stream is playing, hide the banner completely
@@ -592,7 +747,7 @@
 
                 if (!hasPoster) {
                     shakaContainerWrapper.classList.add('hidden');
-                    hlsContainerWrapper.classList.add('hidden');
+                    hlsVideoElement.classList.add('hidden');
                     
                     defaultBanner.classList.remove('hidden');
                     setTimeout(() => defaultBanner.classList.remove('opacity-0'), 10);
@@ -631,8 +786,8 @@
             hlsVideoElement.removeAttribute('src');
             hlsVideoElement.load(); 
             
-            hlsQualitySelector.innerHTML = '<option value="-1">Auto</option>';
-            hlsQualitySelector.classList.add('hidden');
+            qualitySelector.innerHTML = '<option value="auto">Auto</option>';
+            qualitySelector.classList.add('hidden');
             
             shakaErrorCount = 0;
             lastShakaErrorTime = 0;
@@ -731,8 +886,8 @@
             hlsVideoElement.pause();
             hlsVideoElement.removeAttribute('src');
 
-            hlsQualitySelector.innerHTML = '<option value="-1">Auto</option>';
-            hlsQualitySelector.classList.add('hidden');
+            qualitySelector.innerHTML = '<option value="auto">Auto</option>';
+            qualitySelector.classList.add('hidden');
         }
 
         function handlePlaybackLogic(video, isShaka, channelName = null) {
@@ -819,7 +974,7 @@
             // If we have a poster, ensure the banner is hidden and the video container is visible
             if (thumbnailUrl) {
                 shakaContainerWrapper.classList.remove('hidden');
-                hlsContainerWrapper.classList.add('hidden'); // Shaka container holds shaka player, which is fine for poster
+                hlsVideoElement.classList.add('hidden'); // Shaka container holds shaka player, which is fine for poster
                 defaultBanner.classList.add('hidden');
             } else {
                 // If no poster, ensure banner is visible and players are hidden (resetPlayers handles visibility)
@@ -843,7 +998,7 @@
 
                 if (channel.m3u8) {
                     shakaContainerWrapper.classList.add('hidden'); 
-                    hlsContainerWrapper.classList.remove('hidden');
+                    hlsVideoElement.classList.remove('hidden');  
 
                     if (Hls.isSupported()) {
                         hlsPlayer = new Hls({
@@ -859,7 +1014,6 @@
                         hlsPlayer.attachMedia(hlsVideoElement);
                         hlsPlayer.on(Hls.Events.MANIFEST_PARSED, function() {
                             handlePlaybackLogic(hlsVideoElement, false, channel.name);
-                            setupHlsQualitySelector();
                         });
                         hlsPlayer.on(Hls.Events.ERROR, handleHlsError);
                         
@@ -873,7 +1027,7 @@
                 }
                 else if (channel.mpd) {
                     shakaContainerWrapper.classList.remove('hidden'); 
-                    hlsContainerWrapper.classList.add('hidden');      
+                    hlsVideoElement.classList.add('hidden');      
 
                     if (!shakaPlayerInstance) {
                         passiveStopPlayer("Shaka Player त्रुटि", "Shaka Player इंस्टेंस तैयार नहीं है।");
@@ -915,6 +1069,7 @@
 
                     await shakaPlayerInstance.load(channel.mpd);
                     handlePlaybackLogic(shakaVideoElement, true, channel.name);
+                    setupShakaQualitySelector(); 
                 } else {
                     passiveStopPlayer("URL त्रुटि", "इस चैनल के लिए कोई मान्य स्ट्रीम URL (MPD या M3U8/Generic) नहीं मिला।");
                 }
@@ -1185,22 +1340,6 @@
             `;
             
             const dataUrl = tabDataUrls[tabName];
-            
-            console.log(`Loading tab: ${tabName}, URL: ${dataUrl}`);
-            
-            // Check if dataUrl is null or still a placeholder
-            if (!dataUrl || dataUrl === '__BRdogAESnnn__') {
-                console.error(`Data source not configured for ${tabName}`);
-                contentDisplay.innerHTML = `
-                    <div class="flex flex-col items-center justify-center p-8 col-span-full">
-                        <i class="fas fa-exclamation-triangle text-5xl text-yellow-500 mb-4"></i>
-                        <p class="text-center text-gray-300 font-semibold text-lg">Data source not configured</p>
-                        <p class="text-center text-gray-400 text-sm mt-2">Please configure the data source for this tab in GitHub Secrets.</p>
-                    </div>
-                `;
-                return;
-            }
-            
             let channelsToDisplay = [];
             
             try {
@@ -1271,56 +1410,44 @@
             }
         }
         
-        // --- HLS Quality Selector Logic ---
-        function setupHlsQualitySelector() {
-            if (!hlsPlayer) return;
+        // --- Quality Selector Logic (Identical to previous version) ---
+        function setupShakaQualitySelector() {
+            if (!shakaPlayerInstance) return;
 
-            const levels = hlsPlayer.levels;
-            hlsQualitySelector.innerHTML = '<option value="-1">Auto</option>';
+            const tracks = shakaPlayerInstance.getVariantTracks();
+            qualitySelector.innerHTML = '<option value="auto">स्वचालित</option>';
 
-            if (levels && levels.length > 1) {
-                levels.forEach((level, index) => {
-                    const option = document.createElement('option');
-                    option.value = index;
-                    option.textContent = `${level.height}p`;
-                    hlsQualitySelector.appendChild(option);
-                });
-                hlsQualitySelector.classList.remove('hidden');
+            const videoTracks = tracks.filter(t => t.type === 'variant' && t.height > 0).sort((a, b) => b.bandwidth - a.bandwidth);
+
+            videoTracks.forEach(track => {
+                const option = document.createElement('option');
+                option.value = track.id;
+                option.textContent = `${track.height}p (${Math.round(track.bandwidth / 1000)} Kbps)`;
+                qualitySelector.appendChild(option);
+            });
+
+            if (videoTracks.length > 1) {
+                qualitySelector.classList.remove('hidden');
             } else {
-                hlsQualitySelector.classList.add('hidden');
+                qualitySelector.classList.add('hidden');
             }
 
-            hlsQualitySelector.value = hlsPlayer.currentLevel;
+            const activeTrack = shakaPlayerInstance.getVariantTracks().find(t => t.active);
+            qualitySelector.value = activeTrack ? activeTrack.id : 'auto';
         }
 
-        // Hide quality selector when controls are hidden
-        hlsVideoElement.addEventListener('controlshidden', () => {
-            hlsQualitySelector.classList.add('hidden');
-        });
-
-        hlsVideoElement.addEventListener('controlsshown', () => {
-            if (hlsPlayer && hlsPlayer.levels && hlsPlayer.levels.length > 1) {
-                hlsQualitySelector.classList.remove('hidden');
-            }
-        });
-
-        // Fallback: Monitor controls attribute changes
-        const hlsControlsObserver = new MutationObserver(() => {
-            if (hlsVideoElement.hasAttribute('controls')) {
-                if (hlsPlayer && hlsPlayer.levels && hlsPlayer.levels.length > 1) {
-                    hlsQualitySelector.classList.remove('hidden');
-                }
+        qualitySelector.addEventListener('change', (e) => {
+            if (!shakaPlayerInstance) return;
+            const trackId = e.target.value;
+            if (trackId === 'auto') {
+                shakaPlayerInstance.configure({ abr: { enabled: true } });
             } else {
-                hlsQualitySelector.classList.add('hidden');
+                shakaPlayerInstance.configure({ abr: { enabled: false } });
+                const track = shakaPlayerInstance.getVariantTracks().find(t => t.id == trackId);
+                if (track) {
+                    shakaPlayerInstance.selectVariantTrack(track, true);
+                }
             }
-        });
-
-        hlsControlsObserver.observe(hlsVideoElement, { attributes: true, attributeFilter: ['controls'] });
-
-        hlsQualitySelector.addEventListener('change', (e) => {
-            if (!hlsPlayer) return;
-            const levelIndex = parseInt(e.target.value);
-            hlsPlayer.currentLevel = levelIndex;
         });
 
         // --- Recent Streams Logic (Identical to previous version) ---
@@ -1351,15 +1478,23 @@
             const url = channelConfig.mpd || channelConfig.m3u8;
             if (!url) return;
 
+            // Encrypt the URL before saving
+            const encryptedUrl = simpleEncrypt(url, ENCRYPTION_KEY);
+
             const simpleConfig = {
-                mpd: channelConfig.mpd,
-                m3u8: channelConfig.m3u8,
+                mpd: channelConfig.mpd ? encryptedUrl : null,
+                m3u8: channelConfig.m3u8 ? encryptedUrl : null,
+                originalMpd: channelConfig.mpd,
+                originalM3u8: channelConfig.m3u8,
                 clearkey: channelConfig.clearkey ? { keyId: channelConfig.clearkey.keyId, key: channelConfig.clearkey.key } : null,
                 drm: channelConfig.drm ? { licenseUrl: channelConfig.drm.licenseUrl } : null,
-                thumbnail: channelConfig.thumbnail || '' // Save thumbnail for N-Stream
+                thumbnail: channelConfig.thumbnail || ''
             };
 
-            streams = streams.filter(s => (s.mpd || s.m3u8) !== url);
+            streams = streams.filter(s => {
+                const existingUrl = s.originalMpd || s.originalM3u8;
+                return existingUrl !== url;
+            });
             streams.unshift(simpleConfig);
             streams = streams.slice(0, maxStreams);
 
@@ -1384,25 +1519,29 @@
             clearRecentStreamsBtn.classList.remove('hidden'); 
 
             streams.forEach(stream => {
-                const streamUrl = stream.mpd || stream.m3u8 || 'N/A';
-                const type = stream.mpd ? 'DASH' : 'HLS';
-                const keyId = stream.clearkey ? stream.clearkey.keyId : '';
-                const key = stream.clearkey ? stream.clearkey.key : '';
-                const licenseUrl = stream.drm ? stream.drm.licenseUrl : '';
+                const streamUrl = stream.originalMpd || stream.originalM3u8 || 'N/A';
+                const type = stream.originalMpd ? 'DASH' : 'HLS';
+                
+                // Show only last 5 characters of the URL
+                const urlDisplay = streamUrl.length > 5 ? '...' + streamUrl.slice(-5) : streamUrl;
 
                 const button = document.createElement('button');
                 button.classList.add('bg-gray-700', 'hover:bg-gray-600', 'text-white', 'py-2', 'px-3', 'rounded-lg', 'text-sm', 'transition-all', 'duration-200', 'shadow-md', 'flex', 'flex-col', 'items-start');
 
                 button.innerHTML = `
                     <span class="font-semibold text-blue-300">${type} Stream</span>
-                    <span class="text-xs text-gray-400 recent-stream-url" title="${streamUrl}">${streamUrl.split('/')[2] || streamUrl}</span>
+                    <span class="text-xs text-gray-400" title="${streamUrl}">${urlDisplay}</span>
                 `;
 
                 button.addEventListener('click', () => {
+                    // Decrypt the URL when playing
+                    const decryptedMpd = stream.mpd ? simpleDecrypt(stream.mpd, ENCRYPTION_KEY) : null;
+                    const decryptedM3u8 = stream.m3u8 ? simpleDecrypt(stream.m3u8, ENCRYPTION_KEY) : null;
+                    
                     const channelConfig = {
                         name: `N Stream: ${type}`,
-                        mpd: stream.mpd,
-                        m3u8: stream.m3u8,
+                        mpd: decryptedMpd,
+                        m3u8: decryptedM3u8,
                         clearkey: stream.clearkey,
                         drm: stream.drm,
                         thumbnail: stream.thumbnail || ''
@@ -1447,26 +1586,11 @@
             try {
                 const jsonString = JSON.stringify(shareableChannel);
                 const base64Data = btoa(jsonString);
+                const deepLinkUrl = `rubyplayer://play?data=${base64Data}`;
+                console.log(`Attempting to open Ruby Player with URL: ${deepLinkUrl}`);
                 
-                // Determine scheme host based on playlist or play
-                const isPlaylist = window.location.pathname.startsWith('/playlist');
-                const schemeHost = isPlaylist ? "playlist" : "play";
-                
-                // Create custom scheme URL (for iOS and some Android browsers)
-                const customSchemeUrl = `rubyplayer://${schemeHost}?data=${base64Data}`;
-                
-                // Create intent URL (for Android)
-                const intentUrl = `intent://${schemeHost}?data=${base64Data}#Intent;scheme=rubyplayer;package=com.niet.rubyplayer;end`;
-                
-                console.log(`Attempting to open Ruby Player with URL: ${customSchemeUrl}`);
-                
-                // Try intent URL first (Android)
-                if (/Android/i.test(navigator.userAgent)) {
-                    window.location.href = intentUrl;
-                } else {
-                    // For iOS and other platforms, use custom scheme
-                    window.location.href = customSchemeUrl;
-                }
+                // Attempt to launch the app
+                window.location.href = deepLinkUrl;
 
                 // Fallback for when the app is not installed
                 const appLaunchTimeout = setTimeout(() => {
@@ -1482,6 +1606,48 @@
         }
 
         // --- Event Listeners and Initialization ---
+
+        addPlaylistBtn.addEventListener('click', () => toggleAddPlaylistModal(true));
+        
+        addPlaylistCancelBtn.addEventListener('click', () => toggleAddPlaylistModal(false));
+        
+        addPlaylistModal.addEventListener('click', (e) => {
+            if (e.target === addPlaylistModal) {
+                toggleAddPlaylistModal(false);
+            }
+        });
+        
+        addPlaylistConfirmBtn.addEventListener('click', () => {
+            const name = playlistNameInput.value.trim();
+            const url = playlistUrlInput.value.trim();
+            
+            if (!name) {
+                alert('Please enter a playlist name');
+                return;
+            }
+            
+            if (!url) {
+                alert('Please enter a valid M3U URL');
+                return;
+            }
+            
+            // Check if URL is valid
+            try {
+                new URL(url);
+            } catch (e) {
+                alert('Please enter a valid URL');
+                return;
+            }
+            
+            // Add playlist
+            customPlaylists.push({ name, url });
+            saveCustomPlaylists();
+            renderCustomPlaylistTabs();
+            toggleAddPlaylistModal(false);
+            
+            // Auto-load the new playlist
+            loadCustomPlaylist(customPlaylists.length - 1);
+        });
 
         downloadModalCloseBtn.addEventListener('click', () => toggleDownloadModal(false));
         downloadModal.addEventListener('click', (e) => {
@@ -1600,6 +1766,9 @@
         });
         
         document.addEventListener('DOMContentLoaded', () => {
+            // Load custom playlists first
+            loadCustomPlaylists();
+            
             const urlParams = new URLSearchParams(window.location.search);
             const nParam = urlParams.get('n');
             const sharedTab = urlParams.get('tab');
@@ -1609,54 +1778,49 @@
             
             if (nParam) {
                 tabToActivate = 'n-stream';
-                // Decrypt the n parameter
-                const nValue = decryptData(nParam);
-                
-                if (!nValue) {
-                    console.error('Failed to decrypt n parameter');
-                    tabToActivate = 'pere-sports';
-                } else {
-                    let streamUrl = nValue;
-                    let clearkeyId = '';
-                    let clearkeyKey = '';
-                    let drmLicenseUrl = '';
-                    let streamType = 'HLS';
+                const nValue = decodeURIComponent(nParam);
 
-                    const parts = nValue.split('|');
-                    streamUrl = parts[0];
+                let streamUrl = nValue;
+                let clearkeyId = '';
+                let clearkeyKey = '';
+                let drmLicenseUrl = '';
+                let streamType = 'HLS';
 
-                    if (parts.length > 1) {
-                        const params = new URLSearchParams(parts[1]);
+                const parts = nValue.split('|');
+                streamUrl = parts[0];
 
-                        const drmScheme = params.get('drmScheme');
-                        if (drmScheme === 'clearkey') {
-                            const license = params.get('drmLicense');
-                            if (license) {
-                                const [kid, key] = license.split(':');
-                                clearkeyId = kid;
-                                clearkeyKey = key;
-                                streamType = 'DASH';
-                            }
-                        } else if (drmScheme === 'widevine') {
-                            drmLicenseUrl = params.get('drmLicense');
+                if (parts.length > 1) {
+                    const params = new URLSearchParams(parts[1]);
+
+                    const drmScheme = params.get('drmScheme');
+                    if (drmScheme === 'clearkey') {
+                        const license = params.get('drmLicense');
+                        if (license) {
+                            const [kid, key] = license.split(':');
+                            clearkeyId = kid;
+                            clearkeyKey = key;
                             streamType = 'DASH';
                         }
-                    } else if (streamUrl.includes('.mpd')) {
+                    } else if (drmScheme === 'widevine') {
+                        drmLicenseUrl = params.get('drmLicense');
                         streamType = 'DASH';
                     }
+                } else if (streamUrl.includes('.mpd')) {
+                    streamType = 'DASH';
+                }
 
-                    const nStreamTabButton = document.querySelector('.tab-button[data-tab="n-stream"]');
-                    if (nStreamTabButton) {
-                        currentTab = 'n-stream';
-                        updateQueryParam('tab', 'n-stream');
-                        loadAndDisplayChannels('n-stream'); 
+                const nStreamTabButton = document.querySelector('.tab-button[data-tab="n-stream"]');
+                if (nStreamTabButton) {
+                    currentTab = 'n-stream';
+                    updateQueryParam('tab', 'n-stream');
+                    loadAndDisplayChannels('n-stream'); 
 
-                        setTimeout(() => {
-                            streamUrlInput.value = streamUrl;
-                            streamTypeSelect.value = streamType;
+                    setTimeout(() => {
+                        streamUrlInput.value = streamUrl;
+                        streamTypeSelect.value = streamType;
 
-                            const changeEvent = new Event('change');
-                            streamTypeSelect.dispatchEvent(changeEvent);
+                        const changeEvent = new Event('change');
+                        streamTypeSelect.dispatchEvent(changeEvent);
 
                         clearkeyIdInput.value = clearkeyId;
                         clearkeyKeyInput.value = clearkeyKey;
@@ -1666,18 +1830,10 @@
                     }, 100);
                 }
             }
-            }
             else if (sharedTab && sharedChannel) {
                 const tabButton = document.querySelector(`.tab-button[data-tab="${sharedTab}"]`);
                 if (tabButton) {
-                    // Decrypt the channel name
-                    const decryptedChannel = decryptData(sharedChannel);
-                    if (decryptedChannel) {
-                        loadAndDisplayChannels(sharedTab, decryptedChannel);
-                    } else {
-                        console.error('Failed to decrypt channel parameter');
-                        loadAndDisplayChannels(sharedTab);
-                    }
+                    loadAndDisplayChannels(sharedTab, decodeURIComponent(sharedChannel));
                 }
             }
             else {
@@ -1694,24 +1850,5 @@
         });
     </script>
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "68a40879f6b244629841d4be7aec5e0f"}'></script><!-- End Cloudflare Web Analytics -->
-    <script>
-(function () {
-    const smartLink = "https://www.effectivegatecpm.com/ausxb7pr?key=26be3cdf2d6a4bb4aee58a75afd9e94e";
-    const cooldown = 60 * 1000; // 1 minute
-    const storageKey = "lastSmartLinkClick";
-
-    document.addEventListener("click", function (e) {
-        const lastClick = localStorage.getItem(storageKey);
-        const now = Date.now();
-
-        if (!lastClick || now - lastClick > cooldown) {
-            localStorage.setItem(storageKey, now);
-            window.location.href = smartLink;
-            e.preventDefault();
-            e.stopPropagation();
-        }
-    }, true);
-})();
-    </script>
 </body>
 </html>
