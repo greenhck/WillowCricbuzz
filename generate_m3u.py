@@ -1,6 +1,7 @@
 import os
 import requests
 
+# GitHub Secret: ALLJIO (JSON URL)
 JSON_URL = os.getenv("ALLJIO")
 OUTPUT_FILE = "jiotv.m3u"
 
@@ -30,18 +31,33 @@ def generate_m3u(data):
         token = ch.get("token", "")
         drm = ch.get("drm", {})
 
-        stream_url = mpd + (f"?{token}" if token else "")
+        # 🔑 token IS cookie
+        cookies = token
 
+        # Stream URL (token optional but kept)
+        stream_url = mpd
+        if token:
+            stream_url = f"{mpd}?{token}"
+
+        # EXTINF
         lines.append(
             f'#EXTINF:-1 tvg-name="{name}" tvg-logo="{logo}" group-title="{group}",{name}'
         )
 
+        # Headers
         if referer:
             lines.append(f"#EXTVLCOPT:http-referrer={referer}")
         if ua:
             lines.append(f"#EXTVLCOPT:http-user-agent={ua}")
 
-        # 🔐 ONLY CHANGE: scheme = clearkey
+        # 🍪 Cookies
+        if cookies:
+            lines.append(f"#EXTVLCOPT:http-cookie={cookies}")
+            lines.append(
+                f"#KODIPROP:inputstream.adaptive.http_headers=Cookie={cookies}"
+            )
+
+        # 🔐 DRM (ClearKey)
         if drm:
             lines.append("#KODIPROP:inputstream.adaptive.license_type=clearkey")
             for kid, key in drm.items():
@@ -49,6 +65,7 @@ def generate_m3u(data):
                     f"#KODIPROP:inputstream.adaptive.license_key={kid}:{key}"
                 )
 
+        # Stream URL
         lines.append(stream_url + "\n")
 
     return "\n".join(lines)
@@ -61,7 +78,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(m3u)
 
-    print("jiotv.m3u generated successfully")
+    print("✅ jiotv.m3u generated successfully")
 
 
 if __name__ == "__main__":
