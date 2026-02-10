@@ -5,8 +5,11 @@ import urllib.parse
 JSON_URL = os.getenv("ALLJIO")
 OUTPUT_FILE = "jiotv.m3u"
 
+FIXED_UA = "plaYtv/7.1.5 (Linux;Android 13) ExoPlayerLib/2.11.6 YGX/69.69.69.69"
+GROUP_TITLE = "Jiostar"
+
 if not JSON_URL:
-    raise ValueError("ALLJIO secret is missing")
+    raise ValueError("ALLJIO secret missing")
 
 
 def fetch_json(url):
@@ -25,44 +28,22 @@ def generate_m3u(data):
 
         name = ch.get("name", "Unknown")
         logo = ch.get("logo", "")
-        group = ch.get("category", "JioTV")
-
-        ua = ch.get("userAgent", "")
-        referer = ch.get("referer", "")
-        origin = referer
+        tvg_id = ch.get("channel_id", "")
         token = ch.get("token", "")
         drm = ch.get("drm", {})
 
-        # token is cookie
         cookie = token
 
-        # Build headers for RubyPlayer (URL | format)
-        headers = {}
-
-        if ua:
-            headers["User-Agent"] = ua
-        if cookie:
-            headers["Cookie"] = cookie
-        if referer:
-            headers["Referer"] = referer
-        if origin:
-            headers["Origin"] = origin
-
-        header_str = "&".join(
-            f"{k}={urllib.parse.quote(v, safe='~=%:/;,+')}"
-            for k, v in headers.items()
-        )
-
-        stream_url = mpd
-        if header_str:
-            stream_url = f"{mpd}|{header_str}"
+        # URL with encoded |cookie=
+        encoded_cookie = urllib.parse.quote(cookie, safe="")
+        stream_url = f"{mpd}?%7Ccookie={encoded_cookie}"
 
         # EXTINF
         lines.append(
-            f'#EXTINF:-1 tvg-name="{name}" tvg-logo="{logo}" group-title="{group}",{name}'
+            f'#EXTINF:-1 tvg-id="{tvg_id}" group-title="{GROUP_TITLE}" tvg-logo="{logo}",{name}'
         )
 
-        # DRM (RubyPlayer reads this correctly)
+        # DRM
         if drm:
             lines.append("#KODIPROP:inputstream.adaptive.license_type=clearkey")
             for kid, key in drm.items():
@@ -70,7 +51,14 @@ def generate_m3u(data):
                     f"#KODIPROP:inputstream.adaptive.license_key={kid}:{key}"
                 )
 
-        # URL last
+        # Fixed User-Agent
+        lines.append(f"#EXTVLCOPT:http-user-agent={FIXED_UA}")
+
+        # EXTHTTP cookie
+        if cookie:
+            lines.append(f'#EXTHTTP:{{"cookie":"{cookie}"}}')
+
+        # Stream URL
         lines.append(stream_url + "\n")
 
     return "\n".join(lines)
@@ -83,7 +71,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(m3u)
 
-    print("✅ jiotv.m3u generated (RubyPlayer format)")
+    print("✅ jiotv.m3u generated in RubyPlayer-compatible format")
 
 
 if __name__ == "__main__":
