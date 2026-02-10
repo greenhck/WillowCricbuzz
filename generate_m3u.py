@@ -1,6 +1,5 @@
 import os
 import requests
-import urllib.parse
 
 JSON_URL = os.getenv("ALLJIO")
 OUTPUT_FILE = "jiotv.m3u"
@@ -32,11 +31,7 @@ def generate_m3u(data):
         token = ch.get("token", "")
         drm = ch.get("drm", {})
 
-        cookie = token
-
-        # URL with encoded |cookie=
-        encoded_cookie = urllib.parse.quote(cookie, safe="")
-        stream_url = f"{mpd}?%7Ccookie={encoded_cookie}"
+        cookie = token  # token = cookie
 
         # EXTINF
         lines.append(
@@ -54,12 +49,12 @@ def generate_m3u(data):
         # Fixed User-Agent
         lines.append(f"#EXTVLCOPT:http-user-agent={FIXED_UA}")
 
-        # EXTHTTP cookie
+        # Cookie ONLY here (NOT in URL)
         if cookie:
             lines.append(f'#EXTHTTP:{{"cookie":"{cookie}"}}')
 
-        # Stream URL
-        lines.append(stream_url + "\n")
+        # MPD URL (clean)
+        lines.append(mpd + "\n")
 
     return "\n".join(lines)
 
@@ -71,7 +66,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(m3u)
 
-    print("✅ jiotv.m3u generated in RubyPlayer-compatible format")
+    print("✅ jiotv.m3u generated (cookies NOT in MPD URL)")
 
 
 if __name__ == "__main__":
