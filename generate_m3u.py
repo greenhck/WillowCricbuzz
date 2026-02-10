@@ -1,14 +1,11 @@
 import os
-import json
 import requests
 
-# Secret URL (GitHub Actions -> Secrets -> ALLJIO)
 JSON_URL = os.getenv("ALLJIO")
+OUTPUT_FILE = "jiotv.m3u"
 
 if not JSON_URL:
     raise ValueError("ALLJIO secret is missing")
-
-OUTPUT_FILE = "jiotv.m3u"
 
 
 def fetch_json(url):
@@ -21,7 +18,6 @@ def generate_m3u(data):
     lines = ["#EXTM3U\n"]
 
     for ch in data:
-        # Skip info / promo entries without stream
         mpd = ch.get("mpd")
         if not mpd:
             continue
@@ -34,26 +30,28 @@ def generate_m3u(data):
         token = ch.get("token", "")
         drm = ch.get("drm", {})
 
-        # Build stream URL
         stream_url = mpd
         if token:
             stream_url = f"{mpd}?{token}"
 
-        # IPTV entry
         lines.append(
             f'#EXTINF:-1 tvg-name="{name}" tvg-logo="{logo}" group-title="{group}",{name}'
         )
 
-        # Optional headers
         if referer:
-            lines.append(f'#EXTVLCOPT:http-referrer={referer}')
+            lines.append(f"#EXTVLCOPT:http-referrer={referer}")
         if ua:
-            lines.append(f'#EXTVLCOPT:http-user-agent={ua}')
+            lines.append(f"#EXTVLCOPT:http-user-agent={ua}")
 
-        # DRM info as comments (players that support it will parse externally)
+        # 🔐 FORCE CLEARKEY SCHEME FOR ALL DRM CHANNELS
         if drm:
-            for k, v in drm.items():
-                lines.append(f"#KODIPROP:inputstream.adaptive.license_key={k}:{v}")
+            lines.append(
+                "#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey"
+            )
+            for kid, key in drm.items():
+                lines.append(
+                    f"#KODIPROP:inputstream.adaptive.license_key={kid}:{key}"
+                )
 
         lines.append(stream_url + "\n")
 
@@ -62,12 +60,12 @@ def generate_m3u(data):
 
 def main():
     data = fetch_json(JSON_URL)
-    m3u_content = generate_m3u(data)
+    m3u = generate_m3u(data)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write(m3u_content)
+        f.write(m3u)
 
-    print(f"Saved {OUTPUT_FILE} with {len(data)} entries")
+    print(f"Generated {OUTPUT_FILE}")
 
 
 if __name__ == "__main__":
