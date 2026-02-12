@@ -97,8 +97,10 @@ https://in-mc-fdlive.fancode.com/mumbai/140197_english_hls_24d1fb510145499_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140548_english_hls_ebfcad5e0613700_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(3)_1770389196821.png" group-title="Fancode",Court 1 vs Rotterdam, Netherlands (ATP 500 - ABN AMRO Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140547_english_hls_305e1e721982028_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/F1_web_1770205109895.jpg" group-title="Fancode",Day 2 vs Bahrain International Circuit (F1 ARAMCO PRE-SEASON TESTING 2026)
-https://india-mpv2.fancode.com/out/v1/ap-south-1/139559_english_888691/ad-h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/ATP-250IEBArgentina-Open--old-card-(1).png" group-title="Fancode",Cancha Guillermo Vilas vs Buenos Aires, Argentina (ATP 250 - IEB+ Argentina Open 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140204_english_hls_eb22ca9e4848101_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/AT&T-Pebble-Beach-Pro-Am-2026-old-card-.png" group-title="Fancode",Main Feed - Day 1 vs Pebble Beach Golf Links, Spyglass Hill Golf Course (AT&T Pebble Beach Pro-Am 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140624_english_hls_d638bafaa498103_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
