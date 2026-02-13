@@ -1,12 +1,12 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",India A Women vs UAE Women - 13 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022320/DAI16-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771010923~acl=/*~id=03637863769849213945005789397617~hmac=e2aaa29d51f62e76408c37fdeb5b8700fb5ce1293dbd40f7c2a7a44e4e714e7d
+https://sonydaimenew.akamaized.net/hls/live/2022320/DAI16-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771016377~acl=/*~id=38653302216324118677034794892086~hmac=3b9f35cf43b9d1a7d93ec68255745971e5e375ff1df0435768e475360666af2f
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",India A Women vs UAE Women - 13 Feb 2026 [HIN]
-https://sonydaimenew.akamaized.net/hls/live/2037139/DAI19-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771010923~acl=/*~id=03637863769849213945005789397617~hmac=e2aaa29d51f62e76408c37fdeb5b8700fb5ce1293dbd40f7c2a7a44e4e714e7d
+https://sonydaimenew.akamaized.net/hls/live/2037139/DAI19-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771016377~acl=/*~id=38653302216324118677034794892086~hmac=3b9f35cf43b9d1a7d93ec68255745971e5e375ff1df0435768e475360666af2f
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",India A Women vs UAE Women - 13 Feb 2026 [TAM]
-https://sonydaimenew.akamaized.net/hls/live/2037140/DAI20-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771010923~acl=/*~id=03637863769849213945005789397617~hmac=e2aaa29d51f62e76408c37fdeb5b8700fb5ce1293dbd40f7c2a7a44e4e714e7d
+https://sonydaimenew.akamaized.net/hls/live/2037140/DAI20-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771016377~acl=/*~id=38653302216324118677034794892086~hmac=3b9f35cf43b9d1a7d93ec68255745971e5e375ff1df0435768e475360666af2f
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",India A Women vs UAE Women - 13 Feb 2026 [TEL]
-https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771010923~acl=/*~id=03637863769849213945005789397617~hmac=e2aaa29d51f62e76408c37fdeb5b8700fb5ce1293dbd40f7c2a7a44e4e714e7d
+https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771016377~acl=/*~id=38653302216324118677034794892086~hmac=3b9f35cf43b9d1a7d93ec68255745971e5e375ff1df0435768e475360666af2f
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -99,9 +99,13 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Governor_web.jpg" group-title="Fancode",Australia Governor Generals XI vs India Women (Governor General’s XI vs India 2026 - Women)
+https://in-mc-fdlive.fancode.com/mumbai/140367_english_hls_f6facd47f467778_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/139408_5802_SYW_WEL_1770721836090.png" group-title="Fancode",Western Sydney Wanderers vs Wellington Phoenix (A League 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/139408_english_hls_8fbe75e96895648_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/AT&T-Pebble-Beach-Pro-Am-2026-old-card-.png" group-title="Fancode",World Feed - Day 1 vs Pebble Beach Golf Links, Spyglass Hill Golf Course (AT&T Pebble Beach Pro-Am 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140044_english_hls_adcc9f0bfe76431_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WTT_web.jpg" group-title="Fancode",Day 2 vs Chennai (WTT Star Contenders)
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WTT_web.jpg" group-title="Fancode",Day 2 vs WTT Star Contenders (WTT Star Contenders)
 https://in-mc-fdlive.fancode.com/mumbai/140604_english_hls_1cda6b52b860477_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
