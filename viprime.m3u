@@ -13,3 +13,8 @@ https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/dash/enc/rlisfyx9vd/out/v1/6
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=da661ad935054591590c7487368b26f3:10229bfa52d2e601b3e88b7951dc0bae
 https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/dash/enc/gmgcjjmmtb/out/v1/b02b49b7e4244b4ebaf4f2d576a97228/cenc.mpd
+
+#EXTINF:-1 group-title="Prime sports", Prime4
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2904b17cb64c996dbc254981b7602863:66a7ef671b84498e64f94e8401fe8cb9
+https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/dash/enc/qkp4pavybn/out/v1/2298afadf64943adb0b44dc540ace1ce/cenc.mpd
