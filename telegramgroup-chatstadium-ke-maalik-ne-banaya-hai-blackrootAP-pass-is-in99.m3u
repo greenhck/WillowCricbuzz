@@ -1,4 +1,12 @@
 #EXTM3U
+#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",UAE Women vs Nepal Women - 15 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771174819~acl=/*~id=73737843001686544001031776186747~hmac=c0854cd8ea6f8011486b8375fe5a8e13d5cd94c6f3ec33cc28949d4d189b0363
+#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",UAE Women vs Nepal Women - 15 Feb 2026 [HIN]
+https://sonydaimenew.akamaized.net/hls/live/2094588/DAI04-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771174819~acl=/*~id=73737843001686544001031776186747~hmac=c0854cd8ea6f8011486b8375fe5a8e13d5cd94c6f3ec33cc28949d4d189b0363
+#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",UAE Women vs Nepal Women - 15 Feb 2026 [TAM]
+https://sonydaimenew.akamaized.net/hls/live/2005445/DAI06-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771174819~acl=/*~id=73737843001686544001031776186747~hmac=c0854cd8ea6f8011486b8375fe5a8e13d5cd94c6f3ec33cc28949d4d189b0363
+#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",UAE Women vs Nepal Women - 15 Feb 2026 [TEL]
+https://sonydaimenew.akamaized.net/hls/live/2022316/DAI12-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771174819~acl=/*~id=73737843001686544001031776186747~hmac=c0854cd8ea6f8011486b8375fe5a8e13d5cd94c6f3ec33cc28949d4d189b0363
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -95,8 +103,6 @@ https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd4
 https://in-mc-fdlive.fancode.com/mumbai/140607_english_hls_1ccf0d358961357_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WPL_web_2.jpg" group-title="Fancode",Craigengower Cricket Club Women vs Kowloon Cricket Club Women (Women's Premier League T20 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140608_english_hls_227984fbb031210_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="  https://www.fancode.com/skillup-uploads/cms-media/Dallas-Open-(ATP-500)-old-card-_1770541232780.png" group-title="Fancode",Centre Court vs Dallas, United States (ATP 500 - Nexo Dallas Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140539_english_hls_005a5b548062917_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
