@@ -91,10 +91,10 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/19_Al-Ahli-vs-Shabab-Al-Ahli_1770636035481.png" group-title="Fancode",Al-Ahli Saudi FC vs Shabab Al Ahli (AFC Champions League Elite 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/136086_english_hls_d43be7697a43379_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/20_Sharjah-vs-Nasaf_1770636128937.png" group-title="Fancode",Sharjah vs Nasaf (AFC Champions League Elite 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/136085_english_hls_0dc548833f51470_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/21_Al-Shorta-vs-Al-Duhail_1770636215875.png" group-title="Fancode",Al Shorta vs Al Duhail (AFC Champions League Elite 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/136088_english_hls_83304fa5f020864_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/22_Al-Hilal-vs-Al-Wahda_1770636292603.png" group-title="Fancode",Al Hilal SFC vs Al Wahda (AFC Champions League Elite 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/136087_english_hls_1cc815dcc365131_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Qatar-ExxonMobil-Open,ATP-500-old-match-card-.jpg" group-title="Fancode",World Feed vs Doha, Qatar (ATP 500 - Qatar ExxonMobil Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140208_english_hls_e97477f94943430_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Qatar-ExxonMobil-Open,ATP-500-old-match-card-_1771246185234.jpg" group-title="Fancode",Center Court vs Qatar (ATP 500 - Qatar ExxonMobil Open 2026)
