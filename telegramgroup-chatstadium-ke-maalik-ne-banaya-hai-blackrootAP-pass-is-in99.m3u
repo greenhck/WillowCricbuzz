@@ -91,16 +91,18 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/134037_5609_TAS_NSW_fc-Web.jpg" group-title="Fancode",Tasmania vs New South Wales (Sheffield Shield, 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/134037_english_hls_26ae0af60c14372_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140066_5648_MAC_BU_FC-Web.jpg" group-title="Fancode",Macarthur vs Bangkok United (AFC Champions League Two 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/140066_english_hls_ea183cb97162221_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140067_5648_OSK_PHG_FC-Web.jpg" group-title="Fancode",Gamba Osaka vs Pohang Steelers (AFC Champions League Two 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/140067_english_hls_1c470dc6e696554_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140437_5956_MCFC_CFC_fc-web_1771419569202.jpg" group-title="Fancode",Mumbai City FC vs Chennaiyin FC (ISL 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/140437_english_hls_5d588c23d311284_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140437_5956_MCFC_CFC_fc-web-(1).jpg" group-title="Fancode",Mumbai City FC vs Chennaiyin FC (ISL 2025-26  - Regional)
+https://in-mc-fdlive.fancode.com/mumbai/140752_tamil_hls_c70a3b257411493_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/F1_web_1770205109895.jpg" group-title="Fancode",Day 2 vs Bahrain International Circuit (F1 ARAMCO PRE-SEASON TESTING 2026)
 https://india-mpv2.fancode.com/out/v1/ap-south-1/139562_english_624300/ad-h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Apti_cup_web.jpg" group-title="Fancode",Day 4 vs Polo Gorund, Delhi University (Apti Cup T20 Tournament)
-https://in-mc-fdlive.fancode.com/mumbai/140602_english_hls_1be721d13f60446_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Qatar-ExxonMobil-Open,ATP-500-Revised-old-match-card-_1771298305039.jpg" group-title="Fancode",World Feed vs Doha, Qatar (ATP 500 - Qatar ExxonMobil Open 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140211_english_hls_e1ffbe35933090_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Qatar-ExxonMobil-Open,ATP-500-Revised-old-match-card-_1771348773886.jpg" group-title="Fancode",Grandstand 1 vs Rio de Janeiro, Brazil (ATP 500 - Qatar ExxonMobil Open 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140756_english_hls_419fdbac8523112_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Qatar-ExxonMobil-Open,ATP-500-Revised-old-match-card-_1771348773886.jpg" group-title="Fancode",Center Court vs Doha, Qatar (ATP 500 - Qatar ExxonMobil Open 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140755_english_hls_66f4c33efc95962_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
