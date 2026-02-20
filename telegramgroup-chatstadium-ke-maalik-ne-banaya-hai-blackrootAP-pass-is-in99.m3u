@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Mainz vs Hamburger SV - MD 23 - 21 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094588/DAI04ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1771662831~acl=/*~id=75540716241504104313182942963055~hmac=8c14a31571643c983a49d4be01d12dc7d1c2e33d5fbe3fc97022dc075c10c5ea
+https://sonydaimenew.akamaized.net/hls/live/2094588/DAI04ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1771664645~acl=/*~id=31959919660046155279513429206698~hmac=d82959afc94d579925d6a6d30685ea214c5df0a20c45298f50ba4f616c526864
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -93,24 +93,18 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Sri-Lanka-Women-tour-of-West-Indies,-2026-old-card_1771585889068.jpg" group-title="Fancode",Sri Lanka Women vs West Indies Women (Sri Lanka Women tour of West Indies, 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140138_english_hls_74b6af168927832_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131075_5427_ATH_ELC_FC-Web.png" group-title="Fancode",Athletic Club vs Elche CF (LALIGA 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/131075_english_hls_ca435ba20460198_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/FC_Sports_Default_Football-old-copy.jpg" group-title="Fancode",Blackburn Rovers F.C. vs Preston North End F.C. (EFL Championship 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/140122_english_hls_acfa12043f61996_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1770347072513/140424_CASACARDS_APP.png" group-title="Fancode",Ceuta vs Granada (LALIGA Hypermotion 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/140424_english_hls_45a85e90b081817_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Qatar-ExxonMobil-Open,ATP-500-Revised-old-match-card-_1771348773886.jpg" group-title="Fancode",Center Court vs Doha, Qatar (ATP 500 - Qatar ExxonMobil Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140757_english_hls_a0e3f712395899_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)_1770825129935.png" group-title="Fancode",Featured Groups - Day 2 vs The Riviera Country Club (The Genesis Invitational 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140571_english_hls_8df7ce99ba86559_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)_1770825129935.png" group-title="Fancode",Marquee Group - Day 2 vs The Riviera Country Club (The Genesis Invitational 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140570_english_hls_db62e78e2a67743_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)_1770825129935.png" group-title="Fancode",Main Feed - Day 2 vs The Riviera Country Club (The Genesis Invitational 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140569_english_hls_2201b7773938313_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Qatar-ExxonMobil-Open,ATP-500-old-match-card-_1771246185234.jpg" group-title="Fancode",World Feed vs Doha, Qatar (ATP 500 - Qatar ExxonMobil Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140212_english_hls_341b6aef4a2950_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/ATP-250---Delray-Beach-Open-2026--old-card.png" group-title="Fancode",Center Court vs Delray Beach, United States (ATP 250 - Delray Beach Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140299_english_hls_add56807e482715_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(6).png" group-title="Fancode",Quadra 1 vs Rio de Janeiro, Brazil (ATP 500 - Rio Open Presented by Claro 2026)
