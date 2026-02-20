@@ -1,12 +1,14 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Bangladesh A Women vs Pakistan A Women - Semi-Final - 20 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022320/DAI16-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771620474~acl=/*~id=06659289742714710384343029071372~hmac=331325d884d5f65e3e3f030338789cf65040938cb5181b185064d09ffcb9e694
+https://sonydaimenew.akamaized.net/hls/live/2022320/DAI16-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771624106~acl=/*~id=88288035653356821344901256831882~hmac=7dc81804f5f9e9fc3ac9525335c967b2cab727a2212298d01b461ee3c3cc3146
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Bangladesh A Women vs Pakistan A Women - Semi-Final - 20 Feb 2026 [HIN]
-https://sonydaimenew.akamaized.net/hls/live/2037139/DAI19-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771620474~acl=/*~id=06659289742714710384343029071372~hmac=331325d884d5f65e3e3f030338789cf65040938cb5181b185064d09ffcb9e694
+https://sonydaimenew.akamaized.net/hls/live/2037139/DAI19-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771624106~acl=/*~id=88288035653356821344901256831882~hmac=7dc81804f5f9e9fc3ac9525335c967b2cab727a2212298d01b461ee3c3cc3146
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Bangladesh A Women vs Pakistan A Women - Semi-Final - 20 Feb 2026 [TAM]
-https://sonydaimenew.akamaized.net/hls/live/2037140/DAI20-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771620474~acl=/*~id=06659289742714710384343029071372~hmac=331325d884d5f65e3e3f030338789cf65040938cb5181b185064d09ffcb9e694
+https://sonydaimenew.akamaized.net/hls/live/2037140/DAI20-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771624106~acl=/*~id=88288035653356821344901256831882~hmac=7dc81804f5f9e9fc3ac9525335c967b2cab727a2212298d01b461ee3c3cc3146
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",Bangladesh A Women vs Pakistan A Women - Semi-Final - 20 Feb 2026 [TEL]
-https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771620474~acl=/*~id=06659289742714710384343029071372~hmac=331325d884d5f65e3e3f030338789cf65040938cb5181b185064d09ffcb9e694
+https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771624106~acl=/*~id=88288035653356821344901256831882~hmac=7dc81804f5f9e9fc3ac9525335c967b2cab727a2212298d01b461ee3c3cc3146
+#EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Magical Kenya Open - Day 2 - 20 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1771624106~acl=/*~id=88288035653356821344901256831882~hmac=7dc81804f5f9e9fc3ac9525335c967b2cab727a2212298d01b461ee3c3cc3146
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -99,6 +101,8 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(2)_1771323008079.png" group-title="Fancode",England Lions vs Pakistan Shaheens (England Lions and Pakistan Shaheens tour of UAE)
+https://in-mc-fdlive.fancode.com/mumbai/140661_english_hls_2f7528d99a95628_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/139412_5802_ADL_PG_1770722465261.png" group-title="Fancode",Adelaide United vs Perth Glory (A League 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/139412_english_hls_3271f4d7c684772_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/F1_web_1770205109895.jpg" group-title="Fancode",Day 3 vs Bahrain International Circuit (F1 ARAMCO PRE-SEASON TESTING 2026)
