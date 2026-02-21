@@ -2,32 +2,26 @@ name: M3U Auto Update
 on:
   schedule:
     - cron: '*/10 * * * *'
-  workflow_dispatch: # मैन्युअल रन के लिए
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
+      - uses: actions/checkout@v3
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Run Merger
+      - run: pip install requests
+      - name: Run Script
         env:
           ALLURL: ${{ secrets.ALLURL }}
         run: python merge.py
-
       - name: Commit and Push
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
-          git add playlist.m3u
-          git commit -m "Playlist Updated: $(date)" || exit 0
+          git add pere-masala-perry-perry.m3u
+          git commit -m "Updated Playlist" || exit 0
           git push
