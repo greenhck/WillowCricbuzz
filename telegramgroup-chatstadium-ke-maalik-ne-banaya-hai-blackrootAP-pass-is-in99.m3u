@@ -1,14 +1,6 @@
 #EXTM3U
-#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",India A Women vs Bangladesh A Women - Final - 22 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771797257~acl=/*~id=82087503309735501082704698253604~hmac=6c6cb2e32e4fff53bf698f50ec95804f42d03895bc517a2b1583beb42cd888c4
-#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",India A Women vs Bangladesh A Women - Final - 22 Feb 2026 [HIN]
-https://sonydaimenew.akamaized.net/hls/live/2094588/DAI04-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771797257~acl=/*~id=82087503309735501082704698253604~hmac=6c6cb2e32e4fff53bf698f50ec95804f42d03895bc517a2b1583beb42cd888c4
-#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",India A Women vs Bangladesh A Women - Final - 22 Feb 2026 [TAM]
-https://sonydaimenew.akamaized.net/hls/live/2005445/DAI06-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771797257~acl=/*~id=82087503309735501082704698253604~hmac=6c6cb2e32e4fff53bf698f50ec95804f42d03895bc517a2b1583beb42cd888c4
-#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",India A Women vs Bangladesh A Women - Final - 22 Feb 2026 [TEL]
-https://sonydaimenew.akamaized.net/hls/live/2022316/DAI12-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771797257~acl=/*~id=82087503309735501082704698253604~hmac=6c6cb2e32e4fff53bf698f50ec95804f42d03895bc517a2b1583beb42cd888c4
 #EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Magical Kenya Open - Day 4 - 22 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1771797257~acl=/*~id=82087503309735501082704698253604~hmac=6c6cb2e32e4fff53bf698f50ec95804f42d03895bc517a2b1583beb42cd888c4
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1771802712~acl=/*~id=30910879923436633826577064450140~hmac=53f8fe3549ec90c4f424491c7a6c8371f839f7a3dd12c77ad67a39f9ca4fb9b0
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -103,6 +95,8 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(2)_1771323008079.png" group-title="Fancode",England Lions vs Pakistan Shaheens (England Lions and Pakistan Shaheens tour of UAE)
 https://in-mc-fdlive.fancode.com/mumbai/140662_english_hls_160f2d86ad43710_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140441_5956_BFC_NEUFC_fc-web_1771412946471.jpg" group-title="Fancode",Bengaluru FC vs NorthEast United FC (ISL 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/140441_english_hls_9d6d4c2e8d43686_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
