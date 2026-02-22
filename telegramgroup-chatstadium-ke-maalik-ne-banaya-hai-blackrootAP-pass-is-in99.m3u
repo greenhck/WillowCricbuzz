@@ -1,6 +1,14 @@
 #EXTM3U
+#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",India A Women vs Bangladesh A Women - Final - 22 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771786343~acl=/*~id=56813964619553743326779687183195~hmac=efd1f06147ad7ff9bbf734940af91fcf51536f3a91dfbb0e8828b918e31954e9
+#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",India A Women vs Bangladesh A Women - Final - 22 Feb 2026 [HIN]
+https://sonydaimenew.akamaized.net/hls/live/2094588/DAI04-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771786343~acl=/*~id=56813964619553743326779687183195~hmac=efd1f06147ad7ff9bbf734940af91fcf51536f3a91dfbb0e8828b918e31954e9
+#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",India A Women vs Bangladesh A Women - Final - 22 Feb 2026 [TAM]
+https://sonydaimenew.akamaized.net/hls/live/2005445/DAI06-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771786343~acl=/*~id=56813964619553743326779687183195~hmac=efd1f06147ad7ff9bbf734940af91fcf51536f3a91dfbb0e8828b918e31954e9
+#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",India A Women vs Bangladesh A Women - Final - 22 Feb 2026 [TEL]
+https://sonydaimenew.akamaized.net/hls/live/2022316/DAI12-criclive/std_lrh-800300010.m3u8?hdnea=exp=1771786343~acl=/*~id=56813964619553743326779687183195~hmac=efd1f06147ad7ff9bbf734940af91fcf51536f3a91dfbb0e8828b918e31954e9
 #EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Magical Kenya Open - Day 4 - 22 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1771782706~acl=/*~id=12050914852344574295483020882916~hmac=8000d497bc456f7e21c7e1c4bb5bdc53cfcafd3ae41f33dc30cb03d5e5dfa8d1
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1771786343~acl=/*~id=56813964619553743326779687183195~hmac=efd1f06147ad7ff9bbf734940af91fcf51536f3a91dfbb0e8828b918e31954e9
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -99,6 +107,8 @@ https://in-mc-fdlive.fancode.com/mumbai/140617_english_hls_2b20126b8847793_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140616_english_hls_49dc98e7af12694_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/139416_5802_CCM_SYW_1770723544582.png" group-title="Fancode",Central Coast Mariners vs Western Sydney Wanderers (A League 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/139416_english_hls_f2e88d4f8d88432_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/139417_5802_NJ_MAC_1770723667196.png" group-title="Fancode",Newcastle Jets vs Macarthur (A League 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/139417_english_hls_5b1f17c46e61015_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
