@@ -1,6 +1,8 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Inter vs Real Betis - 24 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094589/DAI05ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1771983153~acl=/*~id=21883396154343469473066866003840~hmac=c2ed409159cd14c57bd25a5d40f0f32c848ba86b6754851e3278992776d9ee55
+https://sonydaimenew.akamaized.net/hls/live/2094589/DAI05ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1771986787~acl=/*~id=09659772016335677351437171636109~hmac=b6e076981c2cbadd14bc45430f9fec5abbf42f1972900a5f836dd07cfd3b9154
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Eintracht Frankfurt vs Sporting CP - 24 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1771986787~acl=/*~id=09659772016335677351437171636109~hmac=b6e076981c2cbadd14bc45430f9fec5abbf42f1972900a5f836dd07cfd3b9154
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -93,6 +95,8 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(2)_1771323008079.png" group-title="Fancode",Pakistan Shaheens vs England Lions (England Lions and Pakistan Shaheens tour of UAE)
+https://in-mc-fdlive.fancode.com/mumbai/140663_english_hls_954543269d89050_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140444_5956_ODS_IK_fc-web_1771412946494.jpg" group-title="Fancode",Odisha FC vs Inter Kashi FC (ISL 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/140444_english_hls_dba160238263461_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Dubai-Duty-Free-Tennis-Championships_fc-web.jpg" group-title="Fancode",Court 2 vs Dubai, United Arab Emirates (ATP 500 - Dubai Duty Free Tennis Championship 2026)
@@ -103,8 +107,6 @@ https://in-mc-fdlive.fancode.com/mumbai/140896_english_hls_d3e71cc86f10359_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140894_english_hls_b9a119fb0153672_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo=" https://www.fancode.com/skillup-uploads/cms-media/Dubai-Duty-Free-Tennis-Championships_fc-web.jpg" group-title="Fancode",Centre Court vs Dubai, United Arab Emirates (ATP 500 - Dubai Duty Free Tennis Championship 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140893_english_hls_416b1a365b26522_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Dubai-Duty-Free-Tennis-Championships_fc-web.jpg" group-title="Fancode",Court 4 vs Dubai, United Arab Emirates (ATP 500 - Dubai Duty Free Tennis Championship 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140895_english_hls_20ab64006b37531_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
