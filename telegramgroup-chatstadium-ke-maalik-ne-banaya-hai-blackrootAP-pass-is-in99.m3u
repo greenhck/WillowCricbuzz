@@ -95,6 +95,14 @@ https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd4
 https://in-mc-fdlive.fancode.com/mumbai/133985_english_hls_2b559b681857065_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BCI-Seguros-Chile-Open,-Clay,-ATP-250-old-.png" group-title="Fancode",Court Jaime Fillol vs Santiago, Chile (ATP 250 - BCI Seguros Chile Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140357_english_hls_a30faa2f5741221_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Abierto-Mexicano-_web.jpg" group-title="Fancode",World Feed vs Acapulco, Mexico (ATP 500 - Abierto Mexicano Telcel)
+https://in-mc-fdlive.fancode.com/mumbai/140351_english_hls_fc7f3ef58a3756_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Abierto-Mexicano-_web.jpg" group-title="Fancode",Cancha 1 vs Acapulco, Mexico (ATP 500 - Abierto Mexicano Telcel)
+https://in-mc-fdlive.fancode.com/mumbai/140831_english_hls_5f1a9653a843727_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Abierto-Mexicano-_web.jpg" group-title="Fancode",Grandstand vs Acapulco, Mexico (ATP 500 - Abierto Mexicano Telcel)
+https://in-mc-fdlive.fancode.com/mumbai/140830_english_hls_db79b7a9ae31299_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Abierto-Mexicano-_web.jpg" group-title="Fancode",Estadio vs Acapulco, Mexico (ATP 500 - Abierto Mexicano Telcel)
+https://in-mc-fdlive.fancode.com/mumbai/140829_english_hls_ce63c6a72971170_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
