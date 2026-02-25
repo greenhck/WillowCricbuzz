@@ -1,6 +1,8 @@
 #EXTM3U
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Real Madrid vs Chelsea - 25 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772073518~acl=/*~id=18931093285159496017552770058626~hmac=59ca3b5d2630888682f85803ef0889877b401b7fc59aef2d5d757efb4da05080
 #EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",PSG vs HJK - 25 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094589/DAI05ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772069866~acl=/*~id=38993979903978961600406154756440~hmac=81b1a1e21eef8755f9a64d0c96ff3a8589406465b63e3798983a658297cb6c68
+https://sonydaimenew.akamaized.net/hls/live/2094589/DAI05ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772073518~acl=/*~id=18931093285159496017552770058626~hmac=59ca3b5d2630888682f85803ef0889877b401b7fc59aef2d5d757efb4da05080
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -101,8 +103,6 @@ https://in-mc-fdlive.fancode.com/mumbai/140347_english_hls_066a4acf083966_1ta-di
 https://in-mc-fdlive.fancode.com/mumbai/140899_english_hls_421a52c4be66302_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Dubai-Duty-Free-Tennis-Championships_fc-web.jpg" group-title="Fancode",World Feed vs Dubai, United Arab Emirates (ATP 500 - Dubai Duty Free Tennis Championship 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140898_english_hls_202857d2b986118_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo=" https://www.fancode.com/skillup-uploads/cms-media/Dubai-Duty-Free-Tennis-Championships_fc-web.jpg" group-title="Fancode",Court 2 vs Dubai, United Arab Emirates (ATP 500 - Dubai Duty Free Tennis Championship 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140897_english_hls_24b0c1bdd696559_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
