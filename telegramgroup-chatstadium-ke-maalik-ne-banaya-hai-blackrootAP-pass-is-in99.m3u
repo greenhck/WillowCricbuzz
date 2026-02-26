@@ -1,4 +1,20 @@
 #EXTM3U
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",VfB Stuttgart vs Celtic - Play-offs - Leg 2 - 26 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2018458/DAI10ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772173777~acl=/*~id=85176163858276998513856460590795~hmac=b9ec1e40c3aa63919f7fdd44667282471eb374a32c1a1a397d2f1ffbc68ad3f5
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Fiorentina vs Jagiellonia Bialystok- Play-Offs - Leg 2 - 26 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2022315/DAI11ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772173777~acl=/*~id=85176163858276998513856460590795~hmac=b9ec1e40c3aa63919f7fdd44667282471eb374a32c1a1a397d2f1ffbc68ad3f5
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Rijeka vs Omonia Nicosia - Play-Offs - Leg 2 - 26 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2022322/DAI18ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772173777~acl=/*~id=85176163858276998513856460590795~hmac=b9ec1e40c3aa63919f7fdd44667282471eb374a32c1a1a397d2f1ffbc68ad3f5
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Viktoria Plzen vs Panathinaikos - Play-offs - Leg 2 - 26 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2105079/DAI08ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772173777~acl=/*~id=85176163858276998513856460590795~hmac=b9ec1e40c3aa63919f7fdd44667282471eb374a32c1a1a397d2f1ffbc68ad3f5
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Ferencvaros vs Ludogorets Razgrad - Play-offs - Leg 2 - 26 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2094588/DAI04ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772173777~acl=/*~id=85176163858276998513856460590795~hmac=b9ec1e40c3aa63919f7fdd44667282471eb374a32c1a1a397d2f1ffbc68ad3f5
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Red Star Belgrade vs Lille - Play-offs - Leg 2 - 26 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2022319/DAI15ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772173777~acl=/*~id=85176163858276998513856460590795~hmac=b9ec1e40c3aa63919f7fdd44667282471eb374a32c1a1a397d2f1ffbc68ad3f5
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",NK Celje vs Drita Gjilan- Play-Offs - Leg 2 - 26 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2022318/DAI14ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772173777~acl=/*~id=85176163858276998513856460590795~hmac=b9ec1e40c3aa63919f7fdd44667282471eb374a32c1a1a397d2f1ffbc68ad3f5
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Samsunspor vs KF Shkendijak- Play-Offs - Leg 2 - 26 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2022316/DAI12ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772173777~acl=/*~id=85176163858276998513856460590795~hmac=b9ec1e40c3aa63919f7fdd44667282471eb374a32c1a1a397d2f1ffbc68ad3f5
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -107,6 +123,8 @@ https://in-mc-fdlive.fancode.com/mumbai/140765_english_hls_6a56e82b3860399_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140767_english_hls_cb35a81a7790793_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BCI-Seguros-Chile-Open,-Clay,-ATP-250-old-.png" group-title="Fancode",Court Jaime Fillol vs Santiago, Chile (ATP 250 - BCI Seguros Chile Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140360_english_hls_9d2a98691631145_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode",World Feed - Day 1 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140763_english_hls_2d6f03ab0c66348_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
