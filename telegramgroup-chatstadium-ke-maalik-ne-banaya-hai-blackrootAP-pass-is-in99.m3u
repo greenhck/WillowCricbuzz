@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",2nd T20I - 27 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1772218632~acl=/*~id=51069916440285369185997504946209~hmac=587ff9e88f533ea4c470e07ec116660b1d01f1a2af057afd06ed290f1e2dff58
+https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1772225298~acl=/*~id=99342331800570606886661318443171~hmac=cbc6c89df11b11bb847058e4f9f29ff99dd61196a53c2eb5d5ef2720979ca78f
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -99,6 +99,8 @@ https://sonypartnersdaimenew.akamaized.net/hls/live/2037141/DAI21NZVSZM/master.m
 https://in-mc-fdlive.fancode.com/mumbai/140664_english_hls_c6d012446437197_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140674_5970_TL_BAH_fc-web.jpg" group-title="Fancode",Bahrain vs Thailand (Thailand Open Men's T20I Series 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140674_english_hls_542878262328580_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/139418_5802_MLV_ADL_1770723740129.png" group-title="Fancode",Melbourne Victory vs Adelaide United (A League 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/139418_english_hls_ee35c9f6d587051_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(4)_1771915359087.png" group-title="Fancode",Day 1 vs Buriram International Circuit (PT GRAND PRIX OF THAILAND 2026)
 https://in-mc-fdlive.fancode.com/mumbai/139924_english_hls_df8a015c4f81523_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
