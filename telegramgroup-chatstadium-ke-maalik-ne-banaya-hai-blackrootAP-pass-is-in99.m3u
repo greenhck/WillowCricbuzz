@@ -93,14 +93,10 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140673_5970_JPN_BHU_fc-web.jpg" group-title="Fancode",Japan vs Bhutan (Thailand Open Men's T20I Series 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140673_english_hls_5cad73958e85788_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BCI-Seguros-Chile-Open,-Clay,-ATP-250-old-.png" group-title="Fancode",Court Jaime Fillol vs Santiago, Chile (ATP 250 - BCI Seguros Chile Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140360_english_hls_9d2a98691631145_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Abierto-Mexicano-_web.jpg" group-title="Fancode",World Feed vs Acapulco, Mexico (ATP 500 - Abierto Mexicano Telcel)
 https://in-mc-fdlive.fancode.com/mumbai/140355_english_hls_f0d1a215da37548_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Abierto-Mexicano-_web.jpg" group-title="Fancode",Grandstand vs Acapulco, Mexico (ATP 500 - Abierto Mexicano Telcel)
 https://in-mc-fdlive.fancode.com/mumbai/140354_english_hls_3a3bb01d3780775_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Abierto-Mexicano-_web.jpg" group-title="Fancode",Cancha 1 vs Acapulco, Mexico (ATP 500 - Abierto Mexicano Telcel)
-https://in-mc-fdlive.fancode.com/mumbai/140841_english_hls_27166d353e85871_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Abierto-Mexicano-_web.jpg" group-title="Fancode",Estadio vs Acapulco, Mexico (ATP 500 - Abierto Mexicano Telcel)
 https://in-mc-fdlive.fancode.com/mumbai/140840_english_hls_f20d9e132f35042_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(4)_1771915359087.png" group-title="Fancode",Day 1 vs Buriram International Circuit (PT GRAND PRIX OF THAILAND 2026)
