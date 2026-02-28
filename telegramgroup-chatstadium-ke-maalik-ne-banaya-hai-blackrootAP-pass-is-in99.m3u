@@ -1,6 +1,16 @@
 #EXTM3U
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Bayer Leverkusen vs Mainz - MD 24 - 28 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2094589/DAI05ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772330687~acl=/*~id=86489565317601060606334493869613~hmac=07ccea85d2ff582cd328f27d5092b2c270fe633b02b93158563fc9d4f3af6e7c
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Goal Arena - MD 24 - 28 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2094588/DAI04ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772330687~acl=/*~id=86489565317601060606334493869613~hmac=07ccea85d2ff582cd328f27d5092b2c270fe633b02b93158563fc9d4f3af6e7c
 #EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Investec South African Open Day 3 - 28 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772329469~acl=/*~id=07067608796510955981045850344810~hmac=263c63f1e91526e806c371c2bbecfd1b5f6faccf75ee817ae3f21c5892ec279d
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772330687~acl=/*~id=86489565317601060606334493869613~hmac=07ccea85d2ff582cd328f27d5092b2c270fe633b02b93158563fc9d4f3af6e7c
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Borussia M'gladbach vs Union Berlin - MD 24 - 28 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2105079/DAI08ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772330687~acl=/*~id=86489565317601060606334493869613~hmac=07ccea85d2ff582cd328f27d5092b2c270fe633b02b93158563fc9d4f3af6e7c
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Hoffenheim vs St. Pauli - MD 24 - 28 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2018457/DAI09ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772330687~acl=/*~id=86489565317601060606334493869613~hmac=07ccea85d2ff582cd328f27d5092b2c270fe633b02b93158563fc9d4f3af6e7c
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Werder Bremen vs Heidenheim - MD 24 - 28 Feb 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2022315/DAI11ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772330687~acl=/*~id=86489565317601060606334493869613~hmac=07ccea85d2ff582cd328f27d5092b2c270fe633b02b93158563fc9d4f3af6e7c
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -99,6 +109,10 @@ https://in-mc-fdlive.fancode.com/mumbai/140691_english_hls_4f60dceaf185652_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140129_english_hls_eecaeedf8a25876_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131089_5427_RVL_ATH_FC-Web.png" group-title="Fancode",Rayo Vallecano vs Athletic Club (LALIGA 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/131089_english_hls_6e9096680544395_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140449_5956_MBSG_MSC_fc-web-(1).jpg" group-title="Fancode",Mohun Bagan Super Giant vs Mohammedan SC (ISL 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/140449_english_hls_de21be73a71835_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140449_5956_MBSG_MSC_fc-web_1772199121067.jpg" group-title="Fancode",Mohun Bagan Super Giant vs Mohammedan SC (ISL 2025-26  - Regional)
+https://in-mc-fdlive.fancode.com/mumbai/141088_bengali_hls_c23fa9b7f217264_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode",Main Feed - Day 3 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140774_english_hls_2c2200de6810581_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Dubai-Duty-Free-Tennis-Championships_fc-web.jpg" group-title="Fancode",Centre Court vs Dubai, United Arab Emirates (ATP 500 - Dubai Duty Free Tennis Championship 2026)
@@ -109,14 +123,6 @@ https://in-mc-fdlive.fancode.com/mumbai/140776_english_hls_5e5cba4b3886404_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140775_english_hls_32ed92903554382_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode",Featured Holes - Day 3 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140777_english_hls_9609f6d6ce80839_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140448_5956_KBFC_IK_fc-web-(1).jpg" group-title="Fancode",Kerala Blasters FC vs Inter Kashi FC (ISL 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/140448_english_hls_6da5ca03ac47135_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140448_5956_KBFC_IK_fc-web_1772199010518.jpg" group-title="Fancode",Kerala Blasters FC vs Inter Kashi FC (ISL 2025-26  - Regional)
-https://in-mc-fdlive.fancode.com/mumbai/141087_malayalam_hls_a8e417905292894_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140449_5956_MBSG_MSC_fc-web-(1).jpg" group-title="Fancode",Mohun Bagan Super Giant vs Mohammedan SC (ISL 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/140449_english_hls_de21be73a71835_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140449_5956_MBSG_MSC_fc-web_1772199121067.jpg" group-title="Fancode",Mohun Bagan Super Giant vs Mohammedan SC (ISL 2025-26  - Regional)
-https://in-mc-fdlive.fancode.com/mumbai/141088_bengali_hls_c23fa9b7f217264_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
