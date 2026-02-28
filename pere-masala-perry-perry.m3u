@@ -11767,9 +11767,19 @@ https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/k0duzgfejg/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://sportzx.cc/
 https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
+#EXTINF:-1 tvg-id="LaLiga" tvg-name="Real Oviedo vs Atlético Madrid - LaLiga [FANCODE 1]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Football", Real Oviedo vs Atlético Madrid - LaLiga [FANCODE 1]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=065051b99bf5cf8d9a3bde5cbde6aaf9:214bd176832872339ce184338320f9a2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://sportzx.cc/
+https://abfjk4haaaaaaaampv6ofhkihi4r6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/inpyms8ezu/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
+#EXTINF:-1 tvg-id="LaLiga" tvg-name="Real Oviedo vs Atlético Madrid - LaLiga [ESPN DEPORTES]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Football", Real Oviedo vs Atlético Madrid - LaLiga [ESPN DEPORTES]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://gooz.aapmains.net
+https://red1.kamfir7.space/playlist/46035/load-playlist?|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Origin=https://sportzx.cc&Referer=https://gooz.aapmains.net
 # By Abu SAEEID X Noob
 # Github X Tg @abusaeeidx
-# Update on 2026-03-01 01:38:51 (BD Time)
+# Update on 2026-03-01 01:57:37 (BD Time)
 # Note: I do not host any content, everything is publicly available. And any issues, please contact me.
 #EXTINF:-1 group-title="LIVE" tvg-logo="https://image.tsports.com/images/mobile_thumbnail/1761718928-1750064430-LIVE.jpg", T Sports Live 01
 https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
@@ -12168,10 +12178,14 @@ https://webiptv.site/sstel
 https://in-mc-fdlive.fancode.com/mumbai/140141_english_hls_c7e54df6c689484_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140703_5655_ALF_ANF_fc-web.jpg" group-title="Fancode-Football", Al-Fayha FC vs Al-Nassr FC (Roshn Saudi League 2025-2026)
 https://in-mc-fdlive.fancode.com/mumbai/140703_english_hls_481589922736134_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131080_5427_RO_ATL_FC-Web.png" group-title="Fancode-Football", Real Oviedo vs Atletico de Madrid (LALIGA 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/131080_english_hls_8f490769c339284_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode-Golf", World Feed - Day 3 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140773_english_hls_f0d09727f189310_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131087_5427_MRC_RS_FC-Web.png" group-title="Fancode-Football", RCD Mallorca vs Real Sociedad (LALIGA 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/131087_english_hls_e9a90d99ac98527_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://images.fancode.com/aig/match/v1772160982905/140822_CASACARDS_APP.png" group-title="Fancode-Football", Castellón vs Racing Club (LALIGA Hypermotion 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/140822_english_hls_7f47cead1535237_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="OMNIX EMPIRE" tvg-logo="https://github.com/omnixmain/OMNIX-EMPIRE/blob/main/omnix-empire-logo.jpg?raw=true",OMNIX EMPIRE
 http://WWW.OMNIXEMPIRE.MP4
 #EXTINF:-1 group-title="Live Events" tvg-logo="https://api.ppv.st/assets/thumb/7e199dcd58047cbca1111ec9a7ff9afc-thumbnail.jpg",Leeds United vs. Manchester City
