@@ -11699,123 +11699,7 @@ https://in-mc-flive.fancode.com/mumbai/140446_bengali_dash_48329_1drmta-di_h264/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://sportzx.cc/
 https://bd-mc-flive.fancode.com/delhi/140446_english_dash_93802_1drmta-di_h264/index.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Premier League" tvg-name="Newcastle United vs Everton - Premier League [SKY SPORTS FHD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Football", Newcastle United vs Everton - Premier League [SKY SPORTS FHD]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://hmembeds.one/
-https://grand-s-v001.faggotsports.tv/out/v1/f1e2d3c4b5a698786543210fedcba987/mix-stream.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Origin=https://sportzx.cc&Referer=https://hmembeds.one/
-#EXTINF:-1 tvg-id="Premier League" tvg-name="Newcastle United vs Everton - Premier League [PSN SPORTS]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Football", Newcastle United vs Everton - Premier League [PSN SPORTS]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=3501bd323a6a35c28eb7654bf298b9aa:2db4c8089d627e1b2c480c57baa86a7b
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://cdn3.skygo.mn/live/disk1/PSN3/DASH-FTA/PSN3.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Premier League" tvg-name="Newcastle United vs Everton - Premier League [HD SERVER]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Football", Newcastle United vs Everton - Premier League [HD SERVER]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://gooz.aapmains.net
-https://pfl4.ascendastro.space/playlist/45989/load-playlist?|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Origin=https://sportzx.cc&Referer=https://gooz.aapmains.net
-#EXTINF:-1 tvg-id="Premier League" tvg-name="Newcastle United vs Everton - Premier League [NOW SPORTS PL]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Football", Newcastle United vs Everton - Premier League [NOW SPORTS PL]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://601.lifesharper.com/newcastle.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Bundesliga" tvg-name="Bayer 04 Leverkusen vs 1. FSV Mainz 05 - Bundesliga [SKY BUNDESLIGA SD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/35/image/dark" group-title="Football", Bayer 04 Leverkusen vs 1. FSV Mainz 05 - Bundesliga [SKY BUNDESLIGA SD]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://smarthard.click/hls/8r59wy2BRApK/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Serie A" tvg-name="Como vs Lecce - Serie A [beIN ENGLISH]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Football", Como vs Lecce - Serie A [beIN ENGLISH]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Serie A" tvg-name="Como vs Lecce - Serie A [FOX DEPORTES]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Football", Como vs Lecce - Serie A [FOX DEPORTES]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=d1a163914db8ffad2c3e94f979896a0d:9728800a3959aafdd5b0bcfbf3768811
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/vkpoljjpkj/out/v1/502bcf68b3514cd28a220e6f0a43816f/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Premier League" tvg-name="Liverpool vs West Ham United - Premier League [PSN SPORTS]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Football", Liverpool vs West Ham United - Premier League [PSN SPORTS]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=3501bd323a6a35c28eb7654bf298b9aa:2db4c8089d627e1b2c480c57baa86a7b
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://cdn4.skygo.mn/live/disk1/SPSPlay/DASH-FTA/SPSPlay.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Premier League" tvg-name="Liverpool vs West Ham United - Premier League [NBC UNIVERSO]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Football", Liverpool vs West Ham United - Premier League [NBC UNIVERSO]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=96b67fa09140329a89b7a1ead134eda3:c618d32c56cdc6cad8330eb98507ca3f
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s/Live/channel(universo-east)/master.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Premier League" tvg-name="Liverpool vs West Ham United - Premier League [SKY SPORTS FHD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Football", Liverpool vs West Ham United - Premier League [SKY SPORTS FHD]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://hmembeds.one/
-https://grand-s-v001.faggotsports.tv/out/v1/9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d/mix-stream.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Origin=https://sportzx.cc&Referer=https://hmembeds.one/
-#EXTINF:-1 tvg-id="Premier League" tvg-name="Liverpool vs West Ham United - Premier League [HD SERVER]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Football", Liverpool vs West Ham United - Premier League [HD SERVER]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://gooz.aapmains.net
-https://plf1.ionisglide.space/playlist/45990/load-playlist?|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Origin=https://sportzx.cc&Referer=https://gooz.aapmains.net
-#EXTINF:-1 tvg-id="Premier League" tvg-name="Liverpool vs West Ham United - Premier League [NOW SPORTS PL]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Football", Liverpool vs West Ham United - Premier League [NOW SPORTS PL]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://daffodil.lifesharper.com/now.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Premier League" tvg-name="Burnley vs Brentford - Premier League [SKY SPORTS FHD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Football", Burnley vs Brentford - Premier League [SKY SPORTS FHD]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://hmembeds.one/
-https://grand-s-v001.faggotsports.tv/out/v1/5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d/mix-stream.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Origin=https://sportzx.cc&Referer=https://hmembeds.one/
-#EXTINF:-1 tvg-id="Championship" tvg-name="Preston North End vs Millwall - Championship [beIN ENGLISH]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Football", Preston North End vs Millwall - Championship [beIN ENGLISH]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Bundesliga" tvg-name="TSG Hoffenheim vs FC St. Pauli - Bundesliga [SKY BUNDESLIGA SD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/35/image/dark" group-title="Football", TSG Hoffenheim vs FC St. Pauli - Bundesliga [SKY BUNDESLIGA SD]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://smarthard.click/hls/Mhe8gotoGQlu/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Bundesliga" tvg-name="SV Werder Bremen vs 1. FC Heidenheim - Bundesliga [SKY BUNDESLIGA SD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/35/image/dark" group-title="Football", SV Werder Bremen vs 1. FC Heidenheim - Bundesliga [SKY BUNDESLIGA SD]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://smarthard.click/hls/kjzxkCIqkhtb/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="LaLiga" tvg-name="Barcelona vs Villarreal - LaLiga [Laliga TV FHD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Football", Barcelona vs Villarreal - LaLiga [Laliga TV FHD]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=620e51b82596475517a27aa425c52280:2b9ba811e9c5aeafc8ae1b71cdca4d6a
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/k0duzgfejg/out/v1/70a50b1bda944628b8e7e66ab4069419/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="LaLiga" tvg-name="Barcelona vs Villarreal - LaLiga [FANCODE FHD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Football", Barcelona vs Villarreal - LaLiga [FANCODE FHD]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=065051b99bf5cf8d9a3bde5cbde6aaf9:214bd176832872339ce184338320f9a2
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://abfjk4haaaaaaaampv6ofhkihi4r6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/inpyms8ezu/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="LaLiga" tvg-name="Barcelona vs Villarreal - LaLiga [ESPN DEPORTES]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Football", Barcelona vs Villarreal - LaLiga [ESPN DEPORTES]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://daffodil.serverbandel.sbs/dep.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="LaLiga" tvg-name="Barcelona vs Villarreal - LaLiga [HD SERVER]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Football", Barcelona vs Villarreal - LaLiga [HD SERVER]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://gooz.aapmains.net
-https://red7.astrovortex.space/playlist/45992/load-playlist?|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Origin=https://sportzx.cc&Referer=https://gooz.aapmains.net
-#EXTINF:-1 tvg-id="Bundesliga" tvg-name="Borussia M'gladbach vs 1. FC Union Berlin - Bundesliga [SKY BUNDESLIGA SD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/35/image/dark" group-title="Football", Borussia M'gladbach vs 1. FC Union Berlin - Bundesliga [SKY BUNDESLIGA SD]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://smarthard.click/hls/9gSZoyFska/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="VriendenLoterij Eredivisie" tvg-name="SC Heerenveen vs Sparta Rotterdam - VriendenLoterij Eredivisie [ESPN NL]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Football", SC Heerenveen vs Sparta Rotterdam - VriendenLoterij Eredivisie [ESPN NL]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://smarthard.click/hls/DzazxOvS3QE1/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="LaLiga 2" tvg-name="Real Zaragoza vs Burgos Club de Fútbol - LaLiga 2 [Laliga Hypermotion ES]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Football", Real Zaragoza vs Burgos Club de Fútbol - LaLiga 2 [Laliga Hypermotion ES]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=d69894c7b729c5d1e85893e5e6cfcb0f:db0d53f871f5d2ef91d3a112c7ec9f30
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/tcninbbnt5/out/v1/7668f47d28e345979c072e361f3d3ce3/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Ligue 1" tvg-name="Stade Rennais vs Toulouse - Ligue 1 [NOVA SPORTS]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Football", Stade Rennais vs Toulouse - Ligue 1 [NOVA SPORTS]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://dash2.antik.sk/stream/nvidia_nova_sport2/playlist_cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="Ligue 1" tvg-name="Stade Rennais vs Toulouse - Ligue 1 [Ligue1+]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Football", Stade Rennais vs Toulouse - Ligue 1 [Ligue1+]
+#EXTINF:-1 tvg-id="Ligue 1" tvg-name="AS Monaco vs Angers - Ligue 1 [Ligue1+]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Football", AS Monaco vs Angers - Ligue 1 [Ligue1+]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://sportzx.cc/
 https://bbb.exoadash.com/TVD2083/index.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
@@ -11839,35 +11723,9 @@ https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/5qz8wmdome/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://sportzx.cc/
 https://smarthard.click/hls/hhx33tWwGEeW/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="ICC T20 World Cup" tvg-name="Sri Lanka vs Pakistan - ICC T20 World Cup [WILLOW - AQ]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11185/image/dark" group-title="Cricket", Sri Lanka vs Pakistan - ICC T20 World Cup [WILLOW - AQ]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=04ef2776a130e77f2e829d95bdc94d4b:203f0b19e11497baf5910937486692d7
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://a201aivottlinear-a.akamaihd.net/OTTB/iad-nitro/live/clients/dash/enc/yiiftorhi8/out/v1/be0f7019b1c448f185520be36ff5c809/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="ICC T20 World Cup" tvg-name="Sri Lanka vs Pakistan - ICC T20 World Cup [JIO HOTSTAR]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11185/image/dark" group-title="Cricket", Sri Lanka vs Pakistan - ICC T20 World Cup [JIO HOTSTAR]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportslivenow.top/
-https://live-pull.aisports.mobi/moviebox/device02/playlist.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Origin=https://sportzx.cc&Referer=https://sportslivenow.top/
-#EXTINF:-1 tvg-id="ICC T20 World Cup" tvg-name="Sri Lanka vs Pakistan - ICC T20 World Cup [HD SERVER ]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11185/image/dark" group-title="Cricket", Sri Lanka vs Pakistan - ICC T20 World Cup [HD SERVER ]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://stream1.liveland.af/hls/tv/tolo-sport/chunklist3.m3u8?|Referer=https://sportzx.cc/&Origin=https://sportzx.cc&User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
-#EXTINF:-1 tvg-id="ICC T20 World Cup" tvg-name="Sri Lanka vs Pakistan - ICC T20 World Cup [WILLOW HD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11185/image/dark" group-title="Cricket", Sri Lanka vs Pakistan - ICC T20 World Cup [WILLOW HD]
-#EXTVLCOPT:http-user-agent=AppleCoreMedia/1.0.0.23D5103d (iPhone; U; CPU OS 26_3 like Mac OS X; en_us)
-#EXTVLCOPT:http-referrer=https://yahoo.com/
-https://cdn39591467.blazingcdn.net/dx14fhd/index.m3u8|Referer=https://yahoo.com/&Origin=https://yahoo.com&User-Agent=AppleCoreMedia/1.0.0.23D5103d (iPhone; U; CPU OS 26_3 like Mac OS X; en_us)
-#EXTINF:-1 tvg-id="ICC T20 World Cup" tvg-name="Sri Lanka vs Pakistan - ICC T20 World Cup [Star Sport HIN]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11185/image/dark" group-title="Cricket", Sri Lanka vs Pakistan - ICC T20 World Cup [Star Sport HIN]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-http://103.99.249.139/starsport2/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="ICC T20 World Cup" tvg-name="Sri Lanka vs Pakistan - ICC T20 World Cup [URDU Commentary]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11185/image/dark" group-title="Cricket", Sri Lanka vs Pakistan - ICC T20 World Cup [URDU Commentary]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://pscp.tv/
-https://prod-fastly-ap-southeast-1.video.pscp.tv/Transcoding/v1/hls/xhwjibNeyAi5t5akBQHh9GQFuNPd6-OpoP9ySVoVrRgIKcM1s-7J6kjqfgNMU6uXniXV55NfRbdOkG_G2Lgf4g/non_transcode/ap-southeast-1/periscope-replay-direct-prod-ap-southeast-1-public/master_dynamic_highlatency.m3u8?type=live|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Origin=https://sportzx.cc&Referer=https://pscp.tv/
 # By Abu SAEEID X Noob
 # Github X Tg @abusaeeidx
-# Update on 2026-02-28 23:41:00 (BD Time)
+# Update on 2026-02-28 23:57:49 (BD Time)
 # Note: I do not host any content, everything is publicly available. And any issues, please contact me.
 #EXTINF:-1 group-title="LIVE" tvg-logo="https://image.tsports.com/images/mobile_thumbnail/1761718928-1750064430-LIVE.jpg", T Sports Live 01
 https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
@@ -12197,6 +12055,23 @@ https://n14.sanwalyaarpya.com:1686/hls/fox501.m3u8?md5=w6EdQRXo_PXazWqm2p2qvw&ex
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
 https://n6.sanwalyaarpya.com:1686/hls/ten1hd.m3u8?md5=qyVSvi4JZRiV7Ly4FfEGfw&expires=1772307892
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ce7ab3022e753307997f58afe001bac4:72d631a66e635c60829a0fe7705516c1
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 13; RMX3081 Build/RKQ1.211119.001)
+#EXTINF:-1 tvg-logo="https://api.ppv.st/assets/thumb/7e199dcd58047cbca1111ec9a7ff9afc-thumbnail.jpg", Leeds United vs. Manchester City
+https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s-v2/Live/channel(kvea)/master.mpd
+#EXTINF:-1 tvg-logo="https://api.ppv.st/assets/thumb/7e199dcd58047cbca1111ec9a7ff9afc-thumbnail.jpg", Leeds United vs. Manchester City ios
+https://webiptv.site/iframe?url=https://storage.googleapis.com/uncetrunvover1/mux_video_ts1/index-1.m3u8
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=96b67fa09140329a89b7a1ead134eda3:c618d32c56cdc6cad8330eb98507ca3f
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 13; RMX3081 Build/RKQ1.211119.001)
+#EXTINF:-1 tvg-logo="https://api.ppv.st/assets/thumb/7e199dcd58047cbca1111ec9a7ff9afc-thumbnail.jpg", Leeds United vs. Manchester City
+https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s/Live/channel(universo-east)/master.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3501bd323a6a35c28eb7654bf298b9aa:2db4c8089d627e1b2c480c57baa86a7b
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 13; RMX3081 Build/RKQ1.211119.001)
+#EXTINF:-1 tvg-logo="https://api.ppv.st/assets/thumb/7e199dcd58047cbca1111ec9a7ff9afc-thumbnail.jpg", Leeds United vs. Manchester City
+https://cdn4.skygo.mn/live/disk1/SPSPlay/DASH-FTA/SPSPlay.mpd
 #EXTINF:-1 tvg-logo="https://webiptv.site/jointg", T20 WC : SL vs PAK | Join Tg
 https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://t.me/webipTvOfficial
 #EXTINF:-1 tvg-logo="https://images.icc-cricket.com/image/upload/t_ratio1_1-size20/prd/vbyvinupaaat2mgwx5b4", T20 WC : SL vs PAK | Sky Sport Cricket HD ios
@@ -12245,8 +12120,6 @@ https://webiptv.site/sstam
 https://webiptv.site/sstel
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Sri-Lanka-Women-tour-of-West-Indies,-2026-old-card-(1).jpg" group-title="Fancode-Cricket", West Indies Women vs Sri Lanka Women (Sri Lanka Women tour of West Indies, 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140141_english_hls_c7e54df6c689484_1ta-di_h264/index.m3u8
-#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140692_5968_VDS_PRC_FC-Web.jpg" group-title="Fancode-Cricket", Vredenburg/Saldanha CC vs Paarl CC (Boland T20 Super League Finals 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140692_english_hls_4beadff46b45381_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131087_5427_MRC_RS_FC-Web.png" group-title="Fancode-Football", RCD Mallorca vs Real Sociedad (LALIGA 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/131087_english_hls_e9a90d99ac98527_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode-Golf", Main Feed - Day 3 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
@@ -12259,10 +12132,29 @@ https://in-mc-fdlive.fancode.com/mumbai/140775_english_hls_32ed92903554382_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140777_english_hls_9609f6d6ce80839_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode-Golf", World Feed - Day 3 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140773_english_hls_f0d09727f189310_1ta-di_h264/index.m3u8
-#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131084_5427_BAR_VIL_FC-Web.png" group-title="Fancode-Football", FC Barcelona vs Villarreal CF (LALIGA 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/131084_english_hls_c2042aefad65938_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="OMNIX EMPIRE" tvg-logo="https://github.com/omnixmain/OMNIX-EMPIRE/blob/main/omnix-empire-logo.jpg?raw=true",OMNIX EMPIRE
 http://WWW.OMNIXEMPIRE.MP4
+#EXTINF:-1 group-title="Live Events" tvg-logo="https://api.ppv.st/assets/thumb/7e199dcd58047cbca1111ec9a7ff9afc-thumbnail.jpg",Leeds United vs. Manchester City
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"ce7ab3022e753307997f58afe001bac4":"72d631a66e635c60829a0fe7705516c1"}
+#EXTVLCOPT:http-referrer=https://webiptv.site/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s-v2/Live/channel(kvea)/master.mpd
+#EXTINF:-1 group-title="Live Events" tvg-logo="https://api.ppv.st/assets/thumb/7e199dcd58047cbca1111ec9a7ff9afc-thumbnail.jpg",Leeds United vs. Manchester City ios
+#EXTVLCOPT:http-referrer=https://webiptv.site/
+https://webiptv.site/iframe?url=https://storage.googleapis.com/uncetrunvover1/mux_video_ts1/index-1.m3u8
+#EXTINF:-1 group-title="Live Events" tvg-logo="https://api.ppv.st/assets/thumb/7e199dcd58047cbca1111ec9a7ff9afc-thumbnail.jpg",Leeds United vs. Manchester City
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"96b67fa09140329a89b7a1ead134eda3":"c618d32c56cdc6cad8330eb98507ca3f"}
+#EXTVLCOPT:http-referrer=https://webiptv.site/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s/Live/channel(universo-east)/master.mpd
+#EXTINF:-1 group-title="Live Events" tvg-logo="https://api.ppv.st/assets/thumb/7e199dcd58047cbca1111ec9a7ff9afc-thumbnail.jpg",Leeds United vs. Manchester City
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"3501bd323a6a35c28eb7654bf298b9aa":"2db4c8089d627e1b2c480c57baa86a7b"}
+#EXTVLCOPT:http-referrer=https://webiptv.site/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://cdn4.skygo.mn/live/disk1/SPSPlay/DASH-FTA/SPSPlay.mpd
 #EXTINF:-1 group-title="Live Events" tvg-logo="https://images.icc-cricket.com/image/upload/t_ratio1_1-size20/prd/vbyvinupaaat2mgwx5b4",T20 WC : SL vs PAK | Sky Sport Cricket HD ios
 #EXTVLCOPT:http-referrer=https://webiptv.site/
 https://webiptv.site/byps.m3u8
