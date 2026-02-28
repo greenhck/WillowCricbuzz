@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Investec South African Open Day 3 - 28 Feb 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772322807~acl=/*~id=24301205312971350777467079363092~hmac=990373087a4604d940205c2ba764543c6246de69b6b2773eeb8d3feb55c1e927
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772327043~acl=/*~id=57068066164547778460844477655726~hmac=5a76d499442d4fdc55424cb2bb11ddfe55802b0e61a113d0fcecc53ed6d67888
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -99,6 +99,20 @@ https://in-mc-fdlive.fancode.com/mumbai/140691_english_hls_4f60dceaf185652_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140448_english_hls_6da5ca03ac47135_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140448_5956_KBFC_IK_fc-web_1772199010518.jpg" group-title="Fancode",Kerala Blasters FC vs Inter Kashi FC (ISL 2025-26  - Regional)
 https://in-mc-fdlive.fancode.com/mumbai/141087_malayalam_hls_a8e417905292894_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140129_5489_LEI_NOR_fc-web.jpg" group-title="Fancode",Leicester City F.C. vs Norwich City F.C. (EFL Championship 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/140129_english_hls_eecaeedf8a25876_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131089_5427_RVL_ATH_FC-Web.png" group-title="Fancode",Rayo Vallecano vs Athletic Club (LALIGA 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/131089_english_hls_6e9096680544395_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode",Main Feed - Day 3 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140774_english_hls_2c2200de6810581_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Dubai-Duty-Free-Tennis-Championships_fc-web.jpg" group-title="Fancode",Centre Court vs Dubai, United Arab Emirates (ATP 500 - Dubai Duty Free Tennis Championship 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140350_english_hls_f0f290324f50111_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode",Featured Groups - Day 3 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140776_english_hls_5e5cba4b3886404_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode",Marquee Group - Day 3 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140775_english_hls_32ed92903554382_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode",Featured Holes - Day 3 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140777_english_hls_9609f6d6ce80839_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
