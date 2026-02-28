@@ -12077,7 +12077,7 @@ https://cors-proxy.cooks.fyi/https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live
 https://grand-s-v001.faggotsports.tv/out/v1/frofudrljocldrugudr295ifistlsw1w/mix-stream.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Origin=https://sportzx.cc&Referer=https://hmembeds.one/
 # By Abu SAEEID X Noob
 # Github X Tg @abusaeeidx
-# Update on 2026-02-28 17:27:25 (BD Time)
+# Update on 2026-02-28 17:57:33 (BD Time)
 # Note: I do not host any content, everything is publicly available. And any issues, please contact me.
 #EXTINF:-1 group-title="LIVE" tvg-logo="https://image.tsports.com/images/mobile_thumbnail/1761718928-1750064430-LIVE.jpg", T Sports Live 01
 https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
@@ -12459,6 +12459,8 @@ https://webiptv.site/sskan
 https://webiptv.site/sstam
 #EXTINF:-1 tvg-logo="https://images.icc-cricket.com/image/upload/t_ratio1_1-size20/prd/xmb48mh2b8itacfyjljy", T20 WC : ENG vs NZ | Star Sp Tel
 https://webiptv.site/sstel
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140691_5968_MAT_VDS_FC-Web.jpg" group-title="Fancode-Cricket", Maties Cricket Club vs Vredenburg/Saldanha CC (Boland T20 Super League Finals 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140691_english_hls_4f60dceaf185652_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140448_5956_KBFC_IK_fc-web-(1).jpg" group-title="Fancode-Football", Kerala Blasters FC vs Inter Kashi FC (ISL 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/140448_english_hls_6da5ca03ac47135_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140448_5956_KBFC_IK_fc-web_1772199010518.jpg" group-title="Fancode-Football", Kerala Blasters FC vs Inter Kashi FC (ISL 2025-26  - Regional)
