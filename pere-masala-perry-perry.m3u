@@ -11699,24 +11699,6 @@ https://in-mc-flive.fancode.com/mumbai/140446_bengali_dash_48329_1drmta-di_h264/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://sportzx.cc/
 https://bd-mc-flive.fancode.com/delhi/140446_english_dash_93802_1drmta-di_h264/index.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="ICC T20 World Cup" tvg-name="India vs West Indies - ICC T20 World Cup [Willow [Ad Free]]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11185/image/dark" group-title="Cricket", India vs West Indies - ICC T20 World Cup [Willow [Ad Free]]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=0c1cb3e9514dddd75896a7f60a03decb:963fb175f70769c8d56fc44c843808b3
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://ta.bia-cf.live.pv-cdn.net/bom-nitro/live/clients/dash/enc/ecp6xidc5d/out/v1/b8a94677c56e4411aef7ecc2431cec0a/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="ICC T20 World Cup" tvg-name="India vs West Indies - ICC T20 World Cup [Star Sport HIN]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11185/image/dark" group-title="Cricket", India vs West Indies - ICC T20 World Cup [Star Sport HIN]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-http://103.99.249.139/starsport2/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="ICC T20 World Cup" tvg-name="India vs West Indies - ICC T20 World Cup [WILLOW HD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11185/image/dark" group-title="Cricket", India vs West Indies - ICC T20 World Cup [WILLOW HD]
-#EXTVLCOPT:http-user-agent=AppleCoreMedia/1.0.0.23D5103d (iPhone; U; CPU OS 26_3 like Mac OS X; en_us)
-#EXTVLCOPT:http-referrer=https://yahoo.com/
-https://cdn39591467.blazingcdn.net/dx14fhd/index.m3u8|Referer=https://yahoo.com/&Origin=https://yahoo.com&User-Agent=AppleCoreMedia/1.0.0.23D5103d (iPhone; U; CPU OS 26_3 like Mac OS X; en_us)
-#EXTINF:-1 tvg-id="ICC T20 World Cup" tvg-name="India vs West Indies - ICC T20 World Cup [HD SERVER ]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11185/image/dark" group-title="Cricket", India vs West Indies - ICC T20 World Cup [HD SERVER ]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://stream1.liveland.af/hls/tv/tolo-sport/chunklist3.m3u8?|Referer=https://sportzx.cc/&Origin=https://sportzx.cc&User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
 #EXTINF:-1 tvg-id="Ligue 1" tvg-name="Lorient vs Auxerre - Ligue 1 [Ligue1+]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Football", Lorient vs Auxerre - Ligue 1 [Ligue1+]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://sportzx.cc/
@@ -11725,34 +11707,6 @@ https://bbb.exoadash.com/TVD2083/index.mpd|User-Agent=Mozilla/5.0 (Windows NT 10
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://instreams.click/
 https://instreams.live/EU/HDTV25/index.m3u8?st=SportzX|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://instreams.click/&Origin=https://instreams.click
-#EXTINF:-1 tvg-id="LaLiga 2" tvg-name="Mirandés vs AD Ceuta - LaLiga 2 [Laliga Hypermotion]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Football", Mirandés vs AD Ceuta - LaLiga 2 [Laliga Hypermotion]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://bbb.exoadash.com/TVD1581/index.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="LaLiga 2" tvg-name="Sporting Gijón vs Leganés - LaLiga 2 [Laliga Hypermotion ES]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Football", Sporting Gijón vs Leganés - LaLiga 2 [Laliga Hypermotion ES]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=d69894c7b729c5d1e85893e5e6cfcb0f:db0d53f871f5d2ef91d3a112c7ec9f30
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/tcninbbnt5/out/v1/7668f47d28e345979c072e361f3d3ce3/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="LaLiga" tvg-name="Valencia vs Osasuna - LaLiga [Laliga TV FHD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Football", Valencia vs Osasuna - LaLiga [Laliga TV FHD]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=620e51b82596475517a27aa425c52280:2b9ba811e9c5aeafc8ae1b71cdca4d6a
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/k0duzgfejg/out/v1/70a50b1bda944628b8e7e66ab4069419/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="LaLiga" tvg-name="Valencia vs Osasuna - LaLiga [beIN ENGLISH]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Football", Valencia vs Osasuna - LaLiga [beIN ENGLISH]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
-#EXTINF:-1 tvg-id="LaLiga" tvg-name="Valencia vs Osasuna - LaLiga [Premier Sports]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Football", Valencia vs Osasuna - LaLiga [Premier Sports]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=1444f4235529f183f0a5a486befe9cdb:e5e3fec67a1bb3472a2089c8a0a2557f
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://sportzx.cc/
-https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/m6sqanvm2m/out/v1/f6beb46c6e9a4132ad739f3ca27df6aa/cenc.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
 #EXTINF:-1 tvg-id="Ligue 1" tvg-name="Lille vs Nantes - Ligue 1 [CANAL+ HD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Football", Lille vs Nantes - Ligue 1 [CANAL+ HD]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://instreams.click/
@@ -11813,6 +11767,14 @@ https://bl.rutube.ru/livestream/9585fdae92af45f113fdcc9f6c4ba442/index.m3u8?s=Kg
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://instreams.click/
 https://instreams.pro/US/NFLHD1/index.m3u8?st=SportzX|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://instreams.click/&Origin=https://instreams.click
+#EXTINF:-1 tvg-id="Bundesliga" tvg-name="Hamburger SV vs RB Leipzig - Bundesliga [ELEVEN SPORTS]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/35/image/dark" group-title="Football", Hamburger SV vs RB Leipzig - Bundesliga [ELEVEN SPORTS]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://sportzx.cc/
+https://bbb.exoadash.com/TVD6412/index.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
+#EXTINF:-1 tvg-id="Bundesliga" tvg-name="Hamburger SV vs RB Leipzig - Bundesliga [DAZN SPORTS SD]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/35/image/dark" group-title="Football", Hamburger SV vs RB Leipzig - Bundesliga [DAZN SPORTS SD]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://sportzx.cc/
+https://smarthard.click/hls/2MKw3OQni0WR/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
 #EXTINF:-1 tvg-id="Trendyol Süper Lig" tvg-name="Antalyaspor vs Fenerbahçe - Trendyol Süper Lig [beIN Sports]" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Football", Antalyaspor vs Fenerbahçe - Trendyol Süper Lig [beIN Sports]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://sportzx.cc/
@@ -11841,7 +11803,7 @@ https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/m6sqanvm2m/
 https://smarthard.click/hls/DcTxPWHOB5aM/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&Referer=https://sportzx.cc/&Origin=https://sportzx.cc
 # By Abu SAEEID X Noob
 # Github X Tg @abusaeeidx
-# Update on 2026-03-01 23:43:52 (BD Time)
+# Update on 2026-03-01 23:58:54 (BD Time)
 # Note: I do not host any content, everything is publicly available. And any issues, please contact me.
 #EXTINF:-1 group-title="LIVE" tvg-logo="https://image.tsports.com/images/mobile_thumbnail/1761718928-1750064430-LIVE.jpg", T Sports Live 01
 https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
@@ -12006,189 +11968,181 @@ https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Sansadtvsd/default/Sansadtvsd.m3u8
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/16-by-xfireflix.png",Star Sports 1
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n6.sanwalyaarpya.com:1686/hls/star1in.m3u8?md5=UBSsgwMqfrYA5BO_T8cUSQ&expires=1772394387
+https://n2.sanwalyaarpya.com:1686/hls/star1in.m3u8?md5=EEDNFg3vnUJoMx-KAppRIA&expires=1772397230
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1-by-xfireflix.png",Star Sports 1 Hindi
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n6.sanwalyaarpya.com:1686/hls/starhindi.m3u8?md5=bd3_4SNK0g26WivrCfrCCw&expires=1772394388
+https://n1.sanwalyaarpya.com:1686/hls/starhindi.m3u8?md5=q3t7BRmfe7kn1NdbRJ8T1A&expires=1772397231
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/20-by-xfireflix.png",PTV Sports
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n9.sanwalyaarpya.com:1686/hls/ptvpk.m3u8?md5=iDfKpysc13M8JSbo072-Jg&expires=1772394388
+https://n9.sanwalyaarpya.com:1686/hls/ptvpk.m3u8?md5=hoJmSXmEay6bj0hoz6hBzA&expires=1772397231
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/38-by-xfireflix.png",Willow HD
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n3.sanwalyaarpya.com:1686/hls/willowusa.m3u8?md5=gvkogevU6N7d4GHgXfAjTw&expires=1772394388
+https://n8.sanwalyaarpya.com:1686/hls/willowusa.m3u8?md5=uCKk1LRuydgZpB7iaHbb9g&expires=1772397231
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/8-by-xfireflix.png",Willow HD 2
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n8.sanwalyaarpya.com:1686/hls/willowextra.m3u8?md5=DEkH_8dIXDwVD1nMs4ZnuA&expires=1772394388
+https://n4.sanwalyaarpya.com:1686/hls/willowextra.m3u8?md5=4ouC-L15nIZOEv570cb61w&expires=1772397231
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/10-by-xfireflix.png",Ten Sports
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n7.sanwalyaarpya.com:1686/hls/tenspk.m3u8?md5=ApY9qSo1f8jZqxfJ-wthzw&expires=1772394388
+https://n6.sanwalyaarpya.com:1686/hls/tenspk.m3u8?md5=nMKS0TpG80RH5RVag4aWYw&expires=1772397231
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/12-by-xfireflix.png",A Sports HD
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n14.sanwalyaarpya.com:1686/hls/asportshd.m3u8?md5=ghtLcZBpOk7rx_oFMzhoeQ&expires=1772394388
+https://n2.sanwalyaarpya.com:1686/hls/asportshd.m3u8?md5=WyFNBDal5q87Q8NpOI4WAg&expires=1772397231
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/9-by-xfireflix.png",Sky Sports Cricket
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n7.sanwalyaarpya.com:1686/hls/skyscric.m3u8?md5=Dp5z5LHh_rq8rx-Yfb9Afg&expires=1772394389
+https://n3.sanwalyaarpya.com:1686/hls/skyscric.m3u8?md5=ImEzOlMFmrWll74m17-sxw&expires=1772397231
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/18-by-xfireflix.png",Sky Sports Main Event
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n7.sanwalyaarpya.com:1686/hls/skysme.m3u8?md5=y4yzvH6B-C2rUH9eNHQMbw&expires=1772394389
+https://n4.sanwalyaarpya.com:1686/hls/skysme.m3u8?md5=-GgTW4CbkOGpAUUyipHhSQ&expires=1772397231
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png",TNT 1
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n14.sanwalyaarpya.com:1686/hls/bbtsp1.m3u8?md5=BGvAPqffxoGGbKuo7qYwpQ&expires=1772394389
+https://n14.sanwalyaarpya.com:1686/hls/bbtsp1.m3u8?md5=9uOhpeb706XOu9OAu1e9bg&expires=1772397232
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png",TNT 2
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n3.sanwalyaarpya.com:1686/hls/bbtsp2.m3u8?md5=vZj4VourZVOI2acciBGsDg&expires=1772394389
+https://n3.sanwalyaarpya.com:1686/hls/bbtsp2.m3u8?md5=GbR-s1dNYJOZrM_i551fmQ&expires=1772397232
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png",TNT 3
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n7.sanwalyaarpya.com:1686/hls/bbtsp3.m3u8?md5=Eu2zcR6pppYKI0Uw0dxyyw&expires=1772394389
+https://n5.sanwalyaarpya.com:1686/hls/bbtsp3.m3u8?md5=pdBQ1mjsBZzjuYZ5XJk60Q&expires=1772397232
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png",TNT 4
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n2.sanwalyaarpya.com:1686/hls/bbtespn.m3u8?md5=gCCJKI-LCDt28sCmm4fO5g&expires=1772394389
+https://n8.sanwalyaarpya.com:1686/hls/bbtespn.m3u8?md5=db8V9WRW37La_vLwRzPYyA&expires=1772397232
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 1
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n5.sanwalyaarpya.com:1686/hls/sky1nz.m3u8?md5=q3xhnsuDlZ9qWG5DfKGrRg&expires=1772394389
+https://n4.sanwalyaarpya.com:1686/hls/sky1nz.m3u8?md5=cDACY2wSAG-b9xGLv5hOGw&expires=1772397232
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 2
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n3.sanwalyaarpya.com:1686/hls/sky2nz.m3u8?md5=xBzIRCliby2AXanfWeVjYw&expires=1772394389
+https://n7.sanwalyaarpya.com:1686/hls/sky2nz.m3u8?md5=jVNN7lv5ro1lLZVNrfSDbA&expires=1772397232
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 3
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n14.sanwalyaarpya.com:1686/hls/sky3nz.m3u8?md5=Az1K4Xcirdd6xpSGDE7ESQ&expires=1772394390
+https://n7.sanwalyaarpya.com:1686/hls/sky3nz.m3u8?md5=HgNntCSGGYhizMH_gvorqw&expires=1772397233
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 4
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n8.sanwalyaarpya.com:1686/hls/sky4nz.m3u8?md5=N-1LTDPkwpQjXir-DK0z7Q&expires=1772394390
+https://n3.sanwalyaarpya.com:1686/hls/sky4nz.m3u8?md5=A2V6oXaJbf8H9Dsl01c8cg&expires=1772397233
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 5
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n14.sanwalyaarpya.com:1686/hls/sky5nz.m3u8?md5=NcQ_V6eZlSNWQ2uj49UBaA&expires=1772394390
+https://n14.sanwalyaarpya.com:1686/hls/sky5nz.m3u8?md5=O8FensnW6oVuwdDnRk-fbg&expires=1772397233
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport 6 Nz
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n1.sanwalyaarpya.com:1686/hls/sky6nz.m3u8?md5=WZ2jXJ4lHOzA2gB7bb3JbQ&expires=1772394390
+https://n4.sanwalyaarpya.com:1686/hls/sky6nz.m3u8?md5=B-tbOQUuQQBWaG-GK8pDjw&expires=1772397233
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 7
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n3.sanwalyaarpya.com:1686/hls/sky7nz.m3u8?md5=7DJdosJXxkT8Na9Ur9Pw-w&expires=1772394390
+https://n4.sanwalyaarpya.com:1686/hls/sky7nz.m3u8?md5=6ZLmZIJkAR_qgIZfUOBpPA&expires=1772397233
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 8
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n8.sanwalyaarpya.com:1686/hls/sky8nz.m3u8?md5=xXZVWhE5B9IfssIerSW8ZQ&expires=1772394390
+https://n6.sanwalyaarpya.com:1686/hls/sky8nz.m3u8?md5=DlqpLDHt1x7ZjEWoeVkgEg&expires=1772397233
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 9
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n9.sanwalyaarpya.com:1686/hls/sky9nz.m3u8?md5=bBWFVY8gpl_62JDEicDuCw&expires=1772394390
+https://n3.sanwalyaarpya.com:1686/hls/sky9nz.m3u8?md5=zyfMue0mXwmsc6cCMIuhYQ&expires=1772397233
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/skycinema.png",Sky Cinema
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n7.sanwalyaarpya.com:1686/hls/skysme.m3u8?md5=L41SEo0CaFXfCPaLj84Ysw&expires=1772394391
+https://n9.sanwalyaarpya.com:1686/hls/skysme.m3u8?md5=0GMiTnFpZ0-W48GEjb8sfQ&expires=1772397233
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745007829332.png",Sky Sports Action
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n1.sanwalyaarpya.com:1686/hls/skysact.m3u8?md5=Zi_a1APMl3WcseT0ploK6Q&expires=1772394391
+https://n14.sanwalyaarpya.com:1686/hls/skysact.m3u8?md5=gqHvHwqGOKsOK6UYb42Hsg&expires=1772397234
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008055327.png",Sky Sports Golf
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n5.sanwalyaarpya.com:1686/hls/skysgol.m3u8?md5=Y__f7tErjLy1oOZvM3mbzg&expires=1772394391
+https://n1.sanwalyaarpya.com:1686/hls/skysgol.m3u8?md5=RiAn2-qb-7AdB6jSy9dPEQ&expires=1772397234
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/43-by-xfireflix.png",Sky Sports Premier League
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n8.sanwalyaarpya.com:1686/hls/skysprem.m3u8?md5=ts8T-fhOf3wJkvkZXsq4-Q&expires=1772394391
+https://n8.sanwalyaarpya.com:1686/hls/skysprem.m3u8?md5=n7Os-dQDfYpSJqtxIpBMYA&expires=1772397234
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/44-by-xfireflix.png",Sky Sports Football
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n8.sanwalyaarpya.com:1686/hls/skysfott.m3u8?md5=GrKhd6ecFoKN4fq2q78XsA&expires=1772394391
+https://n3.sanwalyaarpya.com:1686/hls/skysfott.m3u8?md5=SUXgAHTwW6d2AMyBLSGGfQ&expires=1772397234
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008347584.png",Sky Sports Plus
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n4.sanwalyaarpya.com:1686/hls/skysare.m3u8?md5=f5-qb8yRNbyBfLovZNmsFg&expires=1772394391
+https://n1.sanwalyaarpya.com:1686/hls/skysare.m3u8?md5=0OQzlCBG9I2YhUFBczerLQ&expires=1772397234
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008468637.png",Sky Sports F1
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n2.sanwalyaarpya.com:1686/hls/skysfor1.m3u8?md5=R9OS_I-hkK3kEctG5tJyZw&expires=1772394391
+https://n1.sanwalyaarpya.com:1686/hls/skysfor1.m3u8?md5=wtLVnZxa5jpQ-BGF_a47pA&expires=1772397234
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/19-by-xfireflix.png",LaLiGA
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n8.sanwalyaarpya.com:1686/hls/laligauk.m3u8?md5=HR_kNuSndNn9kTYPUENs0A&expires=1772394392
+https://n6.sanwalyaarpya.com:1686/hls/laligauk.m3u8?md5=F3lNm4_-HMwnntugrHBUAQ&expires=1772397234
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/31-by-xfireflix.png",Premier Sports 1
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n8.sanwalyaarpya.com:1686/hls/premieruk.m3u8?md5=cntn985EE7wAMQJholaLuQ&expires=1772394392
+https://n14.sanwalyaarpya.com:1686/hls/premieruk.m3u8?md5=nkOe8XYQMRHUICL08I4r2g&expires=1772397234
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/31-by-xfireflix.png",Premier Sports 2
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n14.sanwalyaarpya.com:1686/hls/hdchnl2.m3u8?md5=BGy8nlqawGWKKf8MXwOoUA&expires=1772394392
+https://n4.sanwalyaarpya.com:1686/hls/hdchnl2.m3u8?md5=Ogf89vvgRneShMqT9lKTZQ&expires=1772397234
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/34-by-xfireflix.png",Super Football
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n6.sanwalyaarpya.com:1686/hls/superfotball.m3u8?md5=4AZE-NAHsbz_6k3LRlr5EQ&expires=1772394392
+https://n9.sanwalyaarpya.com:1686/hls/superfotball.m3u8?md5=Sp7m7ZkGSPaLdtRA_GyCzw&expires=1772397235
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008781606.png",Super Premier League
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n6.sanwalyaarpya.com:1686/hls/superpremier.m3u8?md5=i-w7GytFQFNUScCWu3tBDQ&expires=1772394392
+https://n5.sanwalyaarpya.com:1686/hls/superpremier.m3u8?md5=McyaUlCdRxO85r-fplV-_A&expires=1772397235
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008895589.png",Astro Cricket
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n1.sanwalyaarpya.com:1686/hls/fox501.m3u8?md5=K9l0-533LdupC7CMBrRiPQ&expires=1772394392
+https://n4.sanwalyaarpya.com:1686/hls/fox501.m3u8?md5=W1iXrMPRKsPHhIO3img07g&expires=1772397235
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/17-by-xfireflix.png",ESPN 1
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n4.sanwalyaarpya.com:1686/hls/espnusa.m3u8?md5=gZQynruRSrVGZmMQBFg6hg&expires=1772394392
+https://n4.sanwalyaarpya.com:1686/hls/espnusa.m3u8?md5=8QUl7eLZMSaZmBXfIx3H4A&expires=1772397235
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/17-by-xfireflix.png",ESPN 2
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n2.sanwalyaarpya.com:1686/hls/espn2.m3u8?md5=cOX9M7xGcEJmrBA9RZA6Ew&expires=1772394393
+https://n4.sanwalyaarpya.com:1686/hls/espn2.m3u8?md5=m5Hi5Z_0q6TK_KaNPC55GQ&expires=1772397235
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745007829327.png",Sky Sports Arena
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n8.sanwalyaarpya.com:1686/hls/skysare.m3u8?md5=WK7DWMoRzGhJ3QdOJoi0mQ&expires=1772394393
+https://n1.sanwalyaarpya.com:1686/hls/skysare.m3u8?md5=oywtYrbtGh_46fv7xvtiFQ&expires=1772397235
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/13-by-xfireflix.png",Sky Sports Mix
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n8.sanwalyaarpya.com:1686/hls/skysmixx.m3u8?md5=_WO95lLblDnx6FhJIPicYA&expires=1772394393
+https://n9.sanwalyaarpya.com:1686/hls/skysmixx.m3u8?md5=hVOURcaFw6JLq4EP_9S3DQ&expires=1772397235
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745009085794.png",Sky Sports Tennis
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n2.sanwalyaarpya.com:1686/hls/skystennis.m3u8?md5=hJkkuDsK0rB94mobPqwSTw&expires=1772394393
+https://n2.sanwalyaarpya.com:1686/hls/skystennis.m3u8?md5=BGAvN-HsVJtpOITCZ1qCpg&expires=1772397235
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/6-by-xfireflix.png",Fox Cricket 501 HD
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n7.sanwalyaarpya.com:1686/hls/fox501.m3u8?md5=9OBZoSZfmxgkh9Lqh9W9hA&expires=1772394393
+https://n4.sanwalyaarpya.com:1686/hls/fox501.m3u8?md5=1zlrmrX6YXEGX7M2cio7lw&expires=1772397236
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1000173192-modified.png",Sony Sports3
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
-https://n1.sanwalyaarpya.com:1686/hls/ten1hd.m3u8?md5=j4eoys6Ek_2-l7-bLFgogQ&expires=1772394393
+https://n2.sanwalyaarpya.com:1686/hls/ten1hd.m3u8?md5=0y7TMg4E3uVAUZsdVwLfGw&expires=1772397236
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ce7ab3022e753307997f58afe001bac4:72d631a66e635c60829a0fe7705516c1
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 13; RMX3081 Build/RKQ1.211119.001)
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10", Chelsea vs Arsenal
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10", Chelsea vs Arsenal | Kvea
 https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s-v2/Live/channel(kvea)/master.mpd
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10", Chelsea vs Arsenal ios
-https://webiptv.site/prr.m3u8
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=96b67fa09140329a89b7a1ead134eda3:c618d32c56cdc6cad8330eb98507ca3f
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 13; RMX3081 Build/RKQ1.211119.001)
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10", Chelsea vs Arsenal
-https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s/Live/channel(universo-east)/master.mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3501bd323a6a35c28eb7654bf298b9aa:2db4c8089d627e1b2c480c57baa86a7b
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 13; RMX3081 Build/RKQ1.211119.001)
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10", Chelsea vs Arsenal
-https://cdn4.skygo.mn/live/disk1/SPSPlay/DASH-FTA/SPSPlay.mpd
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10", Chelsea vs Arsenal ios
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10", Chelsea vs Arsenal |Now Sport
+https://webiptv.site/chn6.m3u8
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10", Chelsea vs Arsenal | Peacock
+https://webiptv.site/manu.m3u8
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10", Chelsea vs Arsenal ios | Sky Main Events
 https://webiptv.site/t.me/webipTvOfficial.m3u8
 #EXTINF:-1 tvg-logo="https://webiptv.site/jointg", T20 WC : IND vs WI | Join Tg
 https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://t.me/webipTvOfficial
@@ -12249,27 +12203,18 @@ https://in-mc-fdlive.fancode.com/mumbai/140780_english_hls_1a4d1e64e556602_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140778_english_hls_78a6fea50d59701_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="OMNIX EMPIRE" tvg-logo="https://github.com/omnixmain/OMNIX-EMPIRE/blob/main/omnix-empire-logo.jpg?raw=true",OMNIX EMPIRE
 http://WWW.OMNIXEMPIRE.MP4
-#EXTINF:-1 group-title="Live Events" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10",Chelsea vs Arsenal
+#EXTINF:-1 group-title="Live Events" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10",Chelsea vs Arsenal | Kvea
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={"ce7ab3022e753307997f58afe001bac4":"72d631a66e635c60829a0fe7705516c1"}
 #EXTVLCOPT:http-referrer=https://webiptv.site/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s-v2/Live/channel(kvea)/master.mpd
-#EXTINF:-1 group-title="Live Events" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10",Chelsea vs Arsenal ios
+#EXTINF:-1 group-title="Live Events" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10",Chelsea vs Arsenal |Now Sport
 #EXTVLCOPT:http-referrer=https://webiptv.site/
-https://webiptv.site/prr.m3u8
-#EXTINF:-1 group-title="Live Events" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10",Chelsea vs Arsenal
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={"96b67fa09140329a89b7a1ead134eda3":"c618d32c56cdc6cad8330eb98507ca3f"}
+https://webiptv.site/chn6.m3u8
+#EXTINF:-1 group-title="Live Events" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10",Chelsea vs Arsenal | Peacock
 #EXTVLCOPT:http-referrer=https://webiptv.site/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s/Live/channel(universo-east)/master.mpd
-#EXTINF:-1 group-title="Live Events" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdJDAjblx2BxIJJE1fq1fUIKQBF4VydZrIv_jqqoEtg&s=10",Chelsea vs Arsenal
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={"3501bd323a6a35c28eb7654bf298b9aa":"2db4c8089d627e1b2c480c57baa86a7b"}
-#EXTVLCOPT:http-referrer=https://webiptv.site/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://cdn4.skygo.mn/live/disk1/SPSPlay/DASH-FTA/SPSPlay.mpd
+https://webiptv.site/manu.m3u8
 #EXTINF:-1 group-title="Live Events" tvg-logo="https://images.icc-cricket.com/image/upload/t_ratio1_1-size20/prd/hnbab7cd9bs8itojtioo",T20 WC : IND vs WI | Sky Cricket ios
 #EXTVLCOPT:http-referrer=https://webiptv.site/
 https://webiptv.site/byps.m3u8
