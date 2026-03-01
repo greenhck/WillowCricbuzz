@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Investec South African Open Day 4 - 1 Mar 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772408916~acl=/*~id=24220801483860565660411157577831~hmac=4b00e2252018b9ccdd340cfef12e7b26c52b952f866038454066aaf41bcd8018
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772413151~acl=/*~id=42517710539318290899775758305861~hmac=c5cbc1f0ccd171d87161817bed93ec21add114e5b1f939903854b7857367c031
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -99,6 +99,16 @@ https://in-mc-fdlive.fancode.com/mumbai/140694_english_hls_5a3a9ee8c631732_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/140450_english_hls_9f644f544799278_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140450_5956_ODS_CFC_fc-web-(1).jpg" group-title="Fancode",Odisha FC vs Chennaiyin FC (ISL 2025-26  - Regional)
 https://in-mc-fdlive.fancode.com/mumbai/141089_tamil_hls_32315a4ebf28018_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131086_5427_ELC_ESL_FC-Web.png" group-title="Fancode",Elche CF vs RCD Espanyol (LALIGA 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/131086_english_hls_36546f8a7656011_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1772160982911/140824_CASACARDS_APP.png" group-title="Fancode",Real Sociedad vs Deportivo La Coruna (LALIGA Hypermotion 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/140824_english_hls_63a18503a8455_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode",Featured Groups - Day 4 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140781_english_hls_a231eb42595351_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode",Main Feed - Day 4 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140779_english_hls_a1d77d46e43033_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Cognizant-Classic-in-The-Palm-Beaches-2026-old-match-card-.png" group-title="Fancode",Marquee Group - Day 4 vs PGA National Resort, Florida (Cognizant Classic in The Palm Beaches 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140782_english_hls_f4fd2fec2656049_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
