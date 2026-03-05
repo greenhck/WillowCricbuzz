@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",1st ODI - 5 Mar 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1772715579~acl=/*~id=36819116888068084800854022461217~hmac=a60f1d8d792eb74e9374965200d05f5e4ace160c36ff0cad38476a0b09e00b52
+https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1772724662~acl=/*~id=34092245915178081927311928509218~hmac=1847339d884bb9e15aa05ddb6beedd909a9da1fba88337c0d74d65f4b61cbe1a
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -105,8 +105,6 @@ https://in-mc-fdlive.fancode.com/mumbai/134040_english_hls_2b4391587444375_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/134038_english_hls_7fd497bc3670906_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140800_5979_PHI-W_KOR-W_fc-Web_1772191702182.jpg" group-title="Fancode",Philippines Women vs Korea Republic Women (AFC Women's Asian Cup, 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140800_english_hls_5b02b4227249185_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",B Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/141006_english_hls_6bf703572476628_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",A Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141005_english_hls_feaf78b80227098_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",World Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
