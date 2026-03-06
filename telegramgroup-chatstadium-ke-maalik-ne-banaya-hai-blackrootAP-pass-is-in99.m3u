@@ -91,14 +91,6 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(7).png" group-title="Fancode",Main Feed Day 1 vs Orlando, Florida (Arnold Palmer Invitational 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140988_english_hls_65f4a904ef47085_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(7).png" group-title="Fancode",Featured Group Day 1 vs Orlando, Florida (Arnold Palmer Invitational 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140989_english_hls_b8ff07e2aa86981_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(7).png" group-title="Fancode",Marquee Feed Day 1 vs Orlando, Florida (Arnold Palmer Invitational 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140990_english_hls_c6e6105bca36287_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(7).png" group-title="Fancode",World Feed Day 1 vs Orlando, Florida (Arnold Palmer Invitational 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140991_english_hls_eb1d7d793362378_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",B Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141009_english_hls_4e141f956945974_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",A Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
@@ -113,8 +105,8 @@ https://in-mc-fdlive.fancode.com/mumbai/141234_english_hls_f8c5929af437662_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/141233_english_hls_a54dbd2ed712005_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",C Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141232_english_hls_ed95ca4ccc24821_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/F3_Australia_web.jpg" group-title="Fancode",Practice Session vs Melbourne (F3 AUSTRALIA 2026)
-https://in-mc-fdlive.fancode.com/mumbai/139704_english_hls_bdd625e40164292_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/F2_Australia_web.jpg" group-title="Fancode",Practice Session vs Melbourne  (F2 AUSTRALIA 2026)
+https://in-mc-fdlive.fancode.com/mumbai/139542_english_hls_a2dd1c27f720079_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
