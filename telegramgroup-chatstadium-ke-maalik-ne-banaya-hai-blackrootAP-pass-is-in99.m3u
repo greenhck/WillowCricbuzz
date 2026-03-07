@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",2nd ODI - 8 Mar 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1772964404~acl=/*~id=04081229192521928743644648368327~hmac=6a08ac642a4359fd62eacf33a00331b8e7769dbd048a073ca40e259f1ad0f334
+https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1772966215~acl=/*~id=21852019419034654332970602855543~hmac=1226241abf0945b251f221faf0a23cbe62ebc233aad86413f94d8cdecc0ce6c9
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -95,12 +95,6 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/NZ-vs-ZIM_ODi_fc_web_1772618590773.jpg" group-title="Fancode",Zimbabwe Women vs New Zealand Women (Zimbabwe Women tour of New Zealand, 2026)
 https://sonypartnersdaimenew.akamaized.net/hls/live/2037141/DAI21NZVSZM/master.m3u8?hdnea=exp=1772963733~acl=/*~id=02256228094703966392344128637199~hmac=b2490228f52eea6fda5a910a9a2dd080aefb6fa6e6025b6bee920179fe5414be
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131093_5427_ATH_BAR_FC-Web.png" group-title="Fancode",Athletic Club vs FC Barcelona (LALIGA 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/131093_english_hls_e8d132943e57210_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1772160982905/140826_CASACARDS_APP.png" group-title="Fancode",Málaga vs Real Valladolid (LALIGA Hypermotion 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/140826_english_hls_77b6bf3ece5680_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(7).png" group-title="Fancode",Main Feed Day 3 vs Orlando, Florida (Arnold Palmer Invitational 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140996_english_hls_de7809357e35318_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(7).png" group-title="Fancode",Featured Group Day 3 vs Orlando, Florida (Arnold Palmer Invitational 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140997_english_hls_102c0f584234160_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(7).png" group-title="Fancode",Marquee Feed Day 3 vs Orlando, Florida (Arnold Palmer Invitational 2026)
@@ -109,9 +103,9 @@ https://in-mc-fdlive.fancode.com/mumbai/140998_english_hls_193c7043f0592_1ta-di_
 https://in-mc-fdlive.fancode.com/mumbai/140999_english_hls_c77be8dce672545_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",B Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141015_english_hls_3429f0c24a57181_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",A Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Novak-Djokovic-vs-Kamil-Majchrzak_web.jpg" group-title="Fancode",A Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141014_english_hls_0aa841899f47138_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",World Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Novak-Djokovic-vs-Kamil-Majchrzak_web.jpg" group-title="Fancode",World Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141013_english_hls_b36ec7b03a14069_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",C Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141244_english_hls_ed824b2d8631876_1ta-di_h264/index.m3u8
