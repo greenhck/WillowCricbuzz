@@ -7460,7 +7460,7 @@ https://dishmt.slivcdn.com/hls/live/2020593/SONYSIXHD/hdntl=exp=1772934243~acl=%
 </html>
 # By Abu SAEEID X Noob
 # Github X Tg @abusaeeidx
-# Update on 2026-03-08 03:30:22 (BD Time)
+# Update on 2026-03-08 03:58:04 (BD Time)
 # Note: I do not host any content, everything is publicly available. And any issues, please contact me.
 #EXTINF:-1 group-title="LIVE" tvg-logo="https://image.tsports.com/images/mobile_thumbnail/1761718928-1750064430-LIVE.jpg", T Sports Live 01
 https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
@@ -7788,8 +7788,8 @@ https://n9.sanwalyaarpya.com:1686/hls/fox501.m3u8?md5=QEswke_BUqOSH4yRS960zQ&exp
 #EXTVLCOPT:http-referrer=https://profamouslife.com/
 #EXTVLCOPT:http-origin=https://profamouslife.com
 https://n14.sanwalyaarpya.com:1686/hls/ten1hd.m3u8?md5=F92Ujz5NdQAZ0XYXYbSD-w&expires=1772927022
-#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131093_5427_ATH_BAR_FC-Web.png" group-title="Fancode-Football", Athletic Club vs FC Barcelona (LALIGA 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/131093_english_hls_e8d132943e57210_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/NZ-vs-ZIM_ODi_fc_web_1772618590773.jpg" group-title="Fancode-Cricket", Zimbabwe Women vs New Zealand Women (Zimbabwe Women tour of New Zealand, 2026)
+https://sonypartnersdaimenew.akamaized.net/hls/live/2037141/DAI21NZVSZM/master.m3u8?hdnea=exp=1772963733~acl=/*~id=02256228094703966392344128637199~hmac=b2490228f52eea6fda5a910a9a2dd080aefb6fa6e6025b6bee920179fe5414be
 #EXTINF:-1, tvg-logo="https://images.fancode.com/aig/match/v1772160982905/140826_CASACARDS_APP.png" group-title="Fancode-Football", Málaga vs Real Valladolid (LALIGA Hypermotion 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/140826_english_hls_77b6bf3ece5680_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(7).png" group-title="Fancode-Golf", Main Feed Day 3 vs Orlando, Florida (Arnold Palmer Invitational 2026)
@@ -7816,6 +7816,8 @@ https://in-mc-fdlive.fancode.com/mumbai/141242_english_hls_03fb55697861427_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/141241_english_hls_311fc8a66291546_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/F3_Australia_web.jpg" group-title="Fancode-Motorsports", Feature Race vs Melbourne  (F3 AUSTRALIA 2026)
 https://in-mc-fdlive.fancode.com/mumbai/139707_english_hls_44dd080ff120846_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131093_5427_ATH_BAR_FC-Web.png" group-title="Fancode-Football", Athletic Club vs FC Barcelona (LALIGA 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/131093_english_hls_e8d132943e57210_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="OMNIX EMPIRE" tvg-logo="https://github.com/omnixmain/OMNIX-EMPIRE/blob/main/omnix-empire-logo.jpg?raw=true",OMNIX EMPIRE
 http://WWW.OMNIXEMPIRE.MP4
 #EXTINF:-1 group-title="IccTv Upcoming Events" tvg-logo="https://images.icc-cricket.com/image/upload/t_ratio1_1-size20/prd/acj4wj5snkpplbtkg7fn",3rd ODI: Hong Kong, China v Kuwait | 07-03-26
