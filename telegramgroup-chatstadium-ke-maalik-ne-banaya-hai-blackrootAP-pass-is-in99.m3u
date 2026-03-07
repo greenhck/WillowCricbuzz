@@ -1,10 +1,10 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Mansfield Town vs Arsenal - Round 5 - 7 Mar 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2018458/DAI10ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772926787~acl=/*~id=45239002827068843846189005630542~hmac=675b0c31e3f2e06993178f5cb764721fcb9700ddac8d553e5fa6a83c8b438ba2
-#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Gokulam Kerala FC vs Namdhari FC - 7 Mar 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2105080/DAI24ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772926787~acl=/*~id=45239002827068843846189005630542~hmac=675b0c31e3f2e06993178f5cb764721fcb9700ddac8d553e5fa6a83c8b438ba2
+https://sonydaimenew.akamaized.net/hls/live/2018458/DAI10ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772931636~acl=/*~id=69456616641729558764177199403512~hmac=18caf57e452435f863a54acb575ce4f2af65086c9cf8257cf40533968539200c
+#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Chanmari FC vs Sreenidi Deccan FC - 7 Mar 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/2037143/DAI23ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772931636~acl=/*~id=69456616641729558764177199403512~hmac=18caf57e452435f863a54acb575ce4f2af65086c9cf8257cf40533968539200c
 #EXTINF:-1 tvg-name="LIV" group-title="Sony Sports",Joburg Open Day 3 - 7 Mar 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772926787~acl=/*~id=45239002827068843846189005630542~hmac=675b0c31e3f2e06993178f5cb764721fcb9700ddac8d553e5fa6a83c8b438ba2
+https://sonydaimenew.akamaized.net/hls/live/2094587/DAI03ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1772931636~acl=/*~id=69456616641729558764177199403512~hmac=18caf57e452435f863a54acb575ce4f2af65086c9cf8257cf40533968539200c
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -101,6 +101,10 @@ https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd4
 https://in-mc-fdlive.fancode.com/mumbai/140455_english_hls_c7aac83f1960410_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140455_5956_MSC_BFC_FC-Web_1772877810236.jpg" group-title="Fancode",Mohammedan SC vs Bengaluru FC (ISL 2025-26  - Regional)
 https://in-mc-fdlive.fancode.com/mumbai/141172_bengali_hls_1bd40809b6892_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140553_5489_BLK_PRM_fc-web.jpg" group-title="Fancode",Blackburn Rovers F.C. vs Portsmouth F.C. (EFL Championship 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/140553_english_hls_d0284535f580000_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131091_5427_OSN_MRC_FC-Web.png" group-title="Fancode",CA Osasuna vs RCD Mallorca (LALIGA 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/131091_english_hls_d3768e72b175089_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140805_5979_INDW_JPN-W_fc-Web_1772191702174.jpg" group-title="Fancode",India Women vs Japan Women (AFC Women's Asian Cup, 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140805_english_hls_1790686bd391788_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
