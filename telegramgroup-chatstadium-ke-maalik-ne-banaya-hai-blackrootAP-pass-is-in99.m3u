@@ -93,10 +93,10 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140706_5971_MEX_SRN_fc-Web.jpg" group-title="Fancode",Mexico vs Suriname (ICC Men's T20 WC Americas Sub Regional Qualifier B)
 https://in-mc-fdlive.fancode.com/mumbai/140706_english_hls_9093d46afb27336_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131092_5427_SEV_RVL_FC-Web.png" group-title="Fancode",Sevilla FC vs Rayo Vallecano (LALIGA 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/131092_english_hls_08a7ca576019683_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131097_5427_VAL_ALA_FC-Web.png" group-title="Fancode",Valencia CF vs Deportivo Alaves (LALIGA 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/131097_english_hls_4f79321ad7914_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1772160982911/140827_CASACARDS_APP.png" group-title="Fancode",Deportivo La Coruna vs Granada (LALIGA Hypermotion 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/140827_english_hls_18aea827aa36364_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(7).png" group-title="Fancode",Main Feed Day 4 vs Orlando, Florida (Arnold Palmer Invitational 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141000_english_hls_dadb732bc565599_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(7).png" group-title="Fancode",Marquee Feed Day 4 vs Orlando, Florida (Arnold Palmer Invitational 2026)
@@ -115,6 +115,12 @@ https://in-mc-fdlive.fancode.com/mumbai/141247_english_hls_9b005c9c4c12083_1ta-d
 https://in-mc-fdlive.fancode.com/mumbai/141246_english_hls_5eb09d645450025_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",B Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141245_english_hls_b527f8598e24207_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",A Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
+https://in-mc-fdlive.fancode.com/mumbai/141017_english_hls_772c63cea66683_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",D Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
+https://in-mc-fdlive.fancode.com/mumbai/141248_english_hls_afb5a3f4d465640_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131092_5427_SEV_RVL_FC-Web.png" group-title="Fancode",Sevilla FC vs Rayo Vallecano (LALIGA 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/131092_english_hls_08a7ca576019683_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
