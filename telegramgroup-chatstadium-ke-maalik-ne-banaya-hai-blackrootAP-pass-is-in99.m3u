@@ -1,14 +1,12 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",UFC 326 - Holloway vs Oliveira 2  - 8 Mar 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2022320/DAI16ME-UFC/std_lrh-800300010.m3u8?hdnea=exp=1772970451~acl=/*~id=76235036543350211240959643949863~hmac=a1e73b2efd09ac1108ead2a85c178901b4ea5f0959a50bfc109281eea0e47de0
+https://sonydaimenew.akamaized.net/hls/live/2022320/DAI16ME-UFC/std_lrh-800300010.m3u8?hdnea=exp=1772986817~acl=/*~id=96317258661919475543833425210868~hmac=a287b912964ef4ff18e66175bbb3a3eeb4c65314518176dea612a90c1fcd7ccd
 #EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",UFC 326 - Holloway vs Oliveira 2  - 8 Mar 2026 [HIN]
-https://sonydaimenew.akamaized.net/hls/live/2094588/DAI04ME-UFC/std_lrh-800300010.m3u8?hdnea=exp=1772970451~acl=/*~id=76235036543350211240959643949863~hmac=a1e73b2efd09ac1108ead2a85c178901b4ea5f0959a50bfc109281eea0e47de0
+https://sonydaimenew.akamaized.net/hls/live/2094588/DAI04ME-UFC/std_lrh-800300010.m3u8?hdnea=exp=1772986817~acl=/*~id=96317258661919475543833425210868~hmac=a287b912964ef4ff18e66175bbb3a3eeb4c65314518176dea612a90c1fcd7ccd
 #EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",UFC 326 - Holloway vs Oliveira 2  - 8 Mar 2026 [TAM]
-https://sonydaimenew.akamaized.net/hls/live/2094589/DAI05ME-UFC/std_lrh-800300010.m3u8?hdnea=exp=1772970451~acl=/*~id=76235036543350211240959643949863~hmac=a1e73b2efd09ac1108ead2a85c178901b4ea5f0959a50bfc109281eea0e47de0
+https://sonydaimenew.akamaized.net/hls/live/2094589/DAI05ME-UFC/std_lrh-800300010.m3u8?hdnea=exp=1772986817~acl=/*~id=96317258661919475543833425210868~hmac=a287b912964ef4ff18e66175bbb3a3eeb4c65314518176dea612a90c1fcd7ccd
 #EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",UFC 326 - Holloway vs Oliveira 2  - 8 Mar 2026 [TEL]
-https://sonydaimenew.akamaized.net/hls/live/2105079/DAI08ME-UFC/std_lrh-800300010.m3u8?hdnea=exp=1772970451~acl=/*~id=76235036543350211240959643949863~hmac=a1e73b2efd09ac1108ead2a85c178901b4ea5f0959a50bfc109281eea0e47de0
-#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports",2nd ODI - 8 Mar 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1772970451~acl=/*~id=76235036543350211240959643949863~hmac=a1e73b2efd09ac1108ead2a85c178901b4ea5f0959a50bfc109281eea0e47de0
+https://sonydaimenew.akamaized.net/hls/live/2105079/DAI08ME-UFC/std_lrh-800300010.m3u8?hdnea=exp=1772986817~acl=/*~id=96317258661919475543833425210868~hmac=a287b912964ef4ff18e66175bbb3a3eeb4c65314518176dea612a90c1fcd7ccd
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -101,26 +99,28 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/NZ-vs-ZIM_ODi_fc_web_1772618590773.jpg" group-title="Fancode",Zimbabwe Women vs New Zealand Women (Zimbabwe Women tour of New Zealand, 2026)
-https://sonypartnersdaimenew.akamaized.net/hls/live/2037141/DAI21NZVSZM/master.m3u8?hdnea=exp=1772963733~acl=/*~id=02256228094703966392344128637199~hmac=b2490228f52eea6fda5a910a9a2dd080aefb6fa6e6025b6bee920179fe5414be
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WPL_web_2.jpg" group-title="Fancode",Hong Kong Cricket Club Women vs Lantau Cricket Club Women (Women's Premier League T20 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140612_english_hls_b58d451bd854604_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WPL_web.jpg" group-title="Fancode",Craigengower Cricket Club Women vs Diasqua Little Sai Wan Cricket Club Women (Women's Premier League T20 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140611_english_hls_aea62d053930400_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140910_5802_AFC_PG_fc-web.jpg" group-title="Fancode",Auckland vs Perth Glory (A League 2025-26)
+https://in-mc-fdlive.fancode.com/mumbai/140910_english_hls_0c9f1e468b87915_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/134038_5609_QUN_WAU_FC-Web.png" group-title="Fancode",Western Australia vs Queensland (Sheffield Shield, 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/134038_english_hls_7fd497bc3669657_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(7).png" group-title="Fancode",Featured Group Day 3 vs Orlando, Florida (Arnold Palmer Invitational 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140997_english_hls_102c0f584234160_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",B Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141015_english_hls_3429f0c24a57181_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Novak-Djokovic-vs-Kamil-Majchrzak_web.jpg" group-title="Fancode",A Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",A Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141014_english_hls_0aa841899f47138_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Novak-Djokovic-vs-Kamil-Majchrzak_web.jpg" group-title="Fancode",World Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",World Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141013_english_hls_b36ec7b03a14069_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",C Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/141244_english_hls_ed824b2d8631876_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/FC_Default_Tennis-old.jpg" group-title="Fancode",D Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",D Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141243_english_hls_66a1d804e756513_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",E Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/141242_english_hls_03fb55697861427_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BNP_Paribas-Open_web.jpg" group-title="Fancode",F Court Feed vs Indian, United States (ATP Masters BNP Paribas Open 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141241_english_hls_311fc8a66291546_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Australian-Women's-Classic-2026-old-match-card_1772479047332.jpg" group-title="Fancode",Day 2 vs Magenta Shares Golf & Country Club (Australian Women's Classic 2026)
+https://in-mc-fdlive.fancode.com/mumbai/140786_english_hls_dd639375ae3649_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/F1_Australia_web.jpg" group-title="Fancode",Race vs Australia (F1 QATAR AIRWAYS AUSTRALIAN GRAND PRIX 2026)
+https://in-mc-fdlive.fancode.com/mumbai/139365_english_hls_95cc02bb6011120_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
