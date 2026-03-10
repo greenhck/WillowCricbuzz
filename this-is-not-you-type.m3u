@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z1hxOSttL3ZWbjdURlBGV2xVSlVjZ05DU1RnMWoyVkJpZkpJUGhobXlDWU5NRlJ1d0ZLczh1azJrOEpZR1lLMTE=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2RtZzB4d2F6NlRBcE12WGtPc2REanprWGpGUmZkYkNmaTRnc3NFNTUxWGhjOE9VZDdIelJ0TEtEY3lsZWVkd3I=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -3207,8 +3207,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10590
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10593
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10594.jpg" group-title="News",IBC24
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10594
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10595.jpg" group-title="News",TV9 BHARATVARSH
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10595
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10603.jpg" group-title="News",DD NAGALAND
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10603
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10608.jpg" group-title="News",AAJ TAK
