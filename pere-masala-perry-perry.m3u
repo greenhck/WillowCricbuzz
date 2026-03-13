@@ -7342,73 +7342,73 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Zoom_BTS/output/index.mpd
             animation: "
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://indiantvinfo.com/media/2022/10/Sony-Entertainment-Television-300x300.png" group-title="Entertainment" , Sоnу SET HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011671/SETHD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011671/SETHD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-SAB-HD-New-Logo.png" group-title="Entertainment" , Sоnу SAB HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011749/SABHD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011749/SABHD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Marathi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Marathi-HD-New-Logo.png" group-title="Entertainment" , Sоnу Marathi
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011740/SonyMarathi/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011740/SonyMarathi/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-PAL-New-Logo.png" group-title="Entertainment" , Sоnу Pal
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011741/SonyPalSD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011741/SonyPalSD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://c.evidon.com/pub_logos/2796-2021122219404475.png" group-title="Entertainment" , Sоnу Kal
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
 https://spt-sonykal-1-us.lg.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-language="Bengali" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-AATH-New-Logo.png" group-title="Entertainment" , Sоnу Aath
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011641/SonyAathSD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011641/SonyAathSD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-YAY-New-Logo.png" group-title="Kids" , Sоnу Yay
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011746/SonyYaySD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011746/SonyYaySD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-MAX-HD-New-Logo.png" group-title="Movies" , Sоnу MAX HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011670/SonyMaxhd/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011670/SonyMaxhd/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-MAX-HD-New-Logo.png" group-title="Movies" , Sоnу MAX
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011745/SonyMaxSD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011745/SonyMaxSD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-MAX2-New-Logo.png" group-title="Movies" , Sоnу MAX 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011908/MAX2/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011908/MAX2/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-WAH-New-Logo.png" group-title="Movies" , Sоnу WAH
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011906/SonyWah/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011906/SonyWah/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-PIX-HD-New-Logo.png" group-title="Movies" , Sоnу PIX HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011748/PIXHD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011748/PIXHD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-BBC-Earth-HD-New-Logo.png" group-title="Infotainment" , Sоnу BBC Earth HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011907/SonyBBCEarthHD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011907/SonyBBCEarthHD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten1-New-Logo.png" group-title="Sports" , Sоnу Sports Ten 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011739/TEN1SD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011739/TEN1SD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten2-HD-New-Logo.png" group-title="Sports" , Sоnу Sports Ten 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020590/TEN2SD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020590/TEN2SD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten3-HD.png" group-title="Sports" , Sоnу Sports Ten 3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020592/TEN3SD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020592/TEN3SD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten4.png" group-title="Sports" , Sоnу Sports Ten 4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020437/ten4sd/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020437/ten4sd/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten5-New-Logo.png" group-title="Sports" , Sоnу Sports Ten 5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020594/SONYSIXSD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020594/SONYSIXSD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten1-HD-New-Logo.png" group-title="Sports" , Sоnу Sports Ten 1 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com//hls/live/2011747/TEN1HD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com//hls/live/2011747/TEN1HD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten2-HD-New-Logo.png" group-title="Sports" , Sоnу Sports Ten 2 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020434/TEN2HD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020434/TEN2HD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten3-HD.png" group-title="Sports" , Sоnу Sports Ten 3 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020591/TEN3HD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020591/TEN3HD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten4.png" group-title="Sports" , Sоnу Sports Ten 4 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020589/ten4hd/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020589/ten4hd/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten5-HD-New-Logo.png" group-title="Sports" , !Sоnу Sports Ten 5 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020593/SONYSIXHD/hdntl=exp=1773432723~acl=%2f*~id=b6f51abe-b8f1-4ca6-a34b-287596248ec6~data=hdntl~hmac=d6e8a283ce8bd7d22459490e1a7a9a05a2e3eb72592edae02217fb34707ea38b/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020593/SONYSIXHD/hdntl=exp=1773497763~acl=%2f*~id=43db90a0-5d22-49c5-825f-e1d985c9e29f~data=hdntl~hmac=872f44a1abe68bc7a332aa2d365048781ad9bb121cd623844bec4319d2bd03e6/master_3500.m3u8
 "            ;
         }
         @keyframes fadeIn {
@@ -7460,7 +7460,7 @@ https://dishmt.slivcdn.com/hls/live/2020593/SONYSIXHD/hdntl=exp=1773432723~acl=%
 </html>
 # By Abu SAEEID X Noob
 # Github X Tg @abusaeeidx
-# Update on 2026-03-14 01:22:01 (BD Time)
+# Update on 2026-03-14 01:52:35 (BD Time)
 # Note: I do not host any content, everything is publicly available. And any issues, please contact me.
 #EXTINF:-1 group-title="LIVE" tvg-logo="https://image.tsports.com/images/mobile_thumbnail/1761718928-1750064430-LIVE.jpg", T Sports Live 01
 https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
