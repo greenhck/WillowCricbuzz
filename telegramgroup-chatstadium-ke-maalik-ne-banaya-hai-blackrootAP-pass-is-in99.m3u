@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",VfB Stuttgart vs RB Leipzig - MD 26 - 15 Mar 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2105079/DAI08ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1773647539~acl=/*~id=55900784569479554335101421212323~hmac=019c39d126411f9d30e5a0ce2877ea6bc8a0d55beb7ffbf77828989c6bff920e
+https://sonydaimenew.akamaized.net/hls/live/2105079/DAI08ME-V3/std_lrh-800300010.m3u8?hdnea=exp=1773649964~acl=/*~id=24945755057618082111073117848589~hmac=3167381cc5b140f36d55651ecf25362e4cacee5a458005feeb8480e4e380434a
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -107,8 +107,6 @@ https://in-mc-fdlive.fancode.com/mumbai/141150_english_hls_1da6e708136467_1ta-di
 https://in-mc-fdlive.fancode.com/mumbai/141149_english_hls_f00ff0b1e358700_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/The-Players_fc-web.jpg" group-title="Fancode",World Feed - Day 4 vs Ponte Vedra Beach, Florida (THE PLAYERS Championship 2026)
 https://in-mc-fdlive.fancode.com/mumbai/141147_english_hls_c7c72ac39374750_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131107_5427_RB_CEV_FC-Web.png" group-title="Fancode",Real Betis vs RC Celta (LALIGA 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/131107_english_hls_5bd74dd81b45462_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
