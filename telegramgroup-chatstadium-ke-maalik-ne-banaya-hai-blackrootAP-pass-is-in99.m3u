@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="Sony Sports", 1st T20I - 15 Mar 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1773596052~acl=/*~id=22589567941805424995388013819010~hmac=38b5d340bc95c66492154799da1c2c096e5f68cb68fac88ce5b7eac401f1cb10
+https://sonydaimenew.akamaized.net/hls/live/2037141/DAI21-criclive/std_lrh-800300010.m3u8?hdnea=exp=1773599687~acl=/*~id=35470378070039758803050907831713~hmac=0c2a19c33101ec23881db2dbfe2ccec9579d49cc35ed0c6a6b2bec6b6460660d
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -103,16 +103,16 @@ https://in-mc-fdlive.fancode.com/mumbai/141362_english_hls_da30ecdd1c7696_1ta-di
 https://in-mc-fdlive.fancode.com/mumbai/140620_english_hls_826b14a42723724_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Women's-National-Cricket-League_old_v3_1758034980120.jpg" group-title="Fancode",ACT Meteors vs Western Australia Women (Women's National Cricket League, 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/133991_english_hls_12619df5084660_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Tillo-Cup-2026-old-card-.jpg" group-title="Fancode",NCC Odisha vs CAG Delhi (Tillo Cup 2026)
+https://in-mc-fdlive.fancode.com/mumbai/141269_english_hls_66c7a4a15f34564_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(8).png" group-title="Fancode",Bengal Royals vs Delhi Champions (Thunderbolt T10 League 2026)
+https://in-mc-fdlive.fancode.com/mumbai/141200_english_hls_a12941b2a78917_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1773380049877/140815_CASACARDS_APP.png" group-title="Fancode",Japan Women vs Philippines Women (AFC Women's Asian Cup, 2026)
 https://in-mc-fdlive.fancode.com/mumbai/140815_english_hls_4df32c67809210_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/134043_5609_TAS_QUN_FC-Web.png" group-title="Fancode",Tasmania vs Queensland (Sheffield Shield, 2025-26)
 https://in-mc-fdlive.fancode.com/mumbai/134043_english_hls_ad224acef214446_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/134042_5609_VCT_SAU_FC-Web.png" group-title="Fancode",South Australia vs Victoria (Sheffield Shield, 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/134042_english_hls_bb67f89f6d46872_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/134041_5609_NSW_WAU_FC-Web.png" group-title="Fancode",New South Wales vs Western Australia (Sheffield Shield, 2025-26)
-https://in-mc-fdlive.fancode.com/mumbai/134041_english_hls_327851520357185_1ta-di_h264/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(9).png" group-title="Fancode",Day 4 vs Koonyonga Club (Women's Australian Open 2026)
-https://in-mc-fdlive.fancode.com/mumbai/140790_english_hls_f146afce1927037_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/F1_Kids_China_GP_web.jpg" group-title="Fancode",Race vs China (F1 Kids 2026)
+https://in-mc-fdlive.fancode.com/mumbai/141419_english_hls_55101a7bb450585_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
