@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2MxbFZhVHZMcUR3ajNDeFFIVmhLS3k3WjVvQjNYVmlBYytTQXJkSHIvNzdXSWdHOVBGYjZsT0JPNEhMVkNObDY=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z3BPZmZUOUQ2UzNqYUpMMFRFdS9Ld2hleVhyK3ljeXd2Ky9vMSsxR3c0SDl1MW5zb0tNMGtqbFFVQUVhRUsvZCs=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -3238,8 +3238,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-11
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-17
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-230.png" group-title="Entertainment",SHEMAROO TV
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-230
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1291.png" group-title="Entertainment",DHAMAAL
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1291
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1013.jpg" group-title="Entertainment",MANORANJAN TV
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1013
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1011.jpg" group-title="Entertainment",MANORANJAN GRAND
@@ -3314,8 +3312,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-455
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-473
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-965.jpg" group-title="Entertainment",NIREEKSHANA TV
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-965
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-969.jpg" group-title="Entertainment",AKASH BANGLA
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-969
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1129.png" group-title="Entertainment",MANORAMA MAZHAVIL HD
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1129
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1221.png" group-title="Entertainment",GANGAUR
