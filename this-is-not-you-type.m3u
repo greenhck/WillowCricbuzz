@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2MxbFZhVHZMcUR3ajNDeFFIVmhLSzN4QytyVFhMbkZRVXpwZVNrNHpYUmR2Q0twNUtGamFTNk15em1IUmxSSGM=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2ZzhEVWZsYWhqSVlBOGlEeUZXTHIrR25EaUowZ3hBSmFUTmhuRGhFSjhMancvL0xacit4blhiVkpWVW8rYjBNYWk=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -3520,7 +3520,7 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=696876346
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=738780686
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1613.png" group-title="Music",9X TASHAN
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1613
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1229.png" group-title="Music",SANGEET MARATI
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1229.png" group-title="Music",Sangeet Marathi
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1229
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/698906578.jpeg" group-title="Music",PTC Chak De
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=698906578
