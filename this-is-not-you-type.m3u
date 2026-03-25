@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z0dNb09Gc3oyTCthcDcvbk8rZEY0QVM0NW4xUGVvcFZiMFZpVmZqd1NZUGFMSzE4QTE3ZDIwL0p3WFFzZXd2N1o=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2JWV2NHU2VCMjFid2pSL0dncTAvMG5DUTVlOTJUWWNlOWF3a3N0d3pPRkpIVkJDdkd6elBiZFpxTzZjYnJNQlU=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -4158,6 +4158,8 @@ https://jt.drmlive.net/jiotvplus/477.mpd
 https://jt.drmlive.net/jiotvplus/479.mpd
 
 #EXTINF:-1 tvg-id="482" tvg-name="Colors Cineplex" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Cineplex.png" group-title="Movies", Colors Cineplex
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=482
 https://jt.drmlive.net/jiotvplus/482.mpd
 
 #EXTINF:-1 tvg-id="483" tvg-name="Sony MAX2" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/SonyMAX2.png" group-title="Movies", Sony MAX2
@@ -4412,9 +4414,6 @@ https://jt.drmlive.net/jiotvplus/548.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=550
 https://jt.drmlive.net/jiotvplus/550.mpd
-
-#EXTINF:-1 tvg-id="551" tvg-name="TEST14 HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/TEST14_HD.png" group-title="Kids", TEST14 HD
-https://jt.drmlive.net/jiotvplus/551.mpd
 
 #EXTINF:-1 tvg-id="554" tvg-name="Discovery Kids Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/DiscoveryKidsHin.png" group-title="Kids", Discovery Kids Hindi
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -4916,7 +4915,7 @@ https://jt.drmlive.net/jiotvplus/676.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=677
 https://jt.drmlive.net/jiotvplus/677.mpd
 
-#EXTINF:-1 tvg-id="678" tvg-name="Udaya Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_Movies.png" group-title="Movies", Udaya Movies
+#EXTINF:-1 tvg-id="678" tvg-name="Sun Udaya Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_Movies.png" group-title="Movies", Sun Udaya Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=678
 https://jt.drmlive.net/jiotvplus/678.mpd
@@ -4931,7 +4930,7 @@ https://jt.drmlive.net/jiotvplus/682.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=683
 https://jt.drmlive.net/jiotvplus/683.mpd
 
-#EXTINF:-1 tvg-id="684" tvg-name="Gemini Life" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Life.png" group-title="Movies", Gemini Life
+#EXTINF:-1 tvg-id="684" tvg-name="Sun Gemini Life" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Life.png" group-title="Movies", Sun Gemini Life
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=684
 https://jt.drmlive.net/jiotvplus/684.mpd
@@ -5121,7 +5120,7 @@ https://jt.drmlive.net/jiotvplus/727.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=728
 https://jt.drmlive.net/jiotvplus/728.mpd
 
-#EXTINF:-1 tvg-id="729" tvg-name="Gemini Comedy" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Comedy.png" group-title="Entertainment", Gemini Comedy
+#EXTINF:-1 tvg-id="729" tvg-name="Sun Gemini Comedy" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Comedy.png" group-title="Entertainment", Sun Gemini Comedy
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=729
 https://jt.drmlive.net/jiotvplus/729.mpd
@@ -5134,7 +5133,7 @@ https://jt.drmlive.net/jiotvplus/731.mpd
 #EXTINF:-1 tvg-id="732" tvg-name="9X Tashan" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/9xTashan.png" group-title="Music", 9X Tashan
 https://jt.drmlive.net/jiotvplus/732.m3u8
 
-#EXTINF:-1 tvg-id="733" tvg-name="Udaya Comedy" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_Comedy.png" group-title="Entertainment", Udaya Comedy
+#EXTINF:-1 tvg-id="733" tvg-name="Sun Udaya Comedy" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_Comedy.png" group-title="Entertainment", Sun Udaya Comedy
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=733
 https://jt.drmlive.net/jiotvplus/733.mpd
@@ -5179,12 +5178,12 @@ https://jt.drmlive.net/jiotvplus/742.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=743
 https://jt.drmlive.net/jiotvplus/743.mpd
 
-#EXTINF:-1 tvg-id="744" tvg-name="Udaya Music" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_Music.png" group-title="Music", Udaya Music
+#EXTINF:-1 tvg-id="744" tvg-name="Sun Udaya Music" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_Music.png" group-title="Music", Sun Udaya Music
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=744
 https://jt.drmlive.net/jiotvplus/744.mpd
 
-#EXTINF:-1 tvg-id="747" tvg-name="Surya Music" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Surya_Music.png" group-title="Music", Surya Music
+#EXTINF:-1 tvg-id="747" tvg-name="Sun Surya Music" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Surya_Music.png" group-title="Music", Sun Surya Music
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=747
 https://jt.drmlive.net/jiotvplus/747.mpd
@@ -5635,27 +5634,27 @@ https://jt.drmlive.net/jiotvplus/895.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=896
 https://jt.drmlive.net/jiotvplus/896.mpd
 
-#EXTINF:-1 tvg-id="897" tvg-name="Gemini TV HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_TV_HD.png" group-title="Entertainment", Gemini TV HD
+#EXTINF:-1 tvg-id="897" tvg-name="Sun Gemini HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_TV_HD.png" group-title="Entertainment", Sun Gemini HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=897
 https://jt.drmlive.net/jiotvplus/897.mpd
 
-#EXTINF:-1 tvg-id="898" tvg-name="Gemini Music HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Music_HD.png" group-title="Music", Gemini Music HD
+#EXTINF:-1 tvg-id="898" tvg-name="Sun Gemini Music HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Music_HD.png" group-title="Music", Sun Gemini Music HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=898
 https://jt.drmlive.net/jiotvplus/898.mpd
 
-#EXTINF:-1 tvg-id="899" tvg-name="Gemini Movies HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Movies_HD.png" group-title="Movies", Gemini Movies HD
+#EXTINF:-1 tvg-id="899" tvg-name="Sun Gemini Movies HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Movies_HD.png" group-title="Movies", Sun Gemini Movies HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=899
 https://jt.drmlive.net/jiotvplus/899.mpd
 
-#EXTINF:-1 tvg-id="900" tvg-name="Surya HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Surya_HD.png" group-title="Entertainment", Surya HD
+#EXTINF:-1 tvg-id="900" tvg-name="Sun Surya HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Surya_HD.png" group-title="Entertainment", Sun Surya HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=900
 https://jt.drmlive.net/jiotvplus/900.mpd
 
-#EXTINF:-1 tvg-id="901" tvg-name="Udaya HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_HD.png" group-title="Entertainment", Udaya HD
+#EXTINF:-1 tvg-id="901" tvg-name="Sun Udaya HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_HD.png" group-title="Entertainment", Sun Udaya HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=901
 https://jt.drmlive.net/jiotvplus/901.mpd
@@ -6913,9 +6912,6 @@ https://jt.drmlive.net/jiotvplus/1516.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=1521
 https://jt.drmlive.net/jiotvplus/1521.mpd
 
-#EXTINF:-1 tvg-id="1525" tvg-name="TEST13 HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/TEST13_HD.png" group-title="News", TEST13 HD
-https://jt.drmlive.net/jiotvplus/1525.mpd
-
 #EXTINF:-1 tvg-id="1528" tvg-name="Network 10" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Network_10.png" group-title="News", Network 10
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=1528
@@ -7087,7 +7083,7 @@ https://jt.drmlive.net/jiotvplus/1655.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=1657
 https://jt.drmlive.net/jiotvplus/1657.mpd
 
-#EXTINF:-1 tvg-id="1662" tvg-name="Surya Comedy" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Surya_Comedy.png" group-title="Entertainment", Surya Comedy
+#EXTINF:-1 tvg-id="1662" tvg-name="Sun Surya Comedy" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Surya_Comedy.png" group-title="Entertainment", Sun Surya Comedy
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=1662
 https://jt.drmlive.net/jiotvplus/1662.mpd
@@ -7208,7 +7204,7 @@ https://jt.drmlive.net/jiotvplus/1747.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=1751
 https://jt.drmlive.net/jiotvplus/1751.mpd
 
-#EXTINF:-1 tvg-id="1754" tvg-name="Surya Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Surya_Movies.png" group-title="Movies", Surya Movies
+#EXTINF:-1 tvg-id="1754" tvg-name="Sun Surya Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Surya_Movies.png" group-title="Movies", Sun Surya Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=1754
 https://jt.drmlive.net/jiotvplus/1754.mpd
@@ -7242,12 +7238,6 @@ https://jt.drmlive.net/jiotvplus/1772.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=1773
 https://jt.drmlive.net/jiotvplus/1773.mpd
-
-#EXTINF:-1 tvg-id="1774" tvg-name="Sony Ten 4 Tamil" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Ten_4_Tamil.png" group-title="Sports", Sony Ten 4 Tamil
-https://jt.drmlive.net/jiotvplus/1774.mpd
-
-#EXTINF:-1 tvg-id="1775" tvg-name="Sony Ten 4 Telugu" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Ten_4_Telugu.png" group-title="Sports", Sony Ten 4 Telugu
-https://jt.drmlive.net/jiotvplus/1775.mpd
 
 #EXTINF:-1 tvg-id="1780" tvg-name="HooplaKidz TV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Hoopla_Kids_TV.png" group-title="Kids", HooplaKidz TV
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -7549,9 +7539,6 @@ https://jt.drmlive.net/jiotvplus/2014.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=2017
 https://jt.drmlive.net/jiotvplus/2017.mpd
 
-#EXTINF:-1 tvg-id="2019" tvg-name="Global Punjab" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Global_Punjab.png" group-title="News", Global Punjab
-https://jt.drmlive.net/jiotvplus/2019.m3u8
-
 #EXTINF:-1 tvg-id="2020" tvg-name="KKD News" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/KKD_News.png" group-title="News", KKD News
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=2020
@@ -7566,6 +7553,9 @@ https://jt.drmlive.net/jiotvplus/2021.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=2022
 https://jt.drmlive.net/jiotvplus/2022.mpd
+
+#EXTINF:-1 tvg-id="2027" tvg-name="Raatdin Bangla" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/raatdinbangla.png" group-title="News", Raatdin Bangla
+https://jt.drmlive.net/jiotvplus/2027.m3u8
 
 #EXTINF:-1 tvg-id="2028" tvg-name="Sadvidya TV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Sadvidya_TV.png" group-title="Devotional", Sadvidya TV
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -9356,6 +9346,9 @@ https://jt.drmlive.net/jiotvplus/3457.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3458
 https://jt.drmlive.net/jiotvplus/3458.mpd
+
+#EXTINF:-1 tvg-id="3459" tvg-name="Swastik TV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/swastiktv.png" group-title="Devotional", Swastik TV
+https://jt.drmlive.net/jiotvplus/3459.m3u8
 
 #EXTINF:-1 tvg-id="3460" tvg-name="G94 News" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/G94News.png" group-title="News", G94 News
 #KODIPROP:inputstream.adaptive.license_type=clearkey
