@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z3lydFh4bzRCVElaNmpuWGVvV2d6MkpIMWRFc2x4ZDJmSVJmZ21vQXdaaEtaSjZ3NmVUZjJnbFl5ZVZPTllrSi8=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2ZFa3hYemsvOXhpS01ONlNONFdZWGwyOFRCcDFzbFoyL2lxZlFTWUVyN1crenhmREFlK2l3U3dHYjJhSTlXQTA=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -2962,20 +2962,14 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=643229904
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=012194967
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1626.jpg" group-title="News",ANB NEWS
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1626
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/3627478281773990686883.png" group-title="News",Aagaaz Times
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=362747828
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/954722144.jpeg" group-title="News",AB News
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=954722144
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/621146662.png" group-title="News",Soochna India
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=621146662
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/738987466.jpeg" group-title="News",Voice TV Urdu
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=738987466
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/737367535.jpeg" group-title="News",News11 Bharat
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=737367535
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/318296789.jpeg" group-title="News",22 Scope
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=318296789
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/349456337.jpeg" group-title="News",Kashish News
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=349456337
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-10004.png" group-title="News",JAN TV
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-10004
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1051.jpg" group-title="News",BANSAL NEWS
@@ -2998,6 +2992,8 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=566931073
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=905407473
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/892388087.jpeg" group-title="News",MEDIA9
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=892388087
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/375180410.jpg" group-title="News",Express News Bharat
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=375180410
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/560376842.jpeg" group-title="News",Ab Star News
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=560376842
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/560455707.jpeg" group-title="News",FM News
@@ -3008,8 +3004,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=560576470
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=775645524
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/557508944.jpg" group-title="News",PUBLIC FIRST
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=557508944
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/487338259.jpeg" group-title="News",ABC News
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=487338259
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/695286272.jpg" group-title="News",TV45
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=695286272
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/923060617.jpeg" group-title="News",National News
@@ -3018,8 +3012,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=923060617
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=088350188
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/349141515.jpeg" group-title="News",KBC News
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=349141515
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/349286143.jpg" group-title="News",TNP News
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=349286143
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/354624659.jpeg" group-title="News",Prime TV
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=354624659
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-19.png" group-title="News",DD NEWS HD
@@ -3068,10 +3060,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=323960759
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=406398419
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/846978550.jpeg" group-title="News",TNP News
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=846978550
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/987213368.png" group-title="News",C News Bharat
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=987213368
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/990520431.png" group-title="News",NSC9 News
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=990520431
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/021185003.jpeg" group-title="News",Buletin India
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=021185003
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/821172381.jpeg" group-title="News",PTC NEWS
@@ -3186,36 +3174,16 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1606
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1612
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1627.png" group-title="News",CHARDIKLA TIME TV
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1627
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/030061673.jpeg" group-title="News",News Marathi 24x7 News
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=030061673
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/818656534.jpeg" group-title="News",PTC NEWS
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=818656534
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/980974889.jpeg" group-title="News",Ajj Di Awaaz Tv
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=980974889
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/114158523.jpeg" group-title="News",Bhadko
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=114158523
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/446346390.png" group-title="News",CN News
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=446346390
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/545617430.png" group-title="News",DK24x7 News
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=545617430
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/846103798.png" group-title="News",R Plus Gold
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=846103798
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/846392392.png" group-title="News",R Plus News
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=846392392
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/846543164.png" group-title="News",Asian News
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=846543164
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/846821795.png" group-title="News",GTC  News
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=846821795
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/986456993.png" group-title="News",4 Sides TV
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=986456993
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/986659431.png" group-title="News",R Maxx
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=986659431
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/987092116.png" group-title="News",Prime9 Plus
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=987092116
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/989028847.png" group-title="News",Metro Tv
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=989028847
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/989200196.png" group-title="News",NE Bharat 24
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=989200196
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10541.jpg" group-title="News",DD News
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10541
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10542.jpg" group-title="News",DD Bharati
@@ -3268,8 +3236,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-230
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1013
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1011.jpg" group-title="Entertainment",MANORANJAN GRAND
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1011
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/986966813.png" group-title="Entertainment",Awaaz India
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=986966813
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-39.jpg" group-title="Entertainment",DD SANSAD TV (RAJYA SABHA)
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-39
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-993.jpg" group-title="Entertainment",ANJAN TV
@@ -3388,22 +3354,8 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1526
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-10009
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/202572425.png" group-title="Entertainment",Valam TV Dayro
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=202572425
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/847445515.png" group-title="Entertainment",U TV
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=847445515
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/986803714.png" group-title="Entertainment",NKR TV
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=986803714
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/987348202.png" group-title="Entertainment",Sana Plus
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=987348202
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/987469472.png" group-title="Entertainment",Aaryaa Tv
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=987469472
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/987671848.png" group-title="Entertainment",Subin Tv
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=987671848
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/988036576.png" group-title="Entertainment",Suriya Tv
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=988036576
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10543.jpg" group-title="Entertainment",B4U Bhojpuri
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10543
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10553.jpg" group-title="Entertainment",PITAARA TV
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10553
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10555.jpg" group-title="Entertainment",PTC PUNJABI GOLD
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10555
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10556.jpg" group-title="Entertainment",PTC PUNJABI
@@ -3654,16 +3606,12 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=923146139
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=318718649
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/225998679.png" group-title="Religious & Devotional",Shree shyam tv
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=225998679
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/988439101.png" group-title="Religious & Devotional",Sadvidya Tv
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=988439101
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/980913547.jpeg" group-title="Religious & Devotional",Ratwara Sahib
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=980913547
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/980752311.jpeg" group-title="Religious & Devotional",Desi Vaid
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=980752311
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/980694110.jpeg" group-title="Religious & Devotional",Aatma Tv
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=980694110
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/088285778.jpeg" group-title="Religious & Devotional",Vedant Ras
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=088285778
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/818842783.png" group-title="Religious & Devotional",PTC SIMRAN
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=818842783
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-957.png" group-title="Religious & Devotional",CVR SPIRTUAL OM
@@ -3690,14 +3638,8 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=700271194
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=697916164
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/775271733.jpeg" group-title="Religious & Devotional",Lakshya TV
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=775271733
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/775324874.jpeg" group-title="Religious & Devotional",Kartavya TV
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=775324874
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/775574735.jpeg" group-title="Religious & Devotional",Kalyan TV
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=775574735
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/417390783.jpeg" group-title="Religious & Devotional",Gurkibani
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=417390783
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/417608551.jpeg" group-title="Religious & Devotional",Gurmat TV
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=417608551
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/418465816.jpeg" group-title="Religious & Devotional",Gurudwara Dasmesh Darbar Canada 24x7 Live
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=418465816
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-961.png" group-title="Religious & Devotional",ARADHANA TV
@@ -3706,8 +3648,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-961
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1135
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1235.png" group-title="Religious & Devotional",SAI TV
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1235
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/114234971.jpeg" group-title="Religious & Devotional",Gospel tv 
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=114234971
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/826572326.png" group-title="Religious & Devotional",MAHOTSAV TV
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=826572326
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/673405756.png" group-title="Religious & Devotional",Satkartar TV
@@ -3720,8 +3660,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=200924683
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=874135261
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/988936638.png" group-title="Religious & Devotional",Gospel Tv
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=988936638
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10550.jpg" group-title="Religious & Devotional",DIVYA TV
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10550
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10610.jpg" group-title="Religious & Devotional",Sanskar
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10610
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10611.jpg" group-title="Religious & Devotional",SATSANG
