@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2dCQTk3VjRXMCtwWmEyYVBBK2gveTBlTkNTNktIMk9ieVhCYW44d0ZmeVN5eStqNzh4aVpaVHN4MkRvMEhPMEg=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z0hIQkd3YkUzYlFjTTVBbVRDOTRpLzZGb1VRTlZFdEZpSHdKam4xWGN1bWVwSmV6RG5rbnZBNnhlREQwNVMyK2k=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -3004,6 +3004,8 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=560576470
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=775645524
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/557508944.jpg" group-title="News",PUBLIC FIRST
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=557508944
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/487338259.jpeg" group-title="News",ABC News
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=487338259
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/695286272.jpg" group-title="News",TV45
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=695286272
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/923060617.jpeg" group-title="News",National News
@@ -3426,8 +3428,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=696103172
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=698364200
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1459.jpg" group-title="Movies",GOLDMINES
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1459
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/120674378.jpeg" group-title="Movies",Hiff Movies
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=120674378
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/695291646.jpg" group-title="Movies",Oscar Movies
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=695291646
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-233.png" group-title="Movies",OSCAR MOVIES BHOJPURI
@@ -3640,6 +3640,8 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=697916164
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=775271733
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/417390783.jpeg" group-title="Religious & Devotional",Gurkibani
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=417390783
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/417608551.jpeg" group-title="Religious & Devotional",Gurmat TV
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=417608551
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/418465816.jpeg" group-title="Religious & Devotional",Gurudwara Dasmesh Darbar Canada 24x7 Live
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=418465816
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-961.png" group-title="Religious & Devotional",ARADHANA TV
