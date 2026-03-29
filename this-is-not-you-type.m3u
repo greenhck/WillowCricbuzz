@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2NwN2VqemUwTUtSS29vSDZ2M3FreXA5M05SNjhNV1VBTXk0RGRQZFh1UGZ3Z3BzWmlLamlIcW5iaG1PSkZaajk=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z05xNWtwSmlEcjdMeDgxSXlCY1FmS3phR2FlR3Y2aEg2NFJqdjVic0pNazRRUEYvK3lMZ2VQUEhQL2pSK1U4ZUw=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -5554,6 +5554,11 @@ https://jt.drmlive.net/jiotvplus/885.mpd
 #EXTINF:-1 tvg-id="887" tvg-name="Vedant Ras Swar Shree" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/swarshreejio.png" group-title="Devotional", Vedant Ras Swar Shree
 https://jt.drmlive.net/jiotvplus/887.m3u8
 
+#EXTINF:-1 tvg-id="889" tvg-name="Jio Sports HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Jio_Sports.png" group-title="Sports", Jio Sports HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=889
+https://jt.drmlive.net/jiotvplus/889.mpd
+
 #EXTINF:-1 tvg-id="891" tvg-name="Sony Ten 2 HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Ten2_HD.png" group-title="Sports", Sony Ten 2 HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=891
@@ -7484,6 +7489,9 @@ https://jt.drmlive.net/jiotvplus/2014.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=2017
 https://jt.drmlive.net/jiotvplus/2017.mpd
 
+#EXTINF:-1 tvg-id="2019" tvg-name="Global Punjab" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Global_Punjab.png" group-title="News", Global Punjab
+https://jt.drmlive.net/jiotvplus/2019.m3u8
+
 #EXTINF:-1 tvg-id="2020" tvg-name="KKD News" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/KKD_News.png" group-title="News", KKD News
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=2020
@@ -8154,6 +8162,11 @@ https://jt.drmlive.net/jiotvplus/3058.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3059
 https://jt.drmlive.net/jiotvplus/3059.mpd
 
+#EXTINF:-1 tvg-id="3060" tvg-name="Hiff Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Hiff_Movies.png" group-title="Movies", Hiff Movies
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3060
+https://jt.drmlive.net/jiotvplus/3060.mpd
+
 #EXTINF:-1 tvg-id="3064" tvg-name="Navsarjan Sanskruti News" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Nav_Sanskruti_News.png" group-title="News", Navsarjan Sanskruti News
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3064
@@ -8725,6 +8738,11 @@ https://jt.drmlive.net/jiotvplus/3253.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3255
 https://jt.drmlive.net/jiotvplus/3255.mpd
+
+#EXTINF:-1 tvg-id="3258" tvg-name="ATN Samachar" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ATN_Samachar.png" group-title="News", ATN Samachar
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3258
+https://jt.drmlive.net/jiotvplus/3258.mpd
 
 #EXTINF:-1 tvg-id="3259" tvg-name="Pocket Films" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/p_pktflm.png" group-title="Movies", Pocket Films
 https://jt.drmlive.net/jiotvplus/3259.m3u8
