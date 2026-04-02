@@ -7460,7 +7460,7 @@ https://dishmt.slivcdn.com/hls/live/2020593/SONYSIXHD/hdntl=exp=1775187784~acl=%
 </html>
 # By Abu SAEEID X Noob
 # Github X Tg @abusaeeidx
-# Update on 2026-04-03 04:55:34 (BD Time)
+# Update on 2026-04-03 05:36:48 (BD Time)
 # Note: I do not host any content, everything is publicly available. And any issues, please contact me.
 #EXTINF:-1 group-title="LIVE" tvg-logo="https://image.tsports.com/images/mobile_thumbnail/1761718928-1750064430-LIVE.jpg", T Sports Live 01
 https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
@@ -7636,6 +7636,102 @@ https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Ddbharti/default/Ddbharti.m3u8
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Sansadtvhd/default/Sansadtvhd.m3u8
 #EXTINF:-1 tvg-logo="https://d388d59m61mm0v.cloudfront.net/optimized/content/common/logos/channel/logos/oshzts.png" group-title="News", Sansad TV SD
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Sansadtvsd/default/Sansadtvsd.m3u8
+# By Abu SAEEID X Noob
+# Github @abusaeeidx
+# Update on 2026-04-03 05:36:16 (BD Time)
+# Note: I do not host any content, everything is publicly available.
+#EXTINF:-1 tvg-name="PTV Sports" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/20-by-xfireflix.png" group-title="CricHd Tv1",PTV Sports
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n3.zohanayaan.com:1686/hls/ptvpk.m3u8?md5=lr8ZR9v6MlSypLmbgdDQlw&expires=1775180186
+#EXTINF:-1 tvg-name="Willow HD" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/38-by-xfireflix.png" group-title="CricHd Tv1",Willow HD
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n1.zohanayaan.com:1686/hls/willowusa.m3u8?md5=_1FM_TcXWTaa9o2Ym34ahw&expires=1775180196
+#EXTINF:-1 tvg-name="Willow HD 2" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/8-by-xfireflix.png" group-title="CricHd Tv1",Willow HD 2
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n1.zohanayaan.com:1686/hls/willowextra.m3u8?md5=gKq03GmZ9KQn7fo0oYDsVQ&expires=1775180203
+#EXTINF:-1 tvg-name="Ten Sports" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/10-by-xfireflix.png" group-title="CricHd Tv1",Ten Sports
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n3.zohanayaan.com:1686/hls/tenspk.m3u8?md5=eA8hD6L465p2Co9sEHfXwA&expires=1775180207
+#EXTINF:-1 tvg-name="A Sports HD" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/12-by-xfireflix.png" group-title="CricHd Tv1",A Sports HD
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n2.zohanayaan.com:1686/hls/asportshd.m3u8?md5=7JWKzO5sjc9uoXeskTZpaw&expires=1775180212
+#EXTINF:-1 tvg-name="TNT 1" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png" group-title="CricHd Tv1",TNT 1
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n5.zohanayaan.com:1686/hls/bbtsp1.m3u8?md5=eBAS8scIU0_42rMojGCY8A&expires=1775180223
+#EXTINF:-1 tvg-name="TNT 2" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png" group-title="CricHd Tv1",TNT 2
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n2.zohanayaan.com:1686/hls/bbtsp2.m3u8?md5=QVNMxaUihZzC7o_P0UuLIg&expires=1775180227
+#EXTINF:-1 tvg-name="TNT 3" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png" group-title="CricHd Tv1",TNT 3
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n4.zohanayaan.com:1686/hls/bbtsp3.m3u8?md5=u5KU7K0TPnIggRjrClpqDQ&expires=1775180232
+#EXTINF:-1 tvg-name="TNT 4" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png" group-title="CricHd Tv1",TNT 4
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n3.zohanayaan.com:1686/hls/bbtespn.m3u8?md5=zRTH3YckzQDlB6X-y_d6Hg&expires=1775180236
+#EXTINF:-1 tvg-name="Sky Sport 1 Nz" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="CricHd Tv1",Sky Sport 1 Nz
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n5.zohanayaan.com:1686/hls/sky1nz.m3u8?md5=Ilwe4SMmsBcEvWb9wP_64g&expires=1775180240
+#EXTINF:-1 tvg-name="Sky Sport 2 Nz" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="CricHd Tv1",Sky Sport 2 Nz
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n4.zohanayaan.com:1686/hls/sky2nz.m3u8?md5=_q1CIo53bMEkZtWUWGAVyQ&expires=1775180244
+#EXTINF:-1 tvg-name="Sky Sport 3 Nz" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="CricHd Tv1",Sky Sport 3 Nz
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n4.zohanayaan.com:1686/hls/sky3nz.m3u8?md5=782zSz4096WCRcuxpTDaBw&expires=1775180249
+#EXTINF:-1 tvg-name="Sky Sport 4 Nz" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="CricHd Tv1",Sky Sport 4 Nz
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n1.zohanayaan.com:1686/hls/sky4nz.m3u8?md5=ug6tPZLu0_6hzaFChnf0BQ&expires=1775180253
+#EXTINF:-1 tvg-name="Sky Sport 5 Nz" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="CricHd Tv1",Sky Sport 5 Nz
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n4.zohanayaan.com:1686/hls/sky5nz.m3u8?md5=uS-oyvV7QjEg2Wx45PYI6A&expires=1775180257
+#EXTINF:-1 tvg-name="Sky Sport 6 Nz" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="CricHd Tv1",Sky Sport 6 Nz
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n3.zohanayaan.com:1686/hls/sky6nz.m3u8?md5=AlRnTp9srsZPdjyFvaf7pA&expires=1775180261
+#EXTINF:-1 tvg-name="Sky Sport 7 Nz" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="CricHd Tv1",Sky Sport 7 Nz
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n1.zohanayaan.com:1686/hls/sky7nz.m3u8?md5=Tnbso7-Y55cIhM90s2XMqg&expires=1775180266
+#EXTINF:-1 tvg-name="Sky Sport 8 Nz" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="CricHd Tv1",Sky Sport 8 Nz
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n3.zohanayaan.com:1686/hls/sky8nz.m3u8?md5=P3OLrgZSYHW4sjlW2TyjgA&expires=1775180270
+#EXTINF:-1 tvg-name="Sky Sport 9 Nz" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png" group-title="CricHd Tv1",Sky Sport 9 Nz
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n1.zohanayaan.com:1686/hls/sky9nz.m3u8?md5=wnNTC2cGaf1n72uzguCHKQ&expires=1775180274
+#EXTINF:-1 tvg-name="LaLiGA" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/19-by-xfireflix.png" group-title="CricHd Tv1",LaLiGA
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n3.zohanayaan.com:1686/hls/laligauk.m3u8?md5=rVZqAeUXOOxsGFZ_v4B6iw&expires=1775180303
+#EXTINF:-1 tvg-name="Astro Cricket" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008895589.png" group-title="CricHd Tv1",Astro Cricket
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n2.zohanayaan.com:1686/hls/fox501.m3u8?md5=iwu1OXysqJ8kuKxsaQLlFQ&expires=1775180322
+#EXTINF:-1 tvg-name="Sky Sports Tennis" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745009085794.png" group-title="CricHd Tv1",Sky Sports Tennis
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n5.zohanayaan.com:1686/hls/skystennis.m3u8?md5=p1F0MbDxxgF_nPuvJ2NIbQ&expires=1775180341
+#EXTINF:-1 tvg-name="Fox Cricket 501 HD" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/6-by-xfireflix.png" group-title="CricHd Tv1",Fox Cricket 501 HD
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n5.zohanayaan.com:1686/hls/fox501.m3u8?md5=t1nXXjaDMqp_8yuszVFv1Q&expires=1775180345
+#EXTINF:-1 tvg-name="Sony Sports3" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1000173192-modified.png" group-title="CricHd Tv1",Sony Sports3
+#EXTVLCOPT:http-referrer=https://executeandship.com/
+#EXTVLCOPT:http-origin=https://executeandship.com
+https://n5.zohanayaan.com:1686/hls/ten1hd.m3u8?md5=AKCBN8rNPC_rItPvOzVIGQ&expires=1775180349
 #EXTINF:-1 tvg-logo="https://webiptv.site/jointg", IPL 2026 | Fox 50fps iOS | Join Tg
 https://webiptv.site/jointg.webp
 #EXTINF:-1 tvg-logo="https://documents.iplt20.com/bcci/articles/1774524610_IPL_2026__1_.JPG", IPL 2026 | Hub 4 50fps
@@ -7684,14 +7780,10 @@ https://webiptv.site/sstam
 https://webiptv.site/sstel
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Valero-Texas-Open-2026-old-card-_1775132383085.png" group-title="Fancode-Golf", Main Feed - Day 1 vs San Antonio, Texas (Valero Texas Open 2026)
 https://dai-partner.fancode.com/primary/141777_english_hls_7ed727d39238515_1ta-di_h264/index.m3u8
-#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Valero-Texas-Open-2026-old-card-.png" group-title="Fancode-Golf", Featured Holes - Day 1 vs San Antonio, Texas (Valero Texas Open 2026)
-https://dai-partner.fancode.com/primary/141780_english_hls_c19a041ad746169_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Valero-Texas-Open-2026-old-card-.png" group-title="Fancode-Golf", Marquee Feed - Day 1 vs San Antonio, Texas (Valero Texas Open 2026)
 https://dai-partner.fancode.com/primary/141779_english_hls_80be00b8c551397_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/ATP--250-Clay-Court-Championship_fc-web.jpg" group-title="Fancode-Tennis", Fayez Sarofim & Co. U.S. Men's Clay - Day 4 vs Houston, United States (ATP 250 - Fayez Sarofim & Co. U.S. Men's Clay)
 https://dai-partner.fancode.com/primary/141081_english_hls_29077d768575402_1ta-di_h264/index.m3u8
-#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Valero-Texas-Open-2026-old-card-.png" group-title="Fancode-Golf", World Feed - Day 1 vs San Antonio, Texas (Valero Texas Open 2026)
-https://dai-partner.fancode.com/primary/141781_english_hls_23cc1c2b5e96402_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(14).png" group-title="Fancode-Golf", Day 1 vs Shadow Creek Golf Club (Aramco Championship USA 2026)
 https://dai-partner.fancode.com/primary/141636_english_hls_5ed28162dc44409_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="OMNIX EMPIRE" tvg-logo="https://github.com/omnixmain/OMNIX-EMPIRE/blob/main/omnix-empire-logo.jpg?raw=true",OMNIX EMPIRE
