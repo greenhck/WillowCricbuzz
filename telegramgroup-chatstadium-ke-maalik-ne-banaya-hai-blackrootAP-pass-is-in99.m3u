@@ -1,6 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-name="Sony Sports Ten 2" group-title="Sony Sports",Armenia vs Belarus - 29 Mar 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/2018458/ArmeniaV2903/ENG/std_lrh-800300010.m3u8?hdnea=exp=1774841962~acl=/*~id=25669436233249887389286920387971~hmac=50e388e56e59a8454d772477355fe9a8fe53cdb31eadcacacb30040f44d16471
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2HindiHD_Transparent_c72d6289-27aa-422d-8420-40135329a5b6.png" group-title="Hotstar Sports",Star Sports 2 Hindi HD
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
 #EXTINF:-1 tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Hindi_Transparent_e2c035d5-8451-4c1e-930f-4cb4449d1901.png" group-title="Hotstar Sports",Star Sports 2 Hindi
@@ -93,6 +91,24 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ffcedf61e9544d1da7db98277a290000:cea7c92c93f04c6daaf31e2fda5e6809
 https://livetv.hotstar.com/mp2/gec-india-1540057081/5c13f17d142c4963a1c7bd54fcd421d5/index.mpd|User-Agent=Hotstar;in.startv.hotstar/25.01.27.5.3788 (Android/13)&Cookie=hdntl=exp=1770602344~acl=%2f*~id=bd1f706594aff71bf098956b5d49f385~data=hdntl~hmac=351b46a2a11718c564fddd4e12ae9cef021848cb2799ca1c1350b12f9fda4a7b&Origin=https://www.hotstar.com&Referer=https://www.hotstar.com/
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(5)_1774864336440.png" group-title="Fancode",West Indies Women vs Australia Women (Australia Women's tour of West Indies 2026)
+https://dai-partner.fancode.com/primary/141333_english_hls_09fda5fb9c39912_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Valero-Texas-Open-2026-old-card-_1775132383085.png" group-title="Fancode",Main Feed - Day 1 vs San Antonio, Texas (Valero Texas Open 2026)
+https://dai-partner.fancode.com/primary/141777_english_hls_7ed727d39238515_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Valero-Texas-Open-2026-old-card-.png" group-title="Fancode",Featured Holes - Day 1 vs San Antonio, Texas (Valero Texas Open 2026)
+https://dai-partner.fancode.com/primary/141780_english_hls_c19a041ad746169_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Valero-Texas-Open-2026-old-card-.png" group-title="Fancode",Marquee Feed - Day 1 vs San Antonio, Texas (Valero Texas Open 2026)
+https://dai-partner.fancode.com/primary/141779_english_hls_80be00b8c551397_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Valero-Texas-Open-2026-old-card-.png" group-title="Fancode",Featured Groups - Day 1 vs San Antonio, Texas (Valero Texas Open 2026)
+https://dai-partner.fancode.com/primary/141778_english_hls_eaa188f69127854_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/ATP--250-Clay-Court-Championship_fc-web.jpg" group-title="Fancode",Fayez Sarofim & Co. U.S. Men's Clay - Day 4 vs Houston, United States (ATP 250 - Fayez Sarofim & Co. U.S. Men's Clay)
+https://dai-partner.fancode.com/primary/141081_english_hls_29077d768575402_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Valero-Texas-Open-2026-old-card-.png" group-title="Fancode",World Feed - Day 1 vs San Antonio, Texas (Valero Texas Open 2026)
+https://dai-partner.fancode.com/primary/141781_english_hls_23cc1c2b5e96402_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mini-Match-Card-(1080x810)-(14).png" group-title="Fancode",Day 1 vs Shadow Creek Golf Club (Aramco Championship USA 2026)
+https://dai-partner.fancode.com/primary/141636_english_hls_5ed28162dc44409_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140966_5720_OLY-W_WOL-W_fc-web.jpg" group-title="Fancode",Lyon Women vs VfL Wolfsburg Women (UEFA Women's Champions League 2025-26)
+https://dai-partner.fancode.com/primary/140966_english_hls_58069b3ec794327_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="Prime sports", Prime1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b86fa94988debfa3f1dff4cfd0d45345:ab64c1dc3e8f309e61cf0c8318618f05
