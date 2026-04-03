@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z25Kb3VLKzc0dVQvNzZZVWtIZHBmQ1o4ci9YQlRJM0daWUlxUWhsZ0FUclhNOUx1K1ZoM0Q3ODlPSGtjYUF0TzU=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z1BUR3dmZmc4RVFhb3gyM3pHL256RXZwcjJhamhDWG9JZFlFaEdEZnVPR2ZhMWlRQ1hUeDd3YzhPRTV2KzRkcWQ=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -176,6 +176,14 @@ https://mix.drmlive.net/mix/fancode-1.m3u8|Referer=https://fancode.com/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; MI 9 Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/140.0.5563.58 Mobile Safari/537.36
 https://mix.drmlive.net/mix/fancode-2.m3u8|Referer=https://fancode.com/
 
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/drmlive/mix/refs/heads/main/fancode.png" group-title="Sports",Fancode Event Extra 3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; MI 9 Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/140.0.5563.58 Mobile Safari/537.36
+https://mix.drmlive.net/mix/fancode-3.m3u8|Referer=https://fancode.com/
+
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/drmlive/mix/refs/heads/main/fancode.png" group-title="Sports",Fancode Event Extra 4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; MI 9 Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/140.0.5563.58 Mobile Safari/537.36
+https://mix.drmlive.net/mix/fancode-3.m3u8|Referer=https://fancode.com/
+
 #EXTINF:-1 tvg-logo="https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/sony-liv-logo.png" group-title="Cricket",SLIV Event 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; MI 9 Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/140.0.5563.58 Mobile Safari/537.36
 https://mix.drmlive.net/mix/suluv-1.m3u8?category=cricket
@@ -199,6 +207,14 @@ https://mix.drmlive.net/mix/suluv-1.m3u8
 #EXTINF:-1 tvg-logo="https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/sony-liv-logo.png" group-title="Sports",SLIV Event Extra 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; MI 9 Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/140.0.5563.58 Mobile Safari/537.36
 https://mix.drmlive.net/mix/suluv-2.m3u8
+
+#EXTINF:-1 tvg-logo="https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/sony-liv-logo.png" group-title="Sports",SLIV Event Extra 3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; MI 9 Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/140.0.5563.58 Mobile Safari/537.36
+https://mix.drmlive.net/mix/suluv-3.m3u8
+
+#EXTINF:-1 tvg-logo="https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/sony-liv-logo.png" group-title="Sports",SLIV Event Extra 4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; MI 9 Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/140.0.5563.58 Mobile Safari/537.36
+https://mix.drmlive.net/mix/suluv-4.m3u8
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/icctv1.mpd
@@ -224,11 +240,11 @@ https://mix.drmlive.net/mix/icctv3.mpd
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
 https://mix.drmlive.net/mix/icctv4.mpd
 
-#EXTINF:-1 tvg-id="ts559" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12081-j9oc38xc-v8/imageContent-12081-j9oc38xc-m7.png" group-title="Entertainment",SONY SAB (Airtel)
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/eng_key.php?id=sonysab
-#EXTVLCOPT:http-user-agent=third-party
-#https://mix.drmlive.net/mix/engsonysab.mpd
+#EXTINF:-1 tvg-id="ts559" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12081-j9oc38xc-v8/imageContent-12081-j9oc38xc-m7.png" group-title="Entertainment",SONY SAB (Sungo)
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/sungo-wv
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+https://mix.drmlive.net/mix/engsonysab.mpd
 
 #EXTINF:-1 tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_HD.png" group-title="Entertainment",SONY HD
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -4728,6 +4744,8 @@ https://jt.drmlive.net/jiotvplus/642.mpd
 https://jt.drmlive.net/jiotvplus/643.mpd
 
 #EXTINF:-1 tvg-id="646" tvg-name="NTV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/NTV.png" group-title="News", NTV
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=646
 https://jt.drmlive.net/jiotvplus/646.mpd
 
 #EXTINF:-1 tvg-id="647" tvg-name="Pratidin Time" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Pratidin_News.png" group-title="News", Pratidin Time
@@ -6399,6 +6417,11 @@ https://jt.drmlive.net/jiotvplus/1260.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=1261
 https://jt.drmlive.net/jiotvplus/1261.mpd
 
+#EXTINF:-1 tvg-id="1263" tvg-name="BRK News" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Total_Tv_Haryana.png" group-title="News", BRK News
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=1263
+https://jt.drmlive.net/jiotvplus/1263.mpd
+
 #EXTINF:-1 tvg-id="1264" tvg-name="Kolkata TV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Kolkata_TV.png" group-title="News", Kolkata TV
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=1264
@@ -6536,11 +6559,6 @@ https://jt.drmlive.net/jiotvplus/1345.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=1346
 https://jt.drmlive.net/jiotvplus/1346.mpd
-
-#EXTINF:-1 tvg-id="1349" tvg-name="And Prive HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/AndPriveHD.png" group-title="Movies", And Prive HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=1349
-https://jt.drmlive.net/jiotvplus/1349.mpd
 
 #EXTINF:-1 tvg-id="1351" tvg-name="Zee TV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeTV.png" group-title="Entertainment", Zee TV
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -7479,9 +7497,6 @@ https://jt.drmlive.net/jiotvplus/2014.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=2017
 https://jt.drmlive.net/jiotvplus/2017.mpd
 
-#EXTINF:-1 tvg-id="2019" tvg-name="Global Punjab" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Global_Punjab.png" group-title="News", Global Punjab
-https://jt.drmlive.net/jiotvplus/2019.m3u8
-
 #EXTINF:-1 tvg-id="2020" tvg-name="KKD News" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/KKD_News.png" group-title="News", KKD News
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=2020
@@ -7729,11 +7744,6 @@ https://jt.drmlive.net/jiotvplus/2754.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=2757
 https://jt.drmlive.net/jiotvplus/2757.mpd
-
-#EXTINF:-1 tvg-id="2758" tvg-name="Zee Chitramandir" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeChitramandir.png" group-title="Movies", Zee Chitramandir
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=2758
-https://jt.drmlive.net/jiotvplus/2758.mpd
 
 #EXTINF:-1 tvg-id="2759" tvg-name="DD North East" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/DD_North_East.png" group-title="Entertainment", DD North East
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -8026,7 +8036,7 @@ https://jt.drmlive.net/jiotvplus/3018.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3019
 https://jt.drmlive.net/jiotvplus/3019.mpd
 
-#EXTINF:-1 tvg-id="3022" tvg-name="Unique Tv" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Unique_Tv.png" group-title="Entertainment", Unique Tv
+#EXTINF:-1 tvg-id="3022" tvg-name="Unique TV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Unique_Tv.png" group-title="Entertainment", Unique TV
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3022
 https://jt.drmlive.net/jiotvplus/3022.mpd
@@ -8157,6 +8167,11 @@ https://jt.drmlive.net/jiotvplus/3059.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3060
 https://jt.drmlive.net/jiotvplus/3060.mpd
 
+#EXTINF:-1 tvg-id="3063" tvg-name="PR News" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/PR_News.png" group-title="News", PR News
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3063
+https://jt.drmlive.net/jiotvplus/3063.mpd
+
 #EXTINF:-1 tvg-id="3064" tvg-name="Navsarjan Sanskruti News" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Nav_Sanskruti_News.png" group-title="News", Navsarjan Sanskruti News
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3064
@@ -8186,11 +8201,6 @@ https://jt.drmlive.net/jiotvplus/3069.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3070
 https://jt.drmlive.net/jiotvplus/3070.mpd
-
-#EXTINF:-1 tvg-id="3071" tvg-name="TV Asia Powered by Shemaroo" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/TV_Asia.png" group-title="Entertainment", TV Asia Powered by Shemaroo
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3071
-https://jt.drmlive.net/jiotvplus/3071.mpd
 
 #EXTINF:-1 tvg-id="3074" tvg-name="Shemaroo Filmy Gaane" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/smrfgn.png" group-title="Music", Shemaroo Filmy Gaane
 https://jt.drmlive.net/jiotvplus/3074.m3u8
@@ -9048,6 +9058,11 @@ https://jt.drmlive.net/jiotvplus/3373.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3374
 https://jt.drmlive.net/jiotvplus/3374.mpd
 
+#EXTINF:-1 tvg-id="3378" tvg-name="G18 News" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/G18_News.png" group-title="News", G18 News
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3378
+https://jt.drmlive.net/jiotvplus/3378.mpd
+
 #EXTINF:-1 tvg-id="3379" tvg-name="Headlines Kolkata" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Headlines_Kolkata.png" group-title="News", Headlines Kolkata
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3379
@@ -9073,7 +9088,7 @@ https://jt.drmlive.net/jiotvplus/3382.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3383
 https://jt.drmlive.net/jiotvplus/3383.mpd
 
-#EXTINF:-1 tvg-id="3384" tvg-name="Filamchi Bhojpuri" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Filamchi_Bhojpuri.png" group-title="Movies", Filamchi Bhojpuri
+#EXTINF:-1 tvg-id="3384" tvg-name="EPIC Bhojpuri" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Filamchi_Bhojpuri.png" group-title="Movies", EPIC Bhojpuri
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3384
 https://jt.drmlive.net/jiotvplus/3384.mpd
@@ -9132,10 +9147,8 @@ https://jt.drmlive.net/jiotvplus/3402.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3405
 https://jt.drmlive.net/jiotvplus/3405.mpd
 
-#EXTINF:-1 tvg-id="3406" tvg-name="Metro TV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Metro_TV.png" group-title="News", Metro TV
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3406
-https://jt.drmlive.net/jiotvplus/3406.mpd
+#EXTINF:-1 tvg-id="3406" tvg-name="Metro TV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/metrotv.png" group-title="News", Metro TV
+https://jt.drmlive.net/jiotvplus/3406.m3u8
 
 #EXTINF:-1 tvg-id="3409" tvg-name="Roja TV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/rojatv.png" group-title="Entertainment", Roja TV
 https://jt.drmlive.net/jiotvplus/3409.m3u8
@@ -9313,7 +9326,7 @@ https://jt.drmlive.net/jiotvplus/3460.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3461
 https://jt.drmlive.net/jiotvplus/3461.mpd
 
-#EXTINF:-1 tvg-id="3462" tvg-name="Charcha Aaj Ki" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/CharchaAajKi.png" group-title="News", Charcha Aaj Ki
+#EXTINF:-1 tvg-id="3462" tvg-name="Nation Update" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/NationUpdate.png" group-title="News", Nation Update
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3462
 https://jt.drmlive.net/jiotvplus/3462.mpd
@@ -9480,6 +9493,9 @@ https://jt.drmlive.net/jiotvplus/3518.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://jt.drmlive.net/jiotvplus/jtck?id=3519
 https://jt.drmlive.net/jiotvplus/3519.mpd
+
+#EXTINF:-1 tvg-id="3524" tvg-name="Journy" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/amg02159c11.png" group-title="Lifestyle", Journy
+https://jt.drmlive.net/jiotvplus/3524.m3u8
 
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
