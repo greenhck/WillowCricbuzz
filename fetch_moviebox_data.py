@@ -19,8 +19,8 @@ SECRET_KEY_BASE64 = "76iRl07s0xSN9jqmEWAt79EBJZulIQIsV64FZr2O"
 VERSION_HASH = "0d8421d946e2780cf9ebdd642640291d"
 
 # Get from environment or use defaults
-AUTH_TOKEN = os.getenv("MOVIEBOX_AUTH_TOKEN", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjQyMjIwMjc3Mjg4MTc2Mzc0ODAsImV4cCI6MTc4NDAxMTE0MSwiaWF0IjoxNzc2MjM0ODQxfQ.PGSQgdAEaMDEYkavl4fQG7Afc0ITG_c93sYs061PmEE")
-DEVICE_ID = os.getenv("MOVIEBOX_DEVICE_ID", "06dbeab722cd1f28d06d1703317f377c")
+AUTH_TOKEN = os.getenv("MOVIEBOX_AUTH_TOKEN", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjQyMjIwMjc3Mjg4MTc2Mzc0ODAsImV4cCI6MTc4NDAxMTE0MSwiaWF0IjoxNzc2MjM0ODQxfQ.PGSQgdAEaMDEYkavl4fQG7Afc0ITG_c93sYs061PmEE").strip()
+DEVICE_ID = os.getenv("MOVIEBOX_DEVICE_ID", "06dbeab722cd1f28d06d1703317f377c").strip()
 
 # Output directory (root of repository - files will be uploaded directly)
 OUTPUT_DIR = Path(".")  # Current directory (root)
@@ -89,7 +89,7 @@ def fetch_homepage(tab_id: int = 2) -> dict:
         "x-client-info": json.dumps(client_info),
         "x-client-status": "0",
         "x-tr-signature": signature,
-        "authorization": f"Bearer {AUTH_TOKEN}",
+        "authorization": "Bearer " + AUTH_TOKEN,
         "user-agent": "com.community.oneroom/50020092 (Linux; U; Android 14; en_IN; moto g35 5G; Build/UOAS34.216-230-3; Cronet/146.0.7680.144)",
         "accept-encoding": "gzip, deflate, br"
     }
