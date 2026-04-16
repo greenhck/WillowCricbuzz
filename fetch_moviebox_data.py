@@ -18,9 +18,18 @@ BASE_URL = "https://apig.inmoviebox.com/wefeed-mobile-bff"
 SECRET_KEY_BASE64 = "76iRl07s0xSN9jqmEWAt79EBJZulIQIsV64FZr2O"
 VERSION_HASH = "0d8421d946e2780cf9ebdd642640291d"
 
-# Get from environment or use defaults
-AUTH_TOKEN = os.getenv("MOVIEBOX_AUTH_TOKEN", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjQyMjIwMjc3Mjg4MTc2Mzc0ODAsImV4cCI6MTc4NDAxMTE0MSwiaWF0IjoxNzc2MjM0ODQxfQ.PGSQgdAEaMDEYkavl4fQG7Afc0ITG_c93sYs061PmEE").strip()
-DEVICE_ID = os.getenv("MOVIEBOX_DEVICE_ID", "06dbeab722cd1f28d06d1703317f377c").strip()
+# Get from environment or use defaults (ensure proper string type)
+_token = os.getenv("MOVIEBOX_AUTH_TOKEN")
+if _token is None or _token.strip() == "":
+    AUTH_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjQyMjIwMjc3Mjg4MTc2Mzc0ODAsImV4cCI6MTc4NDAxMTE0MSwiaWF0IjoxNzc2MjM0ODQxfQ.PGSQgdAEaMDEYkavl4fQG7Afc0ITG_c93sYs061PmEE"
+else:
+    AUTH_TOKEN = _token.strip()
+
+_device = os.getenv("MOVIEBOX_DEVICE_ID")
+if _device is None or _device.strip() == "":
+    DEVICE_ID = "06dbeab722cd1f28d06d1703317f377c"
+else:
+    DEVICE_ID = _device.strip()
 
 # Output directory (root of repository - files will be uploaded directly)
 OUTPUT_DIR = Path(".")  # Current directory (root)
@@ -97,6 +106,8 @@ def fetch_homepage(tab_id: int = 2) -> dict:
     print(f"Fetching homepage (tab {tab_id})...")
     print(f"URL: {url}")
     print(f"Signature: {signature}")
+    print(f"Auth Token Length: {len(AUTH_TOKEN)}")
+    print(f"Auth Header: Bearer {AUTH_TOKEN[:20]}...")  # Print first 20 chars for debugging
     
     try:
         response = httpx.get(url, headers=headers, timeout=30.0)
@@ -135,6 +146,8 @@ def main():
     print("=" * 60)
     print("MovieBox API Data Fetcher")
     print("=" * 60)
+    print(f"Auth Token: {AUTH_TOKEN[:30]}... (length: {len(AUTH_TOKEN)})")
+    print(f"Device ID: {DEVICE_ID}")
     print()
     
     # Fetch different tabs
