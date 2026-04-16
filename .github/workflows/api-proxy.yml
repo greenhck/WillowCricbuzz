@@ -1,0 +1,50 @@
+name: MovieBox API Proxy
+
+on:
+  # Run on every push to main
+  push:
+    branches: [ main ]
+  
+  # Run on schedule (every 6 hours to keep data fresh)
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  update-cache:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        pip install httpx
+    
+    - name: Fetch MovieBox API data
+      run: |
+        python .github/scripts/fetch_moviebox_data.py
+      env:
+        MOVIEBOX_AUTH_TOKEN: ${{ secrets.MOVIEBOX_AUTH_TOKEN }}
+        MOVIEBOX_DEVICE_ID: ${{ secrets.MOVIEBOX_DEVICE_ID }}
+    
+    - name: Commit updated data
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add app/src/main/assets/api_cache/*.json
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update API cache data [skip ci]"
+    
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
