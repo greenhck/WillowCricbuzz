@@ -31,7 +31,7 @@ jobs:
     
     - name: Fetch MovieBox API data
       run: |
-        python .github/scripts/fetch_moviebox_data.py
+        python fetch_moviebox_data.py
       env:
         MOVIEBOX_AUTH_TOKEN: ${{ secrets.MOVIEBOX_AUTH_TOKEN }}
         MOVIEBOX_DEVICE_ID: ${{ secrets.MOVIEBOX_DEVICE_ID }}
@@ -40,7 +40,7 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add app/src/main/assets/api_cache/*.json
+        git add *.json
         git diff --quiet && git diff --staged --quiet || git commit -m "Update API cache data [skip ci]"
     
     - name: Push changes
