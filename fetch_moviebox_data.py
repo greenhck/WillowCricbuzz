@@ -22,9 +22,8 @@ VERSION_HASH = "0d8421d946e2780cf9ebdd642640291d"
 AUTH_TOKEN = os.getenv("MOVIEBOX_AUTH_TOKEN", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjQyMjIwMjc3Mjg4MTc2Mzc0ODAsImV4cCI6MTc4NDAxMTE0MSwiaWF0IjoxNzc2MjM0ODQxfQ.PGSQgdAEaMDEYkavl4fQG7Afc0ITG_c93sYs061PmEE")
 DEVICE_ID = os.getenv("MOVIEBOX_DEVICE_ID", "06dbeab722cd1f28d06d1703317f377c")
 
-# Output directory
-OUTPUT_DIR = Path("app/src/main/assets/api_cache")
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+# Output directory (root of repository - files will be uploaded directly)
+OUTPUT_DIR = Path(".")  # Current directory (root)
 
 
 def generate_signature(method: str, path: str, timestamp: int) -> str:
