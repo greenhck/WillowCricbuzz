@@ -1,0 +1,33 @@
+name: TW Playlist Updater
+
+on:
+  schedule:
+    # Har ghante ki 28 aur 58 minute par chalega
+    - cron: '28,58 * * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape_and_update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Packages
+        run: pip install requests beautifulsoup4
+
+      - name: Execute Scraper
+        run: python main_scraper.py
+
+      - name: Save Changes
+        run: |
+          git config --local user.email "bot@github.com"
+          git config --local user.name "TW-Bot"
+          git add TW.json
+          git commit -m "Auto-update TW.json: $(date)" || exit 0
+          git push
