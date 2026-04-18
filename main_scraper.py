@@ -6,19 +6,24 @@ import urllib.parse
 
 def parse_headers(url_part):
     headers = {}
-    # Headers ko '&' aur '|' se split karke clean karein
+    # Split by | or & to get individual components
     parts = re.split(r'[|&]', url_part)
     for part in parts:
         if '=' in part:
-            key, value = part.split('=', 1)
-            key = key.strip()
-            # Standard header format (User-agent -> User-Agent)
+            # Key aur value ko split karke extra spaces saaf karein
+            key_raw, val_raw = part.split('=', 1)
+            key = key_raw.strip()
+            value = urllib.parse.unquote(val_raw.strip())
+            
+            # Standard Header Names
             if key.lower() == 'user-agent': key = 'User-Agent'
             elif key.lower() == 'referer': key = 'Referer'
             elif key.lower() == 'origin': key = 'Origin'
             elif key.lower() == 'cookie': key = 'Cookie'
+            elif key.lower() == 'drmscheme': key = 'drmScheme'
+            elif key.lower() == 'drmlicense': key = 'drmLicense'
             
-            headers[key] = urllib.parse.unquote(value)
+            headers[key] = value
     return headers
 
 def get_tw_data():
@@ -34,37 +39,40 @@ def get_tw_data():
             text_area = msg.find('div', class_='tgme_widget_message_text')
             if not text_area: continue
 
-            # Get clean lines
+            # Text extraction with line breaks
             for br in text_area.find_all("br"): br.replace_with("\n")
-            lines = [l.strip() for l in text_area.get_text().split('\n') if l.strip()]
+            raw_content = text_area.get_text()
+            lines = [l.strip() for l in raw_content.split('\n') if l.strip()]
 
             for i, line in enumerate(lines):
                 if line.startswith('http'):
-                    raw_link = line
-                    base_url = raw_link.split('|')[0].split('?')[0]
+                    full_link = line
+                    # Base link extract karein (sabse pehle pipe ya question mark tak)
+                    base_url = re.split(r'[|?]', full_link)[0]
                     
-                    # Name find karein
+                    # Name find karne ke liye pichli lines check karein
                     name = "LIVE STREAM"
                     for j in range(i-1, -1, -1):
                         if not lines[j].startswith('http'):
-                            name = re.sub(r'[^\w\s\[\]]', '', lines[j]).strip()
-                            break
+                            name = re.sub(r'[^\w\s\[\]\-]', '', lines[j]).strip()
+                            if name: break
                     
-                    # Headers extract karein
-                    extracted_headers = {}
-                    if '|' in raw_link:
-                        header_part = raw_link.split('|', 1)[1]
-                        extracted_headers = parse_headers(header_part)
-                    elif '?' in raw_link:
-                        query_part = raw_link.split('?', 1)[1]
-                        extracted_headers = parse_headers(query_part)
+                    # Headers/DRM extract karein
+                    extracted_info = {}
+                    if '|' in full_link:
+                        info_part = full_link.split('|', 1)[1]
+                        extracted_info = parse_headers(info_part)
+                    elif '?' in full_link:
+                        info_part = full_link.split('?', 1)[1]
+                        extracted_info = parse_headers(info_part)
 
                     final_data.append({
                         "name": name.upper(),
                         "link": base_url,
-                        "headers": extracted_headers
+                        "headers": extracted_info
                     })
 
+        # Save to TW.json
         with open('TW.json', 'w', encoding='utf-8') as f:
             json.dump(final_data, f, indent=4, ensure_ascii=False)
             
@@ -73,4 +81,3 @@ def get_tw_data():
 
 if __name__ == "__main__":
     get_tw_data()
-    
