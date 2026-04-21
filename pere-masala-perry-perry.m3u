@@ -190,7 +190,7 @@ https://dishmt.slivcdn.com/hls/live/2020593/SONYSIXHD/hdntl=exp=1776801184~acl=%
 </html>
 # By Abu SAEEID X Noob
 # Github X Tg @abusaeeidx
-# Update on 2026-04-21 20:11:56 (BD Time)
+# Update on 2026-04-21 22:43:51 (BD Time)
 # Note: I do not host any content, everything is publicly available. And any issues, please contact me.
 #EXTINF:-1 group-title="LIVE" tvg-logo="https://image.tsports.com/images/mobile_thumbnail/1761718928-1750064430-LIVE.jpg", T Sports Live 01
 https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
@@ -534,12 +534,14 @@ https://n100.zohanayaan.com:1686/hls/fox501.m3u8?md5=kvFPU6iRz1QEGATe7FHapA&expi
 https://n100.zohanayaan.com:1686/hls/ten1hd.m3u8?md5=CZBaCxt385mf5fveHI70iQ&expires=1776790897
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WI-Test_web.jpg" group-title="Fancode-Cricket", Windward Islands Volcanoes vs Guyana Harpy Eagles (West Indies Championship 2026)
 https://in-mc-fblive.fancode.com/mumbai/141952_english_hls_5c3f8113e668281_1ta-di_h264/index.m3u8
-#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WI-Test_web.jpg" group-title="Fancode-Cricket", Leeward Islands Hurricanes vs Trinidad & Tobago Red Force (West Indies Championship 2026)
-https://in-mc-fblive.fancode.com/mumbai/141950_english_hls_94dbc5a8c336143_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WI-Test_web.jpg" group-title="Fancode-Cricket", Jamaica Scorpions vs Barbados Pride (West Indies Championship 2026)
 https://in-mc-fblive.fancode.com/mumbai/141951_english_hls_2bb96b873655442_1ta-di_h264/index.m3u8
-#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140459_5956_CFC_MSC_FC-Web_1772400660609.jpg" group-title="Fancode-Football", Chennaiyin FC vs Mohammedan SC (ISL 2025-26)
-https://dai-partner.fancode.com/primary/140459_english_hls_ded509945393540_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Old-Match-Card_1776694825679.jpg" group-title="Fancode-Football", Machida Zelvia vs Shabab Al Ahli (AFC Champions League Elite 2025-26)
+https://in-mc-fblive.fancode.com/mumbai/141678_english_hls_8ab66fba0a64507_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131154_5427_MRC_VAL_FC-Web.png" group-title="Fancode-Football", RCD Mallorca vs Valencia CF (LALIGA 2025-26)
+https://dai-partner.fancode.com/primary/131154_english_hls_a330e7086c46539_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/131151_5427_ATH_OSN_FC-Web.png" group-title="Fancode-Football", Athletic Club vs CA Osasuna (LALIGA 2025-26)
+https://dai-partner.fancode.com/primary/131151_english_hls_8336bb11413648_1ta-di_h264/index.m3u8
 #EXTINF:-1 group-title="OMNIX EMPIRE" tvg-logo="https://github.com/omnixmain/OMNIX-EMPIRE/blob/main/omnix-empire-logo.jpg?raw=true",OMNIX EMPIRE
 http://WWW.OMNIXEMPIRE.MP4
 #EXTINF:-1 group-title="Live Events" tvg-logo="https://documents.iplt20.com/bcci/articles/1774524610_IPL_2026__1_.JPG",IPL 2026 | Sky 4k 50fps HD
