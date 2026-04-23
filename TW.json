@@ -99,5 +99,109 @@
             "Origin": "https://www.hotstar.com",
             "Referer": "https://www.hotstar.com"
         }
+    },
+    {
+        "name": "SKY NZ 50FPS",
+        "link": "https://dice-live-oc.akamaized.net/hdntl=exp=1776580323~acl=%2F*~id=c3306428-dcb4-4a74-a24a-d10f3725b3bc~data=hdntl,aXA9MzguMTM3LjIwLjQ1JmV4cD0xNzc2NDkzOTUyJmVpZD04Mzc5MTcmb2lkPTIyJnR5cGU9Vk9EJnVpZD1udWxsJmNpZD1udWxsJnB0PW51bGw~hmac=2693665239735aa8fa728925ce4cee35dcc6f06599c7fcd5068d359e1a9f97ed/dash/live/2093734/219028-313801/manifest-d.mpd",
+        "headers": {
+            "drmScheme": "clearkey",
+            "drmLicense": "2e2636daa74141b68cc14882ea3ff82b:0961f48287324adbb4b7ff3c9d82b3c9"
+        }
+    },
+    {
+        "name": "STAR SPORTS 1 HINDI",
+        "link": "https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b0aaf/index.mpd",
+        "headers": {
+            "Cookie": "hdntl=exp=1776675371~acl=/*~id=827ee1057d2da0d5a5dd45c84517057f~data=hdntl~hmac=92c835cb5ea2581756c5401dea24c006996270fdc17e9c6360297a4633e46792",
+            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169+(Android/15)",
+            "Origin": "https://www.hotstar.com",
+            "Referer": "https://www.hotstar.com/",
+            "drmScheme": "clearkey",
+            "drmLicense": "81872faa1d6b45fa9045cdeb2e310000:9b88168e61274587a471962c46b94675"
+        }
+    },
+    {
+        "name": "STAR SPORTS 2 HINDI HD",
+        "link": "https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8",
+        "headers": {
+            "Cookie": "hdntl=exp=1776675371~acl=/*~id=827ee1057d2da0d5a5dd45c84517057f~data=hdntl~hmac=92c835cb5ea2581756c5401dea24c006996270fdc17e9c6360297a4633e46792",
+            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169+(Android/15)",
+            "Origin": "https://www.hotstar.com",
+            "Referer": "https://www.hotstar.com"
+        }
+    },
+    {
+        "name": "CTV ENG",
+        "link": "https://jcevents.hotstar.com/bpk-tv/4db6f833701e78ae4443cb268020f03b/Fallback/4db6f833701e78ae4443cb268020f03b.m3u8",
+        "headers": {
+            "Cookie": "hdntl=exp=1776675371~acl=/*~id=827ee1057d2da0d5a5dd45c84517057f~data=hdntl~hmac=92c835cb5ea2581756c5401dea24c006996270fdc17e9c6360297a4633e46792",
+            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169+(Android/15)",
+            "Origin": "https://www.hotstar.com",
+            "Referer": "https://www.hotstar.com"
+        }
+    },
+    {
+        "name": "FOX CRIC 501 HD",
+        "link": "https://public.kliv.fun/Zon2/live.m3u8",
+        "headers": {
+            "id": "83670"
+        }
+    },
+    {
+        "name": "FOX CRIC 501 HD",
+        "link": "https://vsd233.okcdn.ru/cmaf/15099590085375/sig/8qcBlQYA0Ak/expires/1776590764841/srcIp/152.58.159.241/urls/185.226.55.70/clientType/36/srcAg/CHROME/mid/13909091895295/get/hls_13909091895295.tu-BEHp8Bko.m3u8",
+        "headers": {}
+    },
+    {
+        "name": "FOX 50 FPS",
+        "link": "https://lb-nl-50gbs.zenostreams-cdn-001.com/secure/api/v1/fox-sports-501.m3u8",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (Linux; Android 13; SM-T837A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
+            "Referer": "https://www.foulembeds.live/",
+            "Origin": "https://www.foulembeds.live"
+        }
+    },
+    {
+        "name": "SKY CRICKET AQ",
+        "link": "https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8",
+        "headers": {
+            "s": "uiXES2ePt7xTpQnbJxn7Dg",
+            "e": "2074684474",
+            "scheme": "https"
+        }
+    },
+    {
+        "name": "WILLOW 2 HINDI",
+        "link": "https://public.kliv.fun/Zon2/live.m3u8",
+        "headers": {
+            "id": "83640"
+        }
+    },
+    {
+        "name": "WILLOW CRICBUZZ ENG",
+        "link": "https://stream.mokakdaoni.me/proxy/wb.php/https://livevideos.cricbuzz.com/hls/live/2124680/WCB-US/9241/151829/master.m3u8",
+        "headers": {
+            "Referer": "https://livecricketsl.cc.nf/",
+            "Origin": "https://livecricketsl.cc.nf",
+            "X-Forwarded-For": "104.143.226.29"
+        }
+    },
+    {
+        "name": "WILLOW CRICBUZZ HINDI",
+        "link": "https://stream.mokakdaoni.me/proxy/wb.php/https://livevideos.cricbuzz.com/hls/live/2123519/WCB-CA-HINDI/9241/151829/master.m3u8",
+        "headers": {
+            "Referer": "https://livecricketsl.cc.nf/",
+            "Origin": "https://livecricketsl.cc.nf",
+            "X-Forwarded-For": "104.143.226.29"
+        }
+    },
+    {
+        "name": "CRICBUZZ WITH ARABIC COUNTRY",
+        "link": "https://aus.mokakdaoni.me/proxy/wb.php/https://livevideos.cricbuzz.com/hls/live/2111488/SEA/9241/151829/master.m3u8",
+        "headers": {
+            "Referer": "https://livecricketsl.cc.nf/",
+            "Origin": "https://livecricketsl.cc.nf",
+            "X-Forwarded-For": "104.143.226.29"
+        }
     }
 ]
