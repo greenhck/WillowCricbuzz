@@ -43,13 +43,21 @@
     },
     {
         "name": "ENGLISH [50FPS]",
-        "link": "https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_BTS/WDVLive/index.mpd?%7Ccookie=hdnea=st=1776342219~exp=1776363819~acl=/bpk-tv/Star_Sports_HD1_BTS/WDVLive/*~hmac=94734cecb99a9a1f5318b4540337bca1c6b791b51dc2ac9dd4246cd775baece0&user-Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64;%20rv:149.0)%20Gecko/20100101%20Firefox/149.0&drmScheme=clearkey&drmLicense=965dc2ddb1d85138ad787999a7f30ca5:859695076e67fe961836b564db6d689c",
-        "headers": {}
+        "link": "https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_BTS/WDVLive/index.mpd?",
+        "headers": {
+            "Cookie": "hdnea=st=1776342219~exp=1776363819~acl=/bpk-tv/Star_Sports_HD1_BTS/WDVLive/*~hmac=94734cecb99a9a1f5318b4540337bca1c6b791b51dc2ac9dd4246cd775baece0",
+            "drmScheme": "clearkey",
+            "drmLicense": "965dc2ddb1d85138ad787999a7f30ca5:859695076e67fe961836b564db6d689c"
+        }
     },
     {
         "name": "HINDI [50FPS]",
-        "link": "https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd?%7Ccookie=hdnea=st=1776342265~exp=1776363865~acl=/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/*~hmac=372e1677c38d8c1669d876c6fd9485f282688e0248325e1c5ba612745732c96e&user-Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64;%20rv:149.0)%20Gecko/20100101%20Firefox/149.0&drmScheme=clearkey&drmLicense=400131994b445d8c8817202248760fda:2d56cb6f07a75b9aff165d534ae2bfc4",
-        "headers": {}
+        "link": "https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd?",
+        "headers": {
+            "Cookie": "hdnea=st=1776342265~exp=1776363865~acl=/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/*~hmac=372e1677c38d8c1669d876c6fd9485f282688e0248325e1c5ba612745732c96e",
+            "drmScheme": "clearkey",
+            "drmLicense": "400131994b445d8c8817202248760fda:2d56cb6f07a75b9aff165d534ae2bfc4"
+        }
     },
     {
         "name": "KANGLUDESH VS  NZ",
@@ -92,7 +100,7 @@
     },
     {
         "name": "SKY NZ 50FPS",
-        "link": "https://dice-live-oc.akamaized.net/hdntl=exp=1776580323~acl=%2F*~id=c3306428-dcb4-4a74-a24a-d10f3725b3bc~data=hdntl,aXA9MzguMTM3LjIwLjQ1JmV4cD0xNzc2NDkzOTUyJmVpZD04Mzc5MTcmb2lkPTIyJnR5cGU9Vk9EJnVpZD1udWxsJmNpZD1udWxsJnB0PW51bGw~hmac=2693665239735aa8fa728925ce4cee35dcc6f06599c7fcd5068d359e1a9f97ed/dash/live/2093734/219028-313801/manifest-d.mpd",
+        "link": "https://dice-live-oc.akamaized.net/hdntl=exp=1776580323~acl=/*~id=c3306428-dcb4-4a74-a24a-d10f3725b3bc~data=hdntl,aXA9MzguMTM3LjIwLjQ1JmV4cD0xNzc2NDkzOTUyJmVpZD04Mzc5MTcmb2lkPTIyJnR5cGU9Vk9EJnVpZD1udWxsJmNpZD1udWxsJnB0PW51bGw~hmac=2693665239735aa8fa728925ce4cee35dcc6f06599c7fcd5068d359e1a9f97ed/dash/live/2093734/219028-313801/manifest-d.mpd",
         "headers": {
             "drmScheme": "clearkey",
             "drmLicense": "2e2636daa74141b68cc14882ea3ff82b:0961f48287324adbb4b7ff3c9d82b3c9"
@@ -188,7 +196,7 @@
     },
     {
         "name": "SKY SPORTS NZ HD",
-        "link": "https://cdn.damitv.live/stream/Sky%20Sport%201?e=.m3u8",
+        "link": "https://cdn.damitv.live/stream/Sky Sport 1?e=.m3u8",
         "headers": {}
     }
 ]
