@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2t0Q3JGcUVhelN6QUhwZ3NOMFpkMTZIbEZTT2g0TXgyR1haU0VrdjRvOWxyRDZpYzJjd2p5WGh6dEFzdFErRkU=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z0JvWS9QWmltVU14ZzY3Nkt2VGd1RFkrd1g0cWJXZ093UEhoQUY3Y1JxZWxZdVBVeUo1czcvM0VGMGVxSzNsMVk=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -2993,6 +2993,8 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1626
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=954722144
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/621146662.png" group-title="News",Soochna India
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=621146662
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/737367535.jpeg" group-title="News",News11 Bharat
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=737367535
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/318296789.jpeg" group-title="News",22 Scope
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=318296789
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-10004.png" group-title="News",JAN TV
@@ -3215,6 +3217,8 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=114158523
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=545617430
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/846103798.png" group-title="News",R Plus Gold
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=846103798
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/9345835981776935967756.png" group-title="News",TV9 Bangla 
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=934583598
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10541.jpg" group-title="News",DD News
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10541
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10542.jpg" group-title="News",DD Bharati
@@ -3303,6 +3307,8 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1600
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-461
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/700047975.jpeg" group-title="Entertainment",Chardikala Time TV
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=700047975
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/735758548.jpeg" group-title="Entertainment",Shine Kannada
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=735758548
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/391280894.jpeg" group-title="Entertainment",Rangmanch
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=391280894
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/417243291.jpeg" group-title="Entertainment",Sanjha TV
@@ -3597,6 +3603,8 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10604
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10835
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1464.png" group-title="Religious & Devotional",ISHWAR BHAKTI
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1464
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/697543037.jpg" group-title="Religious & Devotional",Peace Of Mind
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=697543037
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-475.png" group-title="Religious & Devotional",SANT WANI
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-475
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-989.jpg" group-title="Religious & Devotional",JINVANI
