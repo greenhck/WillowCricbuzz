@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2ZpandlOGVmTFRPM2NkZWYrU3JON1RUUUZtcldqS0FZVHR2aTdnTEpHSWUrUDdoK01Pc01DSXhxVHN2dDRDZnI=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2JWV2NHU2VCMjFid2pSL0dncTAvMHUvc2htOUJYc1l6VjlMSm0xbDlYSUhMQ2p3QVJnL1gwR0xjQlE2VzJGZmQ=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -98,50 +98,62 @@ https://demo.drmlive.net/live/kayo/53208/index.m3u8
 
 #EXTINF:-1 group-title="Cricket",Event 1
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://mix.drmlive.net/mix/star-1.m3u8
 
 #EXTINF:-1 group-title="Cricket",Event 1 hindi
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://mix.drmlive.net/mix/star-1.m3u8?audio=hin
 
 #EXTINF:-1 group-title="Cricket",Event 2
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://mix.drmlive.net/mix/star-2.m3u8
 
 #EXTINF:-1 group-title="Cricket",Event 2 hindi
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://mix.drmlive.net/mix/star-2.m3u8?audio=hin
 
 #EXTINF:-1 group-title="Cricket",Event 3
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://mix.drmlive.net/mix/star-3.m3u8
 
 #EXTINF:-1 group-title="Cricket",Event 3 hindi
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://mix.drmlive.net/mix/star-3.m3u8?audio=hin
 
 #EXTINF:-1 group-title="Cricket",Event 4
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://mix.drmlive.net/mix/star-4.m3u8
 
 #EXTINF:-1 group-title="Cricket",Event 4 hindi
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://mix.drmlive.net/mix/star-4.m3u8?audio=hin
 
 #EXTINF:-1 group-title="Cricket",Event 5
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://mix.drmlive.net/mix/star-5.m3u8
 
 #EXTINF:-1 group-title="Cricket",Event 5 hindi
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://mix.drmlive.net/mix/star-5.m3u8?audio=hin
 
 #EXTINF:-1 group-title="Cricket",Event 6
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://mix.drmlive.net/mix/star-6.m3u8
 
 #EXTINF:-1 group-title="Cricket",Event 6 hindi
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://mix.drmlive.net/mix/star-6.m3u8?audio=hin
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/drmlive/mix/refs/heads/main/fancode.png" group-title="Cricket",Fancode Event 1
