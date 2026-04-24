@@ -33,5 +33,15 @@
     "name": "Fancode IN",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzSjNzm1s6bbwIYK_zpbGyHcMAWvPXMz5s-g&s",
     "link": "https://fcapi.amitbala1993.workers.dev"
+  },
+   {
+    "name": "JioStaar",
+    "image": "https://e2zstore.com/wp-content/uploads/2025/02/jiohotstar.jpg",
+    "link": "https://raw.githubusercontent.com/joiptv/jojo/1a9d905b22c40de2926261ccb45cf81f7f3890ad/Asi.m3u"
+  },
+   {
+    "name": "Star Sports Network",
+    "image": "https://img-cdn.publive.online/fit-in/640x360/filters:format(webp)/afaqs/media/media_files/2025/03/17/4xY0d2UfrcSwDjo63V3I.png",
+    "link": "https://host.cloudplay.me/app/icc/hstr-sprts.php"
   }
 ]
