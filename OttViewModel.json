@@ -73,5 +73,10 @@
     "name": "Sony Tv",
     "image": "https://manifest-media.in/cover/prev/nu5f9mqdevdd5d6jde4tf98ob6-20251217142150.Medi.jpeg",
     "link": "https://perelive.pages.dev/sony_set.m3u"
+  },
+  {
+    "name": "Myco Tv",
+    "image": "https://yt3.googleusercontent.com/FjxtcEaU2t4amZoYb2M7ASzlm5d9vy2pLQEjMphwLAw795GJAMhsx4hFWNzQ3fhFoZGuivm1oQ=s900-c-k-c0x00ffffff-no-rj",
+    "link": "https://perelive.pages.dev/myco_live.m3u"
   }
 ]
