@@ -1,0 +1,32 @@
+name: Update Playlists
+on:
+  schedule:
+    - cron: '*/20 * * * *' # हर 20 मिनट में चलेगा
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Script
+        run: python script.py
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add *.m3u
+          git commit -m "Updated playlists every 20m" || exit 0
+          git push
+          
