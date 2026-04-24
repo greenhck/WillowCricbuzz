@@ -27,6 +27,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add *.m3u
-          git commit -m "Updated playlists every 20m" || exit 0
+          git commit -m "gitbaby1" || exit 0
           git push
           
