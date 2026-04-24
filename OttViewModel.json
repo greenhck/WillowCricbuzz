@@ -48,5 +48,20 @@
     "name": "WWE 24x7",
     "image": "https://i.pinimg.com/736x/86/42/a5/8642a5ccfd0aceca4670d5bfb7d70b11.jpg",
     "link": "https://wweaewlive.deadpooll.workers.dev/playlist.m3u"
+  },
+   {
+    "name": "Kids Tv",
+    "image": "https://static.vecteezy.com/system/resources/previews/052/548/183/non_2x/kids-tv-logo-design-free-vector.jpg",
+    "link": "https://raw.githubusercontent.com/Prithvirajdt/Entertainment/9e55fb145a25d96f7bc0a474fab6cd6f3c99ed9f/sources/tali.vxn"
+  },
+  {
+    "name": "Music Tv",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/010/618/648/small/logo-music-illustration-of-musical-notes-vector.jpg",
+    "link": "https://iptv-org.github.io/iptv/categories/music.m3u"
+  },
+   {
+    "name": "Movies Tv",
+    "image": "https://img.freepik.com/premium-vector/movie-television-logo-template-design_316488-619.jpg",
+    "link": "https://iptv-org.github.io/iptv/categories/movies.m3u"
   }
 ]
