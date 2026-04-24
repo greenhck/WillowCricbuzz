@@ -45,7 +45,7 @@
     "link": "https://host.cloudplay.me/app/icc/hstr-sprts.php"
   },
    {
-    "name": "WWE 24x7",
+    "name": "WWE s1",
     "image": "https://i.pinimg.com/736x/86/42/a5/8642a5ccfd0aceca4670d5bfb7d70b11.jpg",
     "link": "https://wweaewlive.deadpooll.workers.dev/playlist.m3u"
   },
@@ -78,5 +78,20 @@
     "name": "Myco Tv",
     "image": "https://yt3.googleusercontent.com/FjxtcEaU2t4amZoYb2M7ASzlm5d9vy2pLQEjMphwLAw795GJAMhsx4hFWNzQ3fhFoZGuivm1oQ=s900-c-k-c0x00ffffff-no-rj",
     "link": "https://perelive.pages.dev/myco_live.m3u"
+  },
+  {
+    "name": "WWE s2",
+    "image": "https://www.wrestleview.com/wp-content/uploads/2024/12/WWE-logo-1.png",
+    "link": "https://perelive.pages.dev/wwes2.m3u"
+  },
+  {
+    "name": "Sports event(Pak Vpn)",
+    "image": "https://img.freepik.com/premium-vector/sports-brand-logo-vector_666870-2849.jpg",
+    "link": "https://raw.githubusercontent.com/Ajayone8x/sportzx-playlist/refs/heads/main/Sportzx.m3u8"
+  },
+  {
+    "name": "WorldWide Tv",
+    "image": "https://img.freepik.com/premium-vector/tv-television-channel-icon-logo-design-vector-template_10135-4520.jpg?semt=ais_hybrid&w=740&q=80",
+    "link": "https://m3umergers.xyz/filex-m3umergers/channels.php?playlist=all"
   }
 ]
