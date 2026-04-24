@@ -22,7 +22,7 @@
   {
     "name": "Jio Tv+",
     "image": "https://downloadr2.apkmirror.com/wp-content/uploads/2024/06/44/666bb89328275_com.jio.media.jiotvplus.png",
-    "link": "https://example.com/mountain-page"
+    "link": "https://perelive.pages.dev/jiotv.m3u"
   },
   {
     "name": "Nitestar Movee",
@@ -49,6 +49,11 @@
     "image": "https://i.pinimg.com/736x/86/42/a5/8642a5ccfd0aceca4670d5bfb7d70b11.jpg",
     "link": "https://wweaewlive.deadpooll.workers.dev/playlist.m3u"
   },
+  {
+    "name": "Sony Events",
+    "image": "https://www.livemint.com/lm-img/img/2023/10/04/1600x900/SonyLIV-announces-foray-into-Africa-and-the-Caribb_1696401120283.jpg",
+    "link": "https://iptv-org.github.io/iptv/categories/movies.m3u"
+  }
    {
     "name": "Kids Tv",
     "image": "https://static.vecteezy.com/system/resources/previews/052/548/183/non_2x/kids-tv-logo-design-free-vector.jpg",
@@ -63,5 +68,10 @@
     "name": "Movies Tv",
     "image": "https://img.freepik.com/premium-vector/movie-television-logo-template-design_316488-619.jpg",
     "link": "https://iptv-org.github.io/iptv/categories/movies.m3u"
+  },
+  {
+    "name": "Sony Tv",
+    "image": "https://manifest-media.in/cover/prev/nu5f9mqdevdd5d6jde4tf98ob6-20251217142150.Medi.jpeg",
+    "link": "https://perelive.pages.dev/sony_set.m3u"
   }
 ]
