@@ -75,6 +75,11 @@
     "link": "https://perelive.pages.dev/sony_set.m3u"
   },
   {
+    "name": "Fox Sports",
+    "image": "https://pbs.twimg.com/profile_images/1633191289356431361/OdKOXawp_400x400.jpg",
+    "link": "https://perelive.pages.dev/foxn.m3u"
+  }
+  {
     "name": "Myco Tv",
     "image": "https://yt3.googleusercontent.com/FjxtcEaU2t4amZoYb2M7ASzlm5d9vy2pLQEjMphwLAw795GJAMhsx4hFWNzQ3fhFoZGuivm1oQ=s900-c-k-c0x00ffffff-no-rj",
     "link": "https://perelive.pages.dev/myco_live.m3u"
