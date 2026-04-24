@@ -1,27 +1,37 @@
 [
   {
     "name": "Live Event",
-    "image": "https://www.thoughtworks.com/content/dam/thoughtworks/images/photography/side-by-side/about-us/events/ab_side_by_side_live_logo_2022.png"
+    "image": "https://www.thoughtworks.com/content/dam/thoughtworks/images/photography/side-by-side/about-us/events/ab_side_by_side_live_logo_2022.png",
+    "link": "https://perelive.pages.dev/TW.json"
   },
   {
     "name": "Zee Tv",
-    "image": "https://etimg.etb2bimg.com/photo/75023504.cms"
+    "image": "https://etimg.etb2bimg.com/photo/75023504.cms",
+    "link": "https://perelive.pages.dev/zee5.m3u"
   },
   {
     "name": "Tata Play",
-    "image": "https://play-lh.googleusercontent.com/PTLQRc7a8vRjs8fmM7hRI36s7gGYalxIFd80xZDvYkIl91d709fcl4-UH9vZbxWDGG8"
+    "image": "https://play-lh.googleusercontent.com/PTLQRc7a8vRjs8fmM7hRI36s7gGYalxIFd80xZDvYkIl91d709fcl4-UH9vZbxWDGG8",
+    "link": "https://example.com/mountain-page"
   },
   {
     "name": "Sun NXT",
-    "image": "https://play-lh.googleusercontent.com/jFi2iC10wQJ42gu-DO2CMeIcN3qcmNQHtY5EBT_wtp4jCIozS4n3Q9pA7ZloDUGHHw"
+    "image": "https://play-lh.googleusercontent.com/jFi2iC10wQJ42gu-DO2CMeIcN3qcmNQHtY5EBT_wtp4jCIozS4n3Q9pA7ZloDUGHHw",
+    "link": "https://perelive.pages.dev/sun_tv.m3u"
   },
   {
     "name": "Jio Tv+",
-    "image": "https://downloadr2.apkmirror.com/wp-content/uploads/2024/06/44/666bb89328275_com.jio.media.jiotvplus.png"
+    "image": "https://downloadr2.apkmirror.com/wp-content/uploads/2024/06/44/666bb89328275_com.jio.media.jiotvplus.png",
+    "link": "https://example.com/mountain-page"
   },
   {
     "name": "Nitestar Movee",
-    "image": "https://img.freepik.com/premium-vector/digital-movie-logo-template-design-vector-emblem-design-concept-creative-symbol-icon_316488-2385.jpg"
+    "image": "https://img.freepik.com/premium-vector/digital-movie-logo-template-design-vector-emblem-design-concept-creative-symbol-icon_316488-2385.jpg",
+    "link": "https://raw.githubusercontent.com/Prtstream820894/GitHub/refs/heads/main/mx.m3u"
+  },
+   {
+    "name": "Fancode IN",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzSjNzm1s6bbwIYK_zpbGyHcMAWvPXMz5s-g&s",
+    "link": "https://fcapi.amitbala1993.workers.dev"
   }
-  
 ]
