@@ -13,11 +13,28 @@
         .food-card:hover { border-color: #ff4d00; }
         .qty-btn { background: #1a1a1a; border: 1px solid #333; transition: 0.2s; }
         .qty-btn:hover { background: #ff4d00; color: #fff; }
+        
+        /* Floating View Cart Button */
         .floating-cart { 
             background: #ff4d00; 
             box-shadow: 0 10px 30px rgba(255, 77, 0, 0.4); 
             border: 1px solid rgba(255,255,255,0.1);
         }
+
+        /* Unit Badge on Image */
+        .unit-badge {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
         .strike { text-decoration: line-through; color: #444; }
         .input-field { background: #1a1a1a; border: 1px solid #333; color: white; padding: 10px; border-radius: 12px; width: 100%; font-size: 14px; outline: none; }
         .input-field:focus { border-color: #ff4d00; }
@@ -82,7 +99,7 @@
             { id: 4, name: "Veg Momos", price: 50, unit: "15pc", img: "https://dcprovide.com/wp-content/uploads/2023/04/2-10-2.jpg.webp" },
             { id: 5, name: "Aloo Finger", price: 50, unit: "plate", img: "https://m.media-amazon.com/images/I/71VfAESa6iL.jpg" },
             { id: 6, name: "Dahi Bhalla", price: 35, unit: "plate", img: "https://cdn1.foodviva.com/static-content/food-images/snacks-recipes/dahi-vada-dahi-bhalla/dahi-vada-dahi-bhalla.jpg" },
-            { id: 7, name: "Golgappe", price: 40, unit: "12pc", img: "https://images.unsplash.com/photo-1589112852652-32583844fa0e?w=400" },
+            { id: 7, name: "Golgappe", price: 40, unit: "12pc", img: "https://i0.wp.com/parentingbyanshu.com/wp-content/uploads/2023/07/group-bombay-chat-food-includes-golgappa.jpg?fit=1000%2C667&ssl=1" },
             { id: 8, name: "Burger", price: 30, unit: "pc", img: "https://res.cloudinary.com/hellochef/image/upload/c_fit/q_auto/dpr_auto/gcaobzdeb2psu5fe5amx?_a=E" },
             { id: 9, name: "Veg Sandwich", price: 30, unit: "pc", img: "https://i.ytimg.com/vi/7_rS8UgmHag/maxresdefault.jpg" },
             { id: 10, name: "Spring Roll", price: 50, unit: "2pc", img: "https://www.chefkunalkapur.com/wp-content/uploads/2021/05/Veg-spring-rolls-scaled.jpg?v=1620580103" },
@@ -98,13 +115,16 @@
             grid.innerHTML = menu.map(item => {
                 const q = cart[item.id] || 0;
                 return `
-                <div class="food-card rounded-2xl overflow-hidden p-2.5 flex flex-col">
-                    <img src="${item.img}" class="w-full h-28 md:h-36 object-cover rounded-xl mb-2" alt="${item.name}">
+                <div class="food-card rounded-2xl overflow-hidden p-2.5 flex flex-col relative">
+                    <div class="relative mb-2">
+                        <img src="${item.img}" class="w-full h-28 md:h-36 object-cover rounded-xl" alt="${item.name}">
+                        <div class="absolute top-2 right-2 unit-badge">Per ${item.unit}</div>
+                    </div>
                     <div class="flex justify-between items-start mb-0.5">
                         <h3 class="text-[11px] md:text-sm font-bold truncate pr-1">${item.name}</h3>
                         <span class="text-orange-500 font-bold text-[11px]">₹${item.price}</span>
                     </div>
-                    <div class="mt-auto">
+                    <div class="mt-auto pt-2">
                         ${q > 0 ? `
                             <div class="flex items-center justify-between bg-white/5 rounded-lg p-0.5 border border-white/5">
                                 <button onclick="updateQty(${item.id}, -1)" class="qty-btn w-6 h-6 rounded font-bold text-[10px]">-</button>
@@ -112,7 +132,7 @@
                                 <button onclick="updateQty(${item.id}, 1)" class="qty-btn w-6 h-6 rounded font-bold text-[10px]">+</button>
                             </div>
                         ` : `
-                            <button onclick="updateQty(${item.id}, 1)" class="w-full bg-white text-black py-1.5 rounded-lg text-[8px] font-bold tracking-widest uppercase hover:bg-orange-500 hover:text-white transition">Add</button>
+                            <button onclick="updateQty(${item.id}, 1)" class="w-full bg-white text-black py-1.5 rounded-lg text-[8px] font-bold tracking-widest uppercase hover:bg-orange-500 hover:text-white transition">Add to Cart</button>
                         `}
                     </div>
                 </div>`;
@@ -159,7 +179,7 @@
             const addr = document.getElementById('cust-address').value;
             const notes = document.getElementById('cust-notes').value || "N/A";
 
-            if(!name || !phone || !addr) { alert("Details are mandatory!"); return; }
+            if(!name || !phone || !addr) { alert("Please enter Name, Mobile and Address!"); return; }
 
             let subtotal = 0;
             let msg = "⬛ *ORDER: A-ONE FAST FOOD* ⬛%0A";
