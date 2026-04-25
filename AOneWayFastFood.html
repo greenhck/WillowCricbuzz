@@ -5,122 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A ONE FAST FOOD</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #000;
             color: #fff;
-            font-family: 'Space Grotesk', sans-serif;
-            scroll-behavior: smooth;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .food-card {
-            background: #0a0a0a;
+            background: #0d0d0d;
             border: 1px solid #1a1a1a;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.3s ease;
         }
 
         .food-card:hover {
             border-color: #ff4d00;
-            transform: translateY(-8px);
         }
 
         .qty-btn {
             background: #1a1a1a;
             border: 1px solid #333;
-            transition: all 0.2s ease;
+            transition: 0.2s;
         }
 
-        .qty-btn:hover {
-            background: #ff4d00;
-            border-color: #ff4d00;
-        }
+        .qty-btn:hover { background: #ff4d00; color: #fff; }
 
         .floating-cart {
             background: #ff4d00;
             box-shadow: 0 10px 30px rgba(255, 77, 0, 0.4);
-            animation: bounce 2s infinite;
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
-            40% {transform: translateY(-10px) translateX(-50%);}
-            60% {transform: translateY(-5px) translateX(-50%);}
-        }
-
-        .strike { text-decoration: line-through; opacity: 0.5; }
+        .strike { text-decoration: line-through; color: #444; }
         
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        /* Modal Customization */
+        .cart-modal-content {
+            background: #0d0d0d;
+            border: 1px solid #222;
+        }
     </style>
 </head>
-<body class="pb-32">
+<body class="pb-20">
 
-    <header class="py-16 px-6 text-center">
-        <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-2 italic">A ONE<span class="text-orange-600">.</span></h1>
-        <div class="inline-block px-4 py-1 border border-orange-600/30 rounded-full text-[10px] tracking-[0.3em] uppercase text-orange-500 font-bold">
-            Premium Fast Food
-        </div>
+    <header class="py-10 px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-800 tracking-tighter italic">A ONE<span class="text-orange-600">.</span></h1>
+        <p class="text-[10px] uppercase tracking-[0.4em] text-orange-500 font-bold mt-2">Elite Fast Food</p>
     </header>
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 p-6" id="menu-grid">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4" id="menu-grid">
         </div>
 
-    <button id="view-cart-btn" onclick="toggleCart()" class="fixed bottom-10 left-1/2 -translate-x-1/2 floating-cart px-10 py-5 rounded-2xl font-bold text-sm tracking-widest z-50 hidden border border-white/20">
-        VIEW CART (<span id="cart-qty">0</span>)
+    <button id="view-cart-btn" onclick="toggleCart()" class="fixed bottom-6 left-1/2 -translate-x-1/2 floating-cart px-6 py-3 rounded-full font-bold text-xs tracking-widest z-50 hidden animate-bounce">
+        CART (<span id="cart-qty">0</span>)
     </button>
 
-    <div id="cart-modal" class="fixed inset-0 bg-black/95 z-[60] hidden flex items-center justify-center p-4 backdrop-blur-xl">
-        <div class="w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 shadow-2xl relative">
-            <button onclick="toggleCart()" class="absolute top-8 right-8 text-gray-500 hover:text-white transition">✕</button>
-            <h2 class="text-3xl font-bold mb-8 italic">Your Order</h2>
+    <div id="cart-modal" class="fixed inset-0 bg-black/90 z-[60] hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="w-full max-w-md cart-modal-content rounded-3xl p-6 relative">
+            <button onclick="toggleCart()" class="absolute top-5 right-5 text-gray-500">✕</button>
+            <h2 class="text-2xl font-bold mb-6 italic">Review Order</h2>
             
-            <div id="cart-items" class="max-h-64 overflow-y-auto mb-8 space-y-4 pr-2">
-                </div>
+            <div id="cart-items" class="max-h-60 overflow-y-auto mb-6 space-y-3 pr-2 text-sm"></div>
 
-            <div class="border-t border-white/5 pt-6 space-y-3">
-                <div class="flex justify-between text-gray-400 font-medium">
+            <div class="border-t border-white/5 pt-4 space-y-2 text-sm">
+                <div class="flex justify-between text-gray-500">
                     <span>Subtotal</span>
                     <span id="modal-subtotal">₹0</span>
                 </div>
-                <div class="flex justify-between text-gray-400 font-medium">
+                <div class="flex justify-between text-gray-500">
                     <span>Delivery</span>
                     <span id="modal-delivery">₹20</span>
                 </div>
-                <div class="flex justify-between text-3xl font-bold text-orange-500 pt-2">
-                    <span>Total</span>
+                <div class="flex justify-between text-xl font-bold text-orange-500 pt-2">
+                    <span>Total Bill</span>
                     <span id="modal-total">₹0</span>
                 </div>
             </div>
 
-            <button onclick="checkout()" class="w-full bg-white text-black py-5 rounded-2xl mt-8 font-bold text-lg hover:bg-orange-600 hover:text-white transition-all transform active:scale-95">
-                ORDER ON WHATSAPP
+            <button onclick="checkout()" class="w-full bg-white text-black py-4 rounded-xl mt-6 font-bold text-sm tracking-widest hover:bg-orange-600 hover:text-white transition-all">
+                WHATSAPP ORDER
             </button>
         </div>
     </div>
 
-    <footer class="mt-20 py-12 border-t border-white/5 text-center">
-        <a href="https://t.me/lovelyakash41" target="_blank" class="text-gray-700 hover:text-orange-500 transition text-[10px] tracking-[0.4em] uppercase font-bold">
-            Created & Hosted by @lovelyakash41
+    <footer class="mt-16 py-6 border-t border-white/5 text-center">
+        <a href="https://t.me/lovelyakash41" target="_blank" class="text-[9px] tracking-[0.3em] uppercase font-bold text-gray-600 hover:text-orange-500 transition">
+            Hosted by @lovelyakash41
         </a>
     </footer>
 
     <script>
         const menu = [
-            { id: 1, name: "Samosa", price: 15, unit: "pc", img: "https://images.unsplash.com/photo-1601050690597-df056fb01793?w=500" },
-            { id: 2, name: "Bread Pakora", price: 15, unit: "pc", img: "https://images.unsplash.com/photo-1626132646529-500334846074?w=500" },
-            { id: 3, name: "Mix Pakora", price: 200, unit: "kg", img: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=500" },
-            { id: 4, name: "Veg Momos", price: 50, unit: "15pc", img: "https://images.unsplash.com/photo-1625220194771-7eb5421971b2?w=500" },
-            { id: 5, name: "Aloo Finger", price: 50, unit: "plate", img: "https://images.unsplash.com/photo-1518013046774-42531b70bc93?w=500" },
-            { id: 6, name: "Dahi Bhalla", price: 35, unit: "plate", img: "https://images.unsplash.com/photo-1626132646529-500334846074?w=500" },
-            { id: 7, name: "Golgappe", price: 40, unit: "12pc", img: "https://images.unsplash.com/photo-1589112852652-32583844fa0e?w=500" },
-            { id: 8, name: "Burger", price: 30, unit: "pc", img: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500" },
-            { id: 9, name: "Veg Sandwich", price: 30, unit: "pc", img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500" },
-            { id: 10, name: "Spring Roll", price: 50, unit: "2pc", img: "https://images.unsplash.com/photo-1542826045-8120302b186b?w=500" },
-            { id: 11, name: "Bhel Puri Chat", price: 50, unit: "plate", img: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=500" },
-            { id: 12, name: "Aloo Tikki", price: 35, unit: "plate", img: "https://images.unsplash.com/photo-1626132646529-500334846074?w=500" },
-            { id: 13, name: "ChowMein", price: 50, unit: "plate", img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=500" }
+            { id: 1, name: "Samosa", price: 15, unit: "pc", img: "https://images.unsplash.com/photo-1601050690597-df056fb01793?w=400" },
+            { id: 2, name: "Bread Pakora", price: 15, unit: "pc", img: "https://images.unsplash.com/photo-1626132646529-500334846074?w=400" },
+            { id: 3, name: "Mix Pakora", price: 200, unit: "kg", img: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400" },
+            { id: 4, name: "Veg Momos", price: 50, unit: "15pc", img: "https://images.unsplash.com/photo-1625220194771-7eb5421971b2?w=400" },
+            { id: 5, name: "Aloo Finger", price: 50, unit: "plate", img: "https://images.unsplash.com/photo-1518013046774-42531b70bc93?w=400" },
+            { id: 6, name: "Dahi Bhalla", price: 35, unit: "plate", img: "https://images.unsplash.com/photo-1626132646529-500334846074?w=400" },
+            { id: 7, name: "Golgappe", price: 40, unit: "12pc", img: "https://images.unsplash.com/photo-1589112852652-32583844fa0e?w=400" },
+            { id: 8, name: "Burger", price: 30, unit: "pc", img: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400" },
+            { id: 9, name: "Veg Sandwich", price: 30, unit: "pc", img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400" },
+            { id: 10, name: "Spring Roll", price: 50, unit: "2pc", img: "https://images.unsplash.com/photo-1542826045-8120302b186b?w=400" },
+            { id: 11, name: "Bhel Puri", price: 50, unit: "plate", img: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400" },
+            { id: 12, name: "Aloo Tikki", price: 35, unit: "plate", img: "https://images.unsplash.com/photo-1626132646529-500334846074?w=400" },
+            { id: 13, name: "ChowMein", price: 50, unit: "plate", img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400" }
         ];
 
         let cart = {};
@@ -130,24 +117,23 @@
             grid.innerHTML = menu.map(item => {
                 const q = cart[item.id] || 0;
                 return `
-                <div class="food-card rounded-[2rem] overflow-hidden p-5">
-                    <img src="${item.img}" class="w-full h-52 object-cover rounded-2xl mb-5 grayscale hover:grayscale-0 transition duration-700" alt="${item.name}">
-                    <div class="flex justify-between items-center mb-1">
-                        <h3 class="text-xl font-bold">${item.name}</h3>
-                        <span class="text-orange-500 font-bold text-xl">₹${item.price}</span>
+                <div class="food-card rounded-2xl overflow-hidden p-3 flex flex-col">
+                    <img src="${item.img}" class="w-full h-32 md:h-40 object-cover rounded-xl mb-3" alt="${item.name}">
+                    <div class="flex justify-between items-start mb-1">
+                        <h3 class="text-xs md:text-sm font-bold truncate pr-2">${item.name}</h3>
+                        <span class="text-orange-500 font-bold text-xs">₹${item.price}</span>
                     </div>
-                    <p class="text-gray-600 text-[10px] uppercase tracking-widest mb-6 font-bold">${item.unit}</p>
-                    
-                    <div id="btn-container-${item.id}">
+                    <p class="text-gray-600 text-[8px] uppercase tracking-widest mb-3">${item.unit}</p>
+                    <div class="mt-auto">
                         ${q > 0 ? `
-                            <div class="flex items-center justify-between bg-white/5 rounded-xl p-1 border border-white/10">
-                                <button onclick="updateQty(${item.id}, -1)" class="qty-btn w-10 h-10 rounded-lg font-bold">-</button>
-                                <span class="font-bold text-lg">${q}</span>
-                                <button onclick="updateQty(${item.id}, 1)" class="qty-btn w-10 h-10 rounded-lg font-bold">+</button>
+                            <div class="flex items-center justify-between bg-white/5 rounded-lg p-1 border border-white/5">
+                                <button onclick="updateQty(${item.id}, -1)" class="qty-btn w-7 h-7 rounded-md font-bold text-xs">-</button>
+                                <span class="font-bold text-xs">${q}</span>
+                                <button onclick="updateQty(${item.id}, 1)" class="qty-btn w-7 h-7 rounded-md font-bold text-xs">+</button>
                             </div>
                         ` : `
-                            <button onclick="updateQty(${item.id}, 1)" class="w-full bg-white text-black py-3 rounded-xl text-[10px] font-900 tracking-widest hover:bg-orange-600 hover:text-white transition uppercase">
-                                Add To Cart
+                            <button onclick="updateQty(${item.id}, 1)" class="w-full bg-white text-black py-2 rounded-lg text-[9px] font-bold tracking-widest hover:bg-orange-600 hover:text-white transition uppercase">
+                                Add
                             </button>
                         `}
                     </div>
@@ -179,41 +165,35 @@
             const list = document.getElementById('cart-items');
             let subtotal = 0;
             let html = "";
-            
             for(let id in cart) {
                 const item = menu.find(m => m.id == id);
                 subtotal += item.price * cart[id];
                 html += `
-                    <div class="flex justify-between items-center bg-white/5 p-4 rounded-2xl border border-white/5">
-                        <div>
-                            <p class="font-bold text-lg">${item.name}</p>
-                            <p class="text-xs text-gray-500 tracking-widest uppercase">Qty: ${cart[id]}</p>
-                        </div>
-                        <p class="font-bold text-orange-500">₹${item.price * cart[id]}</p>
+                    <div class="flex justify-between items-center bg-white/5 p-3 rounded-xl border border-white/5">
+                        <span class="font-semibold">${item.name} <span class="text-gray-500 ml-1">x${cart[id]}</span></span>
+                        <span class="font-bold text-orange-500">₹${item.price * cart[id]}</span>
                     </div>
                 `;
             }
-            list.innerHTML = html || "<p class='text-center text-gray-600 py-10'>Your cart is waiting for some delicious food...</p>";
-            
+            list.innerHTML = html || "<p class='text-center text-gray-600 py-10'>Cart is empty</p>";
             const delivery = subtotal >= 150 ? 0 : 20;
             document.getElementById('modal-subtotal').innerText = `₹${subtotal}`;
-            document.getElementById('modal-delivery').innerHTML = delivery === 0 ? `<span class="strike text-gray-700">₹20</span> <span class="text-green-500 text-xs ml-1">FREE</span>` : `₹20`;
+            document.getElementById('modal-delivery').innerHTML = delivery === 0 ? `<span class="strike">₹20</span> FREE` : `₹20`;
             document.getElementById('modal-total').innerText = `₹${subtotal + delivery}`;
         }
 
         function checkout() {
             let subtotal = 0;
-            let msg = "⬛ *NEW ORDER: A-ONE FAST FOOD* ⬛%0A━━━━━━━━━━━━━━━━━━%0A";
+            let msg = "⬛ *ORDER: A-ONE FAST FOOD* ⬛%0A━━━━━━━━━━━━━━━━━━%0A";
             for(let id in cart) {
                 const item = menu.find(m => m.id == id);
                 msg += `👉 *${item.name}* (x${cart[id]}) = ₹${item.price * cart[id]}%0A`;
                 subtotal += item.price * cart[id];
             }
             const fee = subtotal >= 150 ? 0 : 20;
-            msg += `━━━━━━━━━━━━━━━━━━%0A💰 Subtotal: ₹${subtotal}%0A🚚 Delivery: ${fee === 0 ? "FREE" : "₹20"}%0A🔥 *Total Bill: ₹${subtotal + fee}*%0A━━━━━━━━━━━━━━━━━━%0A🏠 Address: [Please Write Here]`;
+            msg += `━━━━━━━━━━━━━━━━━━%0A💰 Subtotal: ₹${subtotal}%0A🚚 Delivery: ${fee === 0 ? "FREE" : "₹20"}%0A🔥 *Total Bill: ₹${subtotal + fee}*%0A━━━━━━━━━━━━━━━━━━%0A📍 Address: [Please write here]`;
             window.open(`https://wa.me/919780090217?text=${msg}`, '_blank');
         }
-
         renderMenu();
     </script>
 </body>
