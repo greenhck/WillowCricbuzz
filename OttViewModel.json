@@ -98,5 +98,10 @@
     "name": "WorldWide Tv",
     "image": "https://img.freepik.com/premium-vector/tv-television-channel-icon-logo-design-vector-template_10135-4520.jpg?semt=ais_hybrid&w=740&q=80",
     "link": "https://m3umergers.xyz/filex-m3umergers/channels.php?playlist=all"
+  },
+  {
+    "name": "Yupp TV",
+    "image": "https://play-lh.googleusercontent.com/US51fMInT3Qk1Pf3EpPDpLbBLAPduihSxwfbrFMhPG3mkcACs-7qP4aG9ygJLpzNHA=w240-h480-rw",
+    "link": "https://raw.githubusercontent.com/abusaeeidx/Yupptv-Playlist/refs/heads/main/playlist.m3u"
   }
 ]
