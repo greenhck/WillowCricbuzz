@@ -120,5 +120,15 @@
             "Cookie": "hdntl=exp=1777122530~acl=/*~id=a6f4499519bc2d04cc2334b517313f98~data=hdntl~hmac=5547d7df590a3bb31f6967296e13b6785f0adbbe9ca34ff95f390f4112d93fea",
             "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)"
         }
+    },
+    {
+        "name": "FOX 501 FHD",
+        "link": "https://lchd-314.zenostreams-cdn-001.com/sec/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdHJlYW0iOiJmb3gtc3BvcnRzLTUwMSIsImV4cCI6MTc3NzEyNTk1NX0.cCipNCMzIckVIO_wZz6K0vhXw9SUUiClbZr3qLTUCc4/fox-sports-501.m3u8",
+        "headers": {}
+    },
+    {
+        "name": "FOXKAYO HINDI",
+        "link": "https://t20worldcup.pages.dev/foxhindi.m3u8",
+        "headers": {}
     }
 ]
