@@ -1,143 +1,16 @@
 [
     {
-        "name": "FOX 501 FHD",
-        "link": "https://lchd-314.zenostreams-cdn-001.com/sec/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdHJlYW0iOiJmb3gtc3BvcnRzLTUwMSIsImV4cCI6MTc3NzEyNTk1NX0.cCipNCMzIckVIO_wZz6K0vhXw9SUUiClbZr3qLTUCc4/fox-sports-501.m3u8",
-        "headers": {}
-    },
-    {
-        "name": "FOXKAYO HINDI",
-        "link": "https://t20worldcup.pages.dev/foxhindi.m3u8",
-        "headers": {}
-    },
-    {
-        "name": "CRIC LIFE",
-        "link": "https://ev-fast-mpd.starzplayarabia.com/live/eds/Criclife_3/DASH/Criclife_3.mpd?",
-        "headers": {
-            "drmScheme": "clearkey",
-            "drmLicense": "4e8b5ddac5332a4e66c002b4c0f22322:d06de29b0eacb81ac6e3f325849047e8"
-        }
-    },
-    {
-        "name": "WILLOW SPORTS HD",
-        "link": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd?",
-        "headers": {
-            "drmScheme": "clearkey",
-            "drmLicense": "290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247"
-        }
-    },
-    {
         "name": "WILLOW",
-        "link": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd?",
-        "headers": {
-            "drmScheme": "clearkey",
-            "drmLicense": "290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247"
-        }
-    },
-    {
-        "name": "WILLOW SPORTS",
-        "link": "https://amg01269-amg01269c1-sportstribal-emea-5204.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01269-willowtvfast-willowplus-sportstribalemea/playlist.m3u8",
+        "link": "https://otte.cache.aiv-cdn.net/syd-nitro/live/dash/enc/pnu10tp36z/out/v1/912e9db56d75403b8a9ac0a719110f36/cenc.mpd&key=192b1115da041585c77200128549efa1:634e10efe4abbb14be400a3ccbac0258",
         "headers": {}
     },
     {
-        "name": "STARZPLAY AQ",
-        "link": "https://ev-fast-mpd.starzplayarabia.com/live/eds/CricLife1/DASH/CricLife1.mpd",
+        "name": "[50 FPS]",
+        "link": "https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd",
         "headers": {
+            "Cookie": "__hdnea__=st=1777294616~exp=1777316216~acl=/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/*~hmac=ab72454a53998c9e13db60769d973d917404bde4b5536f8b6200c75e52b6df82",
             "drmScheme": "clearkey",
-            "drmLicense": "1e23e51b09a67b83813c17049870bcd4:c3d6288e378b0dc55320fd0e6fd2e55f"
-        }
-    },
-    {
-        "name": "CRICLIFE2 AQ",
-        "link": "https://ev-fast-mpd.starzplayarabia.com/live/eds/CricLife2/DASH/CricLife2.mpd?",
-        "headers": {
-            "drmScheme": "clearkey",
-            "drmLicense": "48bef83b4c6a3c5189b01b0126210da4:bd085230b7b09e50954fe0af111a8a9f"
-        }
-    },
-    {
-        "name": "CRICLIFE3 AQ",
-        "link": "https://ev-fast-mpd.starzplayarabia.com/live/eds/Criclife_3/DASH/Criclife_3.mpd?",
-        "headers": {
-            "drmScheme": "clearkey",
-            "drmLicense": "4e8b5ddac5332a4e66c002b4c0f22322:d06de29b0eacb81ac6e3f325849047e8"
-        }
-    },
-    {
-        "name": "TATA TV",
-        "link": "https://jcevents.hotstar.com/bpk-tv/e03bbf7688f4b14faa3782e78851c3d9_CTV/Fallback/e03bbf7688f4b14faa3782e78851c3d9.m3u8?",
-        "headers": {
-            "Cookie": "hdntl=exp=1777208987~acl=/*~id=4b7a0e7d6c4068c724b8a578d68cd0d7~data=hdntl~hmac=4e1fa50399abec19fc366e194c841c4a95c891b49302d8fb2a1cda794cbd1029",
-            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)",
-            "Origin": "https://www.hotstar.com",
-            "Referer": "https://www.hotstar.com"
-        }
-    },
-    {
-        "name": "SS2 ENGLISH",
-        "link": "https://livetv.hotstar.com/mp2/gec-india-1540065785/a00717b1324f45eb814eec9e48a12db8/index.mpd?",
-        "headers": {
-            "Cookie": "hdntl=exp=1777208987~acl=/*~id=4b7a0e7d6c4068c724b8a578d68cd0d7~data=hdntl~hmac=4e1fa50399abec19fc366e194c841c4a95c891b49302d8fb2a1cda794cbd1029",
-            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)",
-            "Origin": "https://www.hotstar.com",
-            "Referer": "https://www.hotstar.com/",
-            "drmScheme": "clearkey",
-            "drmLicense": "9dacc80134404c34ba184022c28d0000:982183fb4d9449c995859b7cff512092"
-        }
-    },
-    {
-        "name": "SS2 HINDI HD",
-        "link": "https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8?",
-        "headers": {
-            "Cookie": "hdntl=exp=1777208987~acl=/*~id=4b7a0e7d6c4068c724b8a578d68cd0d7~data=hdntl~hmac=4e1fa50399abec19fc366e194c841c4a95c891b49302d8fb2a1cda794cbd1029",
-            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)"
-        }
-    },
-    {
-        "name": "SS2 HINDI SD",
-        "link": "https://jcevents.hotstar.com/bpk-tv/2c7182c8e6a22cfa6ebc02bbc9ed6dd0/Fallback/2c7182c8e6a22cfa6ebc02bbc9ed6dd0.m3u8?",
-        "headers": {
-            "Cookie": "hdntl=exp=1777208987~acl=/*~id=4b7a0e7d6c4068c724b8a578d68cd0d7~data=hdntl~hmac=4e1fa50399abec19fc366e194c841c4a95c891b49302d8fb2a1cda794cbd1029",
-            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)"
-        }
-    },
-    {
-        "name": "SS2 TAMIL",
-        "link": "https://jcevents.hotstar.com/bpk-tv/4db6f833701e78ae4443cb268020f03b/Fallback/4db6f833701e78ae4443cb268020f03b.m3u8?",
-        "headers": {
-            "Cookie": "hdntl=exp=1777208987~acl=/*~id=4b7a0e7d6c4068c724b8a578d68cd0d7~data=hdntl~hmac=4e1fa50399abec19fc366e194c841c4a95c891b49302d8fb2a1cda794cbd1029",
-            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)"
-        }
-    },
-    {
-        "name": "SS2 TELUGU",
-        "link": "https://jcevents.hotstar.com/bpk-tv/034d1fb94cae87294a06f4dc266084b9/Fallback/034d1fb94cae87294a06f4dc266084b9.m3u8?",
-        "headers": {
-            "Cookie": "hdntl=exp=1777208987~acl=/*~id=4b7a0e7d6c4068c724b8a578d68cd0d7~data=hdntl~hmac=4e1fa50399abec19fc366e194c841c4a95c891b49302d8fb2a1cda794cbd1029",
-            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)"
-        }
-    },
-    {
-        "name": "SS1 ENGLISH",
-        "link": "https://livetv.hotstar.com/mp1/gec-india-1540065782/fce958099ca84fc3b980e651a4a668a8/index.mpd?",
-        "headers": {
-            "Cookie": "hdntl=exp=1777208987~acl=/*~id=4b7a0e7d6c4068c724b8a578d68cd0d7~data=hdntl~hmac=4e1fa50399abec19fc366e194c841c4a95c891b49302d8fb2a1cda794cbd1029",
-            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)",
-            "Origin": "https://www.hotstar.com",
-            "Referer": "https://www.hotstar.com/",
-            "drmScheme": "clearkey",
-            "drmLicense": "b7cdde012ce04e90a08b90622e020000:13603245acab444faef6cab5198de55f"
-        }
-    },
-    {
-        "name": "SS1 HINDI",
-        "link": "https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b0aaf/index.mpd?",
-        "headers": {
-            "Cookie": "hdntl=exp=1777208987~acl=/*~id=4b7a0e7d6c4068c724b8a578d68cd0d7~data=hdntl~hmac=4e1fa50399abec19fc366e194c841c4a95c891b49302d8fb2a1cda794cbd1029",
-            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)",
-            "Origin": "https://www.hotstar.com",
-            "Referer": "https://www.hotstar.com/",
-            "drmScheme": "clearkey",
-            "drmLicense": "81872faa1d6b45fa9045cdeb2e310000:9b88168e61274587a471962c46b94675"
+            "drmLicense": "400131994b445d8c8817202248760fda:2d56cb6f07a75b9aff165d534ae2bfc4"
         }
     }
 ]
