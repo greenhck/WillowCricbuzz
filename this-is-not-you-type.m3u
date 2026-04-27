@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z1hxOSttL3ZWbjdURlBGV2xVSlVjZ0VyZGhqSUlzaFhJNyt2c25oam5ndmFsZGxLY2xGYmtLLytKL3lCaW5KenY=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z0ljYlhDZ2hNOUIrc3ZUOGpReFlPMjdwOVcvcWxLSElkem1kdTQ5T2d0emJkWnM5NStaMXVYOXBjcCtQSmRwekg=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -3409,10 +3409,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10543
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10555
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10556.jpg" group-title="Entertainment",PTC PUNJABI
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10556
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10647.jpg" group-title="Entertainment",ABZY Movies
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10647
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10648.png" group-title="Entertainment",ABZY DHAKAD
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10648
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/818232048.jpeg" group-title="Entertainment",PTC PUNJABI
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=818232048
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/819038243.jpeg" group-title="Entertainment",PTC PUNJABI GOLD
