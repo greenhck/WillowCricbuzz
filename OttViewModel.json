@@ -85,6 +85,11 @@
     "link": "https://perelive.pages.dev/myco_live.m3u"
   },
   {
+    "name": "Tapmad Sports",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHt_GSf8G00lplqfJkyOL6ZCr9I3CaG_o9Hw&s",
+    "link": "https://raw.githubusercontent.com/srhady/tapmad-bd/refs/heads/main/tapmad_bd.m3u"
+  }
+  {
     "name": "WWE s2",
     "image": "https://www.wrestleview.com/wp-content/uploads/2024/12/WWE-logo-1.png",
     "link": "https://perelive.pages.dev/wwes2.m3u"
