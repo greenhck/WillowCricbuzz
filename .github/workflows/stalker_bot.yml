@@ -1,0 +1,33 @@
+name: Stalker Playlist Update
+on:
+  schedule:
+    - cron: '*/20 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Stalker Script
+        run: python script_stalker.py
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if [ -f stalker.m3u ]; then
+            git add stalker.m3u
+            git commit -m "Stalker Auto Update" || echo "No changes"
+            git push || echo "No changes"
+          fi
