@@ -40,5 +40,15 @@
         "name": "TAPMAD  ENG",
         "link": "https://bpl24middleeast.akamaized.net/hls/live/2109311/P2s6L-W2o9r3l5d_Feed/master.m3u8",
         "headers": {}
+    },
+    {
+        "name": "SᴛᴀƦ SᴘᴏƦᴛS 1 ʜꞮɴᴅꞮ ʜᴅ",
+        "link": "https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b0aaf/index.mpd?",
+        "headers": {
+            "Cookie": "hdntl=exp=1777377644~acl=/*~id=078eaa91467d4357521e3d73b390404e~data=hdntl~hmac=1fff168149c08a4d76d6d0b3cf5da3afd1ba89fbc3b233770455140a63497bf9",
+            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169+(Android/15)",
+            "drmScheme": "clearkey",
+            "drmLicense": "81872faa1d6b45fa9045cdeb2e310000:9b88168e61274587a471962c46b94675"
+        }
     }
 ]
