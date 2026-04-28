@@ -72,73 +72,73 @@
             animation: "
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://indiantvinfo.com/media/2022/10/Sony-Entertainment-Television-300x300.png" group-title="Entertainment" , Sоnу SET HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011671/SETHD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011671/SETHD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-SAB-HD-New-Logo.png" group-title="Entertainment" , Sоnу SAB HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011749/SABHD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011749/SABHD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Marathi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Marathi-HD-New-Logo.png" group-title="Entertainment" , Sоnу Marathi
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011740/SonyMarathi/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011740/SonyMarathi/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-PAL-New-Logo.png" group-title="Entertainment" , Sоnу Pal
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011741/SonyPalSD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011741/SonyPalSD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://c.evidon.com/pub_logos/2796-2021122219404475.png" group-title="Entertainment" , Sоnу Kal
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
 https://spt-sonykal-1-us.lg.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-language="Bengali" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-AATH-New-Logo.png" group-title="Entertainment" , Sоnу Aath
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011641/SonyAathSD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011641/SonyAathSD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-YAY-New-Logo.png" group-title="Kids" , Sоnу Yay
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011746/SonyYaySD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011746/SonyYaySD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-MAX-HD-New-Logo.png" group-title="Movies" , Sоnу MAX HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011670/SonyMaxhd/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011670/SonyMaxhd/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-MAX-HD-New-Logo.png" group-title="Movies" , Sоnу MAX
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011745/SonyMaxSD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011745/SonyMaxSD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-MAX2-New-Logo.png" group-title="Movies" , Sоnу MAX 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011908/MAX2/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011908/MAX2/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-WAH-New-Logo.png" group-title="Movies" , Sоnу WAH
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011906/SonyWah/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011906/SonyWah/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-PIX-HD-New-Logo.png" group-title="Movies" , Sоnу PIX HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011748/PIXHD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011748/PIXHD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-BBC-Earth-HD-New-Logo.png" group-title="Infotainment" , Sоnу BBC Earth HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011907/SonyBBCEarthHD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011907/SonyBBCEarthHD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten1-New-Logo.png" group-title="Sports" , Sоnу Sports Ten 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2011739/TEN1SD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2011739/TEN1SD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten2-HD-New-Logo.png" group-title="Sports" , Sоnу Sports Ten 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020590/TEN2SD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020590/TEN2SD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten3-HD.png" group-title="Sports" , Sоnу Sports Ten 3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020592/TEN3SD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020592/TEN3SD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten4.png" group-title="Sports" , Sоnу Sports Ten 4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020437/ten4sd/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020437/ten4sd/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten5-New-Logo.png" group-title="Sports" , Sоnу Sports Ten 5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020594/SONYSIXSD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020594/SONYSIXSD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten1-HD-New-Logo.png" group-title="Sports" , Sоnу Sports Ten 1 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com//hls/live/2011747/TEN1HD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com//hls/live/2011747/TEN1HD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten2-HD-New-Logo.png" group-title="Sports" , Sоnу Sports Ten 2 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020434/TEN2HD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020434/TEN2HD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten3-HD.png" group-title="Sports" , Sоnу Sports Ten 3 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020591/TEN3HD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020591/TEN3HD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="Hindi" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten4.png" group-title="Sports" , Sоnу Sports Ten 4 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020589/ten4hd/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020589/ten4hd/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 #EXTINF:-1 tvg-language="English" tvg-logo="https://www.indiantvinfo.com/media/2022/10/Sony-Sports-Ten5-HD-New-Logo.png" group-title="Sports" , !Sоnу Sports Ten 5 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
-https://dishmt.slivcdn.com/hls/live/2020593/SONYSIXHD/hdntl=exp=1777386008~acl=%2f*~id=879df3ee-070f-47d7-b02b-c5ac96e47dc2~data=hdntl~hmac=ca969fb9b3ad322f0e832bb454ad862a1b68a02af7c59cc30d6337b2afc6ffcf/master_3500.m3u8
+https://dishmt.slivcdn.com/hls/live/2020593/SONYSIXHD/hdntl=exp=1777407665~acl=%2f*~id=f33d349b-d4be-4676-bd73-6a9a90e0050d~data=hdntl~hmac=c44f2f6c364424e5710baaf61fd44864506cd24f0dadb43732bc469242f12c01/master_3500.m3u8
 "            ;
         }
         @keyframes fadeIn {
@@ -190,7 +190,7 @@ https://dishmt.slivcdn.com/hls/live/2020593/SONYSIXHD/hdntl=exp=1777386008~acl=%
 </html>
 # By Abu SAEEID X Noob
 # Github X Tg @abusaeeidx
-# Update on 2026-04-28 18:07:51 (BD Time)
+# Update on 2026-04-28 20:59:56 (BD Time)
 # Note: I do not host any content, everything is publicly available. And any issues, please contact me.
 #EXTINF:-1 group-title="LIVE" tvg-logo="https://image.tsports.com/images/mobile_thumbnail/1761718928-1750064430-LIVE.jpg", T Sports Live 01
 https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
@@ -361,173 +361,181 @@ https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Sansadtvsd/default/Sansadtvsd.m3u8
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/16-by-xfireflix.png",Star Sports 1
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/star1in.m3u8?md5=4iK8g1d7eQ15_attjAKXvw&expires=1777382201
+https://n100.zohanayaan.com:1686/hls/star1in.m3u8?md5=26n4ThIQC9lz_eFUiOmlMA&expires=1777391586
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1-by-xfireflix.png",Star Sports 1 Hindi
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/starhindi.m3u8?md5=6pOyQAPizfclo5nKbTrNDw&expires=1777382201
+https://n100.zohanayaan.com:1686/hls/starhindi.m3u8?md5=1aYOFeD3SbBVP48cLNZKUA&expires=1777391586
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/20-by-xfireflix.png",PTV Sports
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/ptvpk.m3u8?md5=EiuduTUnfXAfmsti_9hONg&expires=1777382202
+https://n100.zohanayaan.com:1686/hls/ptvpk.m3u8?md5=L1O_B3sKWivZVAzUuz9wjw&expires=1777391586
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/38-by-xfireflix.png",Willow HD
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/willowusa.m3u8?md5=ypzaO6XMXqn6MQKIDx3MIQ&expires=1777382202
+https://n100.zohanayaan.com:1686/hls/willowusa.m3u8?md5=v-w4xCPNx3nNGUjtC3gRDw&expires=1777391587
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/8-by-xfireflix.png",Willow HD 2
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/willowextra.m3u8?md5=1-b5o2carNNU33SyOTBCgQ&expires=1777382202
+https://n100.zohanayaan.com:1686/hls/willowextra.m3u8?md5=tZhmxT57SzvAKHgRky7etQ&expires=1777391587
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/10-by-xfireflix.png",Ten Sports
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/tenspk.m3u8?md5=BL1anaIT2wtTVDE4tbsa4w&expires=1777382202
+https://n100.zohanayaan.com:1686/hls/tenspk.m3u8?md5=AY0G8j_n6BvZioKOKYbnPA&expires=1777391587
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/12-by-xfireflix.png",A Sports HD
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/asportshd.m3u8?md5=qk3HDsjh90D_vFl3f_OstA&expires=1777382202
+https://n100.zohanayaan.com:1686/hls/asportshd.m3u8?md5=CqodKzrB5PeS05WufzMR-g&expires=1777391587
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/9-by-xfireflix.png",Sky Sports Cricket
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/skyscric.m3u8?md5=5zBS-TyfuX8SVAzuuSVQmw&expires=1777382202
+https://n100.zohanayaan.com:1686/hls/skyscric.m3u8?md5=itk3hQvkf9CgLOL0-sa3AA&expires=1777391587
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/18-by-xfireflix.png",Sky Sports Main Event
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/skysme.m3u8?md5=nTGOm_KzSuHHb9Z0Ba4R_Q&expires=1777382202
+https://n100.zohanayaan.com:1686/hls/skysme.m3u8?md5=vt-GzNmzMEC6bnAw3va9MA&expires=1777391588
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png",TNT 1
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/bbtsp1.m3u8?md5=XU84kPlwcXHUHA0G_Ijp4Q&expires=1777382202
+https://n100.zohanayaan.com:1686/hls/bbtsp1.m3u8?md5=9Yn-c9oy7RX_2oKEKDvTcQ&expires=1777391588
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png",TNT 2
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/bbtsp2.m3u8?md5=ussHWVuUEWLT13GaFd5l2A&expires=1777382202
+https://n100.zohanayaan.com:1686/hls/bbtsp2.m3u8?md5=aoo-LzrQRy5VEJ7GuyvOnQ&expires=1777391588
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png",TNT 3
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/bbtsp3.m3u8?md5=W-QE3ZpC2PIUDmewDXsLMg&expires=1777382202
+https://n100.zohanayaan.com:1686/hls/bbtsp3.m3u8?md5=LAshBxoPO1SDdXwjMi7ykQ&expires=1777391588
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png",TNT 4
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/bbtespn.m3u8?md5=aqU4regQJmUGlLE27dWsBg&expires=1777382202
+https://n100.zohanayaan.com:1686/hls/bbtespn.m3u8?md5=lWb8whVYcTnz32IGC2AXaw&expires=1777391588
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 1
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/sky1nz.m3u8?md5=zXmrllu-ljj-rbAqgCRk4Q&expires=1777382202
+https://n100.zohanayaan.com:1686/hls/sky1nz.m3u8?md5=yjmCXB2ge0Jrpd8Q28CqOA&expires=1777391589
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 2
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/sky2nz.m3u8?md5=0s5wDIPrPN8gGmJTwui4ag&expires=1777382203
+https://n100.zohanayaan.com:1686/hls/sky2nz.m3u8?md5=V0fbSiANStSRsCCviOlRag&expires=1777391589
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 3
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/sky3nz.m3u8?md5=cDE4v2jQd7kPlBsUF4RDog&expires=1777382203
+https://n100.zohanayaan.com:1686/hls/sky3nz.m3u8?md5=WlZxZmOU_DMEEH_WkF0ejw&expires=1777391589
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 4
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/sky4nz.m3u8?md5=fl4sqLotz_u6l4nJf7yjjQ&expires=1777382203
+https://n100.zohanayaan.com:1686/hls/sky4nz.m3u8?md5=d_VHwJC5C5lEHmynFSnWPw&expires=1777391589
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 5
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/sky5nz.m3u8?md5=DENpMlBjFEGYIJXAkktA0g&expires=1777382203
+https://n100.zohanayaan.com:1686/hls/sky5nz.m3u8?md5=pHzy5hxtkRGdbHjdOFv2yw&expires=1777391589
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport 6 Nz
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/sky6nz.m3u8?md5=OO6Ow0qrpHhtv4kqgdIkdA&expires=1777382203
+https://n100.zohanayaan.com:1686/hls/sky6nz.m3u8?md5=BL9lhGGHKrFQTHwRRQwYuw&expires=1777391590
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 7
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/sky7nz.m3u8?md5=LBYWDTUwDIdxWTQ2k7-KRg&expires=1777382203
+https://n100.zohanayaan.com:1686/hls/sky7nz.m3u8?md5=n1EVWGALf6s3ESbDXTUJAA&expires=1777391590
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 8
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/sky8nz.m3u8?md5=ywez4PB7DNNJkKT2mSl1fg&expires=1777382203
+https://n100.zohanayaan.com:1686/hls/sky8nz.m3u8?md5=hUB7H0-l6gfR1HGiLCUOTA&expires=1777391590
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",Sky Sport Nz 9
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/sky9nz.m3u8?md5=5SjVTsrIXYGBGcRniaBStg&expires=1777382203
+https://n100.zohanayaan.com:1686/hls/sky9nz.m3u8?md5=LF1IfU47X6AunjmdD2xUGQ&expires=1777391590
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/skycinema.png",Sky Cinema
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/skysme.m3u8?md5=2_wddaaKLwpiMAKOTzer8w&expires=1777382203
+https://n100.zohanayaan.com:1686/hls/skysme.m3u8?md5=wZemLYqQ5Pkc_PpkJ1NrpA&expires=1777391590
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745007829332.png",Sky Sports Action
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/skysact.m3u8?md5=eugIau1FsHVkEV0sQsCFEA&expires=1777382203
+https://n100.zohanayaan.com:1686/hls/skysact.m3u8?md5=tHuWsCPmBy8H3mIdXYLf7w&expires=1777391590
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008055327.png",Sky Sports Golf
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/skysgol.m3u8?md5=5j9_1bpxexsahqkedEb9cQ&expires=1777382203
+https://n100.zohanayaan.com:1686/hls/skysgol.m3u8?md5=B3rVVPvgqANLyIErXop7SQ&expires=1777391591
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/43-by-xfireflix.png",Sky Sports Premier League
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/skysprem.m3u8?md5=eE5QtF82ys5VRdJI9fZ4sw&expires=1777382203
+https://n100.zohanayaan.com:1686/hls/skysprem.m3u8?md5=Y6dobTsuvwrh28NjoafrqQ&expires=1777391591
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/44-by-xfireflix.png",Sky Sports Football
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/skysfott.m3u8?md5=RtueRRft6tpVSw9cXt_G3g&expires=1777382204
+https://n100.zohanayaan.com:1686/hls/skysfott.m3u8?md5=o25IM4rkM8NQtCDJE0Thag&expires=1777391591
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008347584.png",Sky Sports Plus
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/skysare.m3u8?md5=t5e_unGoS7AowvxoNpD-cw&expires=1777382204
+https://n100.zohanayaan.com:1686/hls/skysare.m3u8?md5=R32OC18bLWKLqN4jxo9hWQ&expires=1777391591
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008468637.png",Sky Sports F1
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/skysfor1.m3u8?md5=USyojCryHZWnT8DnvfvmEA&expires=1777382204
+https://n100.zohanayaan.com:1686/hls/skysfor1.m3u8?md5=Iat_0QeK_sgoUiMZrFQtAQ&expires=1777391591
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/19-by-xfireflix.png",LaLiGA
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/laligauk.m3u8?md5=WdegRLpD6GhuowJvSIxyeg&expires=1777382204
+https://n100.zohanayaan.com:1686/hls/laligauk.m3u8?md5=5NnzBGTmt3JFnJjsL9cQHg&expires=1777391591
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/31-by-xfireflix.png",Premier Sports 1
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/premieruk.m3u8?md5=XwRQxreVGv44nr8qXfdzdw&expires=1777382204
+https://n100.zohanayaan.com:1686/hls/premieruk.m3u8?md5=uj9hgLhxlB95rKQCo_vLlQ&expires=1777391592
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/31-by-xfireflix.png",Premier Sports 2
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/hdchnl2.m3u8?md5=z9L_xRe_Ag9nX72BAHYLcA&expires=1777382204
+https://n100.zohanayaan.com:1686/hls/hdchnl2.m3u8?md5=tsQlzjBvuAsD5FpThN4p5g&expires=1777391592
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/34-by-xfireflix.png",Super Football
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/superfotball.m3u8?md5=YPM9yEH9l7i4qSID4JcXbw&expires=1777382204
+https://n100.zohanayaan.com:1686/hls/superfotball.m3u8?md5=kKgnTERxCaYLBSzrt3VATg&expires=1777391592
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008781606.png",Super Premier League
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/superpremier.m3u8?md5=EdCYQAQMYcRLeVtmGZ-UCg&expires=1777382204
+https://n100.zohanayaan.com:1686/hls/superpremier.m3u8?md5=D6xXETdgKRBO49DSTC-mPw&expires=1777391592
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008895589.png",Astro Cricket
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/fox501.m3u8?md5=dQ-o1ffGmsAcd_rKg5NGrg&expires=1777382204
+https://n100.zohanayaan.com:1686/hls/fox501.m3u8?md5=wjUWRnTjdH9CoZLbh5CJZQ&expires=1777391592
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/17-by-xfireflix.png",ESPN 1
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/espnusa.m3u8?md5=ClIEgz9TI3afbJLoi8_FFw&expires=1777382204
+https://n100.zohanayaan.com:1686/hls/espnusa.m3u8?md5=fzLaVbwGJRpKwFw75LHApA&expires=1777391592
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/17-by-xfireflix.png",ESPN 2
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/espn2.m3u8?md5=K_nwEpzFdiGiOyz-PjZqnQ&expires=1777382204
+https://n100.zohanayaan.com:1686/hls/espn2.m3u8?md5=Tt8r48jSs-kX8fX0NjiAvQ&expires=1777391592
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745007829327.png",Sky Sports Arena
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/skysare.m3u8?md5=t5e_unGoS7AowvxoNpD-cw&expires=1777382204
+https://n100.zohanayaan.com:1686/hls/skysare.m3u8?md5=9xYDp_5E-XXAeg8XNs_wIQ&expires=1777391593
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/13-by-xfireflix.png",Sky Sports Mix
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/skysmixx.m3u8?md5=dhkBZ8hRY6zEPnFga47eNw&expires=1777382205
+https://n100.zohanayaan.com:1686/hls/skysmixx.m3u8?md5=7XQJcvt5a1WIMqFWTEbrxQ&expires=1777391593
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745009085794.png",Sky Sports Tennis
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/skystennis.m3u8?md5=MAm6e5QcrpTiuVyU6hf0IQ&expires=1777382205
+https://n100.zohanayaan.com:1686/hls/skystennis.m3u8?md5=k38WrF4ipiGLAZPOaZ6-kA&expires=1777391593
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/6-by-xfireflix.png",Fox Cricket 501 HD
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/fox501.m3u8?md5=4BQuWlG55NdyhQMvAJfaQg&expires=1777382205
+https://n100.zohanayaan.com:1686/hls/fox501.m3u8?md5=r9C8X3R_8HaRDvTCQdGAwg&expires=1777391593
 #EXTINF:-1 tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1000173192-modified.png",Sony Sports3
 #EXTVLCOPT:http-referrer=https://executeandship.com/
 #EXTVLCOPT:http-origin=https://executeandship.com
-https://n100.zohanayaan.com:1686/hls/ten1hd.m3u8?md5=H0-1RyS4AlrEZ5mUPCemxg&expires=1777382205
-#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/142061_6045_ITA-W_VANW_fc-web.jpg" group-title="Fancode-Cricket", Vanuatu Women vs Italy Women (ICC Women's T20I Challenge Trophy, 2026)
-https://in-mc-fblive.fancode.com/mumbai/142061_english_hls_3fe2ad3b6062809_1ta-di_h264/index.m3u8
+https://n100.zohanayaan.com:1686/hls/ten1hd.m3u8?md5=96WgALe0FI72LNIV3OSNEQ&expires=1777391593
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WI-Test_web.jpg" group-title="Fancode-Cricket", Windward Islands Volcanoes vs Guyana Harpy Eagles (West Indies Championship 2026)
+https://in-mc-fblive.fancode.com/mumbai/141955_english_hls_8a68800a2b60791_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WI-Test_web.jpg" group-title="Fancode-Cricket", Leeward Islands Hurricanes vs Trinidad & Tobago Red Force (West Indies Championship 2026)
+https://in-mc-fblive.fancode.com/mumbai/141953_english_hls_b2b8a92e1630930_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WI-Test_web.jpg" group-title="Fancode-Cricket", Jamaica Scorpions vs Barbados Pride (West Indies Championship 2026)
+https://in-mc-fblive.fancode.com/mumbai/141954_english_hls_bdbd9720362618_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/140501_5956_EBFC_ODS_FC-Web_1772467652152.jpg" group-title="Fancode-Football", East Bengal FC vs Odisha FC (ISL 2025-26)
+https://dai-partner.fancode.com/primary/140501_english_hls_c50f8c7f6346043_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/EBFC_ODS_FC-web-(1).jpg" group-title="Fancode-Football", East Bengal FC vs Odisha FC (ISL 2025-26  - Regional)
+https://dai-partner.fancode.com/primary/141823_english_hls_bec2712e5c47787_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mutua-Madrid-Open,-ATP-1000-old--(1).png" group-title="Fancode-Tennis", Day 7 - Arantxa Sanchez Stadium vs Madrid, Spain (ATP Masters Mutua Madrid Open 2026)
 https://in-mc-fblive.fancode.com/mumbai/141865_english_hls_b5c399e3f592994_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Mutua-Madrid-Open,-ATP-1000-old--(1).png" group-title="Fancode-Tennis", Day 7 - Main Feed vs Madrid, Spain (ATP Masters Mutua Madrid Open 2026)
