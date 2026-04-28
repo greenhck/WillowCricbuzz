@@ -1,72 +1,81 @@
 import requests
+import json
 from datetime import datetime
 
-# Portal Details
 base_url = "http://89.187.191.54/stalker_portal/server/load.php"
 mac = "00:1A:79:6E:FE:A7"
-# सटीक MAG Device User-Agent
-ua = "Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) Mag200 static Version/4.0.2 Safari/533.3"
+# OTT Navigator जैसा User-Agent इस्तेमाल करें
+ua = "OTT Navigator/1.7.1.2 (Linux; Android 10; SM-G975F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/81.0.4044.138 Mobile Safari/537.36"
 
-headers = {
+session = requests.Session()
+session.headers.update({
     "User-Agent": ua,
     "X-User-Agent": "Model: MAG250; SW: 2.20.0-r19-pub-250",
     "Cookie": f"mac={mac}",
+    "Accept": "application/json, text/javascript, */*; q=0.01",
     "Referer": "http://89.187.191.54/stalker_portal/c/",
-    "Accept": "*/*",
-    "Host": "89.187.191.54"
-}
+    "X-Requested-With": "XMLHttpRequest",
+    "Connection": "keep-alive"
+})
 
-def get_token():
-    params = {"type": "stb", "action": "handshake"}
+def get_data():
     try:
-        resp = requests.get(base_url, params=params, headers=headers, timeout=30)
-        print(f"Handshake Status: {resp.status_code}")
-        # अगर JSON नहीं है तो यहाँ एरर आएगा
-        data = resp.json()
-        return data.get('js', {}).get('token')
-    except Exception as e:
-        print(f"Handshake failed: {e}")
-        return None
-
-def get_playlist():
-    token = get_token()
-    if not token:
-        return
-
-    params = {
-        "type": "itv",
-        "action": "get_all_channels",
-        "force_ch_link_check": "0",
-        "jsvw": "1.1.0"
-    }
-    
-    # टोकन को हेडर में जोड़ें
-    headers["Authorization"] = f"Bearer {token}"
-    
-    try:
-        resp = requests.get(base_url, params=params, headers=headers, timeout=30)
-        js_data = resp.json().get('js', {})
-        data = js_data.get('data', [])
+        # 1. Handshake
+        hs_resp = session.get(base_url, params={"type": "stb", "action": "handshake"}, timeout=30)
         
-        if not data:
-            print("No channels found in 'data' field.")
+        # Debugging के लिए प्रिंट करें कि सर्वर क्या भेज रहा है
+        if hs_resp.status_code != 200:
+            print(f"HTTP Error: {hs_resp.status_code}")
             return
 
+        try:
+            token = hs_resp.json().get('js', {}).get('token')
+        except:
+            print("Server response is not JSON. It might be blocking GitHub.")
+            print(f"Server content: {hs_resp.text[:200]}")
+            return
+
+        if not token:
+            print("Token not found.")
+            return
+        
+        # 2. Get Channels
+        session.headers.update({"Authorization": f"Bearer {token}"})
+        ch_params = {
+            "type": "itv",
+            "action": "get_all_channels",
+            "jsvw": "1.1.0"
+        }
+        
+        ch_resp = session.get(base_url, params=ch_params, timeout=30)
+        
+        # Check if the response is actually JSON
+        try:
+            data = ch_resp.json().get('js', {}).get('data', [])
+        except:
+            print("Channel list fetch failed. Server sent HTML instead of JSON.")
+            return
+
+        if not data:
+            print("Portal returned empty channel list.")
+            return
+
+        # 3. Save File
         output = ["#EXTM3U", f"# Updated: {datetime.now()}"]
         for ch in data:
             name = ch.get('name', 'Unknown')
             cmd = ch.get('cmd', '')
-            # ffrt/http लिंक क्लीन करें
-            link = cmd.split(" ")[1] if " " in cmd else cmd
+            # Link formatting
+            link = cmd.replace("ffrt ", "").split(" ")[0] if " " in cmd else cmd
             
             output.append(f'#EXTINF:-1 tvg-id="{ch.get("id")}" tvg-logo="{ch.get("logo")}",{name}')
             output.append(link)
 
         with open("stalker.m3u", "w", encoding="utf-8") as f:
             f.write("\n".join(output))
-        print(f"Success! Saved {len(data)} channels to stalker.m3u")
-        
-    except Exception as e:
-        print(f"Channel fetch failed: {e}")
+        print(f"Success! {len(data)} channels saved.")
 
-get_playlist()
+    except Exception as e:
+        print(f"Script Error: {e}")
+
+get_data()
