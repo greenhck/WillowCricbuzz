@@ -1,20 +1,6 @@
 [
     {
         "name": "WILLOW",
-        "link": "https://otte.cache.aiv-cdn.net/syd-nitro/live/dash/enc/pnu10tp36z/out/v1/912e9db56d75403b8a9ac0a719110f36/cenc.mpd&key=192b1115da041585c77200128549efa1:634e10efe4abbb14be400a3ccbac0258",
-        "headers": {}
-    },
-    {
-        "name": "[50 FPS]",
-        "link": "https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd",
-        "headers": {
-            "Cookie": "__hdnea__=st=1777294616~exp=1777316216~acl=/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/*~hmac=ab72454a53998c9e13db60769d973d917404bde4b5536f8b6200c75e52b6df82",
-            "drmScheme": "clearkey",
-            "drmLicense": "400131994b445d8c8817202248760fda:2d56cb6f07a75b9aff165d534ae2bfc4"
-        }
-    },
-    {
-        "name": "WILLOW",
         "link": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd?",
         "headers": {
             "drmScheme": "clearkey",
@@ -42,13 +28,47 @@
         "headers": {}
     },
     {
-        "name": "SᴛᴀƦ SᴘᴏƦᴛS 1 ʜꞮɴᴅꞮ ʜᴅ",
+        "name": "TATA TV",
+        "link": "https://jcevents.hotstar.com/bpk-tv/e03bbf7688f4b14faa3782e78851c3d9_CTV/Fallback/e03bbf7688f4b14faa3782e78851c3d9.m3u8?",
+        "headers": {
+            "Cookie": "hdntl=exp=1777467505~acl=/*~id=17036844c59890feef177bd860a4ff6c~data=hdntl~hmac=432df6f409dc8be2e6abacc6abadf985ceb20326cc339a7cd8c3c053bf9b9ae6",
+            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)",
+            "Origin": "https://www.hotstar.com",
+            "Referer": "https://www.hotstar.com"
+        }
+    },
+    {
+        "name": "ENGLISH",
+        "link": "https://livetv.hotstar.com/mp1/gec-india-1540065782/fce958099ca84fc3b980e651a4a668a8/index.mpd?",
+        "headers": {
+            "Cookie": "hdntl=exp=1777467505~acl=/*~id=17036844c59890feef177bd860a4ff6c~data=hdntl~hmac=432df6f409dc8be2e6abacc6abadf985ceb20326cc339a7cd8c3c053bf9b9ae6",
+            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169+(Android/15)",
+            "Origin": "https://www.hotstar.com",
+            "Referer": "https://www.hotstar.com/",
+            "drmScheme": "clearkey",
+            "drmLicense": "b7cdde012ce04e90a08b90622e020000:13603245acab444faef6cab5198de55f"
+        }
+    },
+    {
+        "name": "HINDI",
         "link": "https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b0aaf/index.mpd?",
         "headers": {
-            "Cookie": "hdntl=exp=1777377644~acl=/*~id=078eaa91467d4357521e3d73b390404e~data=hdntl~hmac=1fff168149c08a4d76d6d0b3cf5da3afd1ba89fbc3b233770455140a63497bf9",
+            "Cookie": "hdntl=exp=1777467505~acl=/*~id=17036844c59890feef177bd860a4ff6c~data=hdntl~hmac=432df6f409dc8be2e6abacc6abadf985ceb20326cc339a7cd8c3c053bf9b9ae6",
             "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169+(Android/15)",
+            "Origin": "https://www.hotstar.com",
+            "Referer": "https://www.hotstar.com/",
             "drmScheme": "clearkey",
             "drmLicense": "81872faa1d6b45fa9045cdeb2e310000:9b88168e61274587a471962c46b94675"
         }
+    },
+    {
+        "name": "WILLOW RED HD",
+        "link": "https://amg01269-amg01269c1-sportstribal-emea-5204.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01269-willowtvfast-willowplus-sportstribalemea/playlist.m3u8",
+        "headers": {}
+    },
+    {
+        "name": "TAPMAD HD",
+        "link": "https://bpl24middleeast.akamaized.net/hls/live/2109311/P2s6L-W2o9r3l5d_Feed/master.m3u8",
+        "headers": {}
     }
 ]
