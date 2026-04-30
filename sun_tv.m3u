@@ -1,5 +1,5 @@
 #EXTM3U
-# Updated: 2026-04-29 23:37:30.185125
+# Updated: 2026-04-30 01:23:18.776303
 #EXTINF:-1 group-title="SUN NXT" group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194408" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/194408/640x360_SunTV_194408_2617a80e-4f90-42fa-b13a-acc8d7c97f9e.jpg",Sun TV
 https://livestream1.sunnxt.com/05b5df1221764bca9867054c5e65ee62/SunTVB_IN_index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
