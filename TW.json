@@ -89,5 +89,45 @@
             "Referer": "https://livecricketsl.cc.nf",
             "Origin": "https://livecricketsl.cc.nf"
         }
+    },
+    {
+        "name": "STAR 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/703299.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL BHOJPURI 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705165.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL HINDI 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705141.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL MALAYALAM 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705156.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL HARYANVI 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705164.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL ENGLISH 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705142.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL GUJARATI 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705158.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL TAMIL 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705153.ts",
+        "headers": {}
     }
 ]
