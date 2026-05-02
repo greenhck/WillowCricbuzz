@@ -1,5 +1,5 @@
 #EXTM3U
-# Updated: 2026-04-28 00:10:18.319944
+# Updated: 2026-05-02 10:33:01.469736
 #EXTINF:-1 tvg-id="No details available" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjqPJebwHNucQ3X6qZdXE3oGi70_4wRH3SvQ&s"     tvg-name="PPV CRICKET 1 4K" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjqPJebwHNucQ3X6qZdXE3oGi70_4wRH3SvQ&s" group-logo="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/400/header.jpg"  group-title="🅴🆇🆃🆁🅰 | SPORTS",PPV CRICKET 1 4K
 https://yupptv.rkdyiptv.workers.dev/live/2904.m3u8
 #EXTINF:-1 tvg-id="No details available" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjqPJebwHNucQ3X6qZdXE3oGi70_4wRH3SvQ&s"     tvg-name="PPV CRICKET 2 4K" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjqPJebwHNucQ3X6qZdXE3oGi70_4wRH3SvQ&s" group-logo="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/400/header.jpg"  group-title="🅴🆇🆃🆁🅰 | SPORTS",PPV CRICKET 2 4K
@@ -1038,3 +1038,7 @@ https://yupptv.rkdyiptv.workers.dev/live/2355.m3u8
 https://yupptv.rkdyiptv.workers.dev/live/2356.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjqPJebwHNucQ3X6qZdXE3oGi70_4wRH3SvQ&s"     tvg-name="MADINA LIVE BANGLA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjqPJebwHNucQ3X6qZdXE3oGi70_4wRH3SvQ&s" group-logo="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/400/header.jpg"  group-title="🅴🆇🆃🆁🅰 | BENGALI",MADINA LIVE BANGLA
 https://yupptv.rkdyiptv.workers.dev/live/2357.m3u8
+# ===== SPORTS =====
+#EXTM3U
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://ssvods.cr7x.workers.dev/jtv/460.json

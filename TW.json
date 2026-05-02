@@ -1,20 +1,6 @@
 [
     {
         "name": "WILLOW",
-        "link": "https://otte.cache.aiv-cdn.net/syd-nitro/live/dash/enc/pnu10tp36z/out/v1/912e9db56d75403b8a9ac0a719110f36/cenc.mpd&key=192b1115da041585c77200128549efa1:634e10efe4abbb14be400a3ccbac0258",
-        "headers": {}
-    },
-    {
-        "name": "[50 FPS]",
-        "link": "https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd",
-        "headers": {
-            "Cookie": "__hdnea__=st=1777294616~exp=1777316216~acl=/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/*~hmac=ab72454a53998c9e13db60769d973d917404bde4b5536f8b6200c75e52b6df82",
-            "drmScheme": "clearkey",
-            "drmLicense": "400131994b445d8c8817202248760fda:2d56cb6f07a75b9aff165d534ae2bfc4"
-        }
-    },
-    {
-        "name": "WILLOW  AKASH GILL",
         "link": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd?",
         "headers": {
             "drmScheme": "clearkey",
@@ -22,7 +8,7 @@
         }
     },
     {
-        "name": "WILLOW LAKHA GILL",
+        "name": "WILLOW",
         "link": "https://amg01269-amg01269c1-sportstribal-emea-5204.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01269-willowtvfast-willowplus-sportstribalemea/playlist.m3u8",
         "headers": {}
     },
@@ -30,5 +16,87 @@
         "name": "STAR 4K",
         "link": "http://datahub11.com/live/Jen12345/Jen54321/703299.ts",
         "headers": {}
+    },
+    {
+        "name": "SS1 HINDI SD",
+        "link": "https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b0aaf/index.mpd?",
+        "headers": {
+            "Cookie": "hdntl=exp=1777639268~acl=/*~id=19e0f1c519bc9b86f765e370a740485e~data=hdntl~hmac=41c71cc092ef84de9c11c11775cb10cd365c600cae328cad964c530f9ebec4d4",
+            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169+(Android/15)",
+            "Origin": "https://www.hotstar.com",
+            "Referer": "https://www.hotstar.com/",
+            "drmScheme": "clearkey",
+            "drmLicense": "81872faa1d6b45fa9045cdeb2e310000:9b88168e61274587a471962c46b94675"
+        }
+    },
+    {
+        "name": "CTV IPL ENG",
+        "link": "https://jcevents.hotstar.com/bpk-tv/e03bbf7688f4b14faa3782e78851c3d9_CTV/Fallback/e03bbf7688f4b14faa3782e78851c3d9.m3u8?",
+        "headers": {
+            "Cookie": "hdntl=exp=1777639268~acl=/*~id=19e0f1c519bc9b86f765e370a740485e~data=hdntl~hmac=41c71cc092ef84de9c11c11775cb10cd365c600cae328cad964c530f9ebec4d4",
+            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)",
+            "Origin": "https://www.hotstar.com",
+            "Referer": "https://www.hotstar.com"
+        }
+    },
+    {
+        "name": "SS1 ENG SD",
+        "link": "https://livetv.hotstar.com/mp1/gec-india-1540065782/fce958099ca84fc3b980e651a4a668a8/index.mpd?",
+        "headers": {
+            "Cookie": "hdntl=exp=1777639268~acl=/*~id=19e0f1c519bc9b86f765e370a740485e~data=hdntl~hmac=41c71cc092ef84de9c11c11775cb10cd365c600cae328cad964c530f9ebec4d4",
+            "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)",
+            "Origin": "https://www.hotstar.com",
+            "Referer": "https://www.hotstar.com/",
+            "drmScheme": "clearkey",
+            "drmLicense": "b7cdde012ce04e90a08b90622e020000:13603245acab444faef6cab5198de55f"
+        }
+    },
+    {
+        "name": "NOON SPORTS 720P ENG",
+        "link": "https://dai.google.com/linear/hls/event/mbsfWpAoS2Olw5e-nkM-gw/master.m3u8",
+        "headers": {
+            "User-Agent": "Cricbuzz/7.00.01 (Linux;Android 13) AndroidXMedia3/1.5.1",
+            "X-Forwarded-For": "1.178.20.23"
+        }
+    },
+    {
+        "name": "WILLOW CRICBUZZ ENG",
+        "link": "https://stream.mokakdaoni.me/proxy/wb.php/https://livevideos.cricbuzz.com/hls/live/2124680/WCB-US/9241/151965/master.m3u8?",
+        "headers": {
+            "Referer": "https://livecricketsl.cc.nf",
+            "Origin": "https://livecricketsl.cc.nf"
+        }
+    },
+    {
+        "name": "LINK 2",
+        "link": "https://wcup.mokakdaoni.me/proxy/cb.php/https://livevideos.cricbuzz.com/hls/live/2124680/WCB-US/9241/151965/master.m3u8?",
+        "headers": {
+            "Referer": "https://livecricketsl.cc.nf",
+            "Origin": "https://livecricketsl.cc.nf"
+        }
+    },
+    {
+        "name": "WILLOW CRICBUZZ HINDI",
+        "link": "https://stream.mokakdaoni.me/proxy/wb.php/https://livevideos.cricbuzz.com/hls/live/2123519/WCB-CA-HINDI/9241/151965/master.m3u8?",
+        "headers": {
+            "Referer": "https://livecricketsl.cc.nf",
+            "Origin": "https://livecricketsl.cc.nf"
+        }
+    },
+    {
+        "name": "LINK 2",
+        "link": "https://wcup.mokakdaoni.me/proxy/cb.php/https://livevideos.cricbuzz.com/hls/live/2123519/WCB-CA-HINDI/9241/151965/master.m3u8?",
+        "headers": {
+            "Referer": "https://livecricketsl.cc.nf",
+            "Origin": "https://livecricketsl.cc.nf"
+        }
+    },
+    {
+        "name": "CRICBUZZ ENG SG COUNTRY",
+        "link": "https://sg.mokakdaoni.me/proxy/wb.php/https://livevideos.cricbuzz.com/hls/live/2111488/SEA/9241/151965/master.m3u8?",
+        "headers": {
+            "Referer": "https://livecricketsl.cc.nf",
+            "Origin": "https://livecricketsl.cc.nf"
+        }
     }
 ]
