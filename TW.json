@@ -1,14 +1,6 @@
 [
     {
         "name": "WILLOW",
-        "link": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd?",
-        "headers": {
-            "drmScheme": "clearkey",
-            "drmLicense": "290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247"
-        }
-    },
-    {
-        "name": "WILLOW",
         "link": "https://amg01269-amg01269c1-sportstribal-emea-5204.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01269-willowtvfast-willowplus-sportstribalemea/playlist.m3u8",
         "headers": {}
     },
@@ -18,10 +10,55 @@
         "headers": {}
     },
     {
+        "name": "FOX 501  1920 P",
+        "link": "http://ae325328.ucomist.net/iptv/Z3SWF9EL3YPX5N/19146/index.m3u8",
+        "headers": {}
+    },
+    {
+        "name": "STAR 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/703299.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL BHOJPURI 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705165.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL HINDI 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705141.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL MALAYALAM 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705156.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL HARYANVI 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705164.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL ENGLISH 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705142.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL GUJARATI 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705158.ts",
+        "headers": {}
+    },
+    {
+        "name": "IPL TAMIL 4K",
+        "link": "http://datahub11.com/live/johannes/johannes123/705153.ts",
+        "headers": {}
+    },
+    {
         "name": "SS1 HINDI SD",
         "link": "https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b0aaf/index.mpd?",
         "headers": {
-            "Cookie": "hdntl=exp=1777639268~acl=/*~id=19e0f1c519bc9b86f765e370a740485e~data=hdntl~hmac=41c71cc092ef84de9c11c11775cb10cd365c600cae328cad964c530f9ebec4d4",
+            "Cookie": "hdntl=exp=1777882298~acl=/*~id=628860b8563c298a483c77cf32aee138~data=hdntl~hmac=5fa5014ca687211eb712c01c3fe4e5812f3fe0107d45147f60a4e0edb7c2c1d4",
             "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169+(Android/15)",
             "Origin": "https://www.hotstar.com",
             "Referer": "https://www.hotstar.com/",
@@ -30,25 +67,23 @@
         }
     },
     {
-        "name": "CTV IPL ENG",
-        "link": "https://jcevents.hotstar.com/bpk-tv/e03bbf7688f4b14faa3782e78851c3d9_CTV/Fallback/e03bbf7688f4b14faa3782e78851c3d9.m3u8?",
+        "name": "SS2 HINDI HD",
+        "link": "https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8?",
         "headers": {
-            "Cookie": "hdntl=exp=1777639268~acl=/*~id=19e0f1c519bc9b86f765e370a740485e~data=hdntl~hmac=41c71cc092ef84de9c11c11775cb10cd365c600cae328cad964c530f9ebec4d4",
+            "Cookie": "hdntl=exp=1777882298~acl=/*~id=628860b8563c298a483c77cf32aee138~data=hdntl~hmac=5fa5014ca687211eb712c01c3fe4e5812f3fe0107d45147f60a4e0edb7c2c1d4",
             "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)",
             "Origin": "https://www.hotstar.com",
-            "Referer": "https://www.hotstar.com"
+            "Referer": "https://www.hotstar.com/"
         }
     },
     {
-        "name": "SS1 ENG SD",
-        "link": "https://livetv.hotstar.com/mp1/gec-india-1540065782/fce958099ca84fc3b980e651a4a668a8/index.mpd?",
+        "name": "CTV IPL ENG",
+        "link": "https://jcevents.hotstar.com/bpk-tv/e03bbf7688f4b14faa3782e78851c3d9_CTV/Fallback/e03bbf7688f4b14faa3782e78851c3d9.m3u8?",
         "headers": {
-            "Cookie": "hdntl=exp=1777639268~acl=/*~id=19e0f1c519bc9b86f765e370a740485e~data=hdntl~hmac=41c71cc092ef84de9c11c11775cb10cd365c600cae328cad964c530f9ebec4d4",
+            "Cookie": "hdntl=exp=1777882298~acl=/*~id=628860b8563c298a483c77cf32aee138~data=hdntl~hmac=5fa5014ca687211eb712c01c3fe4e5812f3fe0107d45147f60a4e0edb7c2c1d4",
             "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)",
             "Origin": "https://www.hotstar.com",
-            "Referer": "https://www.hotstar.com/",
-            "drmScheme": "clearkey",
-            "drmLicense": "b7cdde012ce04e90a08b90622e020000:13603245acab444faef6cab5198de55f"
+            "Referer": "https://www.hotstar.com"
         }
     },
     {
@@ -61,7 +96,7 @@
     },
     {
         "name": "WILLOW CRICBUZZ ENG",
-        "link": "https://stream.mokakdaoni.me/proxy/wb.php/https://livevideos.cricbuzz.com/hls/live/2124680/WCB-US/9241/151965/master.m3u8?",
+        "link": "https://stream.mokakdaoni.me/proxy/wb.php/https://livevideos.cricbuzz.com/hls/live/2124680/WCB-US/9241/151998/master.m3u8?",
         "headers": {
             "Referer": "https://livecricketsl.cc.nf",
             "Origin": "https://livecricketsl.cc.nf"
@@ -69,7 +104,7 @@
     },
     {
         "name": "LINK 2",
-        "link": "https://wcup.mokakdaoni.me/proxy/cb.php/https://livevideos.cricbuzz.com/hls/live/2124680/WCB-US/9241/151965/master.m3u8?",
+        "link": "https://wcup.mokakdaoni.me/proxy/cb.php/https://livevideos.cricbuzz.com/hls/live/2124680/WCB-US/9241/151998/master.m3u8?",
         "headers": {
             "Referer": "https://livecricketsl.cc.nf",
             "Origin": "https://livecricketsl.cc.nf"
@@ -77,7 +112,7 @@
     },
     {
         "name": "WILLOW CRICBUZZ HINDI",
-        "link": "https://stream.mokakdaoni.me/proxy/wb.php/https://livevideos.cricbuzz.com/hls/live/2123519/WCB-CA-HINDI/9241/151965/master.m3u8?",
+        "link": "https://stream.mokakdaoni.me/proxy/wb.php/https://livevideos.cricbuzz.com/hls/live/2123519/WCB-CA-HINDI/9241/151998/master.m3u8?",
         "headers": {
             "Referer": "https://livecricketsl.cc.nf",
             "Origin": "https://livecricketsl.cc.nf"
@@ -85,7 +120,7 @@
     },
     {
         "name": "LINK 2",
-        "link": "https://wcup.mokakdaoni.me/proxy/cb.php/https://livevideos.cricbuzz.com/hls/live/2123519/WCB-CA-HINDI/9241/151965/master.m3u8?",
+        "link": "https://wcup.mokakdaoni.me/proxy/cb.php/https://livevideos.cricbuzz.com/hls/live/2123519/WCB-CA-HINDI/9241/151998/master.m3u8?",
         "headers": {
             "Referer": "https://livecricketsl.cc.nf",
             "Origin": "https://livecricketsl.cc.nf"
@@ -93,10 +128,23 @@
     },
     {
         "name": "CRICBUZZ ENG SG COUNTRY",
-        "link": "https://sg.mokakdaoni.me/proxy/wb.php/https://livevideos.cricbuzz.com/hls/live/2111488/SEA/9241/151965/master.m3u8?",
+        "link": "https://sg.mokakdaoni.me/proxy/wb.php/https://livevideos.cricbuzz.com/hls/live/2111488/SEA/9241/151998/master.m3u8?",
         "headers": {
             "Referer": "https://livecricketsl.cc.nf",
             "Origin": "https://livecricketsl.cc.nf"
         }
+    },
+    {
+        "name": "KAYO HINDI",
+        "link": "https://dck1-ac-live.cdn.indazn.com/out/v1/761f422bb93edb7b/d3ee4c1daf714b36826fabd93c90986a/index.mpd",
+        "headers": {
+            "drmScheme": "clearkey",
+            "drmLicense": "dcedd692f3315f768ddb192ed266d05f:6cf182dc2d612c127d408851c9d2e524"
+        }
+    },
+    {
+        "name": "FOX 501 FHD 50FPS",
+        "link": "https://aps13.playlist.ttvnw.net/v1/playlist/CroEJvJRRsQY63NN7AiDtWKzAnks7jGrboF8X2voKmKz4TkeXhymCf6z0CN7rIIURCbfV_fYrZiJxerahMsdnSIglL2eYS7VP2n03EKqPUYiShZ5SE-MGPp0mKSMeouiMjKh3KA6RZApusJjq4bMY6vzQEPQMdD6dzCam16pbvbkeBwGsPAxkpOkOpYyt7mu93iSld-fu7gZSiIDBYdHBxvmZ1YZKxbYn3WIJWaVk1dEPwytWJ9QH01AlTYx0ewhF1B0n0xIBLYDj-YY2OdrLOIeV36MHzzyfnq4QAfx-OwvNL4dEfjcgSk65-dNoWXvtKq7g68p51oS7zV3j-M8ZehACm73vkK1RuUcgW4J8qNxy5TVkp3o2IKm59_ZWANECkrZuX1b0jJFifPbtUu8jfeD0XJU-Coctq8Q0bmJTNegQKHJrc03GQ7NVkZe9xdBwaKCRQXKhC3k5y2lNNFyVVM-ZUXAB9nqf7Ku--MFGQEeMnoRde_gWspUAGP6_U-eO-JI4d3t8rQfym08KVihecKmPp2hEt9FRDfjpST15Am6iXYayurzzRMBF9xItWHQ5fyE95jqY8RtUF7UeA20eaR0SbougB5EeuByo1qG3jt5uO9bgzUgTTLVHuiFhEUbdml2vl-edWxnGu9SyTsqpemQ8QJD0Kj2052dR76jkh0JJT6oL3wZtjHNcG5ZDYDCo-WMRG4RxWTzJnz9uwSD-fjAjpBTLU70Ax3c0CihRZF5zAgeZcC1ZJr5pSjgGgz8dPDLXu-2RnugVc8gASoJdXMtd2VzdC0yMIQP.m3u8](https:/aps13.playlist.ttvnw.net/v1/playlist/CroEJvJRRsQY63NN7AiDtWKzAnks7jGrboF8X2voKmKz4TkeXhymCf6z0CN7rIIURCbfV_fYrZiJxerahMsdnSIglL2eYS7VP2n03EKqPUYiShZ5SE-MGPp0mKSMeouiMjKh3KA6RZApusJjq4bMY6vzQEPQMdD6dzCam16pbvbkeBwGsPAxkpOkOpYyt7mu93iSld-fu7gZSiIDBYdHBxvmZ1YZKxbYn3WIJWaVk1dEPwytWJ9QH01AlTYx0ewhF1B0n0xIBLYDj-YY2OdrLOIeV36MHzzyfnq4QAfx-OwvNL4dEfjcgSk65-dNoWXvtKq7g68p51oS7zV3j-M8ZehACm73vkK1RuUcgW4J8qNxy5TVkp3o2IKm59_ZWANECkrZuX1b0jJFifPbtUu8jfeD0XJU-Coctq8Q0bmJTNegQKHJrc03GQ7NVkZe9xdBwaKCRQXKhC3k5y2lNNFyVVM-ZUXAB9nqf7Ku--MFGQEeMnoRde_gWspUAGP6_U-eO-JI4d3t8rQfym08KVihecKmPp2hEt9FRDfjpST15Am6iXYayurzzRMBF9xItWHQ5fyE95jqY8RtUF7UeA20eaR0SbougB5EeuByo1qG3jt5uO9bgzUgTTLVHuiFhEUbdml2vl-edWxnGu9SyTsqpemQ8QJD0Kj2052dR76jkh0JJT6oL3wZtjHNcG5ZDYDCo-WMRG4RxWTzJnz9uwSD-fjAjpBTLU70Ax3c0CihRZF5zAgeZcC1ZJr5pSjgGgz8dPDLXu-2RnugVc8gASoJdXMtd2VzdC0yMIQP.m3u8)",
+        "headers": {}
     }
 ]
