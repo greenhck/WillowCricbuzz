@@ -1,5 +1,5 @@
 #EXTM3U
-# Updated: 2026-05-06 13:19:27.907429
+# Updated: 2026-05-06 15:40:01.208775
 #EXTINF:-1 tvg-id="0-9-zeetvhd" group-title="ZEE5 IN" tvg-logo="https://akamaividz2.zee5.com/image/upload/w_374,h_374,c_fill,f_webp,q_auto:eco/resources/0-9-zeetvhd/square/374x3747e1771cff4404204861bca791ede04c8",Zee TV HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
 https://z5live-cf.zee5.com/out/v1/ZEE5_Live_Channels/ZEE-TV-HD/index-connected/index-connected.m3u8?hdntl=exp=1777012213~acl=%2f*~id=54d8a57c-6673-41c0-a39c-e23d27ebd6f8~data=hdntl~hmac=4f4959d200b4b4b66ff083a812973d9e87208824fb52088ba7eadb5d4a7d4b59
@@ -208,4 +208,4 @@ https://z5live-cf.zee5.com/out/v1/ZEE5_Live_Channels/Zee-Talkies-SD/master/maste
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
 https://aasthaott.akamaized.net/110923/smil:aasthatv.smil/playlist.m3u8?hdntl=exp=1777012213~acl=%2f*~id=54d8a57c-6673-41c0-a39c-e23d27ebd6f8~data=hdntl~hmac=4f4959d200b4b4b66ff083a812973d9e87208824fb52088ba7eadb5d4a7d4b59
 # Playlist Generated Automatically by Double-Threaded Automation
-# Last Updated: 2026-05-06 08:26:49
+# Last Updated: 2026-05-06 13:48:17
