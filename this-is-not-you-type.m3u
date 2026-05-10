@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2dvK3NXZ1ZTYXZKWE1DSmVnalJDZEZWWDlwYThHWUlnK3NRS2ZSalV3cTFMdEpUMTVvRUlGWjhiRzRzVUxJUmc=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2RtZzB4d2F6NlRBcE12WGtPc2REajYreTdPNWZCaktyUWVoSllGTXhTeFBNZGpaOUJBcENCTG9HUFkvQldxTmw=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -3217,6 +3217,8 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=417243291
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=417758391
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/598756356.jpeg" group-title="Entertainment",PTC Punjabi
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=598756356
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-21.jpg" group-title="Entertainment",DD YADAGIRI
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-21
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-40.jpg" group-title="Entertainment",DD SANSAD TV HD
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-40
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-455.png" group-title="Entertainment",NHK WORLD HD
@@ -3305,6 +3307,62 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10607
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=818501230
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-15037.jpg" group-title="Music",PTC MUSIC
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-15037
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-393.png" group-title="Lifestyle & Education",VANITHA
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-393
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10557.jpg" group-title="Lifestyle & Education",DD Arunprabha
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10557
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10558.jpg" group-title="Lifestyle & Education",DD BANGLA
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10558
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10559.jpg" group-title="Lifestyle & Education",DD KASHIR
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10559
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10560.jpg" group-title="Lifestyle & Education",DD MANIPUR
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10560
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10561.jpg" group-title="Lifestyle & Education",DD MIZORAM
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10561
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10562.jpg" group-title="Lifestyle & Education",DD ODIA
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10562
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10570.jpg" group-title="Lifestyle & Education",DD URDU
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10570
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10571.jpg" group-title="Lifestyle & Education",DD CHHATISGARH
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10571
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10573.jpg" group-title="Lifestyle & Education",DD GIRNAR
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10573
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10575.jpg" group-title="Lifestyle & Education",DD PUNJABI
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10575
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10576.jpg" group-title="Lifestyle & Education",DD SHAYADRI
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10576
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10577.jpg" group-title="Lifestyle & Education",DD TAMIL
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10577
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10578.jpg" group-title="Lifestyle & Education",DD Tripura
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10578
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10580.jpg" group-title="Lifestyle & Education",DD HARYANA
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10580
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10581.jpg" group-title="Lifestyle & Education",DD UTTRAKHAND
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10581
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10582.jpg" group-title="Lifestyle & Education",DD MALAYALAM
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10582
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10583.jpg" group-title="Lifestyle & Education",DD MADHYAPRADESH
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10583
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10586.jpg" group-title="Lifestyle & Education",DD HIMANCHAL
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10586
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10587.jpg" group-title="Lifestyle & Education",DD UP
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10587
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10588.jpg" group-title="Lifestyle & Education",DD BIHAR
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10588
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10589.jpg" group-title="Lifestyle & Education",DD Jharkhand
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10589
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10592.jpg" group-title="Lifestyle & Education",DD GOA
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10592
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10599.jpg" group-title="Lifestyle & Education",DD MEGHALAYA
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10599
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10600.jpg" group-title="Lifestyle & Education",DD SAPTAGIRI
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10600
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10601.jpg" group-title="Lifestyle & Education",DD CHANDANA
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10601
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10604.jpg" group-title="Lifestyle & Education",DD ASSAM
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10604
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10835.jpg" group-title="Lifestyle & Education",DD Rajasthan
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10835
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/697543037.jpg" group-title="Religious & Devotional",Peace Of Mind
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=697543037
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/922998137.jpeg" group-title="Religious & Devotional",A-One Imagine
