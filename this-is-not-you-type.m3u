@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2ZzhEVWZsYWhqSVlBOGlEeUZXTHIrR2o0OVhST1ZoUVNqelpiWlEyRHQ2ZXBMTzBpcmFjVDZLS3N5d3BCck1aU0g=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z1ZKdjk2RTBTMDRJZW5Ccy9QeUJobnFnVGlpVVd4UzZ0Um9FT3N6NTM4SGVXNXdlbVZCZlJ4Y1UxOHNYR1hoR3Q=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -3156,6 +3156,8 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1469
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1279
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-10001.png" group-title="News",DY365
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-10001
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1259.png" group-title="News",TAMILIAN TELEVISION
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1259
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1211.png" group-title="News",99 PERCENT
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-1211
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1510.jpg" group-title="News",REPORTER TV
@@ -3716,6 +3718,8 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=076060810
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10610
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10611.jpg" group-title="Religious & Devotional",SATSANG
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10611
+#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/844729998.jpeg" group-title="Shopping",Naaptol - Tamil
+https://mix.drmlive.net/mix/playboxtv.m3u8?id=844729998
 #EXTM3U
 #EXTINF:-1 tvg-id="143" tvg-name="CNBC TV18 Prime" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/CNBCTV18Prime.png" group-title="Business News", CNBC TV18 Prime
 #KODIPROP:inputstream.adaptive.license_type=clearkey
