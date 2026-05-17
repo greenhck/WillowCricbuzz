@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z2tKR294TkwrSS9uN1RQcUVMTXAwQjhHc3ZsNkM4SlQxMlpLTVBpdEoyUE5kdisvUkxtYVN6Y2JNTUtrdEY3T2k=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z3NMdzRNUHl1OHNSZWZzZURhajRPais1UDQ3Q1h5aGZzVm5tVDEySzFFYklpM2U5RXpqMTdUMURNU3pSM3RYM08=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -116,6 +116,17 @@ https://demo.drmlive.net/live/nowtv/4081.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://demo.drmlive.net/wv
 https://demo.drmlive.net/live/kayo/53208/index.m3u8
 
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/kayohindi1.mpd
+#EXTINF:-1 tvg-logo="https://media.kayosports.com.au/content/dam/nc/fc/sm/kyo/prl/media-centre/logos/KayoSportsLogoNegative.png" group-title="Cricket",Kayo Hindi 1
+https://mix.drmlive.net/mix/kayohindi1.mpd
+
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/kayohindi2.mpd
+#EXTINF:-1 tvg-logo="https://media.kayosports.com.au/content/dam/nc/fc/sm/kyo/prl/media-centre/logos/KayoSportsLogoNegative.png" group-title="Cricket",Kayo Hindi 2
+https://mix.drmlive.net/mix/kayohindi2.mpd
 
 #EXTINF:-1 group-title="Cricket",Event 1
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/24.10.07.2.10542 (Android/9)
