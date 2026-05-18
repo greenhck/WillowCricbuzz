@@ -9,7 +9,7 @@
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_key=https://mix.drmlive.net/mix/allowipmpd_key.php?id=chlajabsdk
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/d3Yf3PHX/DRMLIVE-Aggressive-Logo.png" group-title="1-Playlist-Activation",Activate Playlist
-https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z05JQW5zQnF5b3dOdmh4UXE5bUROdElDb1k4dWhBM294UkJhMEpCVSthNU5rQzlSdnBKWGt4M2htS0JPNjFtejI=
+https://mix.drmlive.net/mix/actchaljabsdk.mpd?token=TTMrOWpiSlJXV3JFTWdTMXVIVGllS2REZE0xVTNkeGhqK3pQT0dmcnVIYThnUUFwemdzUGxhQUpWbkFrUFd2Z04xT01kZUtMUXF5bHppY1VsMnNWd2I0QnVLVmtKREQ5OU52N0Z6bkcyVnlhOTZuM0pCN21TMEViaHd3UkdBek4=
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://la.drmlive.net/tp/sling_ck?id=22
@@ -3643,8 +3643,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=697543037
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-475
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-989.jpg" group-title="Religious & Devotional",JINVANI
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-989
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/922998137.jpeg" group-title="Religious & Devotional",A-One Imagine
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=922998137
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/561011873.jpeg" group-title="Religious & Devotional",Nimbark TV
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=561011873
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/376927479.jpeg" group-title="Religious & Devotional",Hare Krsna TV
@@ -3703,8 +3701,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=697916164
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=775271733
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/417390783.jpeg" group-title="Religious & Devotional",Gurkibani
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=417390783
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/418465816.jpeg" group-title="Religious & Devotional",Gurudwara Dasmesh Darbar Canada 24x7 Live
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=418465816
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-961.png" group-title="Religious & Devotional",ARADHANA TV
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=pishow-961
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/pishow-1135.png" group-title="Religious & Devotional",SRI SANKARA
@@ -3729,8 +3725,6 @@ https://mix.drmlive.net/mix/playboxtv.m3u8?id=076060810
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10610
 #EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/PBha-10611.jpg" group-title="Religious & Devotional",SATSANG
 https://mix.drmlive.net/mix/playboxtv.m3u8?id=PBha-10611
-#EXTINF:-1 tvg-logo="https://playboxtv-vod.multitvsolution.com/media.playboxtv.in/content/liveTv/844729998.jpeg" group-title="Shopping",Naaptol - Tamil
-https://mix.drmlive.net/mix/playboxtv.m3u8?id=844729998
 #EXTM3U
 #EXTINF:-1 tvg-id="143" tvg-name="CNBC TV18 Prime" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/CNBCTV18Prime.png" group-title="Business News", CNBC TV18 Prime
 #KODIPROP:inputstream.adaptive.license_type=clearkey
